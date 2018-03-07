@@ -14,7 +14,24 @@ class Base extends \Base_Controller {
         // $this->delete = true;
         // $this->noDisplay = true;
     }
+    public function selectType()
+    {
+        $data["content_view"] = 'base/selectTranstionType';
+        $this->template->render($data);
+        
+    }
 
+    public function addTranslation()
+    {
+        $data["content_view"] = "base/addTranslation";
+        $this->template->render($data);
+    }
+
+    public function addInterpret()
+    {
+        $data["content_view"] = "base/addInterpret";
+        $this->template->render($data);
+    }
 //     public function get($id)
 //     {
 //         parent::get($id);

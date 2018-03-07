@@ -1,5 +1,5 @@
 <?php 
-namespace sample;
+namespace freelancer;
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Api extends \Api_Controller {

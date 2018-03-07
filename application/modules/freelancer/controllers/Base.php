@@ -1,5 +1,5 @@
 <?php 
-namespace sample;
+namespace freelancer;
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Base extends \Base_Controller {
@@ -9,7 +9,7 @@ class Base extends \Base_Controller {
         parent::__construct();
         // $this->get = true;
         // $this->list = true;
-        // $this->add = true;
+        $this->add = true;
         // $this->update = true;
         // $this->delete = true;
         // $this->noDisplay = true;
@@ -23,10 +23,10 @@ class Base extends \Base_Controller {
 //     {
 //         parent::list();
 //     }
-//     public function add()
-//     {
-//         parent::add();
-//     }
+    public function add()
+    {
+        parent::add();
+    }
 //     public function update($id)
 //     {
 //         parent::update($id);

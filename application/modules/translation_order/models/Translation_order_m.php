@@ -271,9 +271,9 @@ class Translation_order_m extends Pagination_Model
 		`manager_phone` varchar(255),
 		`personal_name` varchar(255),
 		`personal_phone` varchar(255),
-		`email` varchar(255),
 		`is_exist_fax` boolean NOT NULL DEFAULT '0',
 		`fax` varchar(255),
+		`email` varchar(255),
 		`translation_kind` varchar(255),
 		`translation_before` varchar(255),
 		`translation_after` varchar(255),
@@ -286,7 +286,7 @@ class Translation_order_m extends Pagination_Model
 		`is_use_confidential` boolean NOT NULL DEFAULT '1',
 
 		`file_group_id` INT UNSIGNED,
---통역 추가필드
+		
 		`interpret_kind` varchar(255),
 		`interpret_address` varchar(255),
 		`interpret_address_detail` varchar(255),

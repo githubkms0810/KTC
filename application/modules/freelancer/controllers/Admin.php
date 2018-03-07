@@ -1,5 +1,5 @@
 <?php 
-namespace sample;
+namespace freelancer;
 //의존성 :: product, user
 defined('BASEPATH') OR exit('No direct script access allowed');
 
