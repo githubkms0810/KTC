@@ -30,20 +30,18 @@
 <!--프리랜서지원폼 시작-->
 
 <div id="free_wrapper">
-  
 	<h1 class="free_title">Horizontal Responsive Form</h1>
-	
-	<form class="freesupport" onsubmit="return false" style="max-width: 1024px; margin: 0 auto;">
+	<form action="/freerancer/add" method="post" class="freesupport" style="max-width: 1024px; margin: 0 auto;">
 	<div class="free_col-2">
 	  <label>
 		이름
-		<input placeholder="What is your full name?" id="free_name" name="free_name" tabindex="1" style="width: 100%;">
+		<input name="name" placeholder="What is your full name?" id="free_name" tabindex="1" style="width: 100%;">
 	  </label>
 	</div>
 	<div class="free_col-2">
 	  <label>
 		생년월일</br>
-		<select  name="birth_year" tabindex="2" style="width: 50%;">
+		<select  ame="birth_year" tabindex="2" style="width: 50%;">
 			<option>연도</option>
 			<option>1939</option>
 			<option>1940</option>
@@ -101,28 +99,30 @@
 	</div>
 	<div class="free_col-3">
 		<label>성별</label>
-		<center style="position:relative; margin-bottom:9px;">
-            <input type="radio" name ="sex" value="남성">
+				<center style="position:relative; margin-bottom:9px;">
+				<!-- <input name="" type="checkbox" class="free_js-switch" style="width: 100%;"> -->
+            남성<input type="radio" name ="sex" value="남성">
+            여성<input type="radio" name ="sex" value="여성">
         </center>
 	  </div>	
 	<div class="free_col-3">
 	  <label>
 		전화번호</br>
-		<select tabindex="5" style="width: 30%;">
+		<select name="phone_first" tabindex="5" style="width: 30%;">
 			<option>010</option>
 			<option>011</option>
 			<option>019</option>
 		  </select>
-		<input placeholder="1234" id="free_phone" name="free_phone" tabindex="6" style="width: 35%;">
-		<input placeholder="5678" id="free_phone" name="free_phone" tabindex="7" style="width: 35%;">
+		<input name="phone_second" placeholder="1234" id="free_phone" tabindex="6" style="width: 35%;">
+		<input name="phone_third" placeholder="5678" id="free_phone"  tabindex="7" style="width: 35%;">
 	  </label>
 	</div>
 	<div class="free_col-3">
 	  <label>
 		Email<br/>
-		<input placeholder="your id" id="free_email" name="free_email" tabindex="8" style="width: 50%;">
+		<input name="email_first" placeholder="your id" id="free_email" tabindex="8" style="width: 50%;">
 		@
-		<select tabindex="9" style="width: 40%;">
+		<select name="email_second" tabindex="9" style="width: 40%;">
 			<option>naver.com</option>
 			<option>gmail.com</option>
 			<option>daum.net</option>
@@ -133,31 +133,37 @@
 	<div class="free_col-3">
 		<label>
 		  주소</br>
-		  <input placeholder="주소" readonly id="free_address" name="free_address" tabindex="10" style="width: 70%;">
+		  <input  name="address" placeholder="주소" readonly id="free_address" tabindex="10" style="width: 70%;">
 		  <button style="width:30%;">찾기</button>
-		  <input placeholder="상세 주소" id="free_address" name="free_address" tabindex="11" style="width: 70%;">		  
+		  <input name="address_detail" placeholder="상세 주소" id="free_address" tabindex="11" style="width: 70%;">		  
 		</label>
 	  </div>
 	<div class="free_col-3">
 		<label>지원 분야</br></br></label>
-		<center style="padding-bottom:10px; position:relative; margin-bottom:9px;"><input type="checkbox" class="free_js-switch" style="width: 100%;"></center>
+		<center style="padding-bottom:10px; position:relative; margin-bottom:9px;">
+			<!-- <input name="" type="checkbox" class="free_js-switch" style="width: 100%;"> -->
+			번역<input type="radio" name="apply_field" value="번역">
+			통역<input type="radio" name="apply_field" value="통역">
+		</center>
 	  </div>
 	<div class="free_col-3">
 		<label>
 		  계좌정보</br></br>
-		  <select tabindex="11" style="width: 25%;">
+		  <select name="account_bank" tabindex="11" style="width: 25%;" >
 			  <option>은행</option>
 			  <option>신한</option>
 			  <option>국민</option>
 			</select>
-		  <input placeholder="계좌번호" id="free_phone" name="free_phone" tabindex="12" style="width: 50%;">
-		  <input placeholder="예금주" id="free_phone" name="free_phone" tabindex="13" style="width:25%;">
+		  <input name="account_number" placeholder="계좌번호" id="free_phone" name="free_phone" tabindex="12" style="width: 50%;">
+		  <input name="account_name" placeholder="예금주" id="free_phone" name="free_phone" tabindex="13" style="width:25%;">
 		</label>
 		</div>
 	  <div class="free_col-2">
 		<label>
-		  사용 언어
-		  <input placeholder="What is your full name?" id="free_name" name="free_name" tabindex="1" style="width: 100%;">
+			사용 언어
+			<input name="language[]" value="영어" type="checkbox" >영어
+			<input name="language[]" value="불어" type="checkbox"  >불어
+		  <!-- <input name="" placeholder="What is your full name?" id="free_name" name="free_name" tabindex="1" style="width: 100%;"> -->
 		</label>
 	  </div>
 	  <div class="free_col-2">
@@ -166,15 +172,15 @@
 
 		  <ul class="free_form-list" style="margin-bottom:0px">
 		<li>
-		  <input type="radio" id="free_radio_1" name="free_radio" style="width:33%">
+		  <input type="radio" name="translation_direction" value="외국어->한국어" id="free_radio_1" style="width:33%">
 		  <label for="free_radio">외국어->한국어</label>
 		  </li>
 		<li>
-		  <input type="radio" id="free_radio_2" name="free_radio" style="width:33%">
+		  <input type="radio" name="translation_direction" value="한국어->외국어" id="free_radio_2" style="width:33%">
 		  <label for="free_radio">한국어->외국어</label>
 		</li>
 		<li>
-		  <input type="radio" id="free_radio_3" name="free_radio" style="width:33%">
+		  <input type="radio" name="translation_direction" value="외국어<->한국어" id="free_radio_3" style="width:33%">
 		  <label for="free_radio">외국어<->한국어</label>
 		</li>
 	</ul>
@@ -182,25 +188,27 @@
 	  </div>
 	  <div class="free_col-3">
 			<label>재직유무</label>
-			<center style="padding-bottom:10px; position:relative; margin-bottom:9px;"><input type="checkbox" class="free_js-switch" style="width: 100%;"></center>
+			<center style="padding-botto	m:10px; position:relative; margin-bottom:9px;">
+				<input type="checkbox" name="is_employed" value="1" class="free_js-switch" style="width: 100%;">
+			</center>
 		  </div>
 
 	  <div class="free_col-3">
 			<label>학력 사항</br>
 			<label>대학교</br>
-			<input placeholder="학교명" id="free_schoolname" name="free_schoolname" tabindex="1" style="width: 65%;">
-			<input placeholder="전공명" id="free_subname" name="free_subname" tabindex="1" style="width: 35%;">
+			<input name="university" placeholder="학교명" id="free_schoolname" tabindex="1" style="width: 65%;">
+			<input name="university_major" placeholder="전공명" id="free_subname" tabindex="1" style="width: 35%;">
 			</label>
 			</label>
 	  </div>
 	  <div class="free_col-3">
 			<label>대학원</br>
-			<input placeholder="학교명" id="free_schoolname" name="free_schoolname" tabindex="1" style="width: 40%;">
-			<select tabindex="2" style="width: 25%;">
+			<input name="graduate_school" placeholder="학교명" id="free_schoolname"  tabindex="1" style="width: 40%;">
+			<select name="graduate_school_degree" tabindex="2" style="width: 25%;">
 					<option>석사</option>
 					<option>박사</option>
 			</select>			
-			<input placeholder="전공명" id="free_subname" name="free_subname" tabindex="1" style="width: 35%;">
+			<input name="graduate_school_major" placeholder="전공명" id="free_subname" tabindex="1" style="width: 35%;">
 			</label>
 	  </div>
 
@@ -219,7 +227,7 @@
 		  </div>
 	
 	<div class="free_col-submit">
-	  <button class="free_submitbtn">Submit Form</button>
+	  <button type="submit" class="free_submitbtn">Submit Form</button>
 	</div>
 	
 	</form>

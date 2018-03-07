@@ -123,7 +123,7 @@ class Translation_order_m extends Pagination_Model
 	//------ @cusotm
 
 	//------ @query @list@Get 정의
-
+		
 	protected function _select()
 	{
 		$this->db->select("
@@ -144,18 +144,22 @@ class Translation_order_m extends Pagination_Model
 		{$this->as}.id,
 		");
 	}
+
 	protected function _from()
 	{
 		$this->db->from("$this->table as {$this->as}");
 		// $this->db->join("user as u","{$this->as}.user_id = u.id","LEFT");
 	}
+
 	protected function _get_admin()
 	{
 	}
+	
 	protected function _get_base()
 	{
 		
 	}
+	
 	protected function _list_admin()
 	{
 	}
@@ -286,7 +290,7 @@ class Translation_order_m extends Pagination_Model
 		`is_use_confidential` boolean NOT NULL DEFAULT '1',
 
 		`file_group_id` INT UNSIGNED,
-		
+
 		`interpret_kind` varchar(255),
 		`interpret_address` varchar(255),
 		`interpret_address_detail` varchar(255),
