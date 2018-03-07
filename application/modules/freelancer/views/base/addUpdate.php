@@ -22,7 +22,8 @@
 
 <!--freesupport form-->
 
-
+<style>
+</style>
 </head>
 <body>
 
@@ -31,69 +32,35 @@
 
 <div id="free_wrapper">
 	<h1 class="free_title">Horizontal Responsive Form</h1>
-	<form action="/freerancer/add" method="post" class="freesupport" style="max-width: 1024px; margin: 0 auto;">
+	<form action="/freelancer/add" method="post" class="freesupport" onsubmit="" style="max-width: 1024px; margin: 0 auto;">
 	<div class="free_col-2">
 	  <label>
 		이름
-		<input name="name" placeholder="What is your full name?" id="free_name" tabindex="1" style="width: 100%;">
-	  </label>
+		<input name="name" value="<?=DEBUG === false ? set_value('name') : "이름테스트"?>" placeholder="What is your full name?" id="free_name" tabindex="1" style="width: 100%;">
+		<?=form_error("name")?>
+		</label>
 	</div>
 	<div class="free_col-2">
 	  <label>
 		생년월일</br>
-		<select  ame="birth_year" tabindex="2" style="width: 50%;">
+		<select  name="birth_year" tabindex="2" style="width: 50%;">
 			<option>연도</option>
-			<option>1939</option>
-			<option>1940</option>
-		  </select>
+			<option value="1939" <?=DEBUG === false ? set_select("birth_year","1939") : "selected"?>>1939</option>
+			<option value="1940" <?=set_select("birth_year","1940")?>>1940</option>
+			</select>
+			
 		  <select name="birth_month" tabindex="3" style="width: 24%;">
 			<option>월</option>
-			<option>1</option>
-			<option>2</option>
-			<option>3</option>
-			<option>4</option>
-			<option>5</option>
-			<option>6</option>
-			<option>7</option>
-			<option>8</option>
-			<option>9</option>
-			<option>10</option>
-			<option>11</option>
-			<option>12</option>
-		  </select>
+			<?php for ( $i = 1 ; $i <=12 ; $i++ ): ?>
+					<option <?=DEBUG === false ? set_select("birth_month",$i) : "selected"?> value="<?=$i?>"><?=$i?></option>
+			<?php endfor; ?>
+			</select>
+			
 		  <select name="birth_day" tabindex="4" style="width: 24%;">
 			<option>일</option>
-			<option>1</option>
-			<option>2</option>
-			<option>3</option>
-			<option>4</option>
-			<option>5</option>
-			<option>6</option>
-			<option>7</option>
-			<option>8</option>
-			<option>9</option>
-			<option>10</option>
-			<option>11</option>
-			<option>12</option>
-			<option>13</option>
-			<option>14</option>
-			<option>15</option>
-			<option>16</option>
-			<option>17</option>
-			<option>18</option>
-			<option>19</option>
-			<option>20</option>
-			<option>21</option>
-			<option>22</option>
-			<option>23</option>
-			<option>24</option>
-			<option>25</option>
-			<option>26</option>
-			<option>27</option>
-			<option>28</option>
-			<option>29</option>
-			<option>30</option>
-			<option>31</option>
+			<?php for ( $i = 1 ; $i <=31 ; $i++ ): ?>
+				<option <?=DEBUG === false ? set_select("birth_day",$i) : "selected"?> value="<?=$i?>"><?=$i?></option>
+			<?php endfor; ?>
 		  </select>
 	  </label>
 	</div>
@@ -101,86 +68,96 @@
 		<label>성별</label>
 				<center style="position:relative; margin-bottom:9px;">
 				<!-- <input name="" type="checkbox" class="free_js-switch" style="width: 100%;"> -->
-            남성<input type="radio" name ="sex" value="남성">
-            여성<input type="radio" name ="sex" value="여성">
+            남성<input type="radio" name ="sex" value="남성" <?=set_checkbox("sex","남성",true)?>>
+            여성<input type="radio" name ="sex" value="여성" <?=set_checkbox("sex","여성")?>>
         </center>
 	  </div>	
 	<div class="free_col-3">
 	  <label>
-		전화번호</br>
+		전화번호
+		<?=form_error_one_of_multiple(["phone_first","phone_second","phone_third"])?>
+	</br>
 		<select name="phone_first" tabindex="5" style="width: 30%;">
-			<option>010</option>
-			<option>011</option>
-			<option>019</option>
+			<option <?=set_select("phone_first","010")?> value="010">010</option>
+			<option <?=set_select("phone_first","011")?> value="011">011</option>
+			<option <?=set_select("phone_first","019")?> value="019">019</option>
 		  </select>
-		<input name="phone_second" placeholder="1234" id="free_phone" tabindex="6" style="width: 35%;">
-		<input name="phone_third" placeholder="5678" id="free_phone"  tabindex="7" style="width: 35%;">
+		<input name="phone_second" value="<?=DEBUG === false ? set_value("phone_second") : "1234"?>"placeholder="1234" id="free_phone" tabindex="6" style="width: 35%;">
+		<input name="phone_third" value="<?=DEBUG === false ? set_value("phone_third") : "5125"?>" placeholder="5678" id="free_phone"  tabindex="7" style="width: 35%;">
 	  </label>
 	</div>
 	<div class="free_col-3">
 	  <label>
 		Email<br/>
-		<input name="email_first" placeholder="your id" id="free_email" tabindex="8" style="width: 50%;">
+		<input name="email_first" value="<?=DEBUG === false ? set_value("email_first") : "emailtestr"?>" placeholder="your id" id="free_email" tabindex="8" style="width: 50%;">
 		@
 		<select name="email_second" tabindex="9" style="width: 40%;">
-			<option>naver.com</option>
-			<option>gmail.com</option>
-			<option>daum.net</option>
+			<option value="naver.com" <?=set_select("email_second","naver.com")?>>naver.com</option>
+			<option value="gmail.com" <?=set_select("email_second","gmail.com")?>>gmail.com</option>
+			<option value="daum.net" <?=set_select("email_second","daum.net")?>>daum.net</option>
 		  </select>
 	</label>
 	</div>
 
 	<div class="free_col-3">
 		<label>
-		  주소</br>
-		  <input  name="address" placeholder="주소" readonly id="free_address" tabindex="10" style="width: 70%;">
+			주소
+			<?=form_error_one_of_multiple(["address","address_detail"])?>
+		</br>
+		  <input  name="address" value="<?=DEBUG === false ? set_value("address") : "주소테스트"?>" placeholder="주소" readonly id="free_address" tabindex="10" style="width: 70%;">
 		  <button style="width:30%;">찾기</button>
-		  <input name="address_detail" placeholder="상세 주소" id="free_address" tabindex="11" style="width: 70%;">		  
+		  <input name="address_detail" value="<?=DEBUG === false ? set_value("address_detail") : "상세주소테스트"?>" placeholder="상세 주소" id="free_address" tabindex="11" style="width: 70%;">		  
 		</label>
 	  </div>
 	<div class="free_col-3">
-		<label>지원 분야</br></br></label>
+		<label>지원 분야
+		<?=form_error("apply_field")?>		
+	</br></br></label>
 		<center style="padding-bottom:10px; position:relative; margin-bottom:9px;">
 			<!-- <input name="" type="checkbox" class="free_js-switch" style="width: 100%;"> -->
-			번역<input type="radio" name="apply_field" value="번역">
-			통역<input type="radio" name="apply_field" value="통역">
+			번역<input type="radio" name="apply_field" value="번역" <?=set_checkbox("apply_field","변역",true)?>>
+			통역<input type="radio" name="apply_field" value="통역" <?=set_checkbox("apply_field","통역")?>>
 		</center>
 	  </div>
 	<div class="free_col-3">
 		<label>
-		  계좌정보</br></br>
+			계좌정보
+			<?=form_error_one_of_multiple(["account_bank","account_number","account_name"])?>
+		</br></br>
 		  <select name="account_bank" tabindex="11" style="width: 25%;" >
 			  <option>은행</option>
-			  <option>신한</option>
-			  <option>국민</option>
+			  <option value="신한" <?=DEBUG === false ? set_select("account_bank","신한") : "selected"?>>신한</option>
+			  <option value="국민" <?=set_select("account_bank","국민")?>>국민</option>
 			</select>
-		  <input name="account_number" placeholder="계좌번호" id="free_phone" name="free_phone" tabindex="12" style="width: 50%;">
-		  <input name="account_name" placeholder="예금주" id="free_phone" name="free_phone" tabindex="13" style="width:25%;">
+		  <input name="account_number" value="<?=DEBUG === false ? set_value("account_number") : "1245967"?>" placeholder="계좌번호" id="free_phone" name="free_phone" tabindex="12" style="width: 50%;">
+		  <input name="account_name" value="<?=DEBUG === false ? set_value("account_name") : "예금주테스트"?>" placeholder="예금주" id="free_phone" name="free_phone" tabindex="13" style="width:25%;">
 		</label>
 		</div>
 	  <div class="free_col-2">
 		<label>
 			사용 언어
-			<input name="language[]" value="영어" type="checkbox" >영어
-			<input name="language[]" value="불어" type="checkbox"  >불어
+			<?=form_error("languages[]")?>
+			<input type="checkbox" name="languages[]" value="영어" <?=DEBUG === false ? set_checkbox("languages[]","영어") : "checked"?> >영어
+			<input type="checkbox" name="languages[]" value="불어" <?=set_checkbox("languages[]","불어")?> >불어
 		  <!-- <input name="" placeholder="What is your full name?" id="free_name" name="free_name" tabindex="1" style="width: 100%;"> -->
 		</label>
 	  </div>
 	  <div class="free_col-2">
 		<label>
-		  언어 방향</br>
-
+			언어 방향
+		<?=form_error("translation_direction")?>
+		</br>
 		  <ul class="free_form-list" style="margin-bottom:0px">
 		<li>
-		  <input type="radio" name="translation_direction" value="외국어->한국어" id="free_radio_1" style="width:33%">
+		  <input type="radio" name="translation_direction" value="외국어->한국어" <?=set_checkbox("translation_direction","외국어->한국어")?> checked id="free_radio_1" style="width:33%">
 		  <label for="free_radio">외국어->한국어</label>
 		  </li>
 		<li>
-		  <input type="radio" name="translation_direction" value="한국어->외국어" id="free_radio_2" style="width:33%">
+		  <input type="radio" name="translation_direction" value="한국어->외국어" <?=set_checkbox("translation_direction","한국어->외국어")?> id="free_radio_2" style="width:33%">
 		  <label for="free_radio">한국어->외국어</label>
 		</li>
 		<li>
-		  <input type="radio" name="translation_direction" value="외국어<->한국어" id="free_radio_3" style="width:33%">
+		  <input type="radio" name="translation_direction" value="외국어<->한국어" <?=set_checkbox("translation_direction","외국어<->한국어")?> id="free_radio_3" style="width:33%">
 		  <label for="free_radio">외국어<->한국어</label>
 		</li>
 	</ul>
@@ -189,26 +166,26 @@
 	  <div class="free_col-3">
 			<label>재직유무</label>
 			<center style="padding-botto	m:10px; position:relative; margin-bottom:9px;">
-				<input type="checkbox" name="is_employed" value="1" class="free_js-switch" style="width: 100%;">
+				<input type="checkbox" name="is_employed" value="1" <?=DEBUG === false ? set_checkbox("is_employed","1") : "checked"?> class="free_js-switch" style="width: 100%;">
 			</center>
 		  </div>
 
 	  <div class="free_col-3">
 			<label>학력 사항</br>
 			<label>대학교</br>
-			<input name="university" placeholder="학교명" id="free_schoolname" tabindex="1" style="width: 65%;">
-			<input name="university_major" placeholder="전공명" id="free_subname" tabindex="1" style="width: 35%;">
+			<input name="university" value="<?=DEBUG === false ? set_value("university") : "대학교이름 테스트"?>" placeholder="학교명"  id="free_schoolname" tabindex="1" style="width: 65%;">
+			<input name="university_major" value="<?=DEBUG === false ? set_value("university_major") : "대학교전공 테스트"?>" placeholder="전공명" id="free_subname" tabindex="1" style="width: 35%;">
 			</label>
 			</label>
 	  </div>
 	  <div class="free_col-3">
 			<label>대학원</br>
-			<input name="graduate_school" placeholder="학교명" id="free_schoolname"  tabindex="1" style="width: 40%;">
+			<input name="graduate_school" value="<?=DEBUG === false ? set_value("graduate_school") : "대학원이름 테스트"?>" placeholder="학교명" id="free_schoolname"  tabindex="1" style="width: 40%;">
 			<select name="graduate_school_degree" tabindex="2" style="width: 25%;">
-					<option>석사</option>
-					<option>박사</option>
+					<option value="석사" <?=set_select("graduate_school_degree","석사")?>>석사</option>
+					<option value="박사" <?=set_select("graduate_school_degree","박사")?>>박사</option>
 			</select>			
-			<input name="graduate_school_major" placeholder="전공명" id="free_subname" tabindex="1" style="width: 35%;">
+			<input name="graduate_school_major" value="<?=DEBUG === false ? set_value("graduate_school_major") : "대학원전공명테스트"?>" placeholder="전공명" id="free_subname" tabindex="1" style="width: 35%;">
 			</label>
 	  </div>
 

@@ -1,4 +1,18 @@
+
 <?php defined('BASEPATH') OR exit('no direct script access allrowed');
+
+
+if(!function_exists('form_error_one_of_multiple')){
+    function form_error_one_of_multiple($fields = [])
+    {
+        foreach ($fields as $field) {
+            $error = form_error($field);
+            if($error !== "")
+            return $error;
+        }
+    }   
+}
+
 
 if(!function_exists('substring')){
     function substring($str,$startIdx,$endIdx)

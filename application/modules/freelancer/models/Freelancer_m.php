@@ -66,11 +66,10 @@ class Freelancer_m extends Pagination_Model
 	// {
 	// 	parent::_update_admin($id);
 	// }
+
 	// protected function _add_base()
 	// {
-	// 	$this->set_post("name");
-	// 	$insert_id= $this->p_add();
-	// 	return $insert_id;
+	// 	parent::_add_base();
 	// }
 
 	// protected function _update_base($id)
@@ -121,9 +120,58 @@ class Freelancer_m extends Pagination_Model
 	// 	$this->form_validation->set_rules('name', '이름', 'trim|required');
 	// }
 	//------ @cusotm
+	public function setRulesWhenAdd()
+	{
+		$this->form_validation->set_rules('name', '이름', 'trim|required|min_length[1]|max_length[12]');
+		$this->form_validation->set_rules('phone_first', '휴대폰', 'trim|required');
+		$this->form_validation->set_rules('phone_second', '휴대폰', 'trim|required');
+		$this->form_validation->set_rules('phone_third', '휴대폰', 'trim|required');
+		$this->form_validation->set_rules('address', '주소', 'trim|required');
+		$this->form_validation->set_rules('address_detail', '상세주소', 'trim|required');
+		$this->form_validation->set_rules('apply_field', '지원분야', 'trim|required');
+		$this->form_validation->set_rules('account_bank', '계좌은행이름', 'trim|required');
+		$this->form_validation->set_rules('account_number', '계좌번호', 'trim|required');
+		$this->form_validation->set_rules('account_name', '예금주', 'trim|required');
+		$this->form_validation->set_rules('languages[]', '사용언어', 'trim|required');
+		$this->form_validation->set_rules('translation_direction', '언어방향', 'trim|required');
+		$this->form_validation->set_rules('translation_direction2', '언어방향', 'trim|required');
+	}
 
+	public function addByPostData()
+	{
+		$this->set_post("name");
+		$this->set_post("birth_year");
+		$this->set_post("birth_month");
+		$this->set_post("birth_day");
+		$this->set_post("sex");
+		$this->set("phone",$this->makePhoneByPostData());
+		$this->set("email",$this->makeEmailByPostData());
+		$this->set_post("address");
+		$this->set_post("address_detail");
+		$this->set_post("apply_field");
+		$this->set_post("account_bank");
+		$this->set_post("account_number");
+		$this->set_post("account_name");
+		$this->set_post("translation_direction");
+		$this->set_post("is_employed");
+		$this->set_post("university");
+		$this->set_post("university_major");
+		$this->set_post("graduate_school");
+		$this->set_post("graduate_school_degree");
+		$this->set_post("graduate_school_major");
+		$insert_id= $this->p_add();
+		return $insert_id;
+	}
+	private function makePhoneByPostData()
+	{
+		return post("phone_first")."-".post("phone_second")."-".post("phone_third");
+	}
+	private function makeEmailByPostData()
+	{
+		return post("email_first")."@".post("email_second");
+	}
 	//------ @query @list@Get 정의
-
+	
 	protected function _select()
 	{
 		$this->db->select("
