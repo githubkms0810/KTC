@@ -7,12 +7,7 @@ class Base extends \Base_Controller {
     public function __construct()
     {
         parent::__construct();
-        // $this->get = true;
-        // $this->list = true;
-        // $this->add = true;
-        // $this->update = true;
-        // $this->delete = true;
-        // $this->noDisplay = true;
+        $this->load->model("translation_order/translation_order_m");
     }
     public function selectType()
     {
@@ -21,37 +16,31 @@ class Base extends \Base_Controller {
         
     }
 
-    public function addTranslation()
+    public function add()
     {
-        $data["content_view"] = "base/addTranslation";
-        $this->template->render($data);
+        $this->translation_order_m->setRulesWhenAdd();
+        if($this->form_validation->run() === false){
+            echo validation_errors();
+            $data['type'] = get("type");
+            $data["content_view"] = "base/addUpdate";
+            $this->template->render($data);
+        }
+        else{
+            $this->db->trans_start();
+            $insert_id=$this->translation_order_m->addByPostData();
+            $this->db->trans_complete();
+            
+            if($this->db->trans_status() === false)
+                echo "실패";
+            else
+            {
+                echo "추가완료 $insert_id";
+                var_dump($this->translation_order_m->p_get($insert_id));
+            }
+        }
     }
 
-    public function addInterpret()
-    {
-        $data["content_view"] = "base/addInterpret";
-        $this->template->render($data);
-    }
-//     public function get($id)
-//     {
-//         parent::get($id);
-//     }
-//     public function list()
-//     {
-//         parent::list();
-//     }
-//     public function add()
-//     {
-//         parent::add();
-//     }
-//     public function update($id)
-//     {
-//         parent::update($id);
-//     }
-//     public function delete($id)
-//     {
-//         parent::_ajaxDelete($id);
-//     }
+ 
 }
 
 /* End of file Admin.php */

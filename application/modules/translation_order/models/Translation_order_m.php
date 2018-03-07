@@ -120,8 +120,97 @@ class Translation_order_m extends Pagination_Model
 	// {
 	// 	$this->form_validation->set_rules('name', '이름', 'trim|required');
 	// }
-	//------ @cusotm
 
+	// `id` INT UNSIGNED NULL AUTO_INCREMENT, 
+	// `order_id` INT UNSIGNED,
+	// `translation_status` ENUM('전달중','전달완료','진행중','완료') NOT NULL DEFAULT '전달중',
+	// `image` varchar(255),
+	// `buyer` ENUM('회사','개인') NOT NULL DEFAULT '회사',
+	// `company` varchar(255),
+	// `department` varchar(255),
+	// `manager` varchar(255),
+	// `company_phone` varchar(255),
+	// `manager_phone` varchar(255),
+	// `personal_name` varchar(255),
+	// `personal_phone` varchar(255),
+	// `is_exist_fax` boolean NOT NULL DEFAULT '1',
+	// `fax` varchar(255),
+	// `email` varchar(255),
+	// `translation_kind` varchar(255),
+	// `translation_before` varchar(255),
+	// `translation_after` varchar(255),
+	// `deadline` varchar(255),
+	// `is_exist_budget` boolean NOT NULL DEFAULT '1',
+	// `budget` varchar(255),
+	// `requirements` varchar(255),
+	// `is_get_tax_bill` boolean NOT NULL DEFAULT '1',
+	// `is_get_cash_receipt` boolean NOT NULL DEFAULT '1',
+	// `is_use_confidential` boolean NOT NULL DEFAULT '1',
+
+	// `file_group_id` INT UNSIGNED,
+
+	// `interpret_kind` varchar(255),
+	// `interpret_address` varchar(255),
+	// `interpret_address_detail` varchar(255),
+	// `interpret_start_date` varchar(255),
+	// `interpret_end_date` varchar(255),
+	// `is_need_equiment` boolean NOT NULL DEFAULT '0',
+	// `num_equiment` INT UNSIGNED DEFAULT '0',
+
+	//------ @cusotm
+	public function setRulesWhenAdd()
+	{
+		if(post("buyer")=== "회사"){
+			$this->form_validation->set_rules('company', '회사이름', 'trim|required');
+			$this->form_validation->set_rules('manager', '담당자', 'trim|required');
+			$this->form_validation->set_rules('manager_phone_first', '담당자 전화번호', 'trim|required');
+			$this->form_validation->set_rules('manager_phone_second', '담당자 전화번호', 'trim|required');
+			$this->form_validation->set_rules('manager_phone_third', '담당자 전화번호', 'trim|required');
+		}
+		else if(post("buyer")=== "개인"){
+			$this->form_validation->set_rules('personal_name', '이름', 'trim|required');
+			$this->form_validation->set_rules('personal_phone_first', '전화번호', 'trim|required');
+			$this->form_validation->set_rules('personal_phone_second', '전화번호', 'trim|required');
+			$this->form_validation->set_rules('personal_phone_third', '전화번호', 'trim|required');
+		}
+
+	}
+	public function addByPostData()
+	{
+		$this->load->library("post_helper");
+
+		$this->set_post("buyer");
+		$this->set_post("company");
+		$this->set_post("department");
+		$this->set_post("manager");
+		$this->set("company_phone",$this->post_helper->makePhoneByPostData("company_phone_first","company_phone_second","company_phone_third"));
+		$this->set("manager_phone",$this->post_helper->makePhoneByPostData("manager_phone_first","manager_phone_second","manager_phone_third"));
+		$this->set_post("personal_name");
+		$this->set("personal_phone",$this->post_helper->makePhoneByPostData("personal_phone_first","personal_phone_second","personal_phone_third"));
+		$this->set("fax",$this->post_helper->makePhoneByPostData("fax_first","fax_second","fax_third"));
+		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_exist_fax","1");
+		$this->set("email",$this->post_helper->makeEmailByPostData());
+		$this->set_post("interpret_kind");
+		$this->set_post("translation_kind");
+		$this->set_post("translation_before");
+		$this->set_post("translation_after");
+		$this->set_post("interpret_address");
+		$this->set_post("interpret_address_detail");
+		$this->set_post("interpret_start_date");
+		$this->set_post("interpret_end_date");
+		$this->set_post("budget");
+		$this->set_post("is_need_equiment");
+		$this->set_post("num_equiment");
+		$this->set_post("is_need_profile");
+		$this->set_post("requirements");
+		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_get_tax_bill","0");
+		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_get_cash_receipt","0");
+		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_use_confidential","0");
+		$this->set_post("message");
+		$insert_id= $this->p_add();
+		return $insert_id;
+	}
+	
 	//------ @query @list@Get 정의
 		
 	protected function _select()
@@ -275,7 +364,7 @@ class Translation_order_m extends Pagination_Model
 		`manager_phone` varchar(255),
 		`personal_name` varchar(255),
 		`personal_phone` varchar(255),
-		`is_exist_fax` boolean NOT NULL DEFAULT '0',
+		`is_exist_fax` boolean NOT NULL DEFAULT '1',
 		`fax` varchar(255),
 		`email` varchar(255),
 		`translation_kind` varchar(255),
@@ -288,7 +377,7 @@ class Translation_order_m extends Pagination_Model
 		`is_get_tax_bill` boolean NOT NULL DEFAULT '1',
 		`is_get_cash_receipt` boolean NOT NULL DEFAULT '1',
 		`is_use_confidential` boolean NOT NULL DEFAULT '1',
-
+		`message` text(255),
 		`file_group_id` INT UNSIGNED,
 
 		`interpret_kind` varchar(255),
@@ -297,6 +386,7 @@ class Translation_order_m extends Pagination_Model
 		`interpret_start_date` varchar(255),
 		`interpret_end_date` varchar(255),
 		`is_need_equiment` boolean NOT NULL DEFAULT '0',
+		`is_need_profile` boolean NOT NULL DEFAULT '0',
 		`num_equiment` INT UNSIGNED DEFAULT '0',
 	
 		`is_secret` boolean NOT NULL DEFAULT '0',

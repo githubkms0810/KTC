@@ -36,7 +36,8 @@
 	<div class="free_col-2">
 	  <label>
 		이름
-		<input name="name" value="<?=DEBUG === false ? set_value('name') : "이름테스트"?>" placeholder="What is your full name?" id="free_name" tabindex="1" style="width: 100%;">
+		<input name="name" value="<?=set_value('name')?>" placeholder="What is your full name?" id="free_name" tabindex="1" style="width: 100%;">
+		<!-- <input name="name" value="<?=DEBUG === false ? set_value('name') : "이름테스트"?>" placeholder="What is your full name?" id="free_name" tabindex="1" style="width: 100%;"> -->
 		<?=form_error("name")?>
 		</label>
 	</div>
@@ -44,22 +45,22 @@
 	  <label>
 		생년월일</br>
 		<select  name="birth_year" tabindex="2" style="width: 50%;">
-			<option>연도</option>
-			<option value="1939" <?=DEBUG === false ? set_select("birth_year","1939") : "selected"?>>1939</option>
-			<option value="1940" <?=set_select("birth_year","1940")?>>1940</option>
+			<option value="">연도</option>
+			<option  <?=DEBUG === false ? set_select("birth_year","1939") : "selected"?>>1939</option>
+			<option  <?=set_select("birth_year","1940")?>>1940</option>
 			</select>
 			
 		  <select name="birth_month" tabindex="3" style="width: 24%;">
-			<option>월</option>
+			<option value="">월</option>
 			<?php for ( $i = 1 ; $i <=12 ; $i++ ): ?>
-					<option <?=DEBUG === false ? set_select("birth_month",$i) : "selected"?> value="<?=$i?>"><?=$i?></option>
+					<option <?=DEBUG === false ? set_select("birth_month",$i) : "selected"?>><?=$i?></option>
 			<?php endfor; ?>
 			</select>
 			
 		  <select name="birth_day" tabindex="4" style="width: 24%;">
-			<option>일</option>
+			<option value="">일</option>
 			<?php for ( $i = 1 ; $i <=31 ; $i++ ): ?>
-				<option <?=DEBUG === false ? set_select("birth_day",$i) : "selected"?> value="<?=$i?>"><?=$i?></option>
+				<option <?=DEBUG === false ? set_select("birth_day",$i) : "selected"?>><?=$i?></option>
 			<?php endfor; ?>
 		  </select>
 	  </label>
@@ -115,7 +116,7 @@
 	</br></br></label>
 		<center style="padding-bottom:10px; position:relative; margin-bottom:9px;">
 			<!-- <input name="" type="checkbox" class="free_js-switch" style="width: 100%;"> -->
-			번역<input type="radio" name="apply_field" value="번역" <?=set_checkbox("apply_field","변역",true)?>>
+			번역<input type="radio" name="apply_field" value="번역" <?=set_checkbox("apply_field","번역",true)?>>
 			통역<input type="radio" name="apply_field" value="통역" <?=set_checkbox("apply_field","통역")?>>
 		</center>
 	  </div>
@@ -125,7 +126,7 @@
 			<?=form_error_one_of_multiple(["account_bank","account_number","account_name"])?>
 		</br></br>
 		  <select name="account_bank" tabindex="11" style="width: 25%;" >
-			  <option>은행</option>
+			  <option value="">은행</option>
 			  <option value="신한" <?=DEBUG === false ? set_select("account_bank","신한") : "selected"?>>신한</option>
 			  <option value="국민" <?=set_select("account_bank","국민")?>>국민</option>
 			</select>

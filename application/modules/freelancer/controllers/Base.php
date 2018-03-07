@@ -28,15 +28,18 @@ class Base extends \Base_Controller {
         }
         else{
             $this->db->trans_start();
-            $freelancerId=$this->freelancer_m->addByPostData();
+            $insert_id=$this->freelancer_m->addByPostData();
             $this->load->model("freelancer_translation_language/freelancer_translation_language_m");
-            $this->freelancer_translation_language_m->addByFreelancerIdAndLanguages($freelancerId,post('languages'));
+            $this->freelancer_translation_language_m->addByFreelancerIdAndLanguages($insert_id,post('languages'));
             $this->db->trans_complete();
             
             if($this->db->trans_status() === false)
                 echo "실패";
             else
-                echo "추가완료 $freelancerId";
+            {
+                echo "추가완료 $insert_id";
+                var_dump($this->freelancer_m->p_get($insert_id));
+            }
         }
     }
 //     public function update($id)

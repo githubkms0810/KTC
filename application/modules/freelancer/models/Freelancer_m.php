@@ -129,23 +129,23 @@ class Freelancer_m extends Pagination_Model
 		$this->form_validation->set_rules('address', '주소', 'trim|required');
 		$this->form_validation->set_rules('address_detail', '상세주소', 'trim|required');
 		$this->form_validation->set_rules('apply_field', '지원분야', 'trim|required');
-		$this->form_validation->set_rules('account_bank', '계좌은행이름', 'trim|required');
+		$this->form_validation->set_rules('account_bank', '은행이름', 'trim|required');
 		$this->form_validation->set_rules('account_number', '계좌번호', 'trim|required');
 		$this->form_validation->set_rules('account_name', '예금주', 'trim|required');
 		$this->form_validation->set_rules('languages[]', '사용언어', 'trim|required');
 		$this->form_validation->set_rules('translation_direction', '언어방향', 'trim|required');
-		$this->form_validation->set_rules('translation_direction2', '언어방향', 'trim|required');
 	}
 
 	public function addByPostData()
 	{
+		$this->load->library("post_helper");
 		$this->set_post("name");
 		$this->set_post("birth_year");
 		$this->set_post("birth_month");
 		$this->set_post("birth_day");
 		$this->set_post("sex");
-		$this->set("phone",$this->makePhoneByPostData());
-		$this->set("email",$this->makeEmailByPostData());
+		$this->set("phone",$this->post_helper->makePhoneByPostData());
+		$this->set("email",$this->post_helper->makeEmailByPostData());
 		$this->set_post("address");
 		$this->set_post("address_detail");
 		$this->set_post("apply_field");
@@ -162,14 +162,7 @@ class Freelancer_m extends Pagination_Model
 		$insert_id= $this->p_add();
 		return $insert_id;
 	}
-	private function makePhoneByPostData()
-	{
-		return post("phone_first")."-".post("phone_second")."-".post("phone_third");
-	}
-	private function makeEmailByPostData()
-	{
-		return post("email_first")."@".post("email_second");
-	}
+
 	//------ @query @list@Get 정의
 	
 	protected function _select()
