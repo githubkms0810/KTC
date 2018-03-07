@@ -5,19 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="icon" href="assets/img/favicon.ico">
-<link rel="stylesheet" type="text/css" media="all" href="assets/css/reset/styles.css">
-<link rel="stylesheet" type="text/css" media="all" href="assets/css/004_freesupport/form_styles.css">
-<link rel="stylesheet" type="text/css" media="all" href="assets/css/004_freesupport/form_switchery.min.css">
-<script type="text/javascript" src="assets/js/004_freesupport/form_switchery.min.js"></script>
+<link rel="icon" href="/public/subpage/img/favicon.ico">
+<link rel="stylesheet" type="text/css" media="all" href="/public/subpage/css/reset/styles.css">
+<link rel="stylesheet" type="text/css" media="all" href="/public/subpage/css/004_freesupport/form_styles.css">
+<link rel="stylesheet" type="text/css" media="all" href="/public/subpage/css/004_freesupport/form_switchery.min.css">
+<script type="text/javascript" src="/public/subpage/js/004_freesupport/form_switchery.min.js"></script>
 <title>Mediumish - A Medium style template by WowThemes.net</title>
 <!-- Bootstrap core CSS -->
-<link href="assets/css/002_sub/customer/bootstrap.min.css" rel="stylesheet">
+<link href="/public/subpage/css/002_sub/customer/bootstrap.min.css" rel="stylesheet">
 <!-- Fonts -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 <!-- Custom styles for this template -->
-<link href="assets/css/002_sub/customer/mediumish.css" rel="stylesheet">
+<link href="/public/subpage/css/002_sub/customer/mediumish.css" rel="stylesheet">
 
 
 <!--freesupport form-->
@@ -238,9 +238,9 @@
 <!-- Bootstrap core JavaScript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="assets/js/002_sub/customer/jquery.min.js"></script>
+<script src="/public/subpage/js/002_sub/customer/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="assets/js/002_sub/customer/bootstrap.min.js"></script>
-<script src="assets/js/002_sub/customer/ie10-viewport-bug-workaround.js"></script>
+<script src="/public/subpage/js/002_sub/customer/bootstrap.min.js"></script>
+<script src="/public/subpage/js/002_sub/customer/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>

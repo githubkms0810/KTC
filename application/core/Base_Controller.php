@@ -16,7 +16,7 @@ class Base_Controller extends Public_Controller {
 		parent::__construct();
 		$data["mainMenus"] = $this->_createMainMenus();
 		$data["subMenus"] = $this->_createSubMenus();
-		$this->template->load("admin/template",$data);
+		$this->template->load("base/template",$data);
 	}
 	
 	private function _createMainMenus()

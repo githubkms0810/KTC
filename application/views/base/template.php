@@ -1,17 +1,13 @@
-
-<?php foreach ( $mainMenus as $mainMenu ): ?>
-<a href="<?=$mainMenu->url?>" target="<?=$mainMenu->target?>"><?=$mainMenu->name?> </a>
-<?php endforeach; ?>
+This is sample base template page.
 <br>
+header
 <br>
-<?php foreach ( $subMenus as $subMenu ): ?>
-<a href="<?=$subMenu->url?>" target="<?=$subMenu->target?>"><?=$subMenu->name?></a>
-<?php endforeach; ?> 
-
+<a href="/freelancer/add">프리랜서 등록창 </a>
 <br>
+<a href="/translation_order/selectType">주문 (통역 / 번역)</a>
 <br>
-
+<a href="">포트폴리오</a>
+<br>
 <?=$this->load->views($content_view)?>
-<br>
 <br>
 footer
