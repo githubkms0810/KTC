@@ -43,12 +43,12 @@
 	<div class="free_col-2">
 	  <label>
 		생년월일</br>
-		<select  tabindex="2" style="width: 50%;">
+		<select  name="birth_year" tabindex="2" style="width: 50%;">
 			<option>연도</option>
 			<option>1939</option>
 			<option>1940</option>
 		  </select>
-		  <select tabindex="3" style="width: 24%;">
+		  <select name="birth_month" tabindex="3" style="width: 24%;">
 			<option>월</option>
 			<option>1</option>
 			<option>2</option>
@@ -63,7 +63,7 @@
 			<option>11</option>
 			<option>12</option>
 		  </select>
-		  <select tabindex="4" style="width: 24%;">
+		  <select name="birth_day" tabindex="4" style="width: 24%;">
 			<option>일</option>
 			<option>1</option>
 			<option>2</option>
@@ -101,7 +101,9 @@
 	</div>
 	<div class="free_col-3">
 		<label>성별</label>
-		<center style="position:relative; margin-bottom:9px;"><input type="checkbox" class="free_js-switch"></center>
+		<center style="position:relative; margin-bottom:9px;">
+            <input type="radio" name ="sex" value="남성">
+        </center>
 	  </div>	
 	<div class="free_col-3">
 	  <label>
