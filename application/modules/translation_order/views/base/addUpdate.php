@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" media="all" href="/public/subpage/css/004_freesupport/form_styles.css">
 <link rel="stylesheet" type="text/css" media="all" href="/public/subpage/css/004_freesupport/form_switchery.min.css">
 <script type="text/javascript" src="/public/subpage/js/004_freesupport/form_switchery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <title>Mediumish - A Medium style template by WowThemes.net</title>
 <!-- Bootstrap core CSS -->
 <link href="/public/subpage/css/002_sub/customer/bootstrap.min.css" rel="stylesheet">
@@ -43,6 +44,43 @@
 			</div>
 			<!-- 예제 끝-->
 			<?php endif; ?>
+			<script>
+
+				$(document).ready(function() {
+                  
+				  //검색하고 나서 결과를 보여줄때 검색 조건을 그대로 노출
+				  //if("${buyer}" == "회사"){ //buyer 가 회사 일 경우 셋팅
+				  if("buyer" == "회사"){
+					
+					  //라디오 버튼 값으로 선택
+					  $('input:radio[name="buyer"][value="회사"]').prop('checked', true);
+					  //개인 hide
+					  $( "#viewPersonal" ).hide();
+					  //회사 show
+					  $( "#viewCompany" ).show();
+				  }
+
+				$("input[name='buyer']:radio").change(function () {
+					//라디오 버튼 값을 가져온다.
+					var buyer = this.value;
+									  
+					if(buyer == "회사"){//회사인 경우
+						//회사 일때 개인 hide
+						$( "#viewPersonal" ).hide();
+						//회사 일때 회사 카테고리 show
+						$( "#viewCompany" ).show();
+					}
+					else if(buyer == "개인"){//개인인 경우
+						//개인 일때 개인 카테고리 show
+						$( "#viewPersonal" ).show();
+						//개인 일때 회사 카테고리 hide
+						$( "#viewCompany" ).hide();
+					}
+									  
+					});
+				});
+				
+			</script>
 			<div>
 				<h4>Project type</h4>
 
@@ -57,10 +95,8 @@
 					</li>
 				</ul>
 			</div>
-	
-			<div class="error-message">
-				<p>Please enter a valid email address</p>
-			</div>
+
+			<div id="viewCompany">
 
 			<div class="icon">
 				<label class="project_label" for="company">회사</label>
@@ -106,7 +142,9 @@
 					<input value="<?=DEBUG === false ? set_value("company_phone_second") : "매니저번호3" ?>" placeholder="5678" style="width:33%; display:inline-block;" class="budget" type="text" name="manager_phone_third" id="project_name" required>
 				</p>
 			</div>
-개인일때	
+			</div>
+			<!--개인일때-->
+			<div  id="viewPersonal">
 			<div class="icon">
 				<label class="project_label" for="personal_name">이름</label>
 				<input value="<?=DEBUG === false ? set_value("personal_name") : "개인이름테스트" ?>" class="user" type="text" name="personal_name" id="project_alonename" required>
@@ -125,6 +163,7 @@
 					<input value="<?=DEBUG === false ? set_value("personal_phone_second") : "개인번호2" ?>" placeholder="1234" style="width:33%; display:inline-block;" class="budget" type="text" name="personal_phone_second" id="project_name" required>
 					<input value="<?=DEBUG === false ? set_value("personal_phone_third") : "개인번호3" ?>" placeholder="5678" style="width:33%; display:inline-block;" class="budget" type="text" name="personal_phone_third" id="project_name" required>
 				</p>
+			</div>
 			</div>
 		</fieldset>
 	
@@ -163,9 +202,12 @@
 				</select>
 			
 			</div>
-	
+
+			<?php if ( $type === "통역" ): ?>
 			<div>
-				<h4>통역형태</h4>
+
+			<div>
+				<h4>통역 형태</h4>
 	
 				<p class="project_select icon">
 					<select name="interpret_kind" class="budget">
@@ -178,7 +220,7 @@
 			</div> 
 
 			<div>
-				<h4>번역사항</h4>
+				<h4>통역 사항</h4>
 				<p class="project_select icon">
 					<select name="translation_kind" class="budget">
 						<option value="">통역형태</option>
@@ -188,6 +230,28 @@
 					</select>
 				</p>
 			</div>
+
+			</div>
+			<?php endif; ?>
+
+			<?php if ( $type === "번역" ): ?>
+			<div>
+
+			<div>
+				<h4>통역 사항</h4>
+				<p class="project_select icon">
+					<select name="translation_kind" class="budget">
+						<option value="">통역형태</option>
+						<option  <?=set_select("translation_kind")?>>이것</option>
+						<option <?=DEBUG === true ? "selected" : ""?> <?=set_select("translation_kind")?>>저것</option>
+						<option <?=set_select("translation_kind")?>>그것</option>
+					</select>
+				</p>
+			</div>
+
+			</div>
+			<?php endif; ?>
+
 
 			<div>
 				<h4>번역 언어쌍</h4>
@@ -210,6 +274,9 @@
 				  </div>
 				</p>
 			</div>
+
+			<?php if ( $type === "통역" ): ?>
+			<div>
 
 			<div>
 				<h4>통역 장소</h4>
@@ -240,31 +307,37 @@
 			<div>
 				<h4>통역예산</h4>
 	
-				<div class="icon">
-					<input type="text" value="<?=DEBUG === false ? set_value("budget") : "예산테스트" ?>" placeholder="$1,000" style="width:80%; display:inline-block;" class="email" name="budget" id="project_budgetyet">			
-					<input class="project_form-list" type="checkbox" name="is_exist_budget" value="0" <?=set_checkbox("is_exist_budget","0")?> id="project_budgetyet" style="width:20%; display:inline-block;">
-					<label style="width:15%;" for="project_budgetyet">미정</label></p>
+				<div class="icon" style="margin-bottom:10px;">
+					<input type="text" value="<?=DEBUG === false ? set_value("budget") : "예산테스트" ?>" placeholder="$1,000" class="email" name="budget" id="project_budget">			
 				</div>
+					<ul class="project_form-list">
+						<li>
+							<input class="project_form-list" type="checkbox" name="is_exist_budget" value="0" <?=set_checkbox("is_exist_budget","0")?> id="project_budgetyet">
+							<label for="project_budgetyet">미정</label>
+						</li>
+					</ul>
+			
 
 			</div>
 
-			<div>
+			<div style="margin-bottom:1px;">
 				<h4>통역 장비</h4>
 	
-				<ul class="project_form-list">
+				<ul class="project_form-list" style="margin-bottom:1px;">
 					<li>
-						<input type="radio" name="is_need_equiment" value="1" <?=set_checkbox("is_need_equiment","1",true)?> id="project_want-1">
-						<label for="project_want-1">요청</label>
+						<input type="radio" name="is_need_equiment" value="1" onclick="div_OnOff(this.value,'equip_num');" <?=set_checkbox("is_need_equiment","1",true)?> id="project_want-1">
+						<label for="project_want-1"><?php $equipment="요청"?>요청</label>
 					</li>
 						
 					<li>
-						<input type="radio" name="is_need_equiment" value="0" <?=set_checkbox("is_need_equiment","0")?>  id="project_want-2">
-						<label for="project_want-2">미요청</label>
+						<input type="radio" name="is_need_equiment" value="0" onclick="div_OnOff(this.value,'equip_num');" <?=set_checkbox("is_need_equiment","0")?> id="project_want-2" checked>
+						<label for="project_want-2"><?php $equipment="미요청"?>미요청</label>
 					</li>
 				</ul>
 				
 			</div>
-			<div>
+			
+			<div id="equip_num" style="display:none; margin-top:1px; margin-bottom:50px;">
 				<h4>장비갯수</h4>
 				<select name="num_equiment">
 					<?php for ( $i = 1 ; $i <= 10 ; $i++ ): ?>
@@ -272,21 +345,68 @@
 					<?php endfor; ?>
 				</select>
 			</div>
+
+			<script>
+				function div_OnOff(v,id){
+ 					// 라디오 버튼 value 값 조건 비교
+ 					if(v == "1"){
+ 						document.getElementById(id).style.display = ""; // 보여줌
+ 					}
+					 else{
+ 						document.getElementById(id).style.display = "none"; // 숨김
+ 					}
+				}
+			</script>
+
 			<div>
-				<h4>통역 프로필</h4>
+				<h4>통역사 프로필</h4>
 	
 				<ul class="project_form-list">
 					<li>
-						<input type="radio" name="is_need_profile" value="1" <?=set_checkbox("is_need_profile","1")?> id="project_want-1" checked>
-						<label for="project_want-1">요청</label>
+						<input type="radio" name="is_need_profile" value="1" <?=set_checkbox("is_need_profile","1")?> id="project_profile-1" checked>
+						<label for="project_profile-1">요청</label>
 					</li>
 						
 					<li>
-						<input type="radio" name="is_need_profile" value="0" <?=set_checkbox("is_need_profile","0")?> id="project_want-2">
-						<label for="project_want-2">미요청</label>
+						<input type="radio" name="is_need_profile" value="0" <?=set_checkbox("is_need_profile","0")?> id="project_profile-2">
+						<label for="project_profile-2">미요청</label>
 					</li>
 				</ul>
 			</div>
+
+			</div>
+			<?php endif; ?>
+
+			<?php if ( $type === "번역" ): ?>
+			<div>
+
+			<div>
+				<h4>희망 납기일</h4>
+
+				<div class="icon">
+					<input type="text" value="<?=DEBUG === false ? set_value("interpret_pay_date") : "납기일테스트" ?>" placeholder="희망 납기일" class="email" name="interpret_pay_date" id="project_paydate">
+				</div>
+			</div>
+
+			</div>
+
+			<div>
+				<h4>번역 예산</h4>
+	
+				<div class="icon" style="margin-bottom:10px;">
+					<input type="text" value="<?=DEBUG === false ? set_value("budget") : "예산테스트" ?>" placeholder="$1,000" class="email" name="budget" id="project_budget">			
+				</div>
+					<ul class="project_form-list">
+						<li>
+							<input class="project_form-list" type="checkbox" name="is_exist_budget" value="0" <?=set_checkbox("is_exist_budget","0")?> id="project_budgetyet">
+							<label for="project_budgetyet">미정</label>
+						</li>
+					</ul>
+			
+			</div>
+
+			<?php endif; ?>
+
 
 			<div>
 				<h4>요구사항</h4>

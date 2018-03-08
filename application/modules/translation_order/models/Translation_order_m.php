@@ -198,6 +198,7 @@ class Translation_order_m extends Pagination_Model
 		$this->set_post("interpret_address_detail");
 		$this->set_post("interpret_start_date");
 		$this->set_post("interpret_end_date");
+		$this->set_post("interpret_pay_date");
 		$this->set_post("budget");
 		$this->set_post("is_need_equiment");
 		$this->set_post("num_equiment");
@@ -385,6 +386,7 @@ class Translation_order_m extends Pagination_Model
 		`interpret_address_detail` varchar(255),
 		`interpret_start_date` varchar(255),
 		`interpret_end_date` varchar(255),
+		`interpret_pay_date` varchar(255),
 		`is_need_equiment` boolean NOT NULL DEFAULT '0',
 		`is_need_profile` boolean NOT NULL DEFAULT '0',
 		`num_equiment` INT UNSIGNED DEFAULT '0',
