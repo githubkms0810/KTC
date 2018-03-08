@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" media="all" href="/public/subpage/css/004_freesupport/form_styles.css">
 <link rel="stylesheet" type="text/css" media="all" href="/public/subpage/css/004_freesupport/form_switchery.min.css">
 <script type="text/javascript" src="/public/subpage/js/004_freesupport/form_switchery.min.js"></script>
+<script type="text/javascript" src="/public/subpage/js/004_freesupport/jquery.js"></script>
 <title>Mediumish - A Medium style template by WowThemes.net</title>
 <!-- Bootstrap core CSS -->
 <link href="/public/subpage/css/002_sub/customer/bootstrap.min.css" rel="stylesheet">
