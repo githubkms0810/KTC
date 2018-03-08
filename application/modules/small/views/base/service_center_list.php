@@ -1,1 +1,1 @@
-고객센터 목록
+<a href="/small/service_center_detail">고객센터 상세보기</a>
