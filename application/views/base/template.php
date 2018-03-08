@@ -25,14 +25,15 @@
   <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="/public/subpage/css/002_sub/customer/mediumish.css" rel="stylesheet">
-  
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/public/subpage/css/005_project/style.css"> <!-- Resource style -->
-  <script src="/public/subpage/js/005_project/modernizr.js"></script> <!-- Modernizr -->
-    <!--메인css-->
+  <!--메인css-->
   <link rel="stylesheet" href="/public/css/beautiful.css">
   <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet" type="text/css">
 
+  <!--projectform-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/public/subpage/css/005_project/style.css"> <!-- Resource style -->
+  <script src="/public/subpage/js/005_project/modernizr.js"></script> <!-- Modernizr -->
+    
 </head>
 
 <body class="home" style="padding-top:0;">
