@@ -1,41 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>KTC</title>
-  <meta name="description" content="">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
 
-  <!--====================================================================================================-->
-  <link rel="icon" href="/public/subpage/img/favicon.ico">
-<link rel="stylesheet" type="text/css" media="all" href="/public/subpage/css/reset/styles.css">
-<link rel="stylesheet" type="text/css" media="all" href="/public/subpage/css/004_freesupport/form_styles.css">
-<link rel="stylesheet" type="text/css" media="all" href="/public/subpage/css/004_freesupport/form_switchery.min.css">
-<script type="text/javascript" src="/public/subpage/js/004_freesupport/form_switchery.min.js"></script>
-<script type="text/javascript" src="/public/subpage/js/004_freesupport/jquery.js"></script>
-<!-- Bootstrap core CSS -->
-<link href="/public/subpage/css/002_sub/customer/bootstrap.min.css" rel="stylesheet">
-<!-- Fonts -->
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
-<!-- Custom styles for this template -->
-<link href="/public/subpage/css/002_sub/customer/mediumish.css" rel="stylesheet">
-<!--메인css-->
-<link rel="stylesheet" href="/public/css/beautiful.css">
-<link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet" type="text/css">
+  <!--projectform-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/public/subpage/css/005_project/style.css"> <!-- Resource style -->
+  <script src="/public/subpage/js/005_project/modernizr.js"></script> <!-- Modernizr -->
 
-<!--projectform-->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="/public/subpage/css/005_project/style.css"> <!-- Resource style -->
-<script src="/public/subpage/js/005_project/modernizr.js"></script> <!-- Modernizr -->
-
-
-
-</head>
-<body>
+<!--번역,통역 폼 시작-->
 	<form action="/translation_order/add" method="post" class="project_form floating-labels" >
 		<fieldset>
 			
@@ -437,6 +406,51 @@
 					</li>
 				</ul>
 			</div>
+
+			<!--첨부파일폼시작-->
+
+			<div class="row">
+				<div class="col s12">
+				<!-- Uploader Dropzone -->
+					<div id="zdrop" class="fileuploader ">
+						<div id="upload-label" style="width: 200px;">
+							<i class="material-icons">cloud_upload</i>
+							<span class="title">Drag your Files here</span>
+							<span>Some description here <span/>
+						</div>
+					</div>
+					<!-- Preview collection of uploaded documents -->
+					<div class="preview-container">
+						<div class="header">
+							<span>Uploaded Files</span>	
+							<i id="controller" class="material-icons">keyboard_arrow_down</i>
+						</div>
+						<div class="collection card" id="previews">
+							<div class="collection-item clearhack valign-wrapper item-template" id="zdrop-template">
+								<div class="left pv zdrop-info" data-dz-thumbnail>
+									<div>
+										<span data-dz-name></span>
+										<span data-dz-size></span>
+									</div>
+									<div class="progress">
+										<div class="determinate" style="width:0" data-dz-uploadprogress></div>
+									</div>
+									<div class="dz-error-message">
+										<span data-dz-errormessage></span>
+									</div>
+								</div>
+
+							<div class="secondary-content actions">
+								<a href="#!" data-dz-remove class="btn-floating ph red white-text waves-effect waves-light">
+									<i class="material-icons white-text">clear</i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--첨부파일폼 끝-->
 	
 			<div class="icon">
 				<label class="project_label" for="project_textarea">Project description</label>
@@ -449,16 +463,10 @@
 		</fieldset>
 	</form>
 
+<script src="/public/subpage/js/000_fileuproad/materialize.min.js"></script>
+<script src="/public/subpage/js/000_fileuproad/js/jquery.min.js"></script>
+<script src="/public/subpage/js/000_fileuproad/js/dropzone.js"></script>
+<script  src="/public/subpage/js/000_fileuproad/js/index.js"></script>
 
-
-<!-- Bootstrap core JavaScript
-    ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="/public/subpage/js/002_sub/customer/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="/public/subpage/js/002_sub/customer/bootstrap.min.js"></script>
-<script src="/public/subpage/js/002_sub/customer/ie10-viewport-bug-workaround.js"></script>
 <script src="/public/subpage/js/005_project/jquery-2.1.1.js"></script>
 <script src="/public/subpage/js/005_project/main.js"></script>
-</body>
-</html>

@@ -12,27 +12,14 @@
   <meta name="author" content="">
 
   <!--====================================================================================================-->
-  <link rel="icon" href="/public/subpage/img/favicon.ico">
+  
   <link rel="stylesheet" type="text/css" media="all" href="/public/subpage/css/reset/styles.css">
-  <link rel="stylesheet" type="text/css" media="all" href="/public/subpage/css/004_freesupport/form_styles.css">
-  <link rel="stylesheet" type="text/css" media="all" href="/public/subpage/css/004_freesupport/form_switchery.min.css">
-  <script type="text/javascript" src="/public/subpage/js/004_freesupport/form_switchery.min.js"></script>
-  <script type="text/javascript" src="/public/subpage/js/004_freesupport/jquery.js"></script>
-  <!-- Bootstrap core CSS -->
-  <link href="/public/subpage/css/002_sub/customer/bootstrap.min.css" rel="stylesheet">
-  <!-- Fonts -->
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="/public/subpage/css/002_sub/customer/mediumish.css" rel="stylesheet">
+
   <!--메인css-->
   <link rel="stylesheet" href="/public/css/beautiful.css">
   <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet" type="text/css">
 
-  <!--projectform-->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/public/subpage/css/005_project/style.css"> <!-- Resource style -->
-  <script src="/public/subpage/js/005_project/modernizr.js"></script> <!-- Modernizr -->
+  
     
 </head>
 
@@ -131,14 +118,13 @@
 <!-- Bootstrap core JavaScript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="/public/subpage/js/002_sub/customer/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="/public/subpage/js/002_sub/customer/bootstrap.min.js"></script>
-<script src="/public/subpage/js/002_sub/customer/ie10-viewport-bug-workaround.js"></script>
-<script src="/public/subpage/js/005_project/jquery-2.1.1.js"></script>
-<script src="/public/subpage/js/005_project/main.js"></script>
+
+
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
     crossorigin="anonymous"></script>
+
+    
 <script src="/public/js/beautiful.js"></script>
 </body>
 </html>
