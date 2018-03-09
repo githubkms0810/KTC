@@ -50,7 +50,6 @@ form > div > label {
   font-weight: bold;
   text-transform: uppercase;
   color: #939393;
-  cursor: pointer;
 }
 form > div.free_switch > label {
   padding: 16px 20px 13px;
@@ -96,10 +95,14 @@ form > div > .free_col-4 {
   padding: 0;
   opacity: 0;
   z-index: 2;
+  cursor: pointer;
+
 }
 .free_form-list input[type="radio"] + label,
 .free_form-list input[type="checkbox"] + label {
   padding-left: 24px;
+  cursor: pointer;
+
 }
 .free_form-list input[type="radio"] + label::before,
 .free_form-list input[type="radio"] + label::after,
@@ -114,6 +117,7 @@ form > div > .free_col-4 {
   margin-top: -8px;
   width: 16px;
   height: 16px;
+  cursor: pointer;
 }
 .free_form-list input[type="radio"] + label::before,
 .free_form-list input[type="checkbox"] + label::before {
@@ -166,7 +170,7 @@ label > input {
   display: inline-block;
   position: relative;
   width: 100%;
-  height: 33px;
+  height: 40px;
   line-height: 27px;
   margin: 5px -5px -5px;
   padding: 7px 5px 3px;
@@ -178,6 +182,7 @@ label > input {
   font-size: 14px;
   opacity: .6;
   transition: all linear .3s;
+  cursor: pointer;
 }
 
 .free_col-submit {
@@ -201,6 +206,7 @@ label > select {
   font-size: 14px;
   opacity: .4;
   transition: all linear .3s;
+  cursor: pointer;
 }
 
 label > input:focus, label > select:focus {
