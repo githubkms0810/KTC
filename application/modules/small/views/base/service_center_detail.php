@@ -65,7 +65,7 @@
 			</div>
 
 			<!-- Begin Featured Image -->
-			<img class="featured-image img-fluid" src="assets/img/demopic/10.jpg" alt="">
+			<img class="featured-image img-fluid" src="/public/subpage/img/demopic/10.jpg" alt="">
 			<!-- End Featured Image -->
 
 			<!-- Begin Post Content -->
@@ -87,7 +87,13 @@
 				</p>
 			</div>
 			<!-- End Post Content -->
-
+<!-- Begin Tags -->
+            <div class="after-post-tags">
+				<ul class="tags">
+					<li><a href="/small/service_center_list">목록으로</a></li>
+				</ul>
+			</div>
+			<!-- End Tags -->
 			
 
 		</div>
@@ -97,8 +103,6 @@
 </div>
 <!-- End Article
 ================================================== -->
-<a href="/small/service_center_list">목록으로</a>
-
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
