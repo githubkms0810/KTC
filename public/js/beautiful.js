@@ -10,20 +10,30 @@ $(document).ready(function(){
     $(".home-header__logo").removeClass("home-header__logo_remove");
   });
   
-  
-  var $logo_list = $(".home-logo--list"),
-    $logo_list_w = $logo_list.width(),
-    logo_wrap = $(".home-logo__wrap");
-  
-  console.log($logo_list_w);
-  console.log($logo_list.width());
-  
-  setTimeout(function() {
-    console.log($logo_list_w);
-  }, 400);
-
   $('.home-nav--btn').on('click',function(){
     $('.home-nav').toggle();
   });
 
+
+  // 로고 슬라이더 시간 단위는 밀리세컨드 입니다. 1000ms = 1초
+  var duration = 8000;
+
+  var home_logo = $('.home-logo--list');
+
+  function logo_slide() {
+    home_logo.animate({
+      left: '-='+1225
+    }, duration, function(){
+      home_logo.find('div').eq(0).clone().appendTo(home_logo);
+      home_logo.find('div').eq(0).remove();
+      home_logo.css({
+        left: 0
+      })
+    });
+  }
+
+  setInterval(function(){
+    logo_slide()
+  }, 300);
+  
 });

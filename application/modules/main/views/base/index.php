@@ -7,36 +7,64 @@
     </p>
     <a href="/translation_order/selectType" class="home-btn">프로젝트 의뢰하기</a>
 </section>
-<section class="home-logo">
+  <section class="home-logo">
     <div class="home-logo__wrap">
-        <ul class="home-logo--list">
-            <li class="home-logo--list__item">
-                <img src="/public/images/logo-1.png">
-            </li>
-            <li class="home-logo--list__item">
-                <img src="/public/images/logo-2.png">
-            </li>
-            <li class="home-logo--list__item">
-                <img src="/public/images/logo-3.png">
-            </li>
-            <li class="home-logo--list__item">
-                <img src="/public/images/logo-4.png">
-            </li>
-            <li class="home-logo--list__item">
-                <img src="/public/images/logo-5.png">
-            </li>
-            <li class="home-logo--list__item">
-                <img src="/public/images/logo-6.png">
-            </li>
-            <li class="home-logo--list__item">
-                <img src="/public/images/logo-7.png">
-            </li>
-            <li class="home-logo--list__item">
-                <img src="/public/images/logo-8.png">
-            </li>
-        </ul>
+      <ul class="home-logo--list">
+        <div>
+          <li class="home-logo--list__item">
+            <img src="assets/img/logo-1.png">
+          </li>
+          <li class="home-logo--list__item">
+            <img src="assets/img/logo-2.png">
+          </li>
+          <li class="home-logo--list__item">
+            <img src="assets/img/logo-3.png">
+          </li>
+          <li class="home-logo--list__item">
+            <img src="assets/img/logo-4.png">
+          </li>
+          <li class="home-logo--list__item">
+            <img src="assets/img/logo-5.png">
+          </li>
+          <li class="home-logo--list__item">
+            <img src="assets/img/logo-6.png">
+          </li>
+          <li class="home-logo--list__item">
+            <img src="assets/img/logo-7.png">
+          </li>
+          <li class="home-logo--list__item">
+            <img src="assets/img/logo-8.png">
+          </li>
+        </div>
+        <div>
+          <li class="home-logo--list__item">
+            <img src="assets/img/logo-1.png">
+          </li>
+          <li class="home-logo--list__item">
+            <img src="assets/img/logo-2.png">
+          </li>
+          <li class="home-logo--list__item">
+            <img src="assets/img/logo-3.png">
+          </li>
+          <li class="home-logo--list__item">
+            <img src="assets/img/logo-4.png">
+          </li>
+          <li class="home-logo--list__item">
+            <img src="assets/img/logo-5.png">
+          </li>
+          <li class="home-logo--list__item">
+            <img src="assets/img/logo-6.png">
+          </li>
+          <li class="home-logo--list__item">
+            <img src="assets/img/logo-7.png">
+          </li>
+          <li class="home-logo--list__item">
+            <img src="assets/img/logo-8.png">
+          </li>
+        </div>
+      </ul>
     </div>
-</section>
+  </section>
 <section class="home-section home-section_padding">
     <div class="bc-container">
         <div>
