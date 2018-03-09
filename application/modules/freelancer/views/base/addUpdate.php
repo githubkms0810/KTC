@@ -10,8 +10,7 @@
 	<div class="free_col-2">
 	  <label style="padding: 20px 20px 10px; margin-top:2px;">
 		이름
-		<input name="name" value="<?=set_value('name')?>" placeholder="What is your full name?" id="free_name" tabindex="1" style="width: 100%;">
-		<!-- <input name="name" value="<?=DEBUG === false ? set_value('name') : "이름테스트"?>" placeholder="What is your full name?" id="free_name" tabindex="1" style="width: 100%;"> -->
+		<input name="name" value="<?=DEBUG === false ? set_value('name') : "이름테스트"?>" placeholder="What is your full name?" id="free_name" tabindex="1" style="width: 100%;">
 		<?=form_error("name")?>
 		</label>
 	</div>
