@@ -32,7 +32,7 @@
 		<div class="card">
 			<div class="row">
 				<div class="col-md-5 wrapthumbnail">
-					<a href="post.html">
+					<a href="/content/">
 						<div class="thumbnail" style="background-image:url(/public/subpage/img/demopic/1.jpg);">
 						</div>
 					</a>
