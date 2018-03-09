@@ -39,7 +39,7 @@
 				</div>
 				<div class="col-md-7">
 					<div class="card-block">
-						<h2 class="card-title"><a href="post.html"><?=$row->title?></a></h2>
+						<h2 class="card-title"><a href="/content/<?=$row->id?>?board_key=<?=$board->key?>"><?=$row->title?></a></h2>
 						<h4 class="card-text"><?=$row->substr_desc?></h4>
 						<div class="metafooter">
 							<div class="wrapfooter">
