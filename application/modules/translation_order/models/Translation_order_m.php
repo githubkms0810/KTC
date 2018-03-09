@@ -244,7 +244,6 @@ class Translation_order_m extends Pagination_Model
 	protected function _get_admin()
 	{
 	}
-	
 	protected function _get_base()
 	{
 		
@@ -261,14 +260,15 @@ class Translation_order_m extends Pagination_Model
 
 	//@listGet 필드네임 정의
 	//admin
-	// public function listData_admin()
-	// {
-	// 	return array(
-	// 		array("displayName"=>"ID","fieldName"=>"id"),
-	// 		array("displayName"=>"이름","fieldName"=>"name"),
-	// 		array("displayName"=>"보이기","fieldName"=>"is_display"),
-	// 	);
-	// }
+	public function listData_admin()
+	{
+		return array(
+			array("displayName"=>"ID","fieldName"=>"id"),
+			array("displayName"=>"종류","fieldName"=>"type"),
+			array("displayName"=>"상태","fieldName"=>"translation_status"),
+			array("displayName"=>"생성일","fieldName"=>"created"),
+		);
+	}
 	// public function getData_admin()
 	// {
 	// 	return array(
@@ -392,6 +392,7 @@ class Translation_order_m extends Pagination_Model
 		`is_need_profile` boolean NOT NULL DEFAULT '0',
 		`num_equiment` INT UNSIGNED DEFAULT '0',
 	
+		`is_display` boolean NOT NULL DEFAULT '1',
 		`is_secret` boolean NOT NULL DEFAULT '0',
 		`sort` INT NOT NULL DEFAULT '0',
 		`created` datetime NOT NULL DEFAULT NOW(),
@@ -418,9 +419,11 @@ class Translation_order_m extends Pagination_Model
 			KEY `idx_is_need_equiment` (`is_need_equiment`),
 			KEY `idx_is_need_profile` (`is_need_profile`),
 			KEY `idx_num_equiment` (`num_equiment`),
+
+			KEY `idx_is_display` (`is_display`),
 			KEY `idx_is_secret` (`is_secret`),
 			KEY `idx_sort` (`sort`),
-
+			KEY `idx_created` (`created`),
 		PRIMARY KEY (`id`)
 		) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 

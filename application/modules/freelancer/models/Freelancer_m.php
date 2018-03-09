@@ -208,14 +208,15 @@ class Freelancer_m extends Pagination_Model
 
 	//@listGet 필드네임 정의
 	//admin
-	// public function listData_admin()
-	// {
-	// 	return array(
-	// 		array("displayName"=>"ID","fieldName"=>"id"),
-	// 		array("displayName"=>"이름","fieldName"=>"name"),
-	// 		array("displayName"=>"보이기","fieldName"=>"is_display"),
-	// 	);
-	// }
+	public function listData_admin()
+	{
+		return array(
+			array("displayName"=>"ID","fieldName"=>"id"),
+			array("displayName"=>"이름","fieldName"=>"name"),
+			array("displayName"=>"관리자 승인","fieldName"=>"is_admin_confirm"),
+			array("displayName"=>"생성일","fieldName"=>"created"),
+		);
+	}
 	// public function getData_admin()
 	// {
 	// 	return array(
@@ -340,6 +341,7 @@ class Freelancer_m extends Pagination_Model
 		`num_translation_per_day` int UNSIGNED,
 		`admin_score` INT,
 		`admin_memo` text,
+
 		`is_admin_confirm` boolean NOT NULL default '0',
 		`is_display` boolean NOT NULL DEFAULT '1',
 		`is_secret` boolean NOT NULL DEFAULT '0',

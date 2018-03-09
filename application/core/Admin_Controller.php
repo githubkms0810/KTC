@@ -22,8 +22,13 @@ class Admin_Controller extends Public_Controller
 	private function _createMainMenus()
 	{
 		$this->menudata_creator->addMainMenu("메인","main","dashboard",site_url("admin/main/index"));
-		// $this->menudata_creator->addMainMenu("유저","user","users",site_url("admin/user/list"));
-		// $this->menudata_creator->addMainMenu("게시판","board","boards",site_url("admin/board/list"));
+        if($this->userstate->isDeveloper()){
+            $this->menudata_creator->addMainMenu("유저","user","users",site_url("admin/user/list"));
+            $this->menudata_creator->addMainMenu("게시판","board","boards",site_url("admin/board/list"));
+        }
+        $this->menudata_creator->addMainMenu("프리랜서","freelancer","freelancer_list",site_url("admin/freelancer/list"));
+        $this->menudata_creator->addMainMenu("주문","translation_order","translation_order_list",site_url("admin/translation_order/list"));
+        
 		// $this->menudata_creator->addMainMenu("상품","product","products",site_url("admin/product/list"));
 		// $this->menudata_creator->addMainMenu("파일","file","files",site_url("admin/file/list"));
 		// $this->menudata_creator->addMainMenu("API","API","APIS",site_url("admin/api/list"));
@@ -40,11 +45,11 @@ class Admin_Controller extends Public_Controller
 		// $this->menudata_creator->addSubMenu("user","설정","setting",site_url("admin/user/setting"));
 		// $this->menudata_creator->addSubMenu("user","유저","users",site_url("admin/user/list"));
 		// $this->menudata_creator->addSubMenu("user","포인트신청","point_order",site_url("admin/point_order/list"));
-		// $this->menudata_creator->addSubMenu("user","로그","user_log",site_url("admin/user_log/list"));
-		// $this->menudata_creator->addSubMenu("user","세션","session",site_url("admin/session/list"));
-		// $this->menudata_creator->addSubMenu("board","게시판","boards",site_url("admin/board/list"));
-		// $this->menudata_creator->addSubMenu("board","게시물","contents",site_url("admin/content/list"));
-		// $this->menudata_creator->addSubMenu("board","게시물 로그","content_log",site_url("admin/content_log/list"));
+		$this->menudata_creator->addSubMenu("user","로그","user_log",site_url("admin/user_log/list"));
+		$this->menudata_creator->addSubMenu("user","세션","session",site_url("admin/session/list"));
+		$this->menudata_creator->addSubMenu("board","게시판","boards",site_url("admin/board/list"));
+		$this->menudata_creator->addSubMenu("board","게시물","contents",site_url("admin/content/list"));
+		$this->menudata_creator->addSubMenu("board","게시물 로그","content_log",site_url("admin/content_log/list"));
 		// $this->menudata_creator->addSubMenu("board","댓글","replys",site_url("admin/reply/list"));
 		// $this->menudata_creator->addSubMenu("product","설정","setting",site_url("admin/product/setting"));
 		// $this->menudata_creator->addSubMenu("product","주문","priduct_orders",site_url("admin/product_order/list"));

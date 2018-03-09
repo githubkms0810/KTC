@@ -9,11 +9,7 @@ class Admin extends \Admin_Controller
     {
         parent::__construct();
     }
-    // public function index()
-    // {
-    //     echo "main index";
-    // }
-   
+
     public function login()
     {
         

@@ -76,14 +76,15 @@ class Base extends \Base_Controller {
     public function login()
     {
         
-        if($this->userstate->isLogin() === true) //forbbidn login user
+        if($this->userstate->isLogin() === true && $this->userstate->isAdmin()) //forbbidn login user
         {
-            redirect("/");
+            redirect("admin/main/index");
             return;
         }
         if($this->input->method() === 'get') //get
         {
             $data["content_view"] = "base/login";
+            $this->template->load("admin/template",$data);
             $this->template->render($data);
             return;
         }
@@ -129,10 +130,7 @@ class Base extends \Base_Controller {
             }
             
         }
-        if($this->userstate->user->api_key === null)
-        {
-            $this->user_m->refresh_apiKey($this->userstate->user->id);
-        }
+      
         
         $this->ajax_helper->json($data);
     }
