@@ -161,7 +161,7 @@ class Translation_order_m extends Pagination_Model
 	public function listIsPortfolioWithLimit($limit)
 	{
 		$this->db->where("is_portfolio","1");
-		$this->db->limit(10,0);
+		$this->db->limit(8,0);
 		return $this->list();
 	}
 	public function setRulesWhenAdd()
@@ -363,7 +363,7 @@ class Translation_order_m extends Pagination_Model
 		-- `order_id` INT UNSIGNED,
 		`type` ENUM('번역','통역') NOT NULL,
 		`translation_status` ENUM('전달중','전달완료','진행중','완료') NOT NULL DEFAULT '전달중',
-		`image` varchar(255),
+		`image` varchar(255) DEFAULT '/public/images/portfolio-1.png',
 		`buyer` ENUM('회사','개인') NOT NULL DEFAULT '회사',
 		`company` varchar(255),
 		`department` varchar(255),

@@ -15,10 +15,12 @@ class Base extends \Base_Controller {
         $this->template->render($data);
         
     }
-    // public function list()
-    // {
-
-    // }
+    public function list()
+    {
+        $data["portfolioes"] = $this->translation_order_m->listIsPortfolioWithLimit(10);
+		$data["content_view"] = "base/list";
+		$this->template->render($data);
+    }   
     public function add()
     {
         $this->translation_order_m->setRulesWhenAdd();
