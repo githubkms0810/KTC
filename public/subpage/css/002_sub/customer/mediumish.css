@@ -128,6 +128,10 @@ section {
 	margin-top:5px;
 	font-size:0.95rem;
 }
+div.portfolio_content-sort {
+	width: 49.5%; 
+	display: inline-block;
+}
 .author-meta {
 	flex:1 1 auto;
 	white-space:nowrap!important;
@@ -303,7 +307,6 @@ blockquote {
 	fill:rgba(0,0,0,.44);
 }
 .graybg {
-	background-color:#fafafa;
 	padding:40px 0 46px;
 	position:relative;
 }
