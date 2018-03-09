@@ -210,7 +210,11 @@
 
 	  <div class="free_col-2">
 			<label style="padding: 20px 20px 10px;">
-			  첨부파일</br>
+				<!-- 파일업로드 폼 적용하려다 이상한거같아서 주석처리 해놈 시작-->
+				<!-- <iframe class="iframe_dynamic_height" height="100px;" width="100%" maginwidth="0" marginheight="0" frameborder="0"  scrolling="no"  src="/file/upload" ></iframe>
+					<script  src="/public/subpage/js/000_fileuproad/iframe-dynmic-height.js"></script> -->
+					<!-- 파일업로드 폼 적용하려다 이상한거같아서 주석처리 해놈 끝-->
+				첨부파일</br>
 			  <input placeholder="파일명" readonly id="free_file" name="free_file" tabindex="1" style="width: 80%;">
 			  <button style="width:15%;">첨부하기</button>
 			</label>
