@@ -23,6 +23,7 @@ class Base extends \Base_Controller {
             echo validation_errors();
             $data['type'] = get("type");
             $data["content_view"] = "base/addUpdate";
+            // $this->load->view("base/addUpdate");
             $this->template->render($data);
         }
         else{
@@ -39,7 +40,10 @@ class Base extends \Base_Controller {
             }
         }
     }
-
+    function fileupload()
+    {
+        $this->load->view("base/fileUpload");
+    }
  
 }
 
