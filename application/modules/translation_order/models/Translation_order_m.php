@@ -411,7 +411,7 @@ class Translation_order_m extends Pagination_Model
 	-- ,
 		KEY `idx_type` (`type`),
 		KEY `idx_title` (`title`),
-		KEY `idx_desc` (`desc`),
+		FULLTEXT `idx_desc` (`desc`),
 			KEY `idx_translation_status` (`translation_status`),
 			KEY `idx_buyer` (`buyer`),
 			KEY `idx_is_exist_fax` (`is_exist_fax`),
