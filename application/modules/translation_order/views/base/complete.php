@@ -1,5 +1,6 @@
 sample order complete page
 <br>
-변역?통역? :  <?=$order->kind?> 
+변역?통역? :  <?=$order->type?> 
 <br>
-<?=var_dump($order) ?>
+
+<?=DEBUG === true ? var_dump($order) : ""?>

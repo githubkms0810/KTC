@@ -38,13 +38,17 @@ class Base extends \Base_Controller {
                 my_redirect($this->referer);
             }
             else{
-                $data["freelancer"] =$this->freelancer_m->p_get($insert_id);
-                $data["content_view"]= "base/complete";
-                $this->template->render($data);
+                redirect("/freelancer/complete/$insert_id");
             }
         }
     }
   
+    function complete($id){
+        $data["freelancer"] =$this->freelancer_m->p_get($id);
+        $data["content_view"]= "base/complete";
+        $this->template->render($data);
+    }
+    
 //     public function update($id)
 //     {
 //         parent::update($id);

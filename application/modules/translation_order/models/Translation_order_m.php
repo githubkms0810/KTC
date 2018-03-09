@@ -354,8 +354,8 @@ class Translation_order_m extends Pagination_Model
 	{
 		$createTableQuery = "CREATE TABLE `{$this->table}`(
 		`id` INT UNSIGNED NULL AUTO_INCREMENT, 
-		`order_id` INT UNSIGNED,
-		`type` ENUM('번역','통역') varchar(255),
+		-- `order_id` INT UNSIGNED,
+		`type` ENUM('번역','통역') NOT NULL,
 		`translation_status` ENUM('전달중','전달완료','진행중','완료') NOT NULL DEFAULT '전달중',
 		`image` varchar(255),
 		`buyer` ENUM('회사','개인') NOT NULL DEFAULT '회사',
@@ -395,6 +395,31 @@ class Translation_order_m extends Pagination_Model
 		`is_secret` boolean NOT NULL DEFAULT '0',
 		`sort` INT NOT NULL DEFAULT '0',
 		`created` datetime NOT NULL DEFAULT NOW(),
+	-- CONSTRAINT `fkTranslationOrdeR_order_id` FOREIGN KEY (`order_id`) REFERENCES product_order(`id`)
+	-- ON UPDATE CASCADE
+	-- ON DELETE CASCADE
+	-- ,
+		KEY `idx_type` (`type`),
+			KEY `idx_translation_status` (`translation_status`),
+			KEY `idx_buyer` (`buyer`),
+			KEY `idx_is_exist_fax` (`is_exist_fax`),
+			KEY `idx_translation_kind` (`translation_kind`),
+			KEY `idx_translation_before` (`translation_before`),
+			KEY `idx_translation_after` (`translation_after`),
+			KEY `idx_is_exist_budget` (`is_exist_budget`),
+			KEY `idx_is_get_tax_bill` (`is_get_tax_bill`),
+			KEY `idx_is_get_cash_receipt` (`is_get_cash_receipt`),
+			KEY `idx_is_use_confidential` (`is_use_confidential`),
+			KEY `idx_file_group_id` (`file_group_id`),
+			KEY `idx_interpret_kind` (`interpret_kind`),
+			KEY `idx_interpret_start_date` (`interpret_start_date`),
+			KEY `idx_interpret_end_date` (`interpret_end_date`),
+			KEY `idx_interpret_pay_date` (`interpret_pay_date`),
+			KEY `idx_is_need_equiment` (`is_need_equiment`),
+			KEY `idx_is_need_profile` (`is_need_profile`),
+			KEY `idx_num_equiment` (`num_equiment`),
+			KEY `idx_is_secret` (`is_secret`),
+			KEY `idx_sort` (`sort`),
 
 		PRIMARY KEY (`id`)
 		) ENGINE=InnoDB DEFAULT CHARSET=utf8;";

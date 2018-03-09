@@ -36,15 +36,15 @@ class Base extends \Base_Controller {
                 my_redirect($this->referer);
             }
             else{            
-                $data["order"] =$this->translation_order_m->p_get($insert_id);
-                $data["content_view"]= "base/complete";
-                $this->template->render($data);
+                redirect("/translation_order/complete/$insert_id");
             }
         }
     }
-    function fileupload()
-    {
-        $this->load->view("base/fileUpload");
+
+    function complete($id){
+        $data["order"] =$this->translation_order_m->p_get($id);
+        $data["content_view"]= "base/complete";
+        $this->template->render($data);
     }
  
 }
