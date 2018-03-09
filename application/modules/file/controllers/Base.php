@@ -13,7 +13,10 @@ class Base extends \Base_Controller {
         // $this->update = true;
         $this->delete = true;
     }
-    
+    function upload()
+    {
+        $this->load->view("base/upload");
+    }   
     function uploadImage()
     {
        

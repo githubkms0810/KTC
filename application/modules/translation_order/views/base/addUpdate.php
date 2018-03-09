@@ -410,16 +410,11 @@
 			<!--첨부파일폼시작-->
 			<div class="row">
 				<div class="col s12">
-			
-
-
-			<iframe class="myIframe" height="100%" width="100%" maginwidth="0" marginheight="0" frameborder="0"  scrolling="no"  src="/translation_order/fileupload" ></iframe>
-			<!-- iframe 동적 height 스크립트 시작 -->
-			<script type="text/javascript" language="javascript"> 
-				$('.myIframe').css('height', $(window).height()+'px');
-			</script>
-			<!-- iframe 동적 height 스크립트 끝 -->
-			</div>
+					<iframe class="iframe_dynamic_height" height="100px;" width="100%" maginwidth="0" marginheight="0" frameborder="0"  scrolling="no"  src="/file/upload" ></iframe>
+					<!-- iframe 동적 height 스크립트 시작 -->
+					<script  src="/public/subpage/js/000_fileuproad/iframe-dynmic-height.js"></script>
+					<!-- iframe 동적 height 스크립트 끝 -->
+				</div>
 			<!--첨부파일폼 끝-->
 	
 			<div class="icon">
@@ -433,10 +428,4 @@
 		</fieldset>
 	</form>
 
-<!-- <script src="/public/subpage/js/000_fileuproad/materialize.min.js"></script> -->
-<!-- <script src="/public/subpage/js/000_fileuproad/jquery.min.js"></script> -->
-<!-- <script src="/public/subpage/js/000_fileuproad/dropzone.js"></script> -->
-<!-- <script  src="/public/subpage/js/000_fileuproad/index.js"></script> -->
-
-<!-- <script src="/public/subpage/js/005_project/jquery-2.1.1.js"></script> -->
 <script src="/public/subpage/js/005_project/main.js"></script>
