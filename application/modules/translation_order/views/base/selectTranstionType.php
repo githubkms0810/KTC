@@ -1,6 +1,6 @@
 <section class="home-hero-project">
-    <h2 class="home-hero-title">프로젝트 의뢰하기</h2>
-    <p class="home-hero-des">
+    <h2 class="home-hero-title-project">프로젝트 의뢰하기</h2>
+    <p class="home-hero-des-project">
         코리아 통번역 센터는<br>
         318건의 프로젝트를 맡았고,<br>
         103명의 통번역사와 함께하고 있습니다
