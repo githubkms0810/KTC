@@ -184,7 +184,7 @@ html{}
 .join-list ul li .img span{border-radius:50%; overflow:hidden; border:1px solid #c8c9cc; display:inline-block}
 .join-list ul li .img span img{width:100%}
 .join-list ul li .name{font-size:23px; color:#1a1a1a; font-weight:bold; padding:30px 0 0 0}
-.join-list ul li .txt{font-size:14px; color:#333333; padding:20px 0 20px 0; font-weight:bold; line-height:25px; height:120px}
+.join-list ul li .txt{font-size:14px; color:#333333; padding:20px 0 20px 0; line-height:25px; height:120px}
 .join-list ul li .btn{border:1px solid #c5c6c9; border-left:0; border-right:0;  padding:15px 10px; text-align:center; font-weight:bold; font-size:20px; color:#acadb0; box-sizing:border-box}
 .join-list ul li.on{border:1px solid #3891ac; border-bottom:0; box-sizing:border-box}
 .join-list ul li.on > div{ border-bottom:0}
