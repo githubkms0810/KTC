@@ -3,7 +3,7 @@
     <p class="home-hero-des-project">
         고객님의 의뢰에 최선을 다하는 코리아 통번역 센터입니다!
     </p>
-    <a href="/small/portfolio_list" class="home-btn">포트폴리오 보러가기</a>
+    <a href="/translation_order/list" class="home-btn">포트폴리오 보러가기</a>
 </section>
 
 <link rel="stylesheet" type="text/css" href="/public/subpage/css/001_jobdance/css/jquery.bxslider.css" media="all">
