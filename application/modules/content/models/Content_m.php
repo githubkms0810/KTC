@@ -385,9 +385,9 @@ class Content_M extends Pagination_Model
 	}
 	public function alertTable()
 	{
-		// $fieldName = "test";
-		// $addFieldQuery = "ALTER TABLE `{$this->table}` ADD `{$fieldName}` INT NOT NULL AFTER `created`, ADD INDEX `idx_{$fieldName}` (`{$fieldName}`);";
-		// $this->_addField($fieldName,$addFieldQuery);
+		$fieldName = "image";
+		$addFieldQuery = "ALTER TABLE `{$this->table}` ADD `{$fieldName}` varchar(255) NOT NULL DEFAULT '/public/images/no_thumnail.png' AFTER `desc`, ADD INDEX `idx_{$fieldName}` (`{$fieldName}`);";
+		$this->_addField($fieldName,$addFieldQuery);
 		
 	}
 }
