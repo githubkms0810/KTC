@@ -23,7 +23,7 @@ $(document).ready(function(){
   function logo_slide() {
     home_logo.animate({
       left: '-='+1225
-    }, duration, function(){
+    }, duration, 'linear', function(){
       home_logo.find('div').eq(0).clone().appendTo(home_logo);
       home_logo.find('div').eq(0).remove();
       home_logo.css({

@@ -10,30 +10,58 @@
 <section class="home-logo">
     <div class="home-logo__wrap">
         <ul class="home-logo--list">
-            <li class="home-logo--list__item">
-                <img src="/public/images/logo-1.png">
-            </li>
-            <li class="home-logo--list__item">
-                <img src="/public/images/logo-2.png">
-            </li>
-            <li class="home-logo--list__item">
-                <img src="/public/images/logo-3.png">
-            </li>
-            <li class="home-logo--list__item">
-                <img src="/public/images/logo-4.png">
-            </li>
-            <li class="home-logo--list__item">
-                <img src="/public/images/logo-5.png">
-            </li>
-            <li class="home-logo--list__item">
-                <img src="/public/images/logo-6.png">
-            </li>
-            <li class="home-logo--list__item">
-                <img src="/public/images/logo-7.png">
-            </li>
-            <li class="home-logo--list__item">
-                <img src="/public/images/logo-8.png">
-            </li>
+            <div>
+                <li class="home-logo--list__item">
+                    <img src="/public/images/logo-1.png">
+                </li>
+                <li class="home-logo--list__item">
+                    <img src="/public/images/logo-2.png">
+                </li>
+                <li class="home-logo--list__item">
+                    <img src="/public/images/logo-3.png">
+                </li>
+                <li class="home-logo--list__item">
+                    <img src="/public/images/logo-4.png">
+                </li>
+                <li class="home-logo--list__item">
+                    <img src="/public/images/logo-5.png">
+                </li>
+                <li class="home-logo--list__item">
+                    <img src="/public/images/logo-6.png">
+                </li>
+                <li class="home-logo--list__item">
+                    <img src="/public/images/logo-7.png">
+                </li>
+                <li class="home-logo--list__item">
+                    <img src="/public/images/logo-8.png">
+                </li>
+            </div>
+            <div>
+                <li class="home-logo--list__item">
+                    <img src="/public/images/logo-1.png">
+                </li>
+                <li class="home-logo--list__item">
+                    <img src="/public/images/logo-2.png">
+                </li>
+                <li class="home-logo--list__item">
+                    <img src="/public/images/logo-3.png">
+                </li>
+                <li class="home-logo--list__item">
+                    <img src="/public/images/logo-4.png">
+                </li>
+                <li class="home-logo--list__item">
+                    <img src="/public/images/logo-5.png">
+                </li>
+                <li class="home-logo--list__item">
+                    <img src="/public/images/logo-6.png">
+                </li>
+                <li class="home-logo--list__item">
+                    <img src="/public/images/logo-7.png">
+                </li>
+                <li class="home-logo--list__item">
+                    <img src="/public/images/logo-8.png">
+                </li>
+            </div>
         </ul>
     </div>
 </section>
