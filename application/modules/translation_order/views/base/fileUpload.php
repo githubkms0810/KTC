@@ -1,3 +1,4 @@
+
 <div class="row">
 				<div class="col s12">
 				<!-- 업로드 파일 시작 -->
@@ -46,8 +47,14 @@
 <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/dropzone.js'></script> -->
 
   
-
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
     <script  src="/public/subpage/js/000_fileuproad/index.js"></script>
+    <script src="/public/subpage/js/000_fileuproad/materialize.min.js"></script>
+<!-- <script src="/public/subpage/js/000_fileuproad/jquery.min.js"></script> -->
+<script src="/public/subpage/js/000_fileuproad/dropzone.js"></script>
 
 				<!-- 업로드 파일 끝 -->
 			</div>
