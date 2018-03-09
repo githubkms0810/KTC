@@ -200,9 +200,9 @@ class Translation_order_m extends Pagination_Model
 		$this->set_post("interpret_end_date");
 		$this->set_post("interpret_pay_date");
 		$this->set_post("budget");
-		$this->set_post("is_need_equiment");
+		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_need_equiment","0");
 		$this->set_post("num_equiment");
-		$this->set_post("is_need_profile");
+		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_need_profile","0");
 		$this->set_post("requirements");
 		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_get_tax_bill","0");
 		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_get_cash_receipt","0");
@@ -355,6 +355,7 @@ class Translation_order_m extends Pagination_Model
 		$createTableQuery = "CREATE TABLE `{$this->table}`(
 		`id` INT UNSIGNED NULL AUTO_INCREMENT, 
 		`order_id` INT UNSIGNED,
+		`type` ENUM('번역','통역') varchar(255),
 		`translation_status` ENUM('전달중','전달완료','진행중','완료') NOT NULL DEFAULT '전달중',
 		`image` varchar(255),
 		`buyer` ENUM('회사','개인') NOT NULL DEFAULT '회사',
@@ -403,6 +404,7 @@ class Translation_order_m extends Pagination_Model
 	// @field
 	public function alertTable()
 	{
+		
 		// $fieldName = "test";
 		// $addFieldQuery = "ALTER TABLE `{$this->table}` ADD `{$fieldName}` INT UNSIGNED NOT NULL AFTER `created`, ADD INDEX `idx_{$fieldName}` (`{$fieldName}`);";
 		// $this->_addField($fieldName,$addFieldQuery);

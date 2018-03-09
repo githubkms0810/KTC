@@ -31,12 +31,14 @@ class Base extends \Base_Controller {
             $insert_id=$this->translation_order_m->addByPostData();
             $this->db->trans_complete();
             
-            if($this->db->trans_status() === false)
-                echo "실패";
-            else
-            {
-                echo "추가완료 $insert_id";
-                var_dump($this->translation_order_m->p_get($insert_id));
+            if($this->db->trans_status() === false){
+                alert("추가 실패.ERRORCODE :".transectionError);
+                my_redirect($this->referer);
+            }
+            else{            
+                $data["order"] =$this->translation_order_m->p_get($insert_id);
+                $data["content_view"]= "base/complete";
+                $this->template->render($data);
             }
         }
     }

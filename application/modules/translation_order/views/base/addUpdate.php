@@ -6,16 +6,10 @@
 
 <!--번역,통역 폼 시작-->
 	<form action="/translation_order/add" method="post" class="project_form floating-labels" >
+		<input type="hidden" name="type" value="<?=$type?>">
 		<fieldset>
 			
 			<legend><?=$type?></legend>
-			<!-- 예제 시작-->
-			<?php if ( $type === "통역" ): ?>
-			<div>
-				통역장비 input폼이 들어갈 자라입니다.
-			</div>
-			<!-- 예제 끝-->
-			<?php endif; ?>
 			<script>
 
 				$(document).ready(function() {
