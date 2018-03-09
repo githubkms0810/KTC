@@ -11,52 +11,52 @@
     <div class="bc-container">
         <h2 class="home-title">포트폴리오</h2>
         <p class="home-des">기밀 유지를 원하는 프로젝트의 정보는 공개하지 않습니다</p>
-        <ul class="home-portfolio">
-            <li class="home-portfolio__item">
+        <ul class="home-portfolio-list">
+            <li class="home-portfolio__itemlist">
                 <img src="/public/images/portfolio-1.png">
                 <a href="/small/portfolio_detail">열람하기</a>
             </li>
-            <li class="home-portfolio__item">
+            <li class="home-portfolio__itemlist">
                 <img src="/public/images/portfolio-1.png">
                 <a href="/small/portfolio_detail">열람하기</a>
             </li>
-            <li class="home-portfolio__item">
+            <li class="home-portfolio__itemlist">
                 <img src="/public/images/portfolio-1.png">
                 <a href="/small/portfolio_detail">열람하기</a>
             </li>
-            <li class="home-portfolio__item">
+            <li class="home-portfolio__itemlist">
                 <img src="/public/images/portfolio-1.png">
                 <a href="/small/portfolio_detail">열람하기</a>
             </li>
-            <li class="home-portfolio__item">
+            <li class="home-portfolio__itemlist">
                 <img src="/public/images/portfolio-1.png">
                 <a href="/small/portfolio_detail">열람하기</a>
             </li>
-            <li class="home-portfolio__item">
+            <li class="home-portfolio__itemlist">
                 <img src="/public/images/portfolio-1.png">
                 <a href="/small/portfolio_detail">열람하기</a>
             </li>
-            <li class="home-portfolio__item">
+            <li class="home-portfolio__itemlist">
                 <img src="/public/images/portfolio-1.png">
                 <a href="/small/portfolio_detail">열람하기</a>
             </li>
-            <li class="home-portfolio__item">
+            <li class="home-portfolio__itemlist">
                 <img src="/public/images/portfolio-1.png">
                 <a href="/small/portfolio_detail">열람하기</a>
             </li>
-            <li class="home-portfolio__item">
+            <li class="home-portfolio__itemlist">
                 <img src="/public/images/portfolio-1.png">
                 <a href="/small/portfolio_detail">열람하기</a>
             </li>
-            <li class="home-portfolio__item">
+            <li class="home-portfolio__itemlist">
                 <img src="/public/images/portfolio-1.png">
                 <a href="/small/portfolio_detail">열람하기</a>
             </li>
-            <li class="home-portfolio__item">
+            <li class="home-portfolio__itemlist">
                 <img src="/public/images/portfolio-1.png">
                 <a href="/small/portfolio_detail">열람하기</a>
             </li>
-            <li class="home-portfolio__item">
+            <li class="home-portfolio__itemlist">
                 <img src="/public/images/portfolio-1.png">
                 <a href="/small/portfolio_detail">열람하기</a>
             </li>
