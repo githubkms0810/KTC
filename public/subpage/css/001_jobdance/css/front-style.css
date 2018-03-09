@@ -15,7 +15,7 @@
 
 /* ui */
 html{}
-.wrap{position:relative; padding:84px 0 0 0}
+.wrap{position:relative; padding:0;}
 .header{position:relative; height:80px; background:#fff; border-bottom:1px solid #dcdcdc}
 .header.fixed{position:fixed; left:0; top:0px; width:100%; z-index:9999; padding-top:4px}
 .header h1{position:absolute; left:50px; top:25px}
@@ -168,12 +168,12 @@ html{}
 .sub-content .client{position:relative; width:100%; margin:0px 0 0 0; padding:30px 0; border-top:1px solid #d9d8d7;}
 
 /* join */
-.join-wrap{position:relative; padding:66px 0 130px 0;}
+.join-wrap{position:relative; padding:100px 0 80px 0;}
 .join-tit{font-size:20px; color:#262626; text-align:center; line-height:32px}
 .join-tit span{font-weight:bold}
 .join-tit b{font-size:30px; font-weight:bold}
 
-.join-list{position:relative; overflow:hidden; padding:80px 0 0 0}
+.join-list{position:relative; overflow:hidden; padding:60px 0 0 0}
 .join-list ul{position:relative; overflow:hidden; font-size:0; text-align:center}
 .join-list ul > li{display:inline-block; width:347px; border:1px solid #c5c6c9; border-bottom:0; box-sizing:border-box; margin-right:10px}
 .join-list ul li .poi{position:relative}
@@ -361,7 +361,7 @@ html{}
 .paging > ul li.on span i{background:#e9ebee}
 
 /* 170120 */
-.join-navi{position:relative; padding:30px 0 0 0; text-align:center; background:#e9ebee}
+.join-navi{position:relative; padding:30px 0 20px 0; text-align:center; background:#e9ebee}
 .join-navi > div{width:900px; margin:0 auto; position:relative}
 .join-navi ul{position:relative}
 .join-navi ul:after{content:''; display:block; clear:both}
@@ -370,10 +370,10 @@ html{}
 .join-navi ul li:nth-child(2){text-align:center}
 .join-navi ul li:nth-child(3){text-align:right}
 .fix{text-align:center; display:inline-block; }
-.fix .bom{display:inline-block; width:37px; height:37px; border:3px solid #b1b2b5; background:#fff; text-align:center; line-height:39px; color:#b1b2b5; border-radius:50%; font-size:20px; font-weight:bold; position:relative; z-index:10}
+.fix .bom{display:inline-block; width:37px; height:37px; border:3px solid #b1b2b5; background:#fff; text-align:center; line-height:32px; color:#b1b2b5; border-radius:50%; font-size:18px; font-weight:bold; position:relative; z-index:10}
 .fix p{font-size:14px; margin:10px 0 0 0; color:#acadb0; font-weight:bold}
 .join-navi > div:after{width:845px; height:2px; background:#b9babd; content:''; display:block; position:absolute; left:30px; top:20px; z-index:5}
-.fix .bom:after{position:absolute; width:41px; height:41px; border:5px solid #e9ebee; border-radius:50%; left:-7px; top:-7px; z-index:5; content:''; display:inline-block; background:none;}
+.fix .bom:after{position:absolute; width:35px; height:35px; border:5px solid #e9ebee; border-radius:50%; left:-7px; top:-7px; z-index:5; content:''; display:inline-block; background:none;}
 .join-navi ul li.on .fix .bom{border:3px solid #3891ac; color:#3891ac}
 .join-navi ul li.on p{color:#3891ac}
 

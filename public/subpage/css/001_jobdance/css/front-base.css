@@ -1,7 +1,7 @@
-@charset "utf-8";
+@charset "utf-8"; 
 
 /* HTML Reset */
-
+/*
 html,
 body {
     width: 100%;
@@ -117,10 +117,10 @@ table {
     border-collapse: collapse;
     border-spacing: 0
 }
-
+*/
 
 /* HTML5 Element Reset */
-
+/*
 article,
 aside,
 canvas,
@@ -136,9 +136,9 @@ section,
 summary {
     display: block
 }
-
+*/
 /* Input Reset */
-
+/*
 input[type="checkbox"] {
     margin: 0;
     vertical-align: middle;
@@ -151,9 +151,9 @@ input[type="radio"] {
     margin-right: 2px
 }
 
-
+*/
 /* Mobile Reset */
-
+/*
 * {
     -webkit-text-size-adjust: none
 }
@@ -169,9 +169,9 @@ textarea {
     -webkit-border-radius: 0
 }
 
-
+*/
 /* UI JS CSS */
-
+/*
 .fadeinUp {
     opacity: 1;
     animation: fadeInUpAni 0.6s ease;
@@ -203,15 +203,15 @@ textarea {
         opacity: 1
     }
 }
-
+*/
 
 /* 20170306 */
-
+/*
 html,
 body {
     margin: 0px;
     width: 100%;
     height: 100%;
 }
-
+*/
 /* 200170306 */
