@@ -22,8 +22,8 @@
     <div class="sub-content">
         <div class="join-wrap">
             <div class="join-tit">
-                코리아 통번역 센터는 <b>318건</b>의 <span>프로젝트</span>를 하였고,<br>
-                <b>104개</b>의 <span>통번역사</span>와 함께합니다
+                코리아 통번역 센터는 <b>318건</b>의 프로젝트를 진행하였고,<br>
+                <b>104명</b>의 통번역사와 함께합니다
             </div>
             <div class="join-list">
                 <ul>
