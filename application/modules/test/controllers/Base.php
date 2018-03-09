@@ -20,13 +20,24 @@ class Base extends \Base_Controller {
     public function index()
     {
 
-    // $this->load->library(["freelancer\\FreelancerImporter"=>"FreelancerImporter"]);
-    // $this->FreelancerImporter->testMode = true;
-    // $this->FreelancerImporter->import();
+    
        $this->load->view("test");
        
     }
-   
+    public function migration($start,$end)
+    {
+        echo $start;
+        echo "<br>";
+        echo $end;
+        $this->load->library(["freelancer\\FreelancerImporter"=>"FreelancerImporter"]);
+        $this->FreelancerImporter->import($start,$end);
+    }
+
+    public function getcount()
+    {
+        $this->load->library(["freelancer\\FreelancerImporter"=>"FreelancerImporter"]);
+        echo $this->FreelancerImporter->getCount();
+    }
     private function outtest(&$output)
     {
         $output = $b;

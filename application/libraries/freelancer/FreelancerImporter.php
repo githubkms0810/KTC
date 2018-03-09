@@ -27,13 +27,27 @@ class FreelancerImporter
       ];
       $this->testMode = false;
    }
-   
-   public function import()
+   public function getCount()
    {
+         return count($this->freelancers);
+   }
+   public function import($start,$end)
+   {
+      //    $start = $config["start"];
+      //    $end = $config["end"];
       set_time_limit(1800);
       $ci = $this->ci;
-      foreach($this->freelancers as $row)
+      echo "<br>";
+      echo $start;
+      echo "<br>";
+echo $end;
+echo "<br>";
+      // foreach($this->freelancers as $row)
+      for($j=(int)$start ; $j < (int)$end ; $j++)
       {
+            echo "<br>";
+            echo $j;
+            $row= $this->freelancers[$j];
          $ci->db->trans_start();
          //기본 정보 추가
          $ci->db->set("profile_image",$row["userfile"]);
@@ -110,21 +124,27 @@ class FreelancerImporter
 
    private function convertEstimateToapplication_file_directory($estimate2)
    {
-      return "public/upload/regacy/{$estimate2}";
+      return "/public/upload/regacy/{$estimate2}";
    }
 
-   private function getBirthYearByBirth(string $birth)
+   private function getBirthYearByBirth($birth)
    {
+      if($birth === null)
+      return null;
       return mb_substr($birth,0,4);
    }
 
-   private function getBirthMonthByBirth(string $birth)
+   private function getBirthMonthByBirth($birth)
    {
+         if($birth === null)
+         return null;
       return mb_substr($birth,7,2);
    }
 
-   private function getBirthDayByBirth(string $birth)
+   private function getBirthDayByBirth($birth)
    {
+      if($birth === null)
+      return null;
       return mb_substr($birth,12,2);
    }
 

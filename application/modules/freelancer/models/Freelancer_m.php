@@ -164,7 +164,6 @@ class Freelancer_m extends Pagination_Model
 	}
 
 	//------ @query @list@Get 정의
-	
 	protected function _select()
 	{
 		$this->db->select("
@@ -188,10 +187,17 @@ class Freelancer_m extends Pagination_Model
 	protected function _from()
 	{
 		$this->db->from("$this->table as {$this->as}");
+		$this->db->join("freelancer_translation_language as f_t_l","{$this->as}.id = f_t_l.freelancer_id","LEFT");
+		$this->db->join("freelancer_translation_field as f_t_f","{$this->as}.id = f_t_f.freelancer_id","LEFT");
 		// $this->db->join("user as u","{$this->as}.user_id = u.id","LEFT");
 	}
 	protected function _get_admin()
 	{
+		$this->db->select("
+			group_concat(f_t_l.language) as languague,
+			group_concat(f_t_f.detail) as field_detail
+		");
+		$this->db->group_by("{$this->as}.id");
 	}
 	protected function _get_base()
 	{
@@ -199,6 +205,7 @@ class Freelancer_m extends Pagination_Model
 	}
 	protected function _list_admin()
 	{
+		$this->db->group_by("{$this->as}.id");
 	}
 	protected function _list_base()
 	{
@@ -217,14 +224,16 @@ class Freelancer_m extends Pagination_Model
 			array("displayName"=>"생성일","fieldName"=>"created"),
 		);
 	}
-	// public function getData_admin()
-	// {
-	// 	return array(
-	// 		array("displayName"=>"ID","fieldName"=>"id"),
-	// 		array("displayName"=>"이름","fieldName"=>"name"),
-	// 		array("displayName"=>"보이기","fieldName"=>"is_display"),
-	// 	);
-	// }
+	public function getData_admin()
+	{
+		return array_merge(parent::getData_admin(),
+		array(
+			array("displayName"=>"언어","fieldName"=>"languague"),
+			array("displayName"=>"분야","fieldName"=>"field_detail"),
+			)
+		);
+		
+	}
 	//base
 	// public function listData_base()
 	// {
