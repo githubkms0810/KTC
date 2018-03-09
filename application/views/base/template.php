@@ -41,7 +41,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="/small/service_center_list">고객센터</a>
+                            <a href="/content/list?board_key=notice">고객센터</a>
                         </li>
                         <li>
                             <a href="/translation_order/selectType">의뢰하기</a>

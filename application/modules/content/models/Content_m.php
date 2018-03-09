@@ -20,12 +20,24 @@ class Content_M extends Pagination_Model
 	//------commponent 정의
 	
 
-	// protected function _component_addUpdate()
+	protected function _component_addUpdate()
+	{
+		return array(
+		
+			array("inputName"=>"title","displayName"=>"제목"),
+			array("method"=>"summernote","inputName"=>"desc","displayName"=>"내용"),
+		);
+	}
+	protected function _component_add()
+	{
+		return array(
+			array("updateDefault"=>"name","method"=>"inputSearch","table"=>"board","searchField"=>["name","key"],"searchFieldDisplayName"=>["게시판이름","게시판키"],"displayName"=>"게시판검색","inputName"=>"board_key","inputValue"=>"key"),
+		);
+	}
+	// protected function _component_update()
 	// {
-	// 	return array(
-	// 	);
+
 	// }
-	
 	//------@CRUD 추가,업데이트 할 정보 정의
 	
 
@@ -53,11 +65,25 @@ class Content_M extends Pagination_Model
 	{
 		$row = $this->p_get($id);
 		$this->addFileAnd_SetFileGroupId($row);
-
+		
 		$this->set_addUpdate_base();
 		return $this->p_update($id);
 	}
-	
+	protected function _add_admin()
+	{
+		$this->_setQueryUserIdOrLoginUserId();
+		return parent::_add_admin();
+	}
+	protected function _update_admin($id)
+	{
+		$this->_setQueryUserIdOrLoginUserId();
+		return parent::_update_admin($id);
+	}
+	private function _setQueryUserIdOrLoginUserId()
+	{
+		if($this->input->post("user_id") === null)
+		$this->set("user_id",$this->user->id);
+	}
 	////
 	private function addFileAnd_SetFileGroupId($row=null)
 	{
@@ -207,7 +233,11 @@ class Content_M extends Pagination_Model
 	}
 	protected function _list_base()
 	{
-		
+		$this->db->select("IF(
+			LENGTH({$this->as}.desc) > 120,
+			CONCAT(LEFT({$this->as}.desc,120),'...'),
+			{$this->as}.desc
+			) as substr_desc");
 		if(($board_key = $this->input->get('board_key')) !== null) //게시판 key값으로
 		{
 			$this->db->where("b_c.board_key",$board_key);

@@ -20,10 +20,10 @@ class Base extends \Base_Controller {
     public function index()
     {
 
-    $this->load->library(["freelancer\\FreelancerImporter"=>"FreelancerImporter"]);
-    $this->FreelancerImporter->testMode = true;
-    $this->FreelancerImporter->import();
-    //    $this->load->view("test");
+    // $this->load->library(["freelancer\\FreelancerImporter"=>"FreelancerImporter"]);
+    // $this->FreelancerImporter->testMode = true;
+    // $this->FreelancerImporter->import();
+       $this->load->view("test");
        
     }
    
@@ -42,7 +42,7 @@ class Base extends \Base_Controller {
     }
     public function test2()
     {
-     
+        var_dump(post("test"));
         //
     }
     function post($url,$data,$fileName=null){

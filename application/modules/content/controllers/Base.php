@@ -118,7 +118,8 @@ class Base extends \Base_Controller {
         }
         
         //뷰
-        
+
+        $data["board"] = $this->board;
         $data['content_view'] = array("base/{$this->kind}/list","base/search");
         $this->data += $data;
         parent::list();
