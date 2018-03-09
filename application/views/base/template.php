@@ -9,6 +9,9 @@
         <link rel="stylesheet" type="text/css" media="all" href="/public/subpage/css/reset/styles.css">
         <link rel="stylesheet" href="/public/css/beautiful.css">
         <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet" type="text/css">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+        <script src="/public/js/beautiful.js"></script>
     </head>
     <body class="home">
         <header class="home-header">
@@ -83,8 +86,5 @@
                 &copy; KTC. All Rights Reserved.
             </div>
         </footer>
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-        crossorigin="anonymous"></script>
-        <script src="/public/js/beautiful.js"></script>
     </body>
 </html>
