@@ -28,7 +28,7 @@
                             <a href="/small/about_us">회사 소개</a>
                         </li>
                         <li>
-                            <a href="/small/portfolio_list">포트폴리오</a>
+                            <a href="/translation_order/list">포트폴리오</a>
                         </li>
                         <li class="home-nav__item">
                             <a href="#">함께하기</a>
