@@ -15,7 +15,10 @@ class Base extends \Base_Controller {
         $this->template->render($data);
         
     }
+    // public function list()
+    // {
 
+    // }
     public function add()
     {
         $this->translation_order_m->setRulesWhenAdd();

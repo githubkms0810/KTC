@@ -158,6 +158,12 @@ class Translation_order_m extends Pagination_Model
 	// `num_equiment` INT UNSIGNED DEFAULT '0',
 
 	//------ @cusotm
+	public function listIsPortfolioWithLimit($limit)
+	{
+		$this->db->where("is_portfolio","1");
+		$this->db->limit(10,0);
+		return $this->list();
+	}
 	public function setRulesWhenAdd()
 	{
 		if(post("buyer")=== "회사"){
@@ -390,6 +396,7 @@ class Translation_order_m extends Pagination_Model
 		`interpret_pay_date` varchar(255),
 		`is_need_equiment` boolean NOT NULL DEFAULT '0',
 		`is_need_profile` boolean NOT NULL DEFAULT '0',
+		`is_portfolio` boolean NOT NULL DEFAULT '0',
 		`num_equiment` INT UNSIGNED DEFAULT '0',
 	
 		`is_display` boolean NOT NULL DEFAULT '1',
@@ -419,6 +426,7 @@ class Translation_order_m extends Pagination_Model
 			KEY `idx_is_need_equiment` (`is_need_equiment`),
 			KEY `idx_is_need_profile` (`is_need_profile`),
 			KEY `idx_num_equiment` (`num_equiment`),
+			KEY `idx_is_portfolio` (`is_portfolio`),
 
 			KEY `idx_is_display` (`is_display`),
 			KEY `idx_is_secret` (`is_secret`),

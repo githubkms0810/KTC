@@ -84,34 +84,14 @@
         <h2 class="home-title">포트폴리오</h2>
         <p class="home-des">기밀 유지를 원하는 프로젝트의 정보는 공개하지 않습니다</p>
         <ul class="home-portfolio">
+        <?php foreach ( $portfolioes as $portfolio ): ?>
             <li class="home-portfolio__item">
-                <img src="/public/images/portfolio-1.png">
+                <img src="<?=$portfolio->image?>">
                 <a href="#">열람하기</a>
             </li>
-            <li class="home-portfolio__item">
-                <img src="/public/images/portfolio-1.png">
-                <a href="#">열람하기</a>
-            </li>
-            <li class="home-portfolio__item">
-                <img src="/public/images/portfolio-1.png">
-                <a href="#">열람하기</a>
-            </li>
-            <li class="home-portfolio__item">
-                <img src="/public/images/portfolio-1.png">
-                <a href="#">열람하기</a>
-            </li>
-            <li class="home-portfolio__item">
-                <img src="/public/images/portfolio-1.png">
-            </li>
-            <li class="home-portfolio__item">
-                <img src="/public/images/portfolio-1.png">
-            </li>
-            <li class="home-portfolio__item">
-                <img src="/public/images/portfolio-1.png">
-            </li>
-            <li class="home-portfolio__item">
-                <img src="/public/images/portfolio-1.png">
-            </li>
+            
+        <?php endforeach; ?>
+            
         </ul>
         <a href="/small/portfolio_list" class="home-btn home-btn_small">다른 프로젝트 보기</a>
     </div>
