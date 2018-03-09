@@ -38,16 +38,13 @@ class Base extends \Base_Controller {
                 my_redirect($this->referer);
             }
             else{
-                redirect("/freelancer/complete/$insert_id");
+                alert("프리랜서 등록이 완료 되었습니다. 검수 후 문자 통보해드립니다.");
+                my_redirect("/");
             }
         }
     }
   
-    function complete($id){
-        $data["freelancer"] =$this->freelancer_m->p_get($id);
-        $data["content_view"]= "base/complete";
-        $this->template->render($data);
-    }
+    
     
 //     public function update($id)
 //     {

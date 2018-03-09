@@ -39,16 +39,12 @@ class Base extends \Base_Controller {
                 my_redirect($this->referer);
             }
             else{            
-                redirect("/translation_order/complete/$insert_id");
+                alert("주문이 완료 되었습니다. 연락드리겠습니다.");
+                my_redirect("/");
             }
         }
     }
 
-    function complete($id){
-        $data["order"] =$this->translation_order_m->p_get($id);
-        $data["content_view"]= "base/complete";
-        $this->template->render($data);
-    }
  
 }
 
