@@ -361,6 +361,8 @@ class Translation_order_m extends Pagination_Model
 		$createTableQuery = "CREATE TABLE `{$this->table}`(
 		`id` INT UNSIGNED NULL AUTO_INCREMENT, 
 		-- `order_id` INT UNSIGNED,
+		`title` varchar(255),
+		`desc` text,
 		`type` ENUM('번역','통역') NOT NULL,
 		`translation_status` ENUM('전달중','전달완료','진행중','완료') NOT NULL DEFAULT '전달중',
 		`image` varchar(255) DEFAULT '/public/images/portfolio-1.png',
@@ -408,6 +410,8 @@ class Translation_order_m extends Pagination_Model
 	-- ON DELETE CASCADE
 	-- ,
 		KEY `idx_type` (`type`),
+		KEY `idx_title` (`title`),
+		KEY `idx_desc` (`desc`),
 			KEY `idx_translation_status` (`translation_status`),
 			KEY `idx_buyer` (`buyer`),
 			KEY `idx_is_exist_fax` (`is_exist_fax`),

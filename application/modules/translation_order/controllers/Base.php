@@ -17,7 +17,7 @@ class Base extends \Base_Controller {
     }
     public function get($id)
     {
-        $data["portfolioe"] = $this->translation_order_m->p_get($id);
+        $data["portfolio"] = $this->translation_order_m->p_get($id);
 		$data["content_view"] = "base/get";
 		$this->template->render($data);
     }
