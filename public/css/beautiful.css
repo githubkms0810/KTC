@@ -414,7 +414,7 @@ body {
   height: 82px;
   border-bottom: 1px solid #a3adfb;
   background-color: #919bfc;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   right: 0;
