@@ -11,9 +11,10 @@
 ================================================== -->
 <div class="container">
 	<div class="mainheading">
-		<h1 class="sitetitle">Mediumish</h1>
-		<p class="lead">
-			 Bootstrap theme, medium style, simply perfect for bloggers
+		<h1 class="sitetitle" style="text-align: center;">고객센터</h1>
+		<p class="lead" style="text-align: center;"></br>
+            <a href="/small/service_center_list">공지사항</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/small/service_center_list">FAQ</a>
 		</p>
 	</div>
 <!-- End Site Title
@@ -23,7 +24,7 @@
 	================================================== -->
 	<section class="featured-posts">
 	<div class="section-title">
-		<h2><span>Featured</span></h2>
+		<h2><span>공지사항</span></h2>
 	</div>
 	<div class="card-columns listfeaturedtag">
 
@@ -32,7 +33,7 @@
 			<div class="row">
 				<div class="col-md-5 wrapthumbnail">
 					<a href="post.html">
-						<div class="thumbnail" style="background-image:url(assets/img/demopic/1.jpg);">
+						<div class="thumbnail" style="background-image:url(/public/subpage/img/demopic/1.jpg);">
 						</div>
 					</a>
 				</div>
@@ -63,7 +64,7 @@
 			<div class="row">
 				<div class="col-md-5 wrapthumbnail">
 					<a href="post.html">
-						<div class="thumbnail" style="background-image:url(assets/img/demopic/2.jpg);">
+						<div class="thumbnail" style="background-image:url(/public/subpage/img/demopic/2.jpg);">
 						</div>
 					</a>
 				</div>
@@ -94,7 +95,7 @@
 			<div class="row">
 				<div class="col-md-5 wrapthumbnail">
 					<a href="post.html">
-						<div class="thumbnail" style="background-image:url(assets/img/demopic/3.jpg);">
+						<div class="thumbnail" style="background-image:url(/public/subpage/img/demopic/3.jpg);">
 						</div>
 					</a>
 				</div>
@@ -125,7 +126,7 @@
 			<div class="row">
 				<div class="col-md-5 wrapthumbnail">
 					<a href="post.html">
-						<div class="thumbnail" style="background-image:url(assets/img/demopic/4.jpg);">
+						<div class="thumbnail" style="background-image:url(/public/subpage/img/demopic/4.jpg);">
 						</div>
 					</a>
 				</div>
