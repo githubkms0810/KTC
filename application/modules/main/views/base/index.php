@@ -87,7 +87,7 @@
         <?php foreach ( $portfolioes as $portfolio ): ?>
             <li class="home-portfolio__item">
                 <img src="<?=$portfolio->image?>">
-                <a href="#">열람하기</a>
+                <a href="/translation_order/<?=$portfolio->id?>">열람하기</a>
             </li>
             
         <?php endforeach; ?>

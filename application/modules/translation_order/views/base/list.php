@@ -16,7 +16,7 @@
             
             <li class="home-portfolio__itemlist">
                 <img src="<?=$portfolio->image?>">
-                <a href="/small/portfolio_detail">열람하기</a>
+                <a href="/translation_order/<?=$portfolio->id?>">열람하기</a>
             </li>
         <?php endforeach; ?>
         

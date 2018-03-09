@@ -15,6 +15,12 @@ class Base extends \Base_Controller {
         $this->template->render($data);
         
     }
+    public function get($id)
+    {
+        $data["portfolioe"] = $this->translation_order_m->p_get($id);
+		$data["content_view"] = "base/get";
+		$this->template->render($data);
+    }
     public function list()
     {
         $data["portfolioes"] = $this->translation_order_m->listIsPortfolioWithLimit(10);
