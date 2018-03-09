@@ -418,8 +418,8 @@
 			<script type="text/javascript" language="javascript"> 
 				$('.myIframe').css('height', $(window).height()+'px');
 			</script>
-			</div>
 			<!-- iframe 동적 height 스크립트 끝 -->
+			</div>
 			<!--첨부파일폼 끝-->
 	
 			<div class="icon">
