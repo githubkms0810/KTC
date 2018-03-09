@@ -532,7 +532,7 @@ body {
     border-bottom: 2px solid #fff;
   }
 }
-/*  */
+/* home-hero */
 .home-hero {
   text-align: center;
   height: 638px;
@@ -544,6 +544,28 @@ body {
 .home-hero-title {
   font-size: 40px;
   padding: 70px 0 20px;
+}
+.home-hero-des {
+  font-size: 18px;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 840px) {
+  .home-hero-title {
+    font-size: 50px;
+  }
+}
+/* home-hero-project */
+.home-hero-project {
+  text-align: center;
+  color: #fff;
+  background-image: linear-gradient(133deg, #261388, #345ecc 73%, #7559ff);
+  background-position: center top;
+  padding: 0 20px;
+}
+.home-hero-title {
+  font-size: 40px;
+  padding: 100px 0 20px;
 }
 .home-hero-des {
   font-size: 18px;

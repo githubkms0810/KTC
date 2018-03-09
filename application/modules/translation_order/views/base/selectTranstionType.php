@@ -1,4 +1,4 @@
-<section class="home-hero">
+<section class="home-hero-project">
     <h2 class="home-hero-title">프로젝트 의뢰하기</h2>
     <p class="home-hero-des">
         코리아 통번역 센터는<br>
