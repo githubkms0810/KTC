@@ -103,7 +103,7 @@
 				<span class="author-meta">
 				<span class="post-name">
                     <a href="author.html">프로젝트 이름</a></span><br/>
-                <span class="post-date"><?=$portfolio->name?></span>
+                <span class="post-date"><?=$portfolio->title?></span>
                 </span>
                 </div>
 
@@ -174,7 +174,7 @@
             <div class="after-post-tags">
 				<ul class="tags" style="margin:0;">
                 </br></br>
-					<li><a href="/small/service_center_list">목록으로</a></li>
+					<li><a href="/translation_order/list">목록으로</a></li>
 				</ul>
 			</div>
             <!-- End Tags -->
