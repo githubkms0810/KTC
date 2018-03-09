@@ -21,23 +21,23 @@ class Base extends \Base_Controller {
         $this->template->render($data);
     }
     
-    public function portfolio_list()
-    {
-        $data["content_view"] = "base/portfolio_list";
-        $this->template->render($data);
-    }
+    // public function portfolio_list()
+    // {
+    //     $data["content_view"] = "base/portfolio_list";
+    //     $this->template->render($data);
+    // }
     
-    public function portfolio_detail()
-    {
-        $data["content_view"] = "base/portfolio_detail";
-        $this->template->render($data);
-    }
+    // public function portfolio_detail()
+    // {
+    //     $data["content_view"] = "base/portfolio_detail";
+    //     $this->template->render($data);
+    // }
     
-    public function partnership()
-    {
-        $data["content_view"] = "base/partnership";
-        $this->template->render($data);
-    }
+    // public function partnership()
+    // {
+    //     $data["content_view"] = "base/partnership";
+    //     $this->template->render($data);
+    // }
     
     public function security()
     {
@@ -45,17 +45,17 @@ class Base extends \Base_Controller {
         $this->template->render($data);
     }
     
-    public function service_center_list()
-    {
-        $data["content_view"] = "base/service_center_list";
-        $this->template->render($data);
-    }
+    // public function service_center_list()
+    // {
+    //     $data["content_view"] = "base/service_center_list";
+    //     $this->template->render($data);
+    // }
     
-    public function service_center_detail()
-    {
-        $data["content_view"] = "base/service_center_detail";
-        $this->template->render($data);
-    }
+    // public function service_center_detail()
+    // {
+    //     $data["content_view"] = "base/service_center_detail";
+    //     $this->template->render($data);
+    // }
 
 
 //     public function get($id)

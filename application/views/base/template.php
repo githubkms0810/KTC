@@ -35,7 +35,7 @@
                             <ul>
                                 <li>
                                     <a href="/freelancer/add">프리랜서 지원</a>
-                                    <a href="/small/partnership">업무 제휴 문의</a>
+                                    <a href="/contact/add">업무 제휴 문의</a>
                                     <a href="/small/security">기밀 유지 정책</a>
                                 </li>
                             </ul>

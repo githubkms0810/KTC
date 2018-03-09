@@ -201,7 +201,7 @@ class Content_M extends Pagination_Model
 		{$this->as}.*,
 		$this->displayName,
 		DATE_FORMAT({$this->as}.created,IF(DATE({$this->as}.created) = CURDATE(),'%p %h:%i','%Y-%m-%d')) as created,
-		
+		u.profile_image
 		",true);
 	}
 	protected function _select_api()
@@ -313,7 +313,6 @@ class Content_M extends Pagination_Model
 			"displayName"=>array("displayName"=>"글쓴이","fieldName"=>"u.displayName"),
 			"created"=>array("displayName"=>"작성시간","fieldName"=>"b_c.created"),
 		);
-		
 	}
 	
 	//------ 정렬 할 필드들을 정의합니다.
@@ -326,13 +325,10 @@ class Content_M extends Pagination_Model
     }
 
 	//---- 어드민 페이지의 세팅을 정의합니다.
-
 	protected function _settingData_admin()
 	{
 		return array();
 	}
-
-
 
 	//------다음 테이블을 만듭니다.
 	public function createTable ()
