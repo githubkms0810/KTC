@@ -1,9 +1,7 @@
 <section class="home-hero-project">
     <h2 class="home-hero-title-project">프로젝트 의뢰하기</h2>
     <p class="home-hero-des-project">
-        코리아 통번역 센터는<br>
-        318건의 프로젝트를 맡았고,<br>
-        103명의 통번역사와 함께하고 있습니다
+        고객님의 의뢰에 최선을 다하는 코리아 통번역 센터입니다!
     </p>
     <a href="/small/portfolio_list" class="home-btn">포트폴리오 보러가기</a>
 </section>
@@ -46,8 +44,8 @@
         </div>
         <div class="join-wrap">
             <div class="join-tit">
-                지금 가입하면 <b>318개</b>의 단체 회원, <b>2,487명</b>의 개인 회원<br>
-                그리고 <b>104개</b>의 기업 회원이 함께합니다.
+                저희는 총 <b>1,172명</b>건의 프로젝트를 맡았습니다!<br>
+                지금 의뢰하시면 <b>318명</b>의 통번역사를 만나보실 수 있어요
             </div>
             <div class="join-list">
                 <ul>
