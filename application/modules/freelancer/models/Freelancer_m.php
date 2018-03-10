@@ -178,35 +178,40 @@ class Freelancer_m extends Pagination_Model
     // {
     //     $this->_select();
 	// }
+
 	protected function _select_api()
 	{
 		$this->db->select("
 		{$this->as}.id,
 		");
 	}
+
 	protected function _from()
 	{
 		$this->db->from("$this->table as {$this->as}");
-		$this->db->join("freelancer_translation_language as f_t_l","{$this->as}.id = f_t_l.freelancer_id","LEFT");
-		$this->db->join("freelancer_translation_field as f_t_f","{$this->as}.id = f_t_f.freelancer_id","LEFT");
-		// $this->db->join("user as u","{$this->as}.user_id = u.id","LEFT");
+		$this->db->join("(select freelancer_id, group_concat(language) as language from freelancer_translation_language GROUP BY freelancer_id) freelancer_translation_language ","{$this->as}.id = freelancer_translation_language.freelancer_id","LEFT");
+		$this->db->join("(select freelancer_id, group_concat(detail) as field_detail from freelancer_translation_field GROUP BY freelancer_id) freelancer_translation_field ","{$this->as}.id = freelancer_translation_field.freelancer_id","LEFT");
+		// $this->db->join("freelancer_translation_language as f_t_l","{$this->as}.id = f_t_l.freelancer_id","LEFT");
 	}
+
 	protected function _get_admin()
 	{
 		$this->db->select("
-			group_concat(f_t_l.language) as languague,
-			group_concat(f_t_f.detail) as field_detail
+		freelancer_translation_language.language,
+		freelancer_translation_field.field_detail,
 		");
-		$this->db->group_by("{$this->as}.id");
 	}
+
 	protected function _get_base()
 	{
 		
 	}
+
 	protected function _list_admin()
 	{
-		$this->db->group_by("{$this->as}.id");
+		// $this->db->group_by("{$this->as}.id");
 	}
+	
 	protected function _list_base()
 	{
 	
@@ -228,7 +233,7 @@ class Freelancer_m extends Pagination_Model
 	{
 		return array_merge(parent::getData_admin(),
 		array(
-			array("displayName"=>"언어","fieldName"=>"languague"),
+			array("displayName"=>"언어","fieldName"=>"language"),
 			array("displayName"=>"분야","fieldName"=>"field_detail"),
 			)
 		);
