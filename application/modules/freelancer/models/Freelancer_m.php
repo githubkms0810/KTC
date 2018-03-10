@@ -320,10 +320,12 @@ class Freelancer_m extends Pagination_Model
     // }
 	//---- @setting 어드민 페이지의 세팅을 정의합니다.
 
-	// protected function _settingComponent_admin()
-	// {
-	// 	return array();
-	// }
+	protected function _settingComponent_admin()
+	{
+		return array(
+				array("displayName"=>"프리랜서 신청할떄 번역 가능언어 쉼표로 구분","inputName"=>"translation_languages")
+		);
+	}
 
 
 
@@ -416,6 +418,15 @@ class Freelancer_m extends Pagination_Model
 	// @field
 	public function alertTable()
 	{
+		$table = "setting";
+		$fieldName = "translation_languages";
+		$addFieldQuery = "ALTER TABLE `{$table}` ADD `{$fieldName}` text AFTER `id`;";
+		$this->_addField($fieldName,$addFieldQuery,$table);
+
+		$this->load->model("setting_m");
+		$this->db->set("translation_languages","영어,일어,중국어,불어,스페인,독어,러시아어,기타");
+		$this->setting_m->p_update(1);
+
 		// $fieldName = "test";
 		// $addFieldQuery = "ALTER TABLE `{$this->table}` ADD `{$fieldName}` INT UNSIGNED NOT NULL AFTER `created`, ADD INDEX `idx_{$fieldName}` (`{$fieldName}`);";
 		// $this->_addField($fieldName,$addFieldQuery);

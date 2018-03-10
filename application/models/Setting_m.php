@@ -21,6 +21,7 @@ class Setting_M extends Public_Model {
 		$callback = function()
 		{
 			$this->db->set("id","1");
+			
 			$this->db->insert("setting");
 		};
 		$this->_createTable($createTableQuery,$callback);

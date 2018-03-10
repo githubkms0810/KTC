@@ -135,26 +135,14 @@
 			사용 언어
 			<?=form_error("languages[]")?>
 			<ul class="free_form-list">
-				<li>
-					<input type="checkbox" name="languages[]" value="영어" <?=DEBUG === false ? set_checkbox("languages[]","영어") : "checked"?> id="free_checkbox-1">
-					<label for="free_checkbox-1">영어</label>
+				<?php $i=1; foreach ( $languages as $language ): ?>
+					<!--재윤:: 목록 많아지면 겹치는 현상 발생해서 li태그에 style margin-top 값 줌-->
+					<li style="margin-top: 20px;">
+					<input type="checkbox" name="languages[]" value="<?=$language?>" <?=DEBUG === false ? set_checkbox("languages[]",$language) : "checked"?> id="free_checkbox-<?=$i?>">
+					<label for="free_checkbox-<?=$i?>"><?=$language?></label>
 				</li>
-				<li>
-					<input type="checkbox" name="languages[]" value="불어" <?=set_checkbox("languages[]","불어")?> id="free_checkbox-2">
-					<label for="free_checkbox-2">불어</label>
-				</li>
-				<li>
-					<input type="checkbox" name="languages[]" value="홍어" <?=set_checkbox("languages[]","홍어")?> id="free_checkbox-3">
-					<label for="free_checkbox-3">홍어</label>
-				</li>
-				<li>
-					<input type="checkbox" name="languages[]" value="광어" <?=set_checkbox("languages[]","광어")?> id="free_checkbox-4">
-					<label for="free_checkbox-4">광어</label>
-				</li>
-				<li>
-					<input type="checkbox" name="languages[]" value="우어" <?=set_checkbox("languages[]","우어")?> id="free_checkbox-5">
-					<label for="free_checkbox-5">우어</label>
-				</li>
+				<?php $i++; endforeach; ?>
+		
 			</ul>
 		  <!-- <input name="" placeholder="What is your full name?" id="free_name" name="free_name" tabindex="1" style="width: 100%;"> -->
 		</label>

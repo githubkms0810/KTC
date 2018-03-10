@@ -34,6 +34,7 @@ class Global_info_M extends Pagination_Model
 	protected function _component_addUpdate()
 	{
 		return array(
+			
 			array("inputName"=>"title","displayName"=>"사이트 제목"),
 			array("inputName"=>"desc","displayName"=>"사이트 설명"),
 			array("inputName"=>"keywords","displayName"=>"사이트 키워드(,로 구분)"),
@@ -283,6 +284,9 @@ class Global_info_M extends Pagination_Model
 		`business_address` varchar(255),
 		`copyright` varchar(255),
 		`bank_number` varchar(255),
+
+	
+
 		`is_display` boolean NOT NULL DEFAULT '1',
 		`is_secret` boolean NOT NULL DEFAULT '0',
 		`sort` INT NOT NULL DEFAULT '0',
@@ -297,6 +301,7 @@ class Global_info_M extends Pagination_Model
 		$this->_createTable($createTableQuery, function(){
 			$this->db->set("id","1");
 			$this->db->set("og_type","site");
+			
 			$this->db->insert($this->table);
 		});
 	}

@@ -11,7 +11,7 @@ class Public_Controller extends MX_Controller {
 	public $modelName =null;
 	public $data =array();
 	public $referer;
-
+	public $global_info;
 	public function __construct()
 	{
 		parent::__construct();
@@ -96,7 +96,7 @@ class Public_Controller extends MX_Controller {
 		$this->user_log_m->add();
 		//global info
 		$this->load->model('global_info/global_info_m');
-		$data['global_info']=$this->global_info_m->p_get(1);
+		$this->global_info = $data['global_info']=$this->global_info_m->p_get(1);
 		$this->template->addData($data);
 	}
 

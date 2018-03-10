@@ -247,10 +247,12 @@ class Sample_M extends Pagination_Model
     //     );
     // }
 	//---- @setting 어드민 페이지의 세팅을 정의합니다.
-
+	
 	// protected function _settingComponent_admin()
 	// {
-	// 	return array();
+	// 	return array(
+	// 			array("displayName"=>"환율","inputName"=>"product_exchange_rate")
+	// 	);
 	// }
 
 
