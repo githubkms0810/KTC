@@ -4,8 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //의존성 ::
 class Freelancer_m extends Pagination_Model 
 {
-	// protected $numRows_moduleName = "file";
-	// protected $numRows_foreignKey = "file_id";
+	// protected $numRows_moduleName = "content";
 	// protected $numRows_fieldName = "num_download_log";
 	public function __construct()
 	{
@@ -160,7 +159,24 @@ class Freelancer_m extends Pagination_Model
 		$this->set_post("graduate_school_degree");
 		$this->set_post("graduate_school_major");
 		$insert_id= $this->p_add();
+
+		$this->load->model("count_m");
+		$this->count_m->plusOneToField("num_freelancer");
 		return $insert_id;
+	}
+	
+	public function delete($id)
+	{
+		$this->load->model("count_m");
+		$this->count_m->minusOneToField("num_freelancer");
+		parent::delete($id);
+	}
+	public function listPagination($where=null,$inConfig=array())
+	{
+		$this->load->model("count_m");
+		$config["get_count_field"] = $this->count_m->p_get(1,"num_freelancer")->num_freelancer;
+		$config["isIgnoreCountOnAdminPage"] = true;
+		return parent::listPagination(null,$config);
 	}
 
 	//------ @query @list@Get 정의

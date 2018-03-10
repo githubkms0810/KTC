@@ -47,7 +47,7 @@ class Base extends \Base_Controller {
                 my_redirect($this->referer);
             }
             else{            
-                alert("주문이 완료 되었습니다. 연락드리겠습니다.");
+                alert("의뢰가 신청 되었습니다. 연락드리겠습니다.\\r메인페이지로 이동합니다.");
                 my_redirect("/");
             }
         }

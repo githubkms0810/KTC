@@ -93,7 +93,8 @@ echo "<br>";
             for($i=1 ; $i <= (int)$fieldInfo->oldNameCount ; $i++)
                $this->addTranslationFieldToFreelancer($insertedFreelancerId,$fieldInfo->newName,$row["{$fieldInfo->oldName}{$i}"]);
          $this->addTranslationFieldToFreelancer($insertedFreelancerId,"기타",$row["selfinput"]);
-
+            $this->ci->load->model("count_m");
+            $this->ci->count_m->plusOneToField("num_freelancer");
          $ci->db->trans_complete();
 
          if ($ci->db->trans_status() === FALSE)

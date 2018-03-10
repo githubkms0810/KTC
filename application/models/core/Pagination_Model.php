@@ -15,6 +15,7 @@ abstract class Pagination_Model extends Public_Model{
         $get_num_rows_func =$config["get_num_rows_func"];
         $get_rows_func =$config["get_rows_func"];
         $get_count_field = $config['get_count_field'] ?? null;
+        $isIgnoreCountOnAdminPage = $config['isIgnoreCountOnAdminPage'] ?? false;
         
         $is_numrow =$config['is_numrow'] ?? false;
         $pgiConfig =array();
@@ -45,7 +46,7 @@ abstract class Pagination_Model extends Public_Model{
             }
             $total_rows = $get_num_rows_func();
         }
-        else if($get_count_field === null || $this->className ==="admin") //일반
+        else if(($get_count_field === null || $this->className ==="admin") && $isIgnoreCountOnAdminPage === false) //일반
         {
             $total_rows = $get_num_rows_func();
         }
@@ -274,6 +275,7 @@ abstract class Pagination_Model extends Public_Model{
     {
         $config["pgi_style"]  = $inConfig['pgi_style'] ?? "default";
         $config["per_page"]  = $inConfig['per_page'] ?? "10";
+        $config["isIgnoreCountOnAdminPage"]  = $inConfig['isIgnoreCountOnAdminPage'] ?? false;
 
         if(isset($inConfig['get_count_field']))
         {

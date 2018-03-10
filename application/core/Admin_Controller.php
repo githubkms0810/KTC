@@ -27,7 +27,8 @@ class Admin_Controller extends Public_Controller
             $this->menudata_creator->addMainMenu("게시판","board","boards",site_url("admin/board/list"));
         }
         $this->menudata_creator->addMainMenu("프리랜서","freelancer","freelancer_list",site_url("admin/freelancer/list"));
-        $this->menudata_creator->addMainMenu("주문","translation_order","translation_order_list",site_url("admin/translation_order/list"));
+        $this->menudata_creator->addMainMenu("번역/통역","translation_order","translation_order_list",site_url("admin/translation_order/list"));
+        $this->menudata_creator->addMainMenu("제휴문의","contact","contact_list",site_url("admin/contact/list"));
         
 		// $this->menudata_creator->addMainMenu("상품","product","products",site_url("admin/product/list"));
 		// $this->menudata_creator->addMainMenu("파일","file","files",site_url("admin/file/list"));

@@ -121,7 +121,27 @@ class Contact_m extends Pagination_Model
 	// 	$this->form_validation->set_rules('name', '이름', 'trim|required');
 	// }
 	//------ @cusotm
+	public function setRulesWhenAdd()
+	{
+		$this->form_validation->set_rules('manager', '담당자', 'trim|required');
+		$this->form_validation->set_rules('manager_phone', '담당자 번호', 'trim|required');
+		$this->form_validation->set_rules('desc', '메세지', 'trim|required');
+	}
+	public function addByPostData()
+	{
+		$this->set_post("company_name");
+		$this->set_post("manager");
+		$this->set_post("manager_phone");
+		$this->set_post("email");
+		$this->set_post("desc");
+		return $this->p_add();
+	}
 
+	public function updateIsReading($id)
+	{
+		$this->db->set("is_reading","1");
+		return $this->p_update($id);
+	}
 	//------ @query @list@Get 정의
 
 	protected function _select()
@@ -167,22 +187,26 @@ class Contact_m extends Pagination_Model
 
 	//@listGet 필드네임 정의
 	//admin
-	// public function listData_admin()
-	// {
-	// 	return array(
-	// 		array("displayName"=>"ID","fieldName"=>"id"),
-	// 		array("displayName"=>"이름","fieldName"=>"name"),
-	// 		array("displayName"=>"보이기","fieldName"=>"is_display"),
-	// 	);
-	// }
-	// public function getData_admin()
-	// {
-	// 	return array(
-	// 		array("displayName"=>"ID","fieldName"=>"id"),
-	// 		array("displayName"=>"이름","fieldName"=>"name"),
-	// 		array("displayName"=>"보이기","fieldName"=>"is_display"),
-	// 	);
-	// }
+	public function listData_admin()
+	{
+		return array(
+			array("displayName"=>"ID","fieldName"=>"id"),
+			array("displayName"=>"담당자명","fieldName"=>"manager"),
+			array("displayName"=>"내용","fieldName"=>"desc"),
+			array("displayName"=>"읽음/안읽음","fieldName"=>"is_reading"),
+			array("displayName"=>"생성일","fieldName"=>"created"),
+		);
+	}
+	public function getData_admin()
+	{
+		return array(
+			array("displayName"=>"ID","fieldName"=>"id"),
+			array("displayName"=>"담당자명","fieldName"=>"manager"),
+			array("displayName"=>"내용","fieldName"=>"desc"),
+			array("displayName"=>"읽음/안읽음","fieldName"=>"is_reading"),
+			array("displayName"=>"생성일","fieldName"=>"created"),
+		);
+	}
 	//base
 	// public function listData_base()
 	// {
@@ -264,9 +288,11 @@ class Contact_m extends Pagination_Model
 		-- `varchar` varchar(255) NOT NULL DEFAULT '',
 		`company_name` varchar(255),
 		`manager` varchar(255),
+		`manager_phone` varchar(255),
 		`email` varchar(255),
 		`title` varchar(255),
 		`desc` TEXT(255),
+		`is_reading` boolean NOT NULL DEFAULT '0',
 		`is_display` boolean NOT NULL DEFAULT '1',
 		`is_secret` boolean NOT NULL DEFAULT '0',
 		`sort` INT NOT NULL DEFAULT '0',
@@ -276,8 +302,10 @@ class Contact_m extends Pagination_Model
 	
 	  		KEY `idx_company_name` (`company_name`),
 	  		KEY `idx_manager` (`manager`),
+	  		KEY `idx_manager_phone` (`manager_phone`),
 	  		KEY `idx_email` (`email`),
 	  		KEY `idx_title` (`title`),
+	  		KEY `idx_is_reading` (`is_reading`),
 			FULLTEXT KEY `idx_desc` (`desc`),
 			KEY `idx_is_display` (`is_display`),
 			KEY `idx_is_secret` (`is_secret`),
