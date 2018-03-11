@@ -25,7 +25,7 @@ class Base extends \Base_Controller {
     public function migration1()
     {
         $start =0;
-        $end = 1;
+        $end = 1000;
         echo $start;
         echo "<br>";
         echo $end;
@@ -42,14 +42,14 @@ class Base extends \Base_Controller {
     {
        
         $this->load->library(["freelancer\\FreelancerImporter"=>"FreelancerImporter"]);
-        $this->FreelancerImporter->import(2000,3000);
+        $this->FreelancerImporter->import(2000,2730);
     }
-    public function migration4()
-    {
+    // public function migration4()
+    // {
        
-        $this->load->library(["freelancer\\FreelancerImporter"=>"FreelancerImporter"]);
-        $this->FreelancerImporter->import(3000,4000);
-    }
+    //     $this->load->library(["freelancer\\FreelancerImporter"=>"FreelancerImporter"]);
+    //     $this->FreelancerImporter->import(3000,4000);
+    // }
 
     public function getcount()
     {
