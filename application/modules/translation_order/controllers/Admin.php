@@ -9,6 +9,17 @@ class Admin extends \Admin_Controller {
     {
         parent::__construct();
     }
+    
+
+    public function get($id)
+    {
+        $data['row'] = $row = $this->{$this->modelName}->get($id);
+        $this->load->model('file/file_m');
+        $data["files"]  = $this->file_m->list_ByGroupId($row->file_group_id);
+		$data["content_view"] = "{$this->className}/get";
+		$this->data += $data;
+        $this->template->render($this->data);
+    }
     public function setting()
     {
         $this->load->model('setting_m');

@@ -27,6 +27,7 @@ class Base extends \Base_Controller {
             $this->template->render($data);
         }
         else{
+         
             $this->db->trans_start();
             $this->load->model('file/file_m');
             $group_id=$this->file_m->add();

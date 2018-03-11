@@ -10,28 +10,7 @@ class Admin extends \Admin_Controller {
         parent::__construct();
     }
     
-    public function confirm($id)
-    {
-        $this->db->set("is_admin_confirm","1");
-        $this->freelancer_m->p_update($id);
-        redirect($this->referer);
-    }
-    public function cancelConfirm($id)
-    {
-        $this->db->set("is_admin_confirm","0");
-        $this->freelancer_m->p_update($id);
-        redirect($this->referer);
-    }
-    public function sendEamilAndUpdateIsSendEmail($email,$id)
-    {
-        $this->$this->load->library('email');
-        $this->email->from = "admin";
-        $subject = $this->setting->freelancer_admin_confirm_mail_subject;
-        $content = $this->setting->freelancer_admin_confirm_mail_content; 
-        $this->email->send_email($email,$subject,$content);
-        $this->db->set("is_send_email" ,"1");
-        $this->freelancer_m->p_update($id);
-    }
+ 
     
     public function get($id)
     {

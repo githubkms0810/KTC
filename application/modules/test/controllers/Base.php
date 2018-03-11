@@ -22,13 +22,33 @@ class Base extends \Base_Controller {
        $this->load->view("test");
        
     }
-    public function migration($start,$end)
+    public function migration1()
     {
+        $start =0;
+        $end = 1;
         echo $start;
         echo "<br>";
         echo $end;
         $this->load->library(["freelancer\\FreelancerImporter"=>"FreelancerImporter"]);
         $this->FreelancerImporter->import($start,$end);
+    }
+    public function migration2()
+    {
+     
+        $this->load->library(["freelancer\\FreelancerImporter"=>"FreelancerImporter"]);
+        $this->FreelancerImporter->import(1000,2000);
+    }
+    public function migration3()
+    {
+       
+        $this->load->library(["freelancer\\FreelancerImporter"=>"FreelancerImporter"]);
+        $this->FreelancerImporter->import(2000,3000);
+    }
+    public function migration4()
+    {
+       
+        $this->load->library(["freelancer\\FreelancerImporter"=>"FreelancerImporter"]);
+        $this->FreelancerImporter->import(3000,4000);
     }
 
     public function getcount()

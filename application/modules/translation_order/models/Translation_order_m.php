@@ -185,6 +185,7 @@ class Translation_order_m extends Pagination_Model
 	{
 		$this->load->library("post_helper");
 
+		$this->set_post("type");
 		$this->set_post("buyer");
 		$this->set_post("company");
 		$this->set_post("department");

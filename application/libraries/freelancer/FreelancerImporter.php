@@ -55,7 +55,7 @@ echo "<br>";
          $ci->db->set("birth_year",$this->getBirthYearByBirth($row["birth"]));
          $ci->db->set("birth_month",$this->getBirthMonthByBirth($row["birth"]));
          $ci->db->set("birth_day",$this->getBirthDayByBirth($row["birth"]));
-         $ci->db->set("address",$row["add"]);
+         $ci->db->set("old_address",$row["add"]);
          $ci->db->set("tel",$row["tel"]);
          $ci->db->set("phone",$row["mobile"]);
          $ci->db->set("email",$row["email"]);

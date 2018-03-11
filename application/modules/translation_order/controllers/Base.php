@@ -17,9 +17,18 @@ class Base extends \Base_Controller {
     }
     public function get($id)
     {
-        $data["portfolio"] = $this->translation_order_m->p_get($id);
+        $portfolio = $this->translation_order_m->p_get($id);
+        if($portfolio->is_use_confidential === "1")
+            $portfolio=$this->changeConfidential($portfolio);
+        $data["portfolio"] = $portfolio;
 		$data["content_view"] = "base/get";
 		$this->template->render($data);
+    }
+    private function changeConfidential($portfolio)
+    {
+        foreach ($portfolio as $key => $value) 
+            $portfolio->$key = "기밀사항";
+        return $portfolio;
     }
     public function list()
     {
@@ -31,14 +40,15 @@ class Base extends \Base_Controller {
     {
         $this->translation_order_m->setRulesWhenAdd();
         if($this->form_validation->run() === false){
-            echo validation_errors();
             $data['type'] = get("type");
             $data["content_view"] = "base/addUpdate";
-            // $this->load->view("base/addUpdate");
             $this->template->render($data);
         }
         else{
             $this->db->trans_start();
+            $this->load->model('file/file_m');
+            $group_id=$this->file_m->add();
+            $this->db->set("file_group_id",$group_id);
             $insert_id=$this->translation_order_m->addByPostData();
             $this->db->trans_complete();
             
