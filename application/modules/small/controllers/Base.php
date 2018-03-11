@@ -41,6 +41,7 @@ class Base extends \Base_Controller {
     
     public function security()
     {
+        $data["security_file_directory"] = $this->setting->security_file_directory;
         $data["content_view"] = "base/security";
         $this->template->render($data);
     }

@@ -159,11 +159,11 @@ class File_M extends Pagination_Model
 	// 	return parent::listPaginaion($where,$config);
 	// }
 
-	//----custom
+	//----@custom
+
 	//@param $kind :: is user or admin folder
 	public function add($kind="user",$next_group_id =true,$config =array()) 
 	{
-		
 		$data =$this->upload->multiUpload("file",$kind);
 		if($data["result"] !== "success")  // fail or non
 		{
@@ -209,7 +209,6 @@ class File_M extends Pagination_Model
 			);
 		}
 		$this->db->insert_batch($this->table, $insert_data); 
-	
 		return $group_id;
 	}
 	public function set_rules($kind = "file")

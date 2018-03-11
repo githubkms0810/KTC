@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // define("DEBUG",false);
 define("DEBUG",TRUE);
  define("AJAX_DEBUG",false);
- // define("AJAX_DEBUG",true);
+//  define("AJAX_DEBUG",true);
  define("transectionError",001);
 
 /*

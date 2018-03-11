@@ -200,7 +200,9 @@ class Translation_order_m extends Pagination_Model
 		$this->set_post("translation_kind");
 		$this->set_post("translation_before");
 		$this->set_post("translation_after");
-		$this->set_post("interpret_address");
+		$this->set_post("interpret_post_number");
+		$this->set_post("interpret_new_address");
+		$this->set_post("interpret_old_address");
 		$this->set_post("interpret_address_detail");
 		$this->set_post("interpret_start_date");
 		$this->set_post("interpret_end_date");
@@ -350,7 +352,9 @@ class Translation_order_m extends Pagination_Model
 
 	// protected function _settingComponent_admin()
 	// {
-	// 	return array();
+	// 	return array(
+	// 		array("method"=>"file",""=>"","displayName"=>"기밀 보안 파일","inputName"=>"security_file_uri")
+	// );
 	// }
 
 
@@ -391,7 +395,9 @@ class Translation_order_m extends Pagination_Model
 		`file_group_id` INT UNSIGNED,
 
 		`interpret_kind` varchar(255),
-		`interpret_address` varchar(255),
+		`interpret_post_number` varchar(255),
+		`interpret_new_address` varchar(255),
+		`interpret_old_address` varchar(255),
 		`interpret_address_detail` varchar(255),
 		`interpret_start_date` varchar(255),
 		`interpret_end_date` varchar(255),
@@ -444,7 +450,14 @@ class Translation_order_m extends Pagination_Model
 	// @field
 	public function alertTable()
 	{
-		
+		$table = "setting";
+		$fieldName = "security_file_directory";
+		$addFieldQuery = "ALTER TABLE `{$table}` ADD `{$fieldName}` varchar(255) DEFAULT '/public/admin/file/testSecurityFile.txt' AFTER `id`;";
+		$this->_addField($fieldName,$addFieldQuery,$table);
+
+		$fieldName = "security_file_name";
+		$addFieldQuery = "ALTER TABLE `{$table}` ADD `{$fieldName}` varchar(255) DEFAULT 'testSecurityFile.txt' AFTER `id`;";
+		$this->_addField($fieldName,$addFieldQuery,$table);
 		// $fieldName = "test";
 		// $addFieldQuery = "ALTER TABLE `{$this->table}` ADD `{$fieldName}` INT UNSIGNED NOT NULL AFTER `created`, ADD INDEX `idx_{$fieldName}` (`{$fieldName}`);";
 		// $this->_addField($fieldName,$addFieldQuery);

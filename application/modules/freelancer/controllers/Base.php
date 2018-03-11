@@ -20,7 +20,6 @@ class Base extends \Base_Controller {
 //         parent::list();
 //     }
     public function add(){
-
         $this->freelancer_m->setRulesWhenAdd();
         if($this->form_validation->run() === false){
             $data["content_view"] = "base/addUpdate";
@@ -29,7 +28,9 @@ class Base extends \Base_Controller {
         }
         else{
             $this->db->trans_start();
-            $insert_id=$this->freelancer_m->addByPostData();
+            $this->load->model('file/file_m');
+            $group_id=$this->file_m->add();
+            $insert_id=$this->freelancer_m->addByPostDataAndByFileGroupId($group_id);
             $this->load->model("freelancer_translation_language/freelancer_translation_language_m");
             $this->freelancer_translation_language_m->addByFreelancerIdAndLanguages($insert_id,post('languages'));
             $this->db->trans_complete();

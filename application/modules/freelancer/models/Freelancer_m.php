@@ -125,7 +125,7 @@ class Freelancer_m extends Pagination_Model
 		$this->form_validation->set_rules('phone_first', '휴대폰', 'trim|required');
 		$this->form_validation->set_rules('phone_second', '휴대폰', 'trim|required');
 		$this->form_validation->set_rules('phone_third', '휴대폰', 'trim|required');
-		$this->form_validation->set_rules('address', '주소', 'trim|required');
+		$this->form_validation->set_rules('new_address', '주소', 'trim|required');
 		$this->form_validation->set_rules('address_detail', '상세주소', 'trim|required');
 		$this->form_validation->set_rules('apply_field', '지원분야', 'trim|required');
 		$this->form_validation->set_rules('account_bank', '은행이름', 'trim|required');
@@ -134,8 +134,12 @@ class Freelancer_m extends Pagination_Model
 		$this->form_validation->set_rules('languages[]', '사용언어', 'trim|required');
 		$this->form_validation->set_rules('translation_direction', '언어방향', 'trim|required');
 	}
-
-	public function addByPostData()
+	public function addByPostDataAndByFileGroupId($file_group_id)
+	{
+		$this->set("file_group_id",$file_group_id);
+		return $this->addByPostData();
+	}
+	private function addByPostData()
 	{
 		$this->load->library("post_helper");
 		$this->set_post("name");
@@ -145,7 +149,10 @@ class Freelancer_m extends Pagination_Model
 		$this->set_post("sex");
 		$this->set("phone",$this->post_helper->makePhoneByPostData());
 		$this->set("email",$this->post_helper->makeEmailByPostData());
-		$this->set_post("address");
+		$this->set_post("post_number");
+		// $this->set_post("is_have_career");
+		$this->set_post("old_address");
+		$this->set_post("new_address");
 		$this->set_post("address_detail");
 		$this->set_post("apply_field");
 		$this->set_post("account_bank");
@@ -158,6 +165,7 @@ class Freelancer_m extends Pagination_Model
 		$this->set_post("graduate_school");
 		$this->set_post("graduate_school_degree");
 		$this->set_post("graduate_school_major");
+		
 		$insert_id= $this->p_add();
 
 		$this->load->model("count_m");
@@ -346,7 +354,9 @@ class Freelancer_m extends Pagination_Model
 		`tel` varchar(255),
 		`phone` varchar(255),
 		`email` varchar(255),
-		`address` varchar(255),
+		`post_number` varchar(255),
+		`old_address` varchar(255),
+		`new_address` varchar(255),
 		`address_detail` varchar(255),
 		`apply_field` varchar(255),
 		`account_bank` varchar(255),
@@ -364,6 +374,7 @@ class Freelancer_m extends Pagination_Model
 		`experience` varchar(255),
 		`etc` varchar(255),
 		`level` varchar(255),
+		`is_send_email` boolean not null default '0',
 
 		`file_group_id` int UNSIGNED,
 
@@ -386,7 +397,9 @@ class Freelancer_m extends Pagination_Model
 			KEY `idx_tel` (`tel`),
 			KEY `idx_phone` (`phone`),
 			KEY `idx_email` (`email`),
-			KEY `idx_address` (`address`),
+			KEY `idx_post_number` (`post_number`),
+			KEY `idx_old_address` (`old_address`),
+			KEY `idx_new_address` (`new_address`),
 			KEY `idx_address_detail` (`address_detail`),
 			KEY `idx_apply_field` (`apply_field`),
 			KEY `idx_account_bank` (`account_bank`),
@@ -419,6 +432,14 @@ class Freelancer_m extends Pagination_Model
 	public function alertTable()
 	{
 		$table = "setting";
+		$fieldName = "freelancer_admin_confirm_mail_subject";
+		$addFieldQuery = "ALTER TABLE `{$table}` ADD `{$fieldName}` varchar(255) DEFAULT '' AFTER `id`;";
+		$this->_addField($fieldName,$addFieldQuery,$table);
+
+		$fieldName = "freelancer_admin_confirm_mail_content";
+		$addFieldQuery = "ALTER TABLE `{$table}` ADD `{$fieldName}` text AFTER `id`;";
+		$this->_addField($fieldName,$addFieldQuery,$table);
+
 		$fieldName = "translation_languages";
 		$addFieldQuery = "ALTER TABLE `{$table}` ADD `{$fieldName}` text AFTER `id`;";
 		$this->_addField($fieldName,$addFieldQuery,$table);

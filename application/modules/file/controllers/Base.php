@@ -16,7 +16,20 @@ class Base extends \Base_Controller {
     function upload()
     {
         $this->load->view("base/upload");
-    }   
+    }  
+    function uploadFile()
+    {
+        $this->ajax_helper->headerJson();
+        $data=$this->upload->multiUpload("file","user");
+        $this->ajax_helper->json($data);
+        $flashdataes= $this->session->flashdata();
+        foreach ($flashdataes as $key=>$flashdata) {
+            if( $this->session->flashdata($key) !== null)
+            {
+                $this->session->set_flashdata($key, $flashdata);
+            }
+        }
+    }
     function uploadImage()
     {
        
@@ -39,7 +52,27 @@ class Base extends \Base_Controller {
     //     $data=$this->upload->multiUpload("file","user");
     //     $this->ajax_helper->json($data);
     // }
-
+    public function downloadSecurityFile()
+    {
+        $this->load->helper('download');
+        
+        $directory = $this->setting->security_file_directory;
+        $original_name = $this->setting->security_file_name;
+        if ($directory) 
+        {
+            $file = ".$directory";
+            if (file_exists ( $file )) 
+            {
+                $data = file_get_contents ( $file );
+                force_download ($original_name , $data );
+            }
+            else 
+            {   
+                alert("해당 파일이 존재하지 않습니다.");
+                my_redirect ( $this->referer);
+            }
+        } 
+    }
     public function downloadOnUser($id) // routed download/$1
     {
         $this->_download("user",$id);
@@ -117,7 +150,7 @@ class Base extends \Base_Controller {
                 alert("해당 파일이 존재하지 않습니다.");
                 my_redirect ( $this->referer);
             }
-        }
+        } 
     }
     public function delete($id)
     {   

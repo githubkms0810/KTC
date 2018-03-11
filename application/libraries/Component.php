@@ -13,7 +13,7 @@ class Component
     {
         $this->ci =& get_instance();
     }
-     
+    
     public function getTreeviewData($rows)
     {
         if(count($rows) === 0) return;
@@ -625,6 +625,8 @@ class Component
         }
         return $variable;
     }
+    
+
     public function input($config)
     {
         if(!isset($config["row"])) throw new RuntimeException("need row");

@@ -32,7 +32,8 @@
                 <ul>
                     <li>
                         <div>
-                            <a href="/public/images/portfolio-1.png" download>
+                            <!-- <a href="<?=$security_file_directory?>" download> -->
+                            <a href="/file/downloadSecurityFile">
                                 <div class="poi">
                                     <div class="img"><span><img src="/public/subpage/css/001_jobdance/images/j-icon01.png" alt=""></span></div>
                                     <div class="name">기밀 유지</div>

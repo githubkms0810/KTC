@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 
 					var zdrop = new Dropzone(target, {
-						url: '/Home/UploadFile',
+						url: '/file/UploadFile',
 						maxFilesize:20,
 						previewTemplate: previewTemplate,
 						autoQueue: true,
