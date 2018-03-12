@@ -4,7 +4,15 @@
   <script type="text/javascript" src="/public/subpage/js/004_freesupport/jquery.js"></script>
 
 <!--프리랜서지원폼 시작-->
-
+<section class="home-hero-freelancer">
+    <h2 class="home-hero-title-freelancer">프리랜서 지원하기</h2>
+    <p class="home-hero-des-freelancer">
+        코리아 통번역 센터와 함께<br>
+        더 좋은 번역 산업의 미래를 만들어가고 싶으시다면<br>
+        아래 지원서를 작성해주세요
+    </p>
+    <a href="/translation_order/list" class="home-btn">포트폴리오 보러가기</a>
+</section>
 <div id="free_wrapper">
 	<form action="/freelancer/add" method="post" class="freesupport" onsubmit="" style="max-width: 1024px; margin: 0 auto;" enctype="multipart/form-data">
 	<div class="free_col-2">
