@@ -84,48 +84,48 @@
 			<div class="article-post">
                 <div class="portfolio_content-sort">
                 <span class="meta-footer-thumb">
-				    <a href="author.html"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+				    <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal">
 			    </span>
 				<span class="author-meta">
 				<span class="post-name">
-                    <a href="author.html">종류</a></span><br/>
+                    종류</span><br/>
                 <span class="post-date"><?=$portfolio->type?></span>
                 </span>
                 </div>
 
                 <div class="portfolio_content-sort">
                 <span class="meta-footer-thumb">
-				    <a href="author.html"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+				    <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal">
 			    </span>
 				<span class="author-meta">
 				<span class="post-name">
-                    <a href="author.html">분야</a></span><br/>
+                    분야</span><br/>
                 <span class="post-date">몰라</span>
                 </span>
                 </div>
 
                 <div class="portfolio_content-sort">
                 <span class="meta-footer-thumb">
-				    <a href="author.html"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+				    <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal">
 			    </span>
 				<span class="author-meta">
 				<span class="post-name">
-                    <a href="author.html">프로젝트 이름</a></span><br/>
+                    프로젝트 이름</span><br/>
                 <span class="post-date"><?=$portfolio->title?></span>
                 </span>
                 </div>
 
                 <div class="portfolio_content-sort">
                 <span class="meta-footer-thumb">
-				    <a href="author.html"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+				    <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal">
 			    </span>
 				<span class="author-meta">
 				<span class="post-name">
                 <?php if ( $portfolio->buyer ==="회사" ): ?>
-                    <a href="author.html">회사 이름</a></span><br/>
+                    회사 이름</span><br/>
                     <span class="post-date"><?=$portfolio->company?></span>
                 <?php elseif($portfolio->buyer ==="개인"): ?>
-                    <a href="author.html">개인 이름</a></span><br/>
+                    개인 이름</span><br/>
                     <span class="post-date"><?=$portfolio->personal_name?></span>
                 <?php endif ?>
                 </span>
@@ -133,44 +133,44 @@
 
                 <div class="portfolio_content-sort">
                 <span class="meta-footer-thumb">
-				    <a href="author.html"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+				    <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal">
 			    </span>
 				<span class="author-meta">
 				<span class="post-name">
-                    <a href="author.html">언어쌍</a></span><br/>
+                    언어쌍</span><br/>
                 <span class="post-date"><?=$portfolio->translation_before?>/<?=$portfolio->translation_after?></span>
                 </span>
                 </div>
 
                 <div class="portfolio_content-sort">
                 <span class="meta-footer-thumb">
-				    <a href="author.html"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+				    <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal">
 			    </span>
 				<span class="author-meta">
 				<span class="post-name">
-                    <a href="author.html">업무 내용</a></span><br/>
+                    업무 내용</span><br/>
                 <span class="post-date"><?=$portfolio->desc?></span>
                 </span>
                 </div>
 
                 <div class="portfolio_content-sort">
                 <span class="meta-footer-thumb">
-				    <a href="author.html"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+				    <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal">
 			    </span>
 				<span class="author-meta">
 				<span class="post-name">
-                    <a href="author.html">기간</a></span><br/>
+                    기간</span><br/>
                 <span class="post-date"><?=$portfolio->deadline?></span>
                 </span>
                 </div>
 
                 <div class="portfolio_content-sort">
                 <span class="meta-footer-thumb">
-				    <a href="author.html"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+				    <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal">
 			    </span>
 				<span class="author-meta">
 				<span class="post-name">
-                    <a href="author.html">기밀여부</a></span><br/>
+                    기밀여부</span><br/>
                 <span class="post-date"><?=$portfolio->is_use_confidential?></span>
                 </span>
                 </div>
