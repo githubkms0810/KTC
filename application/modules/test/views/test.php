@@ -1,31 +1,10 @@
 
-<form action="/test/test2" method="post">
-<input type="text" name="test" value="this is test post data">
+<form action="" method="post">
+<label for="">성별
+  <input type="radio" name="sex" value="여성" id="a" >
+<label for="a">여성</label>
+  <input type="radio" name="sex" value="남성" id="b">
+<label for="b">남성</label>
+  </label>
 <input type="submit">
 </form>
-<!-- <form action="/captcha/api/request"
-      method="post"
-      enctype="multipart/form-data">
-
-    <input type="file"     name="file">
-    <input type="text"     name="key" value="3e69f0e11774d16dd53177999df6fe4e">
-    <input type="text" name="solverType" value ="type2">
-    <input type="submit">
-</form> -->
-
-<!-- <form action="http://api.dbcapi.me/api/user" method="post">
-
-<input type="text" name="username" value="santutu" >
-<input type="text" name="password" value="rkfldhs5100" >
-<input type="submit">
-</form>
-
-
-<form action="http://api.dbcapi.me/api/captcha"
-      method="post"
-      enctype="multipart/form-data">
-    <input type="text"     name="username" value="santutu">
-    <input type="text" name="password" value="rkfldhs5100">
-    <input type="file"     name="captchafile">
-    <input type="submit">
-</form> -->

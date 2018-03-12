@@ -42,7 +42,7 @@
 
 
 	<div class="free_col-3">
-		<label style="padding: 20px 20px 14px;">성별
+		<label for=""style="padding: 20px 20px 14px;">성별
 			<ul class="free_form-list" style="margin-bottom:11px">
 	    	<li>
 		  		<input type="radio" name="sex" value="남성" <?=set_checkbox("sex","남성",true)?> id="free_radio_sex1" >
