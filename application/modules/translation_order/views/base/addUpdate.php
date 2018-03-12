@@ -195,9 +195,9 @@
 				<h4>통역 사항</h4>
 				<p class="project_select icon">
 					<select name="translation_kind" class="budget">
-						<option value="">통역형태</option>
-						<option  <?=set_select("translation_kind")?>>이것</option>
-						<option <?=DEBUG === true ? "selected" : ""?> <?=set_select("translation_kind")?>>저것</option>
+						<option <?=DEBUG === true ? "selected" : ""?> value="">통역형태</option>
+						<option <?=set_select("translation_kind")?>>이것</option>
+						<option <?=set_select("translation_kind")?>>저것</option>
 						<option <?=set_select("translation_kind")?>>그것</option>
 					</select>
 				</p>
@@ -213,9 +213,9 @@
 				<h4>통역 사항</h4>
 				<p class="project_select icon">
 					<select name="translation_kind" class="budget">
-						<option value="">통역형태</option>
+						<option <?=DEBUG === true ? "selected" : ""?> value="">통역형태</option>
 						<option  <?=set_select("translation_kind")?>>이것</option>
-						<option <?=DEBUG === true ? "selected" : ""?> <?=set_select("translation_kind")?>>저것</option>
+						<option  <?=set_select("translation_kind")?>>저것</option>
 						<option <?=set_select("translation_kind")?>>그것</option>
 					</select>
 				</p>

@@ -777,7 +777,7 @@ body {
   .home-portfolio__item {
     width: 30vw;
     height: 30vw;
-    padding-top: 8%;
+    padding-top: 7.5%;
   }
   .home-portfolio__item:nth-child(n + 7) {
     display: inline-block;
@@ -792,18 +792,22 @@ body {
     opacity: 0.5;
   }
   .home-portfolio__item a {
-    margin-top: 25%;
+    margin-top: 10%;
     padding: 0 30px;
     height: 40px;
     line-height: 40px;
     border-radius: 20px;
   }
+  .home-portfolio__item:nth-child(n + 5) a {
+    display: none;
+  }
 }
+
 @media (min-width: 1240px) {
   .home-portfolio__item {
     width: 350px;
     height: 350px;
-    padding-top: 10%;
+    padding-top: 7%;
     margin: 0 -30px;
     margin-bottom: -30px;
   }
@@ -816,7 +820,10 @@ body {
     height: 175px;
   }
   .home-portfolio__item a {
-    margin-top: 70px;
+    margin-top: 20px;
+  }
+  .home-portfolio__item:nth-child(n + 5) a {
+    display: none;
   }
 }
 
