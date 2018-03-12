@@ -1,7 +1,8 @@
-<section class="home-hero-project">
-    <h2 class="home-hero-title-project">기밀 유지 정책</h2>
-    <p class="home-hero-des-project">
-        고객님의 의뢰에 최선을 다하는 코리아 통번역 센터입니다!
+<section class="home-hero-security">
+    <h2 class="home-hero-title-security">기밀 유지 정책</h2>
+    <p class="home-hero-des-security">
+        코리아 통번역 센터는 보안 정책을 실시하고 있으며,<br>
+        고객님의 기밀 사항을 철저하게 보호해드리고 있습니다.
     </p>
     <a href="/small/portfolio_list" class="home-btn">포트폴리오 보러가기</a>
 </section>
@@ -21,12 +22,9 @@
         
         <div class="join-wrap">
             <div class="join-tit">
-                <b>코리아 통번역 센터 기밀 유지 보안 정책 안내</b><br><br>
-                코리아 통번역센터는 사내외 보안정책을 실시하고 있으며,<br>
-                고객님의 기밀사항을 철저하게 보호해 드리고 있습니다.<br>
-                NDA(Non-Disclosure Agreement : 기밀유지협약)가 체결된 중요 문서군<br>
-                프로젝트 단위로 각기 다른 문서보안 System을 통하여 관리, 보호하고 있으며,<br>
-                프로젝트 종료 후 일정기간 내에 파기를 원칙으로 하고 있습니다.
+                NDA(Non-Disclosure Agreement : 기밀유지협약)가<br>
+                체결된 중요 문서군은 프로젝트 단위로 각기 다른 문서 보안 시스템을 통하여<br>
+                관리/보호하고 있으며, 프로젝트 종료 후 일정 기간 내에 파기를 원칙으로 하고 있습니다
             </div>
             <div class="join-list">
                 <ul>
@@ -36,10 +34,10 @@
                             <a href="/file/downloadSecurityFile">
                                 <div class="poi">
                                     <div class="img"><span><img src="/public/subpage/css/001_jobdance/images/j-icon01.png" alt=""></span></div>
-                                    <div class="name">기밀 유지</div>
+                                    <div class="name">기밀 유지 협약</div>
                                     <div class="txt">
-                                        군영과 곧 인생에 끝까지 듣는다.<br class="one">
-                                        용감하고 품고 위하여서, 사라지지 것이다.
+                                        코리아 통번역 센터 NDA.doc<br class="one">
+                                        1,297mb
                                     </div>
                                 </div>
                                 <div class="btn">다운로드</div>
