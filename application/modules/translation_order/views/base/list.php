@@ -1,9 +1,9 @@
-<section class="home-hero">
-    <h2 class="home-hero-title">포트폴리오</h2>
-    <p class="home-hero-des">
-        적합한 통번역사를 찾는 일에 시간과 에너지를 낭비하지 마세요<br>
-        코리아 통번역 센터와 함께라면<br>
-        최고의 품질로 통번역을 경험해보실 수 있습니다
+<section class="home-hero-portfolio">
+    <h2 class="home-hero-title-portfolio">포트폴리오</h2>
+    <p class="home-hero-des-portfolio">
+        코리아 통번역 센터는 다년간의 노하우로<br>
+        총 3,125개의 프로젝트를<br>
+        성공적으로 마무리하였습니다
     </p>
     <a href="/translation_order/selectType" class="home-btn">프로젝트 의뢰하기</a>
 </section>
