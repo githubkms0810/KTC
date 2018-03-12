@@ -32,7 +32,7 @@ class Base extends \Base_Controller {
     }
     public function list()
     {
-        $data["portfolioes"] = $this->translation_order_m->listIsPortfolioWithLimit(20);
+        $data["portfolioes"] = $this->translation_order_m->listIsPortfolioWithLimit(10);
 		$data["content_view"] = "base/list";
 		$this->template->render($data);
     }   

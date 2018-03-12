@@ -161,7 +161,7 @@ class Translation_order_m extends Pagination_Model
 	public function listIsPortfolioWithLimit($limit)
 	{
 		$this->db->where("is_portfolio","1");
-		$this->db->limit(8,0);
+		$this->db->limit($limit,0);
 		return $this->list();
 	}
 	public function setRulesWhenAdd()
