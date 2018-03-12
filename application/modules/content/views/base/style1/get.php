@@ -1,8 +1,14 @@
-고객센터 상세보기
-
 <link type="text/css" media="all" href="/public/subpage/css/002_sub/customer/bootstrap.min.css" rel="stylesheet">
 <link type="text/css" media="all" href="/public/subpage/css/002_sub/customer/mediumish.css" rel="stylesheet">
 
+<section class="home-hero-cs">
+    <h2 class="home-hero-title-cs">고객센터</h2>
+    <p class="home-hero-des-cs">
+        편한 시간에 편한 방법으로 문의주세요<br>
+        모든 상담은 열려있습니다
+    </p>
+    <a href="/translation_order/selectType" class="home-btn">프로젝트 의뢰하기</a>
+</section>
 <!-- Begin Article
 ================================================== -->
 <div class="container">
