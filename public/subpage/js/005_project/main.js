@@ -22,5 +22,6 @@ jQuery(document).ready(function($){
 // jquery ui
 $("#datepicker1").datepicker();
 $("#datepicker2").datepicker();
+$("#datepicker3").datepicker();
 
 

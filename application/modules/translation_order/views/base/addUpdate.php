@@ -295,10 +295,11 @@
     
     			$(function() {
         			$("#datepicker2").datepicker();
-    			});
+				});
+				
 			</script>
 			
-			<div class="u-modal__cal">
+			<div>
 				<h4>통역 일정</h4>
 
 				<div class="icon">
@@ -383,12 +384,37 @@
 			<?php endif; ?>
 
 			<?php if ( $type === "번역" ): ?>
+			<script>
+				(function($) {
+    				$.fn.goTo = function() {
+        			$('html, body').animate({
+            			scrollTop: $(this).offset().top + 'px'
+        			}, 'fast');
+        			return this; // for chaining...
+			  			}
+				})(jQuery);
+    				$.datepicker.setDefaults({
+	    		    dateFormat: 'yy-mm-dd',
+		        	prevText: '이전 달',
+    			    nextText: '다음 달',
+    			    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    			    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    			    dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+    			    dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+    			    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+    			    showMonthAfterYear: true,
+    			    yearSuffix: '년'
+			    });
+				$(function() {
+        			$("#datepicker3").datepicker();
+    			});
+			</script>
 			<div>
 			<div>
 				<h4>희망 납기일</h4>
 
 				<div class="icon">
-					<input type="text" value="<?=DEBUG === false ? set_value("interpret_pay_date") : "납기일테스트" ?>" placeholder="희망 납기일" class="email" name="interpret_pay_date" id="project_paydate">
+					<input type="text" value="<?=DEBUG === false ? set_value("interpret_pay_date") : "납기일테스트" ?>" placeholder="희망 납기일" class="email" name="interpret_pay_date" id="datepicker3" readonly>
 				</div>
 			</div>
 
