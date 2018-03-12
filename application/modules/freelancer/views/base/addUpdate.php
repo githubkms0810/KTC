@@ -42,7 +42,7 @@
 
 
 	<div class="free_col-3">
-		<label for=""style="padding: 20px 20px 14px;">성별
+		<label for="" style="padding: 20px 20px 14px;">성별
 			<ul class="free_form-list" style="margin-bottom:11px">
 	    	<li>
 		  		<input type="radio" name="sex" value="남성" <?=set_checkbox("sex","남성",true)?> id="free_radio_sex1" >
@@ -98,7 +98,7 @@
 		</label>
 	  </div>
 	<div class="free_col-3">
-		<label style="padding: 20px 20px 10px;">지원 분야
+		<label for="" style="padding: 20px 20px 10px;">지원 분야
 		<?=form_error("apply_field")?>		
 	</br></br>
 			<ul class="free_form-list" style="margin-bottom:14px">
@@ -109,7 +109,7 @@
 					<label for="free_radio_apply1">번역</label>
 				</li>
 				<li>
-					<input type="radio" name="apply_field" value="통역" <?=set_checkbox("apply_field","통역")?> id="free_fadio_apply2">
+					<input type="radio" name="apply_field" value="통역" <?=set_checkbox("apply_field","통역")?> id="free_radio_apply2">
 		  		<label for="free_radio_apply2">통역</label>
 				</li>
 			</ul>
@@ -152,7 +152,7 @@
 
 	  </div>
 	  <div class="free_col-2">
-		<label style="padding: 20px 20px 20px;">
+		<label for="" style="padding: 20px 20px 20px;">
 			언어 방향
 		<?=form_error("translation_direction")?>
 		</br>
