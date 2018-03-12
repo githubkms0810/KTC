@@ -42,6 +42,14 @@
     <div class="col-sm-12"><h4>언어방향 : <?=$row->translation_direction?></h4></div>
 </div>
 <div class="row">
+    <div class="col-sm-12"><h4>언어종류 : <?=$row->language?></h4></div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12"><h4>분야 : <?=$row->field_detail?></h4></div>
+</div>
+
+<div class="row">
     <div class="col-sm-12"><h4>재직유무: <?=$row->is_employed?></h4></div>
 </div>
 <div class="row">

@@ -233,11 +233,11 @@ class Content_M extends Pagination_Model
 	}
 	protected function _list_base()
 	{
-		$this->db->select("IF(
-			LENGTH({$this->as}.desc) > 120,
-			CONCAT(LEFT({$this->as}.desc,120),'...'),
-			{$this->as}.desc
-			) as substr_desc");
+		// $this->db->select("IF(
+		// 	LENGTH({$this->as}.desc) > 120,
+		// 	CONCAT(LEFT({$this->as}.desc,120),'...'),
+		// 	{$this->as}.desc
+		// 	) as substr_desc");
 		if(($board_key = $this->input->get('board_key')) !== null) //게시판 key값으로
 		{
 			$this->db->where("b_c.board_key",$board_key);

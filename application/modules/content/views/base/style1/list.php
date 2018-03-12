@@ -39,7 +39,11 @@
 				<div class="col-md-7">
 					<div class="card-block">
 						<h2 class="card-title"><a href="/content/<?=$row->id?>?board_key=<?=$board->key?>"><?=$row->title?></a></h2>
-						<h4 class="card-text"><a  onMouseOver="this.style.textDecoration = 'none';" href="/content/<?=$row->id?>?board_key=<?=$board->key?>"><?=$row->substr_desc?></a></h4>
+						<h4 class="card-text">
+							<a  onMouseOver="this.style.textDecoration = 'none';" href="/content/<?=$row->id?>?board_key=<?=$board->key?>">
+							<?=renderDescriptionToPreview($row->desc)?>
+							</a>
+						</h4>
 						<div class="metafooter">
 							<div class="wrapfooter">
 								<span class="meta-footer-thumb">

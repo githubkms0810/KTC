@@ -2,6 +2,18 @@
 <?php defined('BASEPATH') OR exit('no direct script access allrowed');
 
 
+
+if(!function_exists('renderDescriptionToPreview')){
+    function renderDescriptionToPreview(string $desc)
+    {
+        $desc =addslashes(preg_replace("/<img[^>]+\>/i", "", $desc));
+        if(strlen($desc)  > 120)
+            $desc =mb_substr($desc,0,120)."...";
+        return $desc; 
+            
+    }   
+}
+
 if(!function_exists('form_error_one_of_multiple')){
     function form_error_one_of_multiple($fields = [])
     {

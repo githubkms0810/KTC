@@ -127,6 +127,14 @@ class Email_m extends Pagination_Model
 		$this->form_validation->set_rules('title', '제목', 'trim|required');
 		$this->form_validation->set_rules('desc', '내용', 'trim|required');
 	}
+	public function addByPostData()
+	{
+		$this->set_post("title");
+		$this->set_post("desc");
+		$this->set_post("to");
+		
+		return $this->p_add();
+	}
 	//------ @query @list@Get 정의
 
 	protected function _select()

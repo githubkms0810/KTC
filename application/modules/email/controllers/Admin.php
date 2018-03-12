@@ -19,9 +19,13 @@ class Admin extends \Admin_Controller {
             $data["content_view"] = "admin/addUpdate";
             $this->template->render($data);
         } else {
-            $this->email->from = "admin";
+
+            $from = "admin";
+            $this->email->from = $from;
             $this->email->send_email(post("to"),post("title"),post("desc"));
-            alert("이메일을 보냈습다.");
+            $this->db->set("from","{$from}@".$_SERVER["HTTP_HOST"]);
+            $this->email_m->addByPostData();
+            alert("이메일을 보냈습니다.");
             my_redirect("/admin/email/list");
         }
     }
