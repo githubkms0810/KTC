@@ -181,6 +181,17 @@ class Translation_order_m extends Pagination_Model
 		}
 
 	}
+	public function addForDebug()
+	{
+		$this->db->set("company","debug");
+		$this->db->set("type","번역");
+		$this->db->set("manager","debug");
+		$this->db->set("buyer","회사");
+		$this->db->set("company_phone","debug");
+		$this->db->set("company","debug");
+		$this->db->set("is_portfolio","1");			
+		return  $this->p_add();
+	}
 	public function addByPostData()
 	{
 		$this->load->library("post_helper");
@@ -217,6 +228,7 @@ class Translation_order_m extends Pagination_Model
 		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_get_cash_receipt","0");
 		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_use_confidential","0");
 		$this->set_post("message");
+		
 		$insert_id= $this->p_add();
 		return $insert_id;
 	}
@@ -370,7 +382,7 @@ class Translation_order_m extends Pagination_Model
 		`desc` text,
 		`type` ENUM('번역','통역') NOT NULL,
 		`translation_status` ENUM('전달중','전달완료','진행중','완료') NOT NULL DEFAULT '전달중',
-		`image` varchar(255) DEFAULT '/public/images/portfolio-1.png',
+		`image` varchar(255) DEFAULT '".portfolioDefaultImage."',
 		`buyer` ENUM('회사','개인') NOT NULL DEFAULT '회사',
 		`company` varchar(255),
 		`department` varchar(255),

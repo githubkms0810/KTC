@@ -9,7 +9,12 @@ class Admin extends \Admin_Controller {
     {
         parent::__construct();
     }
-    
+    public function insertPortfolioForDebug()
+    {
+        for ($i=0; $i < 50; $i++) { 
+            $this->translation_order_m->addForDebug();
+        }
+    }
 
     public function get($id)
     {

@@ -7,6 +7,7 @@ define("DEBUG",TRUE);
  define("AJAX_DEBUG",false);
 //  define("AJAX_DEBUG",true);
  define("transectionError",001);
+ define("portfolioDefaultImage","/public/images/portfolio-no-image.png");
 
 /*
 |--------------------------------------------------------------------------

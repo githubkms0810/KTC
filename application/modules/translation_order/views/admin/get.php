@@ -104,6 +104,14 @@
 <hr/>
 
 <div class="row">
+    <div class="col-sm-12">
+        <form <?=$this->ajax_helper->form("/admin/translation_order/update/{$row->id}")?>>
+        <?=$this->component->ajaxImage(["displayName"=>"포트폴리오 대표이미지","inputName"=>"image","row"=>$row,"default"=>portfolioDefaultImage])?>
+        <button class="btn btn-default" type="submit">보내기</button>
+        </form>
+    </div>
+</div>
+<div class="row">
     <div class="col-sm-12"><h2>포트폴리오 여부 :<?=$row->is_portfolio?></h2></div>
     <div class="col-sm-12">
         <form <?=$this->ajax_helper->form("/admin/translation_order/update/{$row->id}")?>>
