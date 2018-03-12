@@ -17,3 +17,10 @@ jQuery(document).ready(function($){
 		( inputField.val() == '' ) ? inputField.prev('.project_label').removeClass('float') : inputField.prev('.project_label').addClass('float');
 	}
 });
+
+
+// jquery ui
+$("#datepicker1").datepicker();
+$("#datepicker2").datepicker();
+
+

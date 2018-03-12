@@ -3,8 +3,14 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/public/subpage/css/005_project/style.css"> <!-- Resource style -->
   <script src="/public/subpage/js/005_project/modernizr.js"></script> <!-- Modernizr -->
+  <!--// jQuery UI CSS파일--> 
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />  
+  <!--// jQuery 기본 js파일-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+  <!--jQuery UI 라이브러리 js파일-->
+  <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script> 
 
-<!--번역,통역 폼 시작-->
+  <!--번역,통역 폼 시작-->
 	<form action="/translation_order/add" method="post"  enctype="multipart/form-data" class="project_form floating-labels" >
 		<input type="hidden" name="type" value="<?=$type?>">
 		<fieldset>
@@ -48,7 +54,7 @@
 				
 			</script>
 			<div>
-				<h4>Project type</h4>
+				<h4>Buyer type</h4>
 
 				<ul class="project_form-list">
 					<li>
@@ -224,14 +230,14 @@
 	
 				<p class="project_select icon">
 					<select name="translation_before" class="budget" style="width:49.7%; display:inline-block;">
-						<option value="">시작언어</option>
+						<option <?=DEBUG === true ? "selected" : ""?> value="">시작언어</option>
 						<option <?=set_select("translation_before")?>>포도</option>
-						<option  <?=set_select("translation_before")?>>사과</option>
-						<option <?=DEBUG === true ? "selected" : ""?> <?=set_select("translation_before")?>>오렌지</option>
+						<option <?=set_select("translation_before")?>>사과</option>
+						<option <?=set_select("translation_before")?>>오렌지</option>
 					</select>
 					<select name="translation_after" class="budget" style="width:49.6%; display:inline-block;">
-						<option value="">번역언어</option>
-						<option <?=DEBUG === true ? "selected" : ""?> <?=set_select("translation_after")?>>포도</option>
+						<option <?=DEBUG === true ? "selected" : ""?> value="">번역언어</option>
+						<option <?=set_select("translation_after")?>>포도</option>
 						<option <?=set_select("translation_after")?>>사과</option>
 						<option <?=set_select("translation_after")?>>오렌지</option>
 					</select>
@@ -253,21 +259,52 @@
 					<input value="<?=DEBUG === false ? set_value("interpret_post_number") : "우편번호테스트" ?>" id="sample4_postcode"type="hidden" name="interpret_post_number">
 				</div>
 				<div style="width:20%; display:inline-block; margin-bottom:1px;" class="project_form">
-					<button type="button "onclick="sample4_execDaumPostcode(); return false;" class="projectlang_add">추가</button>
+					<button type="button " onclick="sample4_execDaumPostcode(); return false;" class="projectlang_add">추가</button>
 				</div>
-				<div class="icon" style="margin-top:1px;">
+				<div class="icon" style="margin-top:20px;">
 					<label class="project_label" for="project_detailaddress">상세 주소</label>
 					<input value="<?=DEBUG === false ? set_value("interpret_address_detail") : "상세주소테스트" ?>" class="email" type="text" name="interpret_address_detail" id="project_detailaddress">
 				</div>
 			</div>
+			
+			<script>
+				(function($) {
+    				$.fn.goTo = function() {
+        			$('html, body').animate({
+            			scrollTop: $(this).offset().top + 'px'
+        			}, 'fast');
+        			return this; // for chaining...
+			  			}
+				})(jQuery);
+    				$.datepicker.setDefaults({
+	    		    dateFormat: 'yy-mm-dd',
+		        	prevText: '이전 달',
+    			    nextText: '다음 달',
+    			    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    			    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    			    dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+    			    dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+    			    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+    			    showMonthAfterYear: true,
+    			    yearSuffix: '년'
+			    });
 
-			<div>
+			    $(function() {
+        			$("#datepicker1").datepicker();
+    			});
+    
+    			$(function() {
+        			$("#datepicker2").datepicker();
+    			});
+			</script>
+			
+			<div class="u-modal__cal">
 				<h4>통역 일정</h4>
 
 				<div class="icon">
-					<input type="text" value="<?=DEBUG === false ? set_value("interpret_start_date") : "시작날짜테스트" ?>" placeholder="시작 날짜" style="width:48.5%; display:inline-block;" class="email" name="interpret_start_date" id="project_startdate">
+					<input type="text" value="<?=DEBUG === false ? set_value("interpret_start_date") : "시작날짜테스트" ?>" placeholder="시작 날짜" style="width:48.5%; display:inline-block;" class="email" name="interpret_start_date" id="datepicker1" readonly>
 					~
-					<input type="text" value="<?=DEBUG === false ? set_value("interpret_end_date") : "종료날자테스트" ?>" placeholder="종료 날짜" style="width:48.5%; display:inline-block;" class="email" name="interpret_end_date" id="project_enddate">
+					<input type="text" value="<?=DEBUG === false ? set_value("interpret_end_date") : "종료날자테스트" ?>" placeholder="종료 날짜" style="width:48.5%; display:inline-block;" class="email" name="interpret_end_date" id="datepicker2" readonly>
 			
 				</div>
 			</div>
@@ -347,7 +384,6 @@
 
 			<?php if ( $type === "번역" ): ?>
 			<div>
-
 			<div>
 				<h4>희망 납기일</h4>
 

@@ -267,6 +267,7 @@ Form
 }
 button {
   height: 57.5px;
+  width: 120px;
   border: none;
   border-radius: 4px;
   margin: 0 0 15px 0;
