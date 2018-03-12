@@ -1,11 +1,11 @@
-<section class="home-hero">
-    <h2 class="home-hero-title">대한민국 대표<br>언어 전문 서비스 기업</h2>
-    <p class="home-hero-des">
+<section class="home-hero-about_us">
+    <h2 class="home-hero-title-about_us">회사 소개</h2>
+    <p class="home-hero-des-about_us">
         코리아 통번역 센터는 전문 번역 서비스는 물론<br>
-        소프트웨어 현지화, 국제회의 맞춤 통역 서비스 등을 제공하는<br>
+        소프트웨어 현지화, 국제 회의 맞춤 통역 서비스 등을 제공하는<br>
         대한민국 대표 언어 전문 서비스 기업입니다
     </p>
-    <a href="/translation_order/selectType" class="home-btn">프로젝트 의뢰하기</a>
+    <a href="/small/portfolio_list" class="home-btn">포트폴리오 보러가기</a>
 </section>
 <section class="home-logo">
     <div class="home-logo__wrap">
