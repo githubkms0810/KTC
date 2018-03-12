@@ -9,7 +9,13 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
   <!--jQuery UI 라이브러리 js파일-->
   <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script> 
-
+<section class="home-hero-project">
+    <h2 class="home-hero-title-project">프로젝트 의뢰하기</h2>
+    <p class="home-hero-des-project">
+        고객님의 의뢰에 최선을 다하는 코리아 통번역 센터입니다!
+    </p>
+    <a href="/translation_order/list" class="home-btn">포트폴리오 보러가기</a>
+</section>
   <!--번역,통역 폼 시작-->
 	<form action="/translation_order/add" method="post"  enctype="multipart/form-data" class="project_form floating-labels" >
 		<input type="hidden" name="type" value="<?=$type?>">
