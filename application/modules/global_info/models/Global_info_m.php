@@ -300,6 +300,7 @@ class Global_info_M extends Pagination_Model
 
 		$this->_createTable($createTableQuery, function(){
 			$this->db->set("id","1");
+			$this->db->set("title","SITE_TITLE");
 			$this->db->set("og_type","site");
 			
 			$this->db->insert($this->table);
