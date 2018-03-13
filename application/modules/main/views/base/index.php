@@ -1,6 +1,6 @@
 <section class="home-hero">
     <h2 class="home-hero-title">대한민국 대표<br>언어 전문 서비스 기업</h2>
-    <p class="home-hero-des">
+    <p class="home-hero-des" style="color:white;">
         코리아 통번역 센터는 전문 번역 서비스는 물론<br>
         소프트웨어 현지화, 국제 회의 맞춤 통역 서비스 등을 제공하는<br>
         대한민국 대표 언어 전문 서비스 기업입니다
@@ -70,10 +70,10 @@
         <div>
             <h2 class="home-title">통번역 산업<sapn>의 표준화</sapn></h2>
             <p class="home-des">
-                코리아 통번역 센터는 대한민국의 통번역 산업의 표준화를 위해 노력하고 있습니다<br>
-                전시적 언어 자원 관리 시스템, 인재 데이터베이스, 전 프로젝트 PM을 통한<br>
-                책임 공정 및 상시 CS팀 운영 등으로 주먹구구식 운영을 지양하고,<br>
-                프로젝트 통합 관리 시스템을 도입함으로 통번역 산업의 표준화에 앞장서고 있습니다
+                코리아 통번역 센터는 대한민국의 통번역 산업의 표준화를 위해 노력하고 있습니다.<br class="br">
+                전시적 언어 자원 관리 시스템, 인재 데이터베이스, 전 프로젝트 PM을 통한<br class="br">
+                책임 공정 및 상시 CS팀 운영 등으로 주먹구구식 운영을 지양하고,<br class="br">
+                프로젝트 통합 관리 시스템을 도입함으로 통번역 산업의 표준화에 앞장서고 있습니다.
             </p>
         </div>
         <img src="/public/images/peolple.png">
