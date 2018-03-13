@@ -8,18 +8,28 @@
     <a href="/translation_order/selectType" class="home-btn">프로젝트 의뢰하기</a>
 </section>
 <section class="home-section home-section__portfolio">
-    <div class="bc-container">
+    <div class="bc-container" >
         <h2 class="home-title">포트폴리오</h2>
         <p class="home-des">기밀 유지를 원하는 프로젝트의 정보는 공개하지 않습니다</p>
-        <ul class="home-portfolio-list">
-        <?php foreach ( $portfolioes as $portfolio): ?>
-            
-            <li class="home-portfolio__itemlist">
-                <img src="<?=$portfolio->image?>">
-                <a href="/translation_order/<?=$portfolio->id?>">열람하기</a>
-            </li>
-        <?php endforeach; ?>
-        
+        <ul class="home-portfolio-list" id="jscroll-wapper">
+            <div>
+                <a href="/translation_order/listWithJscroll?offset=0&limit=<?=$this->limit?>" class="jscroll-next">끝</a>
+            </div>
         </ul>
     </div>
 </section>
+
+<!-- 무한스크롤 스크립트 시작 -->
+<script type="text/javascript" src="/public/libraries/jquery.jscroll.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#jscroll-wapper').jscroll({
+				autoTrigger: true,
+				padding: 0,
+				loadingHtml: '<img src="public/images/loading.gif" alt="Loading" />',
+				nextSelector: 'a.jscroll-next:last',
+                autoTriggerUntil : <?=$num_pages?>,
+			});
+		});
+</script>
+<!-- 무한스크롤 스크립트 끝 -->

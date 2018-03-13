@@ -22,6 +22,18 @@ class Base extends \Base_Controller {
        $this->load->view("test");
        
     }
+    public function getcontent()
+    {
+        $page=get("page");
+        $nextPage = $page + 1;
+        echo('<div>');
+        echo "<h1>$nextPage</h1>";
+        echo "<h1>$nextPage</h1>";
+        echo "<h1>$nextPage</h1>";
+        echo "<h1>$nextPage</h1>";
+        echo('</div> ');
+        echo('<div class="next"><a href="/test/getcontent?mode=auto&page='.$nextPage.'" class="nextPage">다음 페이지</a></div>');
+    }
     public function migration1()
     {
         $start =0;

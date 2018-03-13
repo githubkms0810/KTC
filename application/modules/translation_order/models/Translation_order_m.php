@@ -158,11 +158,17 @@ class Translation_order_m extends Pagination_Model
 	// `num_equiment` INT UNSIGNED DEFAULT '0',
 
 	//------ @cusotm
-	public function listIsPortfolioWithLimit($limit)
+	public function listIsPortfolioWithLimit($limit,$offset = "0")
 	{
 		$this->db->where("is_portfolio","1");
-		$this->db->limit($limit,0);
+		$this->db->limit($limit,$offset);
 		return $this->list();
+	}
+	public function countPortFolioes()
+	{
+		$this->db->select("count(*) as portfoliio_count");
+		$this->db->where("is_portfolio","1");
+		return $this->db->get($this->table)->row()->portfoliio_count;
 	}
 	public function setRulesWhenAdd()
 	{

@@ -3,7 +3,7 @@ namespace translation_order;
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Base extends \Base_Controller {
-
+    public $limit = 8;
     public function __construct()
     {
         parent::__construct();
@@ -14,6 +14,14 @@ class Base extends \Base_Controller {
         $data["content_view"] = 'base/selectTranstionType';
         $this->template->render($data);
         
+    }
+    public function listWithJscroll()
+    {
+        $data["offset"] = $offset = get("offset");
+        $data["limit"] = $limit = get("limit");
+        $data["portfolioes"] = $this->translation_order_m->listIsPortfolioWithLimit($limit,$offset);
+        $this->load->view("base/listWithJscroll",$data);
+
     }
     public function get($id)
     {
@@ -32,7 +40,9 @@ class Base extends \Base_Controller {
     }
     public function list()
     {
-        $data["portfolioes"] = $this->translation_order_m->listIsPortfolioWithLimit(8);
+        $limit = $this->limit;
+        $portfolioes_count = $this->translation_order_m->countPortFolioes();
+        $data["num_pages"]  =  ceil($portfolioes_count/ $limit);
 		$data["content_view"] = "base/list";
 		$this->template->render($data);
     }   
