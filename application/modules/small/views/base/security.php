@@ -21,12 +21,7 @@
     <div class="sub-content">
         
         <div class="join-wrap">
-            <div class="join-tit">
-                NDA(Non-Disclosure Agreement : 기밀유지협약)가<br>
-                체결된 중요 문서군은 프로젝트 단위로 각기 다른 문서 보안 시스템을 통하여<br>
-                관리/보호하고 있으며, 프로젝트 종료 후 일정 기간 내에 파기를 원칙으로 하고 있습니다
-            </div>
-            <div class="join-list">
+            <div class="join-list" >
                 <ul>
                     <li>
                         <div>
@@ -35,8 +30,10 @@
                                 <div class="poi">
                                     <div class="img"><span><img src="/public/subpage/css/001_jobdance/images/j-icon01.png" alt=""></span></div>
                                     <div class="name">기밀 유지 협약</div>
-                                    <div class="txt">
-                                        코리아 통번역 센터 NDA.doc<br class="one">
+                                    <div class="txts">
+                                    NDA(Non-Disclosure Agreement)가<br> 체결된 중요 문서군은 프로젝트 단위로 각기 다른<br> 문서 보안 시스템을 통하여<br>
+                                    관리/보호하고 있으며, 프로젝트 종료 후 <br>일정 기간 내에 파기를 원칙으로 하고 있습니다<br><br>
+                                    코리아 통번역 센터 NDA.doc<br class="one">
                                         1,297mb
                                     </div>
                                 </div>

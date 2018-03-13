@@ -1207,6 +1207,7 @@ template {
 .home-text__item:nth-child(2n) p:after {
   left: -17px;
   background-image: url(../images/tail-1.png);
+  background-color: transparent;
 }
 .home-text__item:nth-child(2n-1) {
   text-align: right;

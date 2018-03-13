@@ -17,7 +17,6 @@
 ================================================== -->
 <div class="container">
 	<div class="mainheading">
-		<h1 class="sitetitle" style="text-align: center;">고객센터</h1>
 		<p>
 		</br>	
 		</br>        

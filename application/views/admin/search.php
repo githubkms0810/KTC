@@ -1,4 +1,5 @@
 	<?php if ( count($searchDataList) !== 0 ): ?>
+	<div style="text-align:center;">
 		<form style="margin-top:10px;" class="form-inline" <?=$this->ajax_helper->form_get(my_site_url("/admin/{$moduleName}/list",true,false))?> >
 		<!-- <form style="margin-top:10px;" class="form-inline" action="<?=my_site_url("/admin/{$moduleName}/list")?>"> -->
 			<div class="form-group">
@@ -29,5 +30,7 @@
 		
 
 		</form>
+
+</div>
 	<?php endif; ?>
 
