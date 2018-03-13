@@ -21,7 +21,12 @@ class Base extends \Base_Controller {
     {
         
        $this->load->view("test");
-       
+    }
+    public function payapp_request()
+    {
+        $this->ajax_helper->headerJson();
+        $data["state"] = true;
+        echo json_encode($data);
     }
     public function getcontent()
     {
