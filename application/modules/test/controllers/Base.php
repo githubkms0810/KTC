@@ -19,6 +19,7 @@ class Base extends \Base_Controller {
     */
     public function index()
     {
+        
        $this->load->view("test");
        
     }

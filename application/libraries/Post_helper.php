@@ -10,7 +10,11 @@ class Post_helper
     {
         $this->ci =& get_instance();
     }
-
+    public function extractFirstImageTagOnDescription($texthtml,$default = "")
+    {
+        preg_match('/<img.+src=[\'"](?P<src>.+?)[\'"].*>/i', $texthtml, $image);
+        return $image['src'] ?? $default;
+    }
     public function makePhoneByPostData(string $first = "phone_first",string $second = "phone_second",string $third ="phone_third")
 	{
 		return post($first)."-".post($second)."-".post($third);

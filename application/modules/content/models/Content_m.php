@@ -7,13 +7,15 @@ class Content_M extends Pagination_Model
 {
 
 	protected $numRows_moduleName = "board";
-    protected $numRows_foreignKey = "board_key";
+	protected $numRows_foreignKey = "board_key";
+	private $defaultImage = "/public/images/no_thumnail.png";
 	public function __construct()
 	{
 		$this->table = "board_content";
 		$this->as = "b_c";
 		parent::__construct();
 		$this->load->model('file/file_m');
+		$this->load->library('post_helper');
 	}
 
 	
@@ -47,6 +49,8 @@ class Content_M extends Pagination_Model
 		$this->set_addUpdate_base();
 		$this->set("user_id",$this->user->id);
 		$this->set("board_key",get("board_key"));
+		
+		$this->set("image",$this->post_helper->extractFirstImageTagOnDescription(post("desc"),$this->defaultImage));
 		///손님일때 추가 데이터
 		$this->setGuestInfo();
 		$this->set("is_secret",$this->setContent_isSecret());
@@ -65,17 +69,19 @@ class Content_M extends Pagination_Model
 	{
 		$row = $this->p_get($id);
 		$this->addFileAnd_SetFileGroupId($row);
-		
+		$this->set("image",$this->post_helper->extractFirstImageTagOnDescription(post("desc"),$this->defaultImage));
 		$this->set_addUpdate_base();
 		return $this->p_update($id);
 	}
 	protected function _add_admin()
 	{
+		$this->set("image",$this->post_helper->extractFirstImageTagOnDescription(post("desc"),$this->defaultImage));
 		$this->_setQueryUserIdOrLoginUserId();
 		return parent::_add_admin();
 	}
 	protected function _update_admin($id)
 	{
+		$this->set("image",$this->post_helper->extractFirstImageTagOnDescription(post("desc"),$this->defaultImage));
 		$this->_setQueryUserIdOrLoginUserId();
 		return parent::_update_admin($id);
 	}
@@ -382,7 +388,7 @@ class Content_M extends Pagination_Model
 	public function alertTable()
 	{
 		$fieldName = "image";
-		$addFieldQuery = "ALTER TABLE `{$this->table}` ADD `{$fieldName}` varchar(255) NOT NULL DEFAULT '/public/images/no_thumnail.png' AFTER `desc`, ADD INDEX `idx_{$fieldName}` (`{$fieldName}`);";
+		$addFieldQuery = "ALTER TABLE `{$this->table}` ADD `{$fieldName}` varchar(255) NOT NULL DEFAULT '{$this->defaultImage}' AFTER `desc`, ADD INDEX `idx_{$fieldName}` (`{$fieldName}`);";
 		$this->_addField($fieldName,$addFieldQuery);
 		
 	}

@@ -40,3 +40,17 @@
 <!-- 회사로고 -->
 <!-- 프로필이미지 -->
 게시판 프리뷰 이미지 나오게하기
+
+
+[]
+http://payapp.kr/index.html
+ID : cho0924
+PW : ktrans8077
+payapp.kr
+페이앱
+페이앱 가입비무료, 블로그마켓 카드결제, 수기결제, 블로그결제, SMS결제, 블로그페이, 본사 고객센터 1800-3772
+연동 KEY 
+EW82nXmcIP98l2xT16ccS+1DPJnCCRVaOgT+oqg6zaM=
+연동 VALUE
+EW82nXmcIP98l2xT16ccS34LbBYn62qCNGVcLUtLlhk=
+http://payapp.kr/home/dev_center/dev_center01.html#
