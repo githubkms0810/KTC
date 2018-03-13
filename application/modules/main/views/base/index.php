@@ -92,6 +92,6 @@
             
         <?php endforeach; ?>
         </ul>
-        <a href="/translation_order/list" class="home-btn home-btn_small">다른 프로젝트 보기</a>
+        <a href="/translation_order/list" class="home-btn">다른 프로젝트 보기</a>
     </div>
 </section>

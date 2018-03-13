@@ -385,7 +385,7 @@ template {
   padding: 0 40px;
   height: 50px;
   line-height: 50px;
-  border-radius: 25px;
+  border-radius: 30px;
 }
 
 .home-btn_small {
@@ -485,7 +485,7 @@ template {
   }
   .home-nav__list > li:last-child {
     border: 2px solid #fff;
-    border-radius: 20px;
+    border-radius: 30px;
     margin-left: 20px;
     margin-top: 20px;
   }
@@ -506,6 +506,7 @@ template {
     left: -10px;
     top: 66px;
     border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(149,186,219,0.3);
   }
   .home-nav__list ul a {
     color: #505460;
@@ -523,7 +524,7 @@ template {
   }
   .home-nav a {
     color: #fff;
-    font-size: 12px;
+    font-size: 14px;
     display: inline-block;
     height: 82px;
     line-height: 82px;
@@ -556,7 +557,7 @@ template {
 @media (min-width: 600px) {
   .home-hero {
     height: 638px;
-    background-image: url(../images/hero-bg.gif);
+    background-image: url(../images/hero-bg.png);
   }
   .home-hero-title {
     font-size: 50px;
@@ -751,25 +752,43 @@ template {
   clear: both;
 }
 
-@media (min-width: 1070px) {
+@media (min-width: 1150px) {
   .home-section_padding {
     padding-bottom: 115px;
   }
   .home-section_padding div div {
     float: left;
     margin-top: 40px;
-    margin-left: 0;
+    margin-left: 40px;
   }
   .home-section_padding h2 {
     text-align: left;
   }
   .home-section_padding img {
-    margin-right: 0;
+    margin-right: 40px;
     float: right;
     margin-top: -20px;
     width: 501px;
   }
 }
+@media (max-width: 1150px) {
+  .home-section_padding {
+    padding-bottom: 115px;
+    text-align:center;
+  }
+  .home-section_padding div div {
+    margin-top: 40px;
+    text-align: center;
+  }
+  .home-section_padding h2 {
+    text-align: center;
+  }
+  .home-section_padding img {
+    margin-top: -20px;
+    width: 501px;
+  }
+}
+
 @media (min-width: 1240px) {
   .home-section_padding div div {
     margin-left: 70px;

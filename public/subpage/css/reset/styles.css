@@ -13,7 +13,6 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
   outline: none;
-  -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-box-sizing: border-box;

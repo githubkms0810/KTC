@@ -34,9 +34,9 @@
                             <a href="#">함께하기</a>
                             <ul>
                                 <li>
-                                    <a href="/freelancer/add">프리랜서 지원</a>
-                                    <a href="/contact/add">업무 제휴 문의</a>
-                                    <a href="/small/security">기밀 유지 정책</a>
+                                    <a style="font-size:12px;" href="/freelancer/add">프리랜서 지원</a>
+                                    <a style="font-size:12px;" href="/contact/add">업무 제휴 문의</a>
+                                    <a style="font-size:12px;" href="/small/security">기밀 유지 정책</a>
                                 </li>
                             </ul>
                         </li>
@@ -54,7 +54,7 @@
         <footer class="home-footer">
             <div class="bc-container">
                 <div class="home-footer__sitemap">
-                    <h4>SITEMAP</h4>
+                    <h4><b>SITEMAP</b></h4>
                     <div>
                         <a href="/">메인</a>
                         <a href="/small/about_us">회사 소개</a>
@@ -69,21 +69,21 @@
                     </div>
                 </div>
                 <div class="home-footer__info">
-                    <h4>CONTACT</h4>
-                    <p><span>TEL</span> 02-6738-8220</p>
-                    <p><span>FAX</span> 02-6499-8220</p>
-                    <p><span>E-MAIL</span> ktx@ktrans.kr</p>
+                    <h4><b>CONTACT</b></h4>
+                    <p><span><b>TEL</b></span> 02-6738-8220</p>
+                    <p><span><b>FAX</b></span> 02-6499-8220</p>
+                    <p><span><b>E-MAIL</b></span> ktx@ktrans.kr</p>
                 </div>
                 <div class="home-footer__info">
-                    <h4>INFORMATION</h4>
-                    <p><span>상호</span> 코리아 통번역 센터</p>
-                    <p><span>대표</span> 조승우</p>
-                    <p><span>사업자 등록 번호</span> 113-22-52693</p>
-                    <p><span>통신 판매업 신고</span> 제2012-서울구로-0538호</p>
+                    <h4><b>INFORMATION</b></h4>
+                    <p><span><b>상호</b></span> 코리아 통번역 센터</p>
+                    <p><span><b>대표</b></span> 조승우</p>
+                    <p><span><b>사업자 등록 번호</b></span> 113-22-52693</p>
+                    <p><span><b>통신 판매업 신고</b></span> 제2012-서울구로-0538호</p>
                 </div>
             </div>
             <div class="home-footer__copy">
-                &copy; KTC. All Rights Reserved.
+                &copy; 2017 <b>KTC</b>. All Rights Reserved.
             </div>
         </footer>
     </body>
