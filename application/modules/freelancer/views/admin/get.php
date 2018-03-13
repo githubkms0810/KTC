@@ -1,79 +1,135 @@
-<style>
-@media (min-width : 768px)
-{
-    .col-border:before
-    {
-        content: "";
-        position : absolute;
-        top : 0 ;
-        bottom : 0;
-        border-left : 1px solid black;
-    }
-}
-</style>
+<link rel="stylesheet" href="/public/css/jy.css">
+<table class="table table-bordered">
+    
+    <tbody>
+      <tr>
+        <td class="jy-td-name">이름</td>
+        <td colspan="2" ><?=$row->name?></td>
+        <td class="jy-td-name">성별</td>
+        <td colspan="2" ><?=$row->sex?></td>
+        <td class="jy-td-name">생년월일</td>
+        <td colspan="2"><?=$row->birth_year?>년 <?=$row->birth_month?>월 <?=$row->birth_day?>일</td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td class="jy-td-name">연락처</td>
+        <td colspan="2"><?=$row->tel?></td>
+        <td class="jy-td-name">휴대폰</td>
+        <td colspan="2"><?=$row->phone?></td>
+        <td class="jy-td-name">국가</td>
+        <td colspan="2"><?=$row->nation?></td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td class="jy-td-name">이메일</td>
+        <td colspan="8"><?=$row->email?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">우편번호</td>
+        <td colspan="8"><?=$row->post_number?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">도로명주소</td>
+        <td colspan="3"><?=$row->new_address?></td>
+        <td class="jy-td-name">지번주소</td>
+        <td colspan="4"><?=$row->old_address?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">상세주소</td>
+        <td colspan="8"><?=$row->address_detail?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">계좌정보</td>
+        <td colspan="8"><?=$row->account_bank?> <?=$row->account_number?> <?=$row->account_name?></td>
+      </tr>
+     
+    </tbody>
+  </table>
+
+
+
+  <table class="table table-bordered">
+    
+    <tbody>
+      <tr>
+        <td class="jy-td-name">지원분야</td>
+        <td colspan="8"><?=$row->apply_field?></td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td class="jy-td-name">경력</td>
+        <td colspan="3"><?=$row->is_have_career?></td>
+        <td class="jy-td-name">언어수준</td>
+        <td colspan="4"><?=$row->level?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">언어방향</td>
+        <td colspan="8"><?=$row->translation_direction?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">언어종류</td>
+        <td colspan="8"><?=$row->language?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">분야</td>
+        <td colspan="8"><?=$row->field_detail?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">재직유무</td>
+        <td colspan="8"><?=$row->is_employed?></td>
+      </tr>
+      <tr>
+        <td colspan="1" class="jy-td-name">대학</td>
+        <td colspan="3"><?=$row->university?></td>
+        <td colspan="1" class="jy-td-name">전공</td>
+        <td colspan="4"><?=$row->university_major?></td>
+      </tr>
+      <tr>
+      <td class="jy-td-name">대학원</td>
+      <td colspan="2"><?=$row->graduate_school?></td>
+      <td class="jy-td-name">학위</td>
+      <td colspan="2"><?=$row->graduate_school_degree?></td>
+      <td class="jy-td-name">전공</td>
+      <td colspan="2"><?=$row->graduate_school_major?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">일할 수 있는 날짜</td>
+        <td colspan="8"><?=$row->can_working_day?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">하루에 번역 가능 페이지수</td>
+        <td colspan="8"><?=$row->num_translation_per_day?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">관리자 점수</td>
+        <td colspan="8"><?=$row->admin_score?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">관리자 메모</td>
+        <td colspan="8"><?=$row->admin_memo?></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+<?php foreach ( $application_files as $application_file ): ?>
 <div class="row">
-    <div class="col-sm-12"><h4>이름 : <?=$row->name?></h4></div>
-    <div class="col-sm-12"><h4>생년월일 : <?=$row->birth_year?>년 <?=$row->birth_month?>월 <?=$row->birth_day?>일</h4></div>
-    <div class="col-sm-12"><h4>국가 : <?=$row->nation?></h4></div>
-    <div class="col-sm-12"><h4>성별 : <?=$row->sex?></h4></div>
-    <div class="col-sm-12"><h4>연락처 : <?=$row->tel?></h4></div>
-    <div class="col-sm-12"><h4>휴대폰 : <?=$row->phone?></h4></div>
-    <div class="col-sm-12"><h4>이메일 : <?=$row->email?></h4></div>
-    <div class="col-sm-12"><h4>우편번호 : <?=$row->post_number?></h4></div>
-    <div class="col-sm-12"><h4>도로명주소 : <?=$row->new_address?></h4></div>
-    <div class="col-sm-12"><h4>지번주소 : <?=$row->old_address?></h4></div>
-    <div class="col-sm-12"><h4>상세주소 : <?=$row->address_detail?></h4></div>
-    <div class="col-sm-12"><h4>계좌정보 : <?=$row->account_bank?> <?=$row->account_number?> <?=$row->account_name?></h4></div>
-</div>  
-<hr>
+    <div class="col-sm-12"><h4>지원서파일 : <a href="/download/<?=$application_file->id?>"><?=$application_file->original_name?></a></h4></div>
+</div>
+<?php endforeach; ?>
 <div class="row">
-    <div class="col-sm-12"><h4>지원분야 : <?=$row->apply_field?></h4></div>
+    <div class="col-sm-12"><h4>지원서파일 : <?=$row->application_file_directory1?></h4></div>
 </div>
 <div class="row">
-    <div class="col-sm-12"><h4>경력 : <?=$row->is_have_career?></h4></div>
-</div>
-<div class="row">
-    <div class="col-sm-12"><h4>언어방향 : <?=$row->translation_direction?></h4></div>
-</div>
-<div class="row">
-    <div class="col-sm-12"><h4>언어종류 : <?=$row->language?></h4></div>
+    <div class="col-sm-12"><h4>지원서파일 : <?=$row->application_file_directory2?></h4></div>
 </div>
 
-<div class="row">
-    <div class="col-sm-12"><h4>분야 : <?=$row->field_detail?></h4></div>
-</div>
-
-<div class="row">
-    <div class="col-sm-12"><h4>재직유무: <?=$row->is_employed?></h4></div>
-</div>
-<div class="row">
-    <div class="col-sm-12"><h4>대학: <?=$row->university?> <?=$row->university_major?></h4></div>
-</div>
-<div class="row">
-    <div class="col-sm-12"><h4>대학원: <?=$row->graduate_school?> <?=$row->graduate_school_degree?> <?=$row->graduate_school_major?></h4></div>
-</div>
-<div class="row">
-    <div class="col-sm-12"><h4>경력 : <?=$row->experience?></h4></div>
-</div>
-<div class="row">
-    <div class="col-sm-12"><h4>그외 : <?=$row->etc?></h4></div>
-</div>
-<div class="row">
-    <div class="col-sm-12"><h4>언어수준 : <?=$row->level?></h4></div>
-</div>
-<div class="row">
-    <div class="col-sm-12"><h4>일할 수 있는 날짜 : <?=$row->can_working_day?></h4></div>
-</div>
-<div class="row">
-    <div class="col-sm-12"><h4>하루에 번역 가능 페이지수 : <?=$row->num_translation_per_day?></h4></div>
-</div>
 <hr>
-<div class="row">
-    <div class="col-sm-12"><h4>관리자 점수 : <?=$row->admin_score?></h4></div>
-</div>
-<div class="row">
-    <div class="col-sm-12"><h4>관리자 메모 : <?=$row->admin_memo?></h4></div>
-</div>
+
 <div class="row">
     <div class="col-sm-4">
     <h4>승인 상태 : <?=$row->is_admin_confirm?> 
@@ -94,17 +150,6 @@
     <div class="col-sm-4">
         <h4><button class="btn btn-default clickable" target="_blank" data-href="/admin/email/add?email=<?=$row->email?>">이메일 보내기</button></h4>
     </div>
+</div>
 
-</div>
-<hr>
-<?php foreach ( $application_files as $application_file ): ?>
-<div class="row">
-    <div class="col-sm-12"><h4>지원서파일 : <a href="/download/<?=$application_file->id?>"><?=$application_file->original_name?></a></h4></div>
-</div>
-<?php endforeach; ?>
-<div class="row">
-    <div class="col-sm-12"><h4>지원서파일 : <?=$row->application_file_directory1?></h4></div>
-</div>
-<div class="row">
-    <div class="col-sm-12"><h4>지원서파일 : <?=$row->application_file_directory2?></h4></div>
-</div>
+<br>

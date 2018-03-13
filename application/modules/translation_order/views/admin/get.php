@@ -1,6 +1,6 @@
-<div class="row">
-    <div class="col-sm-4"><h3><?=$row->type?>/<?=$row->buyer?></h3></div>
-</div>
+
+<link rel="stylesheet" href="/public/css/jy.css">
+
 <hr/>
 <div class="row">
     <div class="col-sm-4"><h3>상태: <?=$row->translation_status?></h3></div>
@@ -21,75 +21,174 @@
     
 </div>
 <hr/>
+
+
+<table class="table table-bordered">
+    
+    <tbody>
+  
+     
+
+    <tr>
+        <td class="jy-td-name">종류</td>
+        <td colspan="8"><?=$row->type?></td>
+    </tr>
+    <tr>
+        <td class="jy-td-name">구매자종류</td>
+        <td colspan="8"><?=$row->buyer?></td>
+    </tr>
+
 <?php if ( $row->buyer ==="회사" ): ?>
-<div class="row">
-    <div class="col-sm-4"><h4>회사명 : <?=$row->company?></h4></div>
-    <div class="col-sm-4"><h4>부서명 : <?=$row->department?></h4></div>    
-    <div class="col-sm-4"><h4>회사번호 : <?=$row->company_phone?></h4></div>    
-</div>
-<div class="row">
-    <div class="col-sm-4"><h4>담당자 : <?=$row->manager?></h4></div>
-    <div class="col-sm-8"><h4>담당자번호 : <?=$row->manager_phone?></h4></div>    
-</div>
+
+<tr>
+    <td class="jy-td-name">회사명</td>
+    <td colspan="8"><?=$row->company?></td>
+</tr>
+<tr>
+    <td class="jy-td-name">부서명</td>
+    <td colspan="8"><?=$row->department?></td>
+</tr>
+<tr>
+    <td class="jy-td-name">회사번호</td>
+    <td colspan="8"><?=$row->company_phone?></td>
+</tr>
+<tr>
+    <td class="jy-td-name">담당자</td>
+    <td colspan="8"><?=$row->manager?></td>
+</tr>
+<tr>
+    <td class="jy-td-name">담당자번호</td>
+    <td colspan="8"><?=$row->manager_phone?></td>
+</tr>
+
+
+
     
 <?php endif; ?>
 <?php if ( $row->buyer ==="개인" ): ?>
-    <div class="row">
-        <div class="col-sm-4"><h4>이름 : <?=$row->personal_name?></h4></div>
-        <div class="col-sm-8"><h4>번호 : <?=$row->personal_phone?></h4></div>    
-    </div>
+<tr>
+    <td class="jy-td-name">이름</td>
+    <td colspan="8"><?=$row->personal_name?></td>
+</tr>
+
+<tr>
+    <td class="jy-td-name">번호</td>
+    <td colspan="8"><?=$row->personal_phone?></td>
+</tr>
+
+<?php endif; ?>
+    <tr>
+        <td class="jy-td-name">팩스여부</td>
+        <td colspan="3"><?=$row->is_exist_fax?></td>
+        <td class="jy-td-name">팩스번호</td>
+        <td colspan="4"><?=$row->fax?></td>
+    </tr>
+    <tr>
+        <td class="jy-td-name">이메일</td>
+        <td colspan="8"><?=$row->email?></td>
+    </tr>
+</tbody>
+  </table>
+
+<hr/>
+<?php if ($row->type ==="번역" ): ?>
+
+<table class="table table-bordered">
+    
+    <tbody>
+      <tr>
+        <td class="jy-td-name">통역종류</td>
+        <td colspan="8"><?=$row->interpret_kind?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">우편번호</td>
+        <td colspan="8"><?=$row->interpret_post_number?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">도로명</td>
+        <td colspan="3"><?=$row->interpret_new_address?></td>
+        <td class="jy-td-name">지번명</td>
+        <td colspan="4"><?=$row->interpret_old_address?></td>
+      </tr>
+      <tr>
+      <td class="jy-td-name">상세 주소</td>
+      <td colspan="8"><?=$row->interpret_address_detail?></td>
+    </tr>
+      <tr>
+      <td class="jy-td-name">시작일</td>
+      <td colspan="3"><?=$row->interpret_start_date?></td>
+      <td class="jy-td-name">마지막일</td>
+      <td colspan="4"><?=$row->interpret_end_date?></td>
+    </tr>
+      <tr>
+      <td class="jy-td-name">희망 납기일</td>
+      <td colspan="8"><?=$row->interpret_pay_date?></td>
+    </tr>
+      <tr>
+      <td class="jy-td-name">장비유무</td>
+      <td colspan="3"><?=$row->is_need_equiment?></td>
+      <td class="jy-td-name">장비갯수</td>
+      <td colspan="4"><?=$row->num_equiment?></td>
+    </tr>
+    <tr>
+      <td class="jy-td-name">프로필 유무</td>
+      <td colspan="8"><?=$row->is_need_profile?></td>
+    </tr>
+    </tbody>
+  </table>
+
+
 <?php endif; ?>
 
-<div class="row">
-    <div class="col-sm-4"><h4>팩스여부 : <?=$row->is_exist_fax?></h4></div>
-    <div class="col-sm-8"><h4>팩스번호 : <?=$row->fax?></h4></div>    
-</div>
-<div class="row">
-    <div class="col-sm-12"><h4>이메일 : <?=$row->email?></h4></div>
-</div>
-<hr/>
-<?php if ($row->type ==="통역" ): ?>
-<div class="row">
-    <div class="col-sm-12"><h4>통역종류 : <?=$row->interpret_kind?></h4></div>
-    <div class="col-sm-12"><h4>우편번호 : <?=$row->interpret_post_number?></h4></div>
-    <div class="col-sm-12"><h4>도로명 : <?=$row->interpret_new_address?></h4></div>
-    <div class="col-sm-12"><h4>지번명 : <?=$row->interpret_old_address?></h4></div>
-    <div class="col-sm-12"><h4>상세 주소 : <?=$row->interpret_address_detail?></h4></div>
-    <div class="col-sm-12"><h4>시작일 : <?=$row->interpret_start_date?></h4></div>
-    <div class="col-sm-12"><h4>마지막일 : <?=$row->interpret_end_date?></h4></div>
-    <div class="col-sm-12"><h4>희망 납기일 : <?=$row->interpret_pay_date?></h4></div>
-    <div class="col-sm-12"><h4>장비유무 : <?=$row->is_need_equiment?></h4></div>
-    <div class="col-sm-12"><h4>장비 갯수 : <?=$row->num_equiment?></h4></div>
-    <div class="col-sm-12"><h4>프로필 유무 : <?=$row->is_need_profile?></h4></div>
-</div>
-<hr/>
-<hr/>
-<?php endif; ?>
+<table class="table table-bordered">
+    
+    <tbody>
+      <tr>
+        <td class="jy-td-name">번역종류</td>
+        <td colspan="8" ><?=$row->translation_kind?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">번역전</td>
+        <td colspan="3" ><?=$row->translation_before?></td>
+        <td class="jy-td-name">번역후</td>
+        <td colspan="4" ><?=$row->translation_after?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">예산여부</td>
+        <td colspan="3" ><?=$row->is_exist_budget?></td>
+        <td class="jy-td-name">예산</td>
+        <td colspan="4" ><?=$row->budget?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">마감일</td>
+        <td colspan="8" ><?=$row->deadline?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">요구사항</td>
+        <td colspan="8" ><?=$row->requirements?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">세금계산서 여부</td>
+        <td colspan="8" ><?=$row->is_get_tax_bill?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">현금 영수증</td>
+        <td colspan="8" ><?=$row->is_get_cash_receipt?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">기밀 여부</td>
+        <td colspan="8" ><?=$row->is_use_confidential?></td>
+      </tr>
+      <tr>
+        <td class="jy-td-name">메세지 여부</td>
+        <td colspan="8" ><?=$row->message?></td>
+      </tr>
+     
+    </tbody>
+  </table>
 
-<div class="row">
-    <div class="col-sm-12"><h4>번역종류 : <?=$row->translation_kind?></h4></div>
-</div>
-<div class="row">
-    <div class="col-sm-6"><h4>번역전 : <?=$row->translation_before?></h4></div>
-    <div class="col-sm-6"><h4>번역후 : <?=$row->translation_after?></h4></div>
-</div>
-<div class="row">
-    <div class="col-sm-12"><h4>마감일 : <?=$row->deadline?></h4></div>
-</div>
 
-<div class="row">
-    <div class="col-sm-6"><h4>예산여부 : <?=$row->is_exist_budget?></h4></div>
-    <div class="col-sm-6"><h4>예산 : <?=$row->budget?></h4></div>
-</div>
-<div class="row">
-    <div class="col-sm-12"><h4>요구사항 : <?=$row->requirements?></h4></div>
-</div>
-<div class="row">
-    <div class="col-sm-12"><h4>세금계산서 여부 : <?=$row->is_get_tax_bill?></h4></div>
-    <div class="col-sm-12"><h4>현금 영수증 : <?=$row->is_get_cash_receipt?></h4></div>
-    <div class="col-sm-12"><h4>기밀 여부 : <?=$row->is_use_confidential?></h4></div>
-    <div class="col-sm-12"><h4>메세지 : <?=$row->message?></h4></div>
-</div>
+
 <hr/>
 
 <div class="row">
@@ -126,3 +225,6 @@
         </form>
     </div>
 </div>
+
+<br>
+<br>

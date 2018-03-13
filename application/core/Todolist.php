@@ -35,22 +35,12 @@
 다른 포트폴리오 보기는 같은 분야로 설정
 
 포트폴리오 리스트 페이지
+
+어드민페이지 손보기 (보이기 안보이기 수정 기능 없애기 등)
 <!-- -회사 로고로 리스트 채움 -->
 
 <!-- 회사로고 -->
 <!-- 프로필이미지 -->
-게시판 프리뷰 이미지 나오게하기
+<!-- 게시판 프리뷰 이미지 나오게하기 -->
 
 
-[]
-http://payapp.kr/index.html
-ID : cho0924
-PW : ktrans8077
-payapp.kr
-페이앱
-페이앱 가입비무료, 블로그마켓 카드결제, 수기결제, 블로그결제, SMS결제, 블로그페이, 본사 고객센터 1800-3772
-연동 KEY 
-EW82nXmcIP98l2xT16ccS+1DPJnCCRVaOgT+oqg6zaM=
-연동 VALUE
-EW82nXmcIP98l2xT16ccS34LbBYn62qCNGVcLUtLlhk=
-http://payapp.kr/home/dev_center/dev_center01.html#
