@@ -9,7 +9,6 @@
 </section>
 <section class="home-section home-section__portfolio">
     <div class="bc-container" >
-        <h2 class="home-title">포트폴리오</h2>
         <p class="home-des">기밀 유지를 원하는 프로젝트의 정보는 공개하지 않습니다</p>
         <ul class="home-portfolio-list" id="jscroll-wapper">
             <div>

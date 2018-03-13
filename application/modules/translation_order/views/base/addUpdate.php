@@ -219,9 +219,6 @@
 					  <option <?=set_select("translation_after")?>>사과</option>
 					  <option <?=set_select("translation_after")?>>오렌지</option>
 				  </select>
-				  <div class="project_form" style="width:20%; margin-top:1px;">
-					  <button class="projectlang_add">추가</button>
-				</div>
 			  </p>
 		  </div>
 

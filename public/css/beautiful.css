@@ -742,7 +742,7 @@ template {
   margin-bottom: 30px;
 }
 .home-section_padding img {
-  margin-bottom: -33px;
+  margin-bottom: -146px;
   width: 80%;
   max-width: 501px;
 }
@@ -784,7 +784,7 @@ template {
     text-align: center;
   }
   .home-section_padding img {
-    margin-top: -20px;
+    margin-top: 35px;
     width: 501px;
   }
 }
@@ -1309,3 +1309,4 @@ template {
 }
 
 /*# sourceMappingURL=beautiful.css.map */
+
