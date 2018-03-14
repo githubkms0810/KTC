@@ -39,7 +39,10 @@ class Base extends \Base_Controller {
     private function changeConfidential($portfolio)
     {
         foreach ($portfolio as $key => $value) 
+        {
+            if($key ==="buyer") continue;
             $portfolio->$key = "기밀사항";
+        }
         return $portfolio;
     }
     public function list()

@@ -383,7 +383,7 @@ class Translation_order_m extends Pagination_Model
 		-- `order_id` INT UNSIGNED,
 		`title` varchar(255),
 		`desc` text,
-		`field` varchar(255) DEFAULT '',
+	
 		`type` ENUM('번역','통역') NOT NULL,
 		`translation_status` ENUM('전달중','전달완료','진행중','완료') NOT NULL DEFAULT '전달중',
 		`image` varchar(255) DEFAULT '".portfolioDefaultImage."',
@@ -434,7 +434,6 @@ class Translation_order_m extends Pagination_Model
 	-- ,
 		KEY `idx_type` (`type`),
 		KEY `idx_title` (`title`),
-		KEY `idx_field` (`field`),
 		FULLTEXT `idx_desc` (`desc`),
 			KEY `idx_translation_status` (`translation_status`),
 			KEY `idx_buyer` (`buyer`),
@@ -475,6 +474,10 @@ class Translation_order_m extends Pagination_Model
 
 		$fieldName = "security_file_name";
 		$addFieldQuery = "ALTER TABLE `{$table}` ADD `{$fieldName}` varchar(255) DEFAULT 'testSecurityFile.txt' AFTER `id`;";
+		$this->_addField($fieldName,$addFieldQuery,$table);
+		
+		$fieldName = "field";
+		$addFieldQuery = "ALTER TABLE `{$this->table}` ADD `{$fieldName}` varchar(255) DEFAULT '' AFTER `id`;";
 		$this->_addField($fieldName,$addFieldQuery,$table);
 		// $fieldName = "test";
 		// $addFieldQuery = "ALTER TABLE `{$this->table}` ADD `{$fieldName}` INT UNSIGNED NOT NULL AFTER `created`, ADD INDEX `idx_{$fieldName}` (`{$fieldName}`);";
