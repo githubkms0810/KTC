@@ -48,8 +48,8 @@
 						<?php endforeach; ?>
 						<td class="unclickable ">
 							<button type="button"class="btn btn-default clickable "style="height:30px; padding-top:4px;" data-href="<?=my_site_url("/admin/{$moduleName}/update/{$row->id}")?>">수정</button>
-							<button type="button" style="height:30px; padding-top:4px;" class="btn btn-default " <?=$this->ajax_helper->anchor("/admin/{$moduleName}/display/{$row->id}")?> >보이기</button>
-							<button type="button" style="height:30px; padding-top:4px;" class="btn btn-default " <?=$this->ajax_helper->anchor("/admin/{$moduleName}/noDisplay/{$row->id}")?> >안보이기</button>
+							<!-- <button type="button" style="height:30px; padding-top:4px;" class="btn btn-default " <?=$this->ajax_helper->anchor("/admin/{$moduleName}/display/{$row->id}")?> >보이기</button> -->
+							<!-- <button type="button" style="height:30px; padding-top:4px;" class="btn btn-default " <?=$this->ajax_helper->anchor("/admin/{$moduleName}/noDisplay/{$row->id}")?> >안보이기</button> -->
 							<button type="button" style="height:30px; padding-top:4px;" class="btn btn-default " <?=$this->ajax_helper->anchor("/admin/{$moduleName}/delete/{$row->id}","복구할 방법이 없습니다. 정말 삭제하시겠습니까?")?> >삭제</button>
 						</td>
 					</tr>
