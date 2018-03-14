@@ -185,10 +185,10 @@ iframe {
 }
 
 .wrap-contact100 {
-  width: 1170px;
+  width: 900px;
   background: #fff;
   border-radius: 10px;
-  padding: 82px 180px 33px 180px;
+  padding: 45px 50px 25px 50px;
   position: relative;
   display: none;
 }
@@ -218,7 +218,7 @@ iframe {
   display: block;
   width: 100%;
   font-family: Poppins-Bold;
-  font-size: 39px;
+  font-size: 35px;
   color: #333333;
   line-height: 1.2;
   text-align: left;
@@ -385,19 +385,22 @@ textarea.input100 {
 
 @media (max-width: 992px) {
   .wrap-contact100 {
-    padding: 82px 80px 33px 80px;
+    padding: 45px 50px 20px 50px;
   }
 }
 
 @media (max-width: 768px) {
   .rs1-wrap-input100 {
-    width: 100%;
+    width: 100%;    
+  }
+  .wrap-contact100 {
+    margin-top: 90px;
   }
 }
 
 @media (max-width: 576px) {
   .wrap-contact100 {
-    padding: 82px 15px 33px 15px;
+    padding: 45px 50px 20px 50px;
   }
 }
 

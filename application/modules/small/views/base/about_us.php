@@ -1,8 +1,8 @@
 <section class="home-hero-about_us">
     <h2 class="home-hero-title-about_us">회사 소개</h2>
     <p class="home-hero-des-about_us">
-        코리아 통번역 센터는 전문 번역 서비스는 물론<br>
-        소프트웨어 현지화, 국제 회의 맞춤 통역 서비스 등을 제공하는<br>
+        코리아 통번역 센터는 전문 번역 서비스는 물론<br class="br_aboutus">
+        소프트웨어 현지화, 국제 회의 맞춤 통역 서비스 등을 제공하는<br class="br_aboutus">
         대한민국 대표 언어 전문 서비스 기업입니다
     </p>
     <a href="/small/portfolio_list" class="home-btn">포트폴리오 보러가기</a>
@@ -75,7 +75,7 @@
                 </div>
                 <h4 class="home-list__title">고객 상담</h4>
                 <p class="home-list__des">
-                    통번역 전문 PM이 일시, 장소, 내용 등<br>
+                    통번역 전문 PM이 일시, 장소, 내용 등<br class="br">
                     고객의 요구를 정확히 분석합니다
                 </p>
             </li>
@@ -85,7 +85,7 @@
                 </div>
                 <h4 class="home-list__title">고객 상담</h4>
                 <p class="home-list__des">
-                    통번역 전문 PM이 일시, 장소, 내용 등<br>
+                    통번역 전문 PM이 일시, 장소, 내용 등<br class="br">
                     고객의 요구를 정확히 분석합니다
                 </p>
             </li>
@@ -95,7 +95,7 @@
                 </div>
                 <h4 class="home-list__title">고객 상담</h4>
                 <p class="home-list__des">
-                    통번역 전문 PM이 일시, 장소, 내용 등<br>
+                    통번역 전문 PM이 일시, 장소, 내용 등<br class="br">
                     고객의 요구를 정확히 분석합니다
                 </p>
             </li>
@@ -105,7 +105,7 @@
                 </div>
                 <h4 class="home-list__title">고객 상담</h4>
                 <p class="home-list__des">
-                    통번역 전문 PM이 일시, 장소, 내용 등<br>
+                    통번역 전문 PM이 일시, 장소, 내용 등<br class="br">
                     고객의 요구를 정확히 분석합니다
                 </p>
             </li>
@@ -115,7 +115,7 @@
                 </div>
                 <h4 class="home-list__title">고객 상담</h4>
                 <p class="home-list__des">
-                    통번역 전문 PM이 일시, 장소, 내용 등<br>
+                    통번역 전문 PM이 일시, 장소, 내용 등<br class="br">
                     고객의 요구를 정확히 분석합니다
                 </p>
             </li>
@@ -125,7 +125,7 @@
                 </div>
                 <h4 class="home-list__title">고객 상담</h4>
                 <p class="home-list__des">
-                    통번역 전문 PM이 일시, 장소, 내용 등<br>
+                    통번역 전문 PM이 일시, 장소, 내용 등<br class="br">
                     고객의 요구를 정확히 분석합니다
                 </p>
             </li>
@@ -135,7 +135,7 @@
                 </div>
                 <h4 class="home-list__title">고객 상담</h4>
                 <p class="home-list__des">
-                    통번역 전문 PM이 일시, 장소, 내용 등<br>
+                    통번역 전문 PM이 일시, 장소, 내용 등<br class="br">
                     고객의 요구를 정확히 분석합니다
                 </p>
             </li>
@@ -145,7 +145,7 @@
                 </div>
                 <h4 class="home-list__title">고객 상담</h4>
                 <p class="home-list__des">
-                    통번역 전문 PM이 일시, 장소, 내용 등<br>
+                    통번역 전문 PM이 일시, 장소, 내용 등<br class="br">
                     고객의 요구를 정확히 분석합니다
                 </p>
             </li>
@@ -187,14 +187,14 @@
         <ul class="home-text">
             <li class="home-text__item home-text__item_right">
                 <p>
-                    고객님의 소중한 의견을 존중하여<br>
+                    고객님의 소중한 의견을 존중하여<br class="br_aboutus2">
                     항상 고객의 입장에서 생각하고 행동하겠습니다
                 </p>
                 <img src="/public/images/profile.png">
             </li>
             <li class="home-text__item">
                 <p>
-                    고객님의 소중한 의견을 존중하여<br>
+                    고객님의 소중한 의견을 존중하여<br class="br_aboutus2">
                     항상 고객의 입장에서 생각하고 행동하겠습니다
                 </p>
                 <img src="/public/images/profile.png">

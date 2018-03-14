@@ -15,8 +15,8 @@
 <section class="home-hero-freelancer">
     <h2 class="home-hero-title-freelancer">프리랜서 지원하기</h2>
     <p class="home-hero-des-freelancer">
-        코리아 통번역 센터와 함께<br>
-        더 좋은 번역 산업의 미래를 만들어가고 싶으시다면<br>
+        코리아 통번역 센터와 함께<br class="br_free">
+        더 좋은 번역 산업의 미래를 만들어가고 싶으시다면<br class="br_free">
         아래 지원서를 작성해주세요
     </p>
     <a href="/translation_order/list" class="home-btn">포트폴리오 보러가기</a>
@@ -67,20 +67,19 @@
 	</div>
 
 	<div class="icon">
-		<label style="width:45%;" class="project_label" for="project_email">Email</label>
+		<label style="width:45%;" class="project_label" for="email">Email</label>
 		<input value="<?=DEBUG === false ? set_value("email_first") : "emailtest@test.com" ?>" style="width:51.22%; display:inline-block;" class="email" type="email" name="email_first" id="project_email">
-		@
+		&nbsp;
 		<select style="width:45%; display:inline-block;" class="email" name="email_second">
-			<option <?=set_select("email_second")?>>naver.com</option>
-			<option <?=set_select("email_second")?>>gmail.com</option>
-			<option <?=set_select("email_second")?>>hanmail.net</option>
-			<option <?=set_select("email_second")?>>daum.net</option>
+			<option <?=set_select("email_second")?>>@naver.com</option>
+			<option <?=set_select("email_second")?>>@gmail.com</option>
+			<option <?=set_select("email_second")?>>@hanmail.net</option>
+			<option <?=set_select("email_second")?>>@daum.net</option>
 		</select>
 	
 	</div>
 
 	<div>
-		<h4>주소</h4>
 		<div class="icon" style="width:79.31%; display:inline-block; margin-top:1px; margin-bottom:1px;">
 			<label class="project_label" for="project_address">주소</label>
 			<input value="<?=DEBUG === false ? set_value("interpret_new_address") : "주소테스트" ?>" class="email" type="text" name="interpret_new_address" id="sample4_roadAddress" readonly>
@@ -175,31 +174,31 @@
 
 		<ul class="project_form-list" style="margin-bottom:1px;">
 				  <li>
-					  <input type="radio" name="is_need_equiment" value="1" onclick="div_OnOff(this.value,'equip_num');" <?=set_checkbox("is_need_equiment","1",true)?> id="project_want-1">
-					  <label for="project_want-1"><?php $equipment="요청"?>대학원</label>
+					  <input type="radio" name="is_school_graduate" value="1" onclick="div_OnOff(this.value,'school');" <?=set_checkbox("is_school_graduate","1",true)?> id="free_want-1">
+					  <label for="free_want-1"><?php $equipment="요청"?>대학원</label>
 				  </li>
 					  
 				  <li>
-					  <input type="radio" name="is_need_equiment" value="0" onclick="div_OnOff(this.value,'equip_num');" <?=set_checkbox("is_need_equiment","0")?> id="project_want-2" checked>
-					  <label for="project_want-2"><?php $equipment="미요청"?>대학교</label>
+					  <input type="radio" name="is_school_graduate" value="0" onclick="div_OnOff(this.value,'school');" <?=set_checkbox("is_school_graduate","0")?> id="free_want-2" checked>
+					  <label for="free_want-2"><?php $equipment="미요청"?>대학교</label>
 				  </li>
 			  </ul>
 
 		<div class="icon">
 		  <label class="project_label" for="company">대학명</label>
-		  <input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("university") : "대학교이름 테스트"?>" placeholder="대학명" id="free_schoolname">
+		  <input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("university") : "대학교이름 테스트"?>" id="free_schoolname">
 		</div> 
 
 		<div class="icon">
 		  <label class="project_label" for="company">전공명</label>
-		  <input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("university_major") : "대학교전공 테스트"?>" placeholder="전공명" id="free_subname">
+		  <input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("university_major") : "대학교전공 테스트"?>" id="free_subname">
 		</div>
 
 
-		  <div id="equip_num" style="display:none;">
+		  <div id="school" style="display:none;">
 			<div class="icon">
 				<label style="width:45%;" class="project_label" for="company">대학원명</label>
-				<input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("university") : "대학원이름 테스트"?>" style="width:51.22%; display:inline-block;" placeholder="대학원명" id="free_schoolname">
+				<input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("graduate_school") : "대학원이름 테스트"?>" style="width:51.22%; display:inline-block;" id="free_graduate_schoolname">
 				&nbsp;
 				<select style="width:45%; display:inline-block;" class="email" name="email_second">
 					<option <?=set_select("email_second")?>>학위</option>	
@@ -211,7 +210,7 @@
 			</div>
 			<div class="icon">
 		  		<label class="project_label" for="company">전공명</label>
-		  		<input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("university_major") : "대학원전공 테스트"?>" placeholder="전공명" id="free_subname">
+		  		<input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("graduate_school_major") : "대학원전공 테스트"?>" id="free_graduate_schoolsubname">
 			</div>
 
 		</div>
