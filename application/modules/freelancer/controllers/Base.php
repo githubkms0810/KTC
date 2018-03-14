@@ -22,7 +22,6 @@ class Base extends \Base_Controller {
     public function add(){
         $this->freelancer_m->setRulesWhenAdd();
         if($this->form_validation->run() === false){
-            var_dump(validation_errors());
             $data["content_view"] = "base/addUpdate";
             $data["languages"]=explode("," ,$this->setting->translation_languages);
             $this->template->render($data);

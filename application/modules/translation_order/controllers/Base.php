@@ -54,7 +54,6 @@ class Base extends \Base_Controller {
     {
 
         $this->translation_order_m->setRulesWhenAdd();
-        var_dump(validation_errors());
       
         if($this->form_validation->run() === false){
             $data['type'] = get("type");
