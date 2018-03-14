@@ -91,7 +91,7 @@
   </table>
 
 <hr/>
-<?php if ($row->type ==="번역" ): ?>
+<?php if ($row->type ==="통역" ): ?>
 
 <table class="table table-bordered">
     

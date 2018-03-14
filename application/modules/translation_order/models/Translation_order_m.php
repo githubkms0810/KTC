@@ -173,17 +173,13 @@ class Translation_order_m extends Pagination_Model
 	public function setRulesWhenAdd()
 	{
 		if(post("buyer")=== "회사"){
-			$this->form_validation->set_rules('company', '회사이름', 'trim|required');
-			$this->form_validation->set_rules('manager', '담당자', 'trim|required');
-			$this->form_validation->set_rules('manager_phone_first', '담당자 전화번호', 'trim|required');
-			$this->form_validation->set_rules('manager_phone_second', '담당자 전화번호', 'trim|required');
-			$this->form_validation->set_rules('manager_phone_third', '담당자 전화번호', 'trim|required');
+			// $this->form_validation->set_rules('company', '회사이름', 'trim|required');
+			// $this->form_validation->set_rules('manager', '담당자', 'trim|required');
+			$this->form_validation->set_rules('manager_phone', '담당자 전화번호', 'trim|required');
 		}
 		else if(post("buyer")=== "개인"){
-			$this->form_validation->set_rules('personal_name', '이름', 'trim|required');
-			$this->form_validation->set_rules('personal_phone_first', '전화번호', 'trim|required');
-			$this->form_validation->set_rules('personal_phone_second', '전화번호', 'trim|required');
-			$this->form_validation->set_rules('personal_phone_third', '전화번호', 'trim|required');
+			// $this->form_validation->set_rules('personal_name', '이름', 'trim|required');
+			$this->form_validation->set_rules('personal_phone', '전화번호', 'trim|required');
 		}
 
 	}
@@ -207,11 +203,11 @@ class Translation_order_m extends Pagination_Model
 		$this->set_post("company");
 		$this->set_post("department");
 		$this->set_post("manager");
-		$this->set("company_phone",$this->post_helper->makePhoneByPostData("company_phone_first","company_phone_second","company_phone_third"));
-		$this->set("manager_phone",$this->post_helper->makePhoneByPostData("manager_phone_first","manager_phone_second","manager_phone_third"));
+		$this->set_post("company_phone");
+		$this->set_post("manager_phone");
 		$this->set_post("personal_name");
-		$this->set("personal_phone",$this->post_helper->makePhoneByPostData("personal_phone_first","personal_phone_second","personal_phone_third"));
-		$this->set("fax",$this->post_helper->makePhoneByPostData("fax_first","fax_second","fax_third"));
+		$this->set_post("personal_phone");
+		$this->set_post("fax");
 		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_exist_fax","1");
 		$this->set("email",$this->post_helper->makeEmailByPostData());
 		$this->set_post("interpret_kind");
@@ -229,6 +225,7 @@ class Translation_order_m extends Pagination_Model
 		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_need_equiment","0");
 		$this->set_post("num_equiment");
 		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_need_profile","0");
+		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_exist_budget","1");
 		$this->set_post("requirements");
 		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_get_tax_bill","0");
 		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_get_cash_receipt","0");

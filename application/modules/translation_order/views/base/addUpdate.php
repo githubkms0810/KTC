@@ -95,7 +95,7 @@
 			  <h4>회사 전화번호</h4>
   
 			  <p class="project_select icon">
-				  <input value="<?=DEBUG === false ? set_value("company_phone_third") : "회사번호3" ?>" placeholder="5678" class="budget" type="text" name="company_phone_third" id="project_name" required>
+				  <input value="<?=DEBUG === false ? set_value("company_phone") : "회사번호3" ?>" placeholder="5678" class="budget" type="text" name="company_phone" id="project_name" required>
 			  </p>
 		  </div>
 
@@ -103,7 +103,7 @@
 			  <h4>담당자 전화번호</h4>
   
 			  <p class="project_select icon">
-				  <input value="<?=DEBUG === false ? set_value("company_phone_second") : "매니저번호3" ?>" placeholder="5678" class="budget" type="text" name="manager_phone_third" id="project_name" required>
+				  <input value="<?=DEBUG === false ? set_value("manager_phone") : "매니저번호3" ?>" placeholder="5678" class="budget" type="text" name="manager_phone" id="project_name" required>
 			  </p>
 		  </div>
 		  </div>
@@ -118,7 +118,7 @@
 			  <h4>전화번호</h4>
   
 			  <p class="project_select icon">
-				  <input value="<?=DEBUG === false ? set_value("personal_phone_third") : "개인번호3" ?>" placeholder="5678" class="budget" type="text" name="personal_phone_third" id="project_name" required>
+				  <input value="<?=DEBUG === false ? set_value("personal_phone") : "개인번호3" ?>" placeholder="5678" class="budget" type="text" name="personal_phone" id="project_name" required>
 			  </p>
 		  </div>
 		  </div>
@@ -130,7 +130,7 @@
 		  <div>
 			  <h4>FAX</h4>
 			  <p class="project_select icon">
-				  <input  value="<?=DEBUG === false ? set_value("fax_third") : "팩스번호3" ?>"  placeholder="5678" class="budget" type="text" name="fax_third" id="project_name" required>
+				  <input  value="<?=DEBUG === false ? set_value("fax") : "팩스번호3" ?>"  placeholder="5678" class="budget" type="text" name="fax" id="project_name" required>
 			  </p>
 			  <ul class="project_form-list">
 				  <li>
@@ -172,8 +172,8 @@
 			  <h4>통역 사항</h4>
 			  <p class="project_select icon">
 				  <select name="translation_kind" class="budget">
-					  <option <?=DEBUG === true ? "selected" : ""?> value="">통역형태</option>
-					  <option <?=set_select("translation_kind")?>>이것</option>
+					  <option value="">통역형태</option>
+					  <option <?=set_select("translation_kind")?> <?=DEBUG === true ? "selected" : ""?>>이것</option>
 					  <option <?=set_select("translation_kind")?>>저것</option>
 					  <option <?=set_select("translation_kind")?>>그것</option>
 				  </select>
@@ -190,8 +190,8 @@
 			  <h4>통역 사항</h4>
 			  <p class="project_select icon">
 				  <select name="translation_kind" class="budget">
-					  <option <?=DEBUG === true ? "selected" : ""?> value="">통역형태</option>
-					  <option  <?=set_select("translation_kind")?>>이것</option>
+					  <option  value="">통역형태</option>
+					  <option  <?=set_select("translation_kind")?> <?=DEBUG === true ? "selected" : ""?>>이것</option>
 					  <option  <?=set_select("translation_kind")?>>저것</option>
 					  <option <?=set_select("translation_kind")?>>그것</option>
 				  </select>
@@ -207,14 +207,14 @@
   
 			  <p class="project_select icon">
 				  <select name="translation_before" class="budget" style="width:49.5%; display:inline-block;">
-					  <option <?=DEBUG === true ? "selected" : ""?> value="">시작언어</option>
-					  <option <?=set_select("translation_before")?>>포도</option>
+					  <option  value="">시작언어</option>
+					  <option <?=set_select("translation_before")?> <?=DEBUG === true ? "selected" : ""?>>포도</option>
 					  <option <?=set_select("translation_before")?>>사과</option>
 					  <option <?=set_select("translation_before")?>>오렌지</option>
 				  </select>
 				  <select name="translation_after" class="budget" style="width:49.5%; display:inline-block;">
-					  <option <?=DEBUG === true ? "selected" : ""?> value="">번역언어</option>
-					  <option <?=set_select("translation_after")?>>포도</option>
+					  <option  value="">번역언어</option>
+					  <option <?=set_select("translation_after")?> <?=DEBUG === true ? "selected" : ""?> >포도</option>
 					  <option <?=set_select("translation_after")?>>사과</option>
 					  <option <?=set_select("translation_after")?>>오렌지</option>
 				  </select>
@@ -343,7 +343,7 @@
   
 			  <ul class="project_form-list">
 				  <li>
-					  <input type="radio" name="is_need_profile" value="1" <?=set_checkbox("is_need_profile","1")?> id="project_profile-1" checked>
+					  <input type="radio" name="is_need_profile" value="1" <?=set_checkbox("is_need_profile","1",true)?> id="project_profile-1" >
 					  <label for="project_profile-1">요청</label>
 				  </li>
 					  

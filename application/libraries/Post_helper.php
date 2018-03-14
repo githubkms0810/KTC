@@ -21,7 +21,7 @@ class Post_helper
 	}
 	public function makeEmailByPostData(string $first = "email_first",string $second = "email_second")
 	{
-		return post($first)."@".post($second);
+		return post($first).post($second);
 	}
     public function ifNullSetQueryByDefaultOrDo($field,$default)
     {

@@ -56,6 +56,7 @@ class Base extends \Base_Controller {
         $this->translation_order_m->setRulesWhenAdd();
       
         if($this->form_validation->run() === false){
+            var_dump(validation_errors());
             $data['type'] = get("type");
             $data["content_view"] = "base/addUpdate";
             $this->template->render($data);
