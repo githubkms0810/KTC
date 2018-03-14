@@ -198,25 +198,23 @@
 
 		  <div id="equip_num" style="display:none;">
 			<div class="icon">
-			<label style="width:45%;" class="project_label" for="company">대학원명</label>
-			<input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("university") : "대학원이름 테스트"?>" style="width:51.22%; display:inline-block;" placeholder="대학원명" id="free_schoolname">
-&nbsp;
-<select style="width:45%; display:inline-block;" class="email" name="email_second">
-<option <?=set_select("email_second")?>>학위</option>	
-<option <?=set_select("email_second")?>>석사</option>
-<option <?=set_select("email_second")?>>박사</option>
-<option <?=set_select("email_second")?>>학사</option>
-<option <?=set_select("email_second")?>>헤헤</option>
-</select></div>
-	
-	</div>
+				<label style="width:45%;" class="project_label" for="company">대학원명</label>
+				<input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("university") : "대학원이름 테스트"?>" style="width:51.22%; display:inline-block;" placeholder="대학원명" id="free_schoolname">
+				&nbsp;
+				<select style="width:45%; display:inline-block;" class="email" name="email_second">
+					<option <?=set_select("email_second")?>>학위</option>	
+					<option <?=set_select("email_second")?>>석사</option>
+					<option <?=set_select("email_second")?>>박사</option>
+					<option <?=set_select("email_second")?>>학사</option>
+					<option <?=set_select("email_second")?>>헤헤</option>
+				</select>
+			</div>
+			<div class="icon">
+		  		<label class="project_label" for="company">전공명</label>
+		  		<input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("university_major") : "대학원전공 테스트"?>" placeholder="전공명" id="free_subname">
+			</div>
 
-		<div class="icon">
-		  <label class="project_label" for="company">전공명</label>
-		  <input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("university_major") : "대학원전공 테스트"?>" placeholder="전공명" id="free_subname">
 		</div>
-
-		  </div>
 
 		  <script>
 			  function div_OnOff(v,id){

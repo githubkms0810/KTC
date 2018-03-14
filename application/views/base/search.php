@@ -1,16 +1,8 @@
 <?php if ( count($searchDataList) !== 0 ): ?>
-<form style="margin-top:10px;" class="form-inline" <?=$this->ajax_helper->form_get(my_site_url("/{$moduleName}/list",true,false))?> >
+<form style="margin-top:10px; width:260px; margin:0 auto;" class="form-inline" <?=$this->ajax_helper->form_get(my_site_url("/{$moduleName}/list",true,false))?> >
 <!-- <form style="margin-top:10px;" class="form-inline" action="<?=my_site_url("/{$moduleName}/list")?>"> -->
 	<div class="form-group">
-	<label for=""></label>
-
-	<select class="form-control" name="searchKey[]" id="">
-		<?php foreach ( $searchDataList as $key=>$searchData ): ?>
-			<?php if ( isset($searchData["displayName"]) ): ?>
-				<option value="<?=$key?>" <?=my_set_selected(null, 'searchKey', $key)?>><?=$searchData["displayName"]?></option>
-			<?php endif; ?>
-		<?php endforeach; ?>
-	</select>
+	
 	<label for=""></label>
 
 	<input class="form-control" type="text" name="searchValue[]" value="<?=my_set_value_input('searchValue',0)?>">

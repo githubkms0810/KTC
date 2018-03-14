@@ -464,7 +464,7 @@ template {
   box-shadow: 0 5px 2px -2px #eee;
 }
 .home-nav__list a {
-  color: #505460;
+  color: #505460 !important;
   font-size: 16px;
   margin-bottom: 20px;
   display: block;
@@ -513,7 +513,7 @@ template {
     box-shadow: 0 4px 20px rgba(149,186,219,0.3);
   }
   .home-nav__list ul a {
-    color: #505460;
+    color: #505460 !important;
     height: 40px;
     line-height: 40px;
   }
@@ -527,7 +527,7 @@ template {
     display: block;
   }
   .home-nav a {
-    color: #fff;
+    color: #fff !important;
     font-size: 14px;
     display: inline-block;
     height: 82px;
@@ -620,6 +620,7 @@ template {
 .home-hero-des-project {
   font-size: 18px;
   margin-bottom: 40px;
+  color: white !important;
 }
 
 @media (min-width: 600px) {
@@ -642,6 +643,7 @@ template {
 .home-hero-des-security {
   font-size: 18px;
   margin-bottom: 40px;
+  color: white !important;
 }
 
 @media (min-width: 600px) {
@@ -664,6 +666,7 @@ template {
 .home-hero-des-cs {
   font-size: 18px;
   margin-bottom: 40px;
+  color:white !important;
 }
 
 @media (min-width: 600px) {
@@ -686,6 +689,7 @@ template {
 .home-hero-des-freelancer {
   font-size: 18px;
   margin-bottom: 40px;
+  color: white !important;
 }
 
 @media (min-width: 600px) {
@@ -708,6 +712,7 @@ template {
 .home-hero-des-portfolio {
   font-size: 18px;
   margin-bottom: 40px;
+  color: white !important;
 }
 
 @media (min-width: 600px) {
@@ -1266,6 +1271,9 @@ template {
   width: 120px;
   margin-bottom: 20px;
 }
+.home-footer a:hover {
+  color: #bcc3cc;
+}
 .home-footer h4 {
   font-size: 12px;
   margin-bottom: 25px;
@@ -1287,6 +1295,8 @@ template {
 }
 .home-footer__info p {
   margin-bottom: 15px;
+  color: #bcc3cc;
+
 }
 .home-footer__info p:last-child {
   margin-bottom: 0;
