@@ -383,7 +383,7 @@ template {
 
 .home-btn {
   font-size: 18px;
-  color: #997f34;
+  color: #997f34 !important;
   background-color: #fed45c;
   display: inline-block;
   padding: 0 40px;
