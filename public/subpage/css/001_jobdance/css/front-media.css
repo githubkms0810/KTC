@@ -24,7 +24,6 @@
 	.util{top:14px}
 	.util a{width:90px; height:34px; line-height:34px}
 	.util .join{display:none}
-	.wrap{padding:70px 0 0 0}
 }
 
 @media all and (max-width:1080px) {

@@ -67,10 +67,9 @@
 	</div>
 
 	<div class="icon">
-		<label style="width:45%;" class="project_label" for="email">Email</label>
-		<input value="<?=DEBUG === false ? set_value("email_first") : "emailtest@test.com" ?>" style="width:51.22%; display:inline-block;" class="email" type="email" name="email_first" id="project_email">
-		&nbsp;
-		<select style="width:45%; display:inline-block;" class="email" name="email_second">
+		<label style="width:49.5%;" class="project_label" for="email">Email</label>
+		<input value="<?=DEBUG === false ? set_value("email_first") : "emailtest@test.com" ?>" style="width:49.5%; display:inline-block;" class="email" type="email" name="email_first" id="project_email">
+		<select style="width:49.5%; display:inline-block;" class="email" name="email_second">
 			<option <?=set_select("email_second")?>>@naver.com</option>
 			<option <?=set_select("email_second")?>>@gmail.com</option>
 			<option <?=set_select("email_second")?>>@hanmail.net</option>
@@ -80,7 +79,7 @@
 	</div>
 
 	<div>
-		<div class="icon" style="width:79.31%; display:inline-block; margin-top:1px; margin-bottom:1px;">
+		<div class="icon" style="width:79%; display:inline-block; margin-top:1px; margin-bottom:1px;">
 			<label class="project_label" for="project_address">주소</label>
 			<input value="<?=DEBUG === false ? set_value("interpret_new_address") : "주소테스트" ?>" class="email" type="text" name="interpret_new_address" id="sample4_roadAddress" readonly>
 			<input value="<?=DEBUG === false ? set_value("interpret_old_address") : "지번주소테스트" ?>" id="sample4_jibunAddress"type="hidden" name="interpret_old_address">
@@ -198,9 +197,8 @@
 		  <div id="school" style="display:none;">
 			<div class="icon">
 				<label style="width:45%;" class="project_label" for="company">대학원명</label>
-				<input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("graduate_school") : "대학원이름 테스트"?>" style="width:51.22%; display:inline-block;" id="free_graduate_schoolname">
-				&nbsp;
-				<select style="width:45%; display:inline-block;" class="email" name="email_second">
+				<input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("graduate_school") : "대학원이름 테스트"?>" style="width:49.5%; display:inline-block;" id="free_graduate_schoolname">
+				<select style="width:49.5%; display:inline-block;" class="email" name="email_second">
 					<option <?=set_select("email_second")?>>학위</option>	
 					<option <?=set_select("email_second")?>>석사</option>
 					<option <?=set_select("email_second")?>>박사</option>

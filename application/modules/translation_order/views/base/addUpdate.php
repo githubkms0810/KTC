@@ -141,14 +141,13 @@
 		  </div>
 
 		  <div class="icon">
-			  <label style="width:45%;" class="project_label" for="project_email">Email</label>
-			  <input value="<?=DEBUG === false ? set_value("email_first") : "emailtest@test.com" ?>" style="width:51.22%; display:inline-block;" class="email" type="email" name="email_first" id="project_email">
-			  @
-			  <select style="width:45%; display:inline-block;" class="email" name="email_second">
-				  <option <?=set_select("email_second")?>>naver.com</option>
-				  <option <?=set_select("email_second")?>>gmail.com</option>
-				  <option <?=set_select("email_second")?>>hanmail.net</option>
-				  <option <?=set_select("email_second")?>>daum.net</option>
+			  <label style="width:49.5%;" class="project_label" for="project_email">Email</label>
+			  <input value="<?=DEBUG === false ? set_value("email_first") : "emailtest@test.com" ?>" style="width:49.5%; display:inline-block;" class="email" type="email" name="email_first" id="project_email">
+			  <select style="width:49.5%; display:inline-block;" class="email" name="email_second">
+				  <option <?=set_select("email_second")?>>@naver.com</option>
+				  <option <?=set_select("email_second")?>>@gmail.com</option>
+				  <option <?=set_select("email_second")?>>@hanmail.net</option>
+				  <option <?=set_select("email_second")?>>@daum.net</option>
 			  </select>
 		  
 		  </div>
@@ -207,13 +206,13 @@
 			  <h4>번역 언어쌍</h4>
   
 			  <p class="project_select icon">
-				  <select name="translation_before" class="budget" style="width:49.7%; display:inline-block;">
+				  <select name="translation_before" class="budget" style="width:49.5%; display:inline-block;">
 					  <option <?=DEBUG === true ? "selected" : ""?> value="">시작언어</option>
 					  <option <?=set_select("translation_before")?>>포도</option>
 					  <option <?=set_select("translation_before")?>>사과</option>
 					  <option <?=set_select("translation_before")?>>오렌지</option>
 				  </select>
-				  <select name="translation_after" class="budget" style="width:49.6%; display:inline-block;">
+				  <select name="translation_after" class="budget" style="width:49.5%; display:inline-block;">
 					  <option <?=DEBUG === true ? "selected" : ""?> value="">번역언어</option>
 					  <option <?=set_select("translation_after")?>>포도</option>
 					  <option <?=set_select("translation_after")?>>사과</option>
@@ -227,7 +226,7 @@
 
 		  <div>
 			  <h4>통역 장소</h4>
-			  <div class="icon" style="width:79.31%; display:inline-block; margin-top:1px; margin-bottom:1px;">
+			  <div class="icon" style="width:79%; display:inline-block; margin-top:1px; margin-bottom:1px;">
 				  <label class="project_label" for="project_address">주소</label>
 				  <input value="<?=DEBUG === false ? set_value("interpret_new_address") : "주소테스트" ?>" class="email" type="text" name="interpret_new_address" id="sample4_roadAddress" readonly>
 				  <input value="<?=DEBUG === false ? set_value("interpret_old_address") : "지번주소테스트" ?>" id="sample4_jibunAddress"type="hidden" name="interpret_old_address">
@@ -278,9 +277,9 @@
 			  <h4>통역 일정</h4>
 
 			  <div class="icon">
-				  <input type="text" value="<?=DEBUG === false ? set_value("interpret_start_date") : "시작날짜테스트" ?>" placeholder="시작 날짜" style="width:48.5%; display:inline-block;" class="email" name="interpret_start_date" id="datepicker1" readonly>
+				  <input type="text" value="<?=DEBUG === false ? set_value("interpret_start_date") : "시작날짜테스트" ?>" placeholder="시작 날짜" style="width:47.5%; display:inline-block;" class="email" name="interpret_start_date" id="datepicker1" readonly>
 				  ~
-				  <input type="text" value="<?=DEBUG === false ? set_value("interpret_end_date") : "종료날자테스트" ?>" placeholder="종료 날짜" style="width:48.5%; display:inline-block;" class="email" name="interpret_end_date" id="datepicker2" readonly>
+				  <input type="text" value="<?=DEBUG === false ? set_value("interpret_end_date") : "종료날자테스트" ?>" placeholder="종료 날짜" style="width:47.5%; display:inline-block;" class="email" name="interpret_end_date" id="datepicker2" readonly>
 		  
 			  </div>
 		  </div>
