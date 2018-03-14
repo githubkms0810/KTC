@@ -11,7 +11,7 @@ class Base extends \Base_Controller {
 	public function index()
 	{
 		$this->load->model('translation_order/translation_order_m');
-		$data["portfolioes"] = $this->translation_order_m->listIsPortfolioWithLimit(10);
+		$data["portfolioes"] = $this->translation_order_m->listIsPortfolioWithLimit(8);
 		$data["content_view"] = "base/index";
 		$this->template->render($data);
 	}

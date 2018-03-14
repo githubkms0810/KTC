@@ -26,8 +26,12 @@ class Base extends \Base_Controller {
     public function get($id)
     {
         $portfolio = $this->translation_order_m->p_get($id);
+        $portfolioType = $portfolio->type;
         if($portfolio->is_use_confidential === "1")
             $portfolio=$this->changeConfidential($portfolio);
+            
+        $this->db->where("type",$portfolioType);
+        $data["portfolioes"] = $this->translation_order_m->listIsPortfolioWithLimit(3,0);
         $data["portfolio"] = $portfolio;
 		$data["content_view"] = "base/get";
 		$this->template->render($data);
