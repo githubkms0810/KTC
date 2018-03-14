@@ -100,7 +100,7 @@
 				<span class="author-meta">
 				<span class="post-name">
                     분야</span><br/>
-                <span class="post-date">몰라</span>
+                <span class="post-date"><?=$portfolio->field?></span>
                 </span>
                 </div>
 

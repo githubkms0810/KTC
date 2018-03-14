@@ -29,7 +29,7 @@ class Base extends \Base_Controller {
         $portfolioType = $portfolio->type;
         if($portfolio->is_use_confidential === "1")
             $portfolio=$this->changeConfidential($portfolio);
-            
+
         $this->db->where("type",$portfolioType);
         $data["portfolioes"] = $this->translation_order_m->listIsPortfolioWithLimit(3,0);
         $data["portfolio"] = $portfolio;
@@ -52,13 +52,17 @@ class Base extends \Base_Controller {
     }   
     public function add()
     {
+
         $this->translation_order_m->setRulesWhenAdd();
+        var_dump(validation_errors());
+      
         if($this->form_validation->run() === false){
             $data['type'] = get("type");
             $data["content_view"] = "base/addUpdate";
             $this->template->render($data);
         }
         else{
+          
             $this->db->trans_start();
             $this->load->model('file/file_m');
             $group_id=$this->file_m->add();
