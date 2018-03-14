@@ -216,30 +216,28 @@
 		<div class="row listrecent listrelated">
 			<?php foreach ( $portfolioes as $portfolio ): ?>
 				<!-- begin post -->
-				<div class="col-md-4">
+				<div class="col-md-4" style="cursor:pointer;" onclick="location.href='#'">
 					<div class="card">
-						<a href="post.html">
 						<img class="img-fluid img-thumb" src="assets/img/demopic/9.jpg" alt="">
-						</a>
 						<div class="card-block">
-							<h2 class="card-title"><a href="post.html"><?=$portfolio->title?></a></h2>
+							<h2 class="card-title"><?=$portfolio->title?></h2>
 							<div class="metafooter">
 								<div class="wrapfooter">
 									<span class="meta-footer-thumb">
-									<a href="author.html"><img class="author-thumb" src="<?=$portfolio->image?>" alt="Sal"></a>
+									<img class="author-thumb" src="<?=$portfolio->image?>" alt="Sal">
 									</span>
 									<span class="author-meta">
-									<span class="post-name"><a href="author.html">
+									<span class="post-name">
 									<?php if ( $portfolio->buyer ==="회사" ): ?>
 										<?=$portfolio->company?>
 									<?php endif; ?>
 									<?php if ( $portfolio->buyer ==="개인" ): ?>
 										<?=$portfolio->personal_name?>
 									<?php endif; ?>
-									</a></span><br/>
+									</span><br/>
 									<span class="post-date"><?=$portfolio->created?></span><span class="dot"></span><span class="post-read">6 min read</span>
 									</span>
-									<span class="post-read-more"><a href="post.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+									<span class="post-read-more"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></span>
 								</div>
 							</div>
 						</div>
