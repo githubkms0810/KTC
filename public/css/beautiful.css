@@ -576,7 +576,7 @@ template {
     line-height: 50px;
   }
 }
-@media (max-width: 520px) {
+@media (max-width: 600px) {
   .home-hero {
     height: 518px;
     background-image: url(../images/hero-bg-m.jpg);
@@ -997,6 +997,11 @@ template {
 @media (max-width: 1240px) {
   .home-portfolio__item a {
     display: none;
+  }
+}
+@media(min-width: 600px){
+  .display{
+    display:none;
   }
 }
 
