@@ -1,4 +1,3 @@
-
 <!--projectform-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="/public/subpage/css/005_project/style.css"> <!-- Resource style -->
@@ -17,7 +16,7 @@
   <a href="/translation_order/list" class="home-btn">포트폴리오 보러가기</a>
 </section>
 <!--번역,통역 폼 시작-->
-  <form action="/translation_order/add" method="post"  enctype="multipart/form-data" class="project_form floating-labels" >
+  <form action="/translation_order/add" method="post"  enctype="multipart/form-data" class="project_form floating-labels" style="margin-top:100px; margin-bottom:150px;">
 	  <input type="hidden" name="type" value="<?=$type?>">
 	  <fieldset>
 		  
@@ -60,12 +59,10 @@
 			  
 		  </script>
 		  <div>
-			  <h4>Buyer type</h4>
-
 			  <ul class="project_form-list">
 				  <li>
 					  <input type="radio" name="buyer" value="회사" <?=set_checkbox("buyer","회사",true)?> id="project_select-1">
-					  <label for="project_select-1">회사</label>
+					  <label for="project_select-1">기업</label>
 				  </li>
 				  <li>
 					  <input type="radio" name="buyer" value="개인" <?=set_checkbox("buyer","개인")?> id="project_select-2">
@@ -76,81 +73,68 @@
 
 		  <div id="viewCompany">
 
-		  <div class="icon">
-			  <label class="project_label" for="company">회사</label>
-			  <input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("company") : "회사이름테스트" ?>" id="project_company" required>
-		  </div> 
-		  
-		  <div class="icon">
-			  <label class="project_label" for="department">부서</label>
-			  <input class="company" type="text" name="department" value="<?=DEBUG === false ? set_value("department") : "부서이름테스트" ?>" id="project_depart" required>
-		  </div>
-		  
-		  <div class="icon">
-			  <label class="project_label" for="manager">담당자</label>
-			  <input class="user" type="text" name="manager"  value="<?=DEBUG === false ? set_value("manager") : "매니저이름 테스트" ?>" id="project_name" required>
-		  </div> 
+              <div class="icon">
+                  <label class="project_label" for="company">회사명</label>
+                  <input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("company") : "회사이름테스트" ?>" id="project_company" required>
+              </div> 
 
-		  <div>
-			  <h4>회사 전화번호</h4>
-  
-			  <p class="project_select icon">
-				  <input value="<?=DEBUG === false ? set_value("company_phone") : "회사번호3" ?>" placeholder="5678" class="budget" type="text" name="company_phone" id="project_name" required>
-			  </p>
-		  </div>
-
-		  <div>
-			  <h4>담당자 전화번호</h4>
-  
-			  <p class="project_select icon">
-				  <input value="<?=DEBUG === false ? set_value("manager_phone") : "매니저번호3" ?>" placeholder="5678" class="budget" type="text" name="manager_phone" id="project_name" required>
-			  </p>
-		  </div>
+              <div class="icon">
+                  <label class="project_label" for="department">부서</label>
+                  <input class="company" type="text" name="department" value="<?=DEBUG === false ? set_value("department") : "부서이름테스트" ?>" id="project_depart" required>
+              </div>
+              <div class="icon">
+                     <label class="project_label" for="company_phone">회사 연락처</label>
+                      <input value="<?=DEBUG === false ? set_value("company_phone") : "회사번호3" ?>" class="budget" type="text" name="company_phone" id="project_name" required>
+              </div>
+              <div class="icon">
+                      <label class="project_label" for="fax">FAX</label>
+                      <input  value="<?=DEBUG === false ? set_value("fax") : "팩스번호3" ?>" class="budget" type="text" name="fax" id="project_name" required>
+              </div>
+              <div class="icon">
+                  <label class="project_label" for="manager">담당자</label>
+                  <input class="user" type="text" name="manager"  value="<?=DEBUG === false ? set_value("manager") : "매니저이름 테스트" ?>" id="project_name" required>
+              </div> 
+              <div class="icon">
+                    <label class="project_label" for="manager_phone">담당자 연락처</label>
+                    <input value="<?=DEBUG === false ? set_value("manager_phone") : "매니저번호3" ?>" class="budget" type="text" name="manager_phone" id="project_name" required>
+              </div>
+              <div class="icon">
+                  <label style="width:49.5%;" class="project_label" for="project_email">담당자 E-mail</label>
+                  <input value="<?=DEBUG === false ? set_value("email_first") : "emailtest@test.com" ?>" style="width:49.5%; display:inline-block;" class="email" type="text" name="email_first" id="project_email">
+                  <select style="width:49.5%; display:inline-block;" class="email" name="email_second">
+                      <option <?=set_select("email_second")?>>@naver.com</option>
+                      <option <?=set_select("email_second")?>>@gmail.com</option>
+                      <option <?=set_select("email_second")?>>@hanmail.net</option>
+                      <option <?=set_select("email_second")?>>@daum.net</option>
+                  </select>
+              </div>
 		  </div>
 		  <!--개인일때-->
-		  <div  id="viewPersonal">
-		  <div class="icon">
-			  <label class="project_label" for="personal_name">이름</label>
-			  <input value="<?=DEBUG === false ? set_value("personal_name") : "개인이름테스트" ?>" class="user" type="text" name="personal_name" id="project_alonename" required>
-		  </div> 
-
-		  <div>
-			  <h4>전화번호</h4>
-  
-			  <p class="project_select icon">
-				  <input value="<?=DEBUG === false ? set_value("personal_phone") : "개인번호3" ?>" placeholder="5678" class="budget" type="text" name="personal_phone" id="project_name" required>
-			  </p>
-		  </div>
+          <div  id="viewPersonal">
+              <div class="icon">
+                  <label class="project_label" for="personal_name">이름</label>
+                  <input value="<?=DEBUG === false ? set_value("personal_name") : "개인이름테스트" ?>" class="user" type="text" name="personal_name" id="project_alonename" required>
+              </div> 
+              <div class="icon">
+                      <label class="project_label" for="personal_phone">연락처</label>
+                      <input value="<?=DEBUG === false ? set_value("personal_phone") : "개인번호3" ?>" class="budget" type="text" name="personal_phone" id="project_name" required>
+              </div>
+              <div class="icon">
+                  <label style="width:49.5%;" class="project_label" for="project_email">E-mail</label>
+                  <input value="<?=DEBUG === false ? set_value("email_first") : "emailtest@test.com" ?>" style="width:49.5%; display:inline-block;" class="email" type="text" name="email_first" id="project_email">
+                  <select style="width:49.5%; display:inline-block;" class="email" name="email_second">
+                      <option <?=set_select("email_second")?>>@naver.com</option>
+                      <option <?=set_select("email_second")?>>@gmail.com</option>
+                      <option <?=set_select("email_second")?>>@hanmail.net</option>
+                      <option <?=set_select("email_second")?>>@daum.net</option>
+                  </select>
+              </div>
 		  </div>
 	  </fieldset>
   
 	  <fieldset>
-		  <legend>공통사항</legend>
+		  <legend>프로젝트 내용</legend>
 
-		  <div>
-			  <h4>FAX</h4>
-			  <p class="project_select icon">
-				  <input  value="<?=DEBUG === false ? set_value("fax") : "팩스번호3" ?>"  placeholder="5678" class="budget" type="text" name="fax" id="project_name" required>
-			  </p>
-			  <ul class="project_form-list">
-				  <li>
-					  <input type="checkbox" name="is_exist_fax" value="0" <?=set_checkbox("is_exist_fax","0")?> id="project_fax-1">
-					  <label for="project_fax-1">없음</label>
-				  </li>
-			  </ul>
-		  </div>
-
-		  <div class="icon">
-			  <label style="width:49.5%;" class="project_label" for="project_email">Email</label>
-			  <input value="<?=DEBUG === false ? set_value("email_first") : "emailtest@test.com" ?>" style="width:49.5%; display:inline-block;" class="email" type="text" name="email_first" id="project_email">
-			  <select style="width:49.5%; display:inline-block;" class="email" name="email_second">
-				  <option <?=set_select("email_second")?>>@naver.com</option>
-				  <option <?=set_select("email_second")?>>@gmail.com</option>
-				  <option <?=set_select("email_second")?>>@hanmail.net</option>
-				  <option <?=set_select("email_second")?>>@daum.net</option>
-			  </select>
-		  
-		  </div>
 
 		  <?php if ( $type === "통역" ): ?>
 		  <div>
@@ -160,7 +144,7 @@
   
 			  <p class="project_select icon">
 				  <select name="interpret_kind" class="budget">
-					  <option value="">통역형태</option>
+					  <option value="">선택해주세요.</option>
 					  <option <?=DEBUG === true ? "selected" : ""?> <?=set_select("interpret_kind")?>>포도</option>
 					  <option <?=set_select("interpret_kind")?>>사과</option>
 					  <option <?=set_select("interpret_kind")?>>오렌지</option>
@@ -172,7 +156,7 @@
 			  <h4>통역 사항</h4>
 			  <p class="project_select icon">
 				  <select name="translation_kind" class="budget">
-					  <option value="">통역형태</option>
+					  <option value="">선택해주세요.</option>
 					  <option <?=set_select("translation_kind")?> <?=DEBUG === true ? "selected" : ""?>>이것</option>
 					  <option <?=set_select("translation_kind")?>>저것</option>
 					  <option <?=set_select("translation_kind")?>>그것</option>
@@ -190,7 +174,7 @@
 			  <h4>통역 사항</h4>
 			  <p class="project_select icon">
 				  <select name="translation_kind" class="budget">
-					  <option  value="">통역형태</option>
+					  <option  value="">선택해주세요.</option>
 					  <option  <?=set_select("translation_kind")?> <?=DEBUG === true ? "selected" : ""?>>이것</option>
 					  <option  <?=set_select("translation_kind")?>>저것</option>
 					  <option <?=set_select("translation_kind")?>>그것</option>
@@ -207,13 +191,13 @@
   
 			  <p class="project_select icon">
 				  <select name="translation_before" class="budget" style="width:49.5%; display:inline-block;">
-					  <option  value="">시작언어</option>
+					  <option  value="">시작 언어</option>
 					  <option <?=set_select("translation_before")?> <?=DEBUG === true ? "selected" : ""?>>포도</option>
 					  <option <?=set_select("translation_before")?>>사과</option>
 					  <option <?=set_select("translation_before")?>>오렌지</option>
 				  </select>
 				  <select name="translation_after" class="budget" style="width:49.5%; display:inline-block;">
-					  <option  value="">번역언어</option>
+					  <option  value="">번역 언어</option>
 					  <option <?=set_select("translation_after")?> <?=DEBUG === true ? "selected" : ""?> >포도</option>
 					  <option <?=set_select("translation_after")?>>사과</option>
 					  <option <?=set_select("translation_after")?>>오렌지</option>
@@ -223,17 +207,16 @@
 
 		  <?php if ( $type === "통역" ): ?>
 		  <div>
-
+<br>
 		  <div>
 			  <h4>통역 장소</h4>
 			  <div class="icon" style="width:79%; display:inline-block; margin-top:1px; margin-bottom:1px;">
-				  <label class="project_label" for="project_address">주소</label>
 				  <input value="<?=DEBUG === false ? set_value("interpret_new_address") : "주소테스트" ?>" class="email" type="text" name="interpret_new_address" id="sample4_roadAddress" readonly>
 				  <input value="<?=DEBUG === false ? set_value("interpret_old_address") : "지번주소테스트" ?>" id="sample4_jibunAddress"type="hidden" name="interpret_old_address">
 				  <input value="<?=DEBUG === false ? set_value("interpret_post_number") : "우편번호테스트" ?>" id="sample4_postcode"type="hidden" name="interpret_post_number">
 			  </div>
 			  <div style="width:20%; display:inline-block; margin-bottom:1px;" class="project_form">
-				  <button type="button " onclick="sample4_execDaumPostcode(); return false;" class="projectlang_add">추가</button>
+				  <button type="button " onclick="sample4_execDaumPostcode(); return false;" class="projectlang_add" style="background-color:#09a5dd; height:50px;">추가</button>
 			  </div>
 			  <div class="icon" style="margin-top:20px;">
 				  <label class="project_label" for="project_detailaddress">상세 주소</label>
@@ -241,7 +224,7 @@
 				  <span id="guide" style="color:#999"></span>
 			  </div>
 		  </div>
-		  
+<br>
 		  <script>
 			  (function($) {
 				  $.fn.goTo = function() {
@@ -284,12 +267,11 @@
 		  
 			  </div>
 		  </div>
-
-		  <div>
-			  <h4>통역예산</h4>
-  
-			  <div class="icon" style="margin-bottom:10px;">
-				  <input type="text" value="<?=DEBUG === false ? set_value("budget") : "예산테스트" ?>" placeholder="$1,000" class="email" name="budget" id="project_budget">			
+<br>
+		  <div>  
+			  <div class="icon">
+				  <label class="project_label" for="budget">예산</label>
+				  <input type="text" value="<?=DEBUG === false ? set_value("budget") : "예산테스트" ?>" class="email" name="budget" id="project_budget">			
 			  </div>
 				  <ul class="project_form-list">
 					  <li>
@@ -300,7 +282,6 @@
 		  
 
 		  </div>
-
 		  <div style="margin-bottom:1px;">
 			  <h4>통역 장비</h4>
   
@@ -414,11 +395,10 @@
 
 
 		  <div>
-			  <h4>요구사항</h4>
-
-			  <div class="icon">
-				  <input type="text" placeholder="내용" class="budget" name="requirements" value="<?=DEBUG === false ? set_value("requirements") : "요구사항테스트" ?>" id="project_reque">
-			  </div>
+            <div class="icon">
+                <label class="project_label" for="project_textarea">요구 사항</label>
+                <textarea class="message" name="message" id="project_textarea" required><?=DEBUG === false ? set_value("message") : "메세지테스트" ?></textarea>
+            </div>
 		  </div>
   
 		  <div>
@@ -448,13 +428,7 @@
 				  <script  src="/public/subpage/js/000_fileuproad/iframe-dynmic-height.js"></script> -->
 			  </div>
 		  </div>
-		  <!--첨부파일폼 끝-->
-  
-		  <div class="icon">
-			  <label class="project_label" for="project_textarea">Project description</label>
-				<textarea class="message" name="message" id="project_textarea" required><?=DEBUG === false ? set_value("message") : "메세지테스트" ?></textarea>
-		  </div>
-  
+		  <!--첨부파일폼 끝-->  
 		  <div>
 				<input type="submit" value="Send Message">
 		  </div>
