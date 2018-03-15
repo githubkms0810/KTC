@@ -53,7 +53,7 @@ abstract class Pagination_Model extends Public_Model{
                 }
             }
             $total_rows = $get_num_rows_func();
-            var_dump($this->db->last_query());
+            // var_dump($this->db->last_query());
         }
         else if(($get_count_field === null || $this->className ==="admin") && $isIgnoreCountOnAdminPage === false) //일반
         {

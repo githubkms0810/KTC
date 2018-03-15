@@ -715,7 +715,7 @@ if ( ! function_exists('set_value'))
 
 		$value = (isset($CI->form_validation) && is_object($CI->form_validation) && $CI->form_validation->has_rule($field))
 			? $CI->form_validation->set_value($field, $default)
-			: $CI->input->post($field, FALSE);
+			: $CI->input->post_get($field, FALSE);
 
 		isset($value) OR $value = $default;
 		return ($html_escape) ? html_escape($value) : $value;
@@ -745,7 +745,7 @@ if ( ! function_exists('set_select'))
 		{
 			return $CI->form_validation->set_select($field, $value, $default);
 		}
-		elseif (($input = $CI->input->post($field, FALSE)) === NULL)
+		elseif (($input = $CI->input->post_get($field, FALSE)) === NULL)
 		{
 			return ($default === TRUE) ? ' selected="selected"' : '';
 		}
