@@ -3,7 +3,7 @@
     <p class="home-hero-des-portfolio">
         코리아 통번역 센터는 다년간의 노하우로<br>
         총 3,125개의 프로젝트를<br>
-        성공적으로 마무리하였습니다
+        성공적으로 마무리하였습니다.
     </p>
     <a href="/translation_order/selectType" class="home-btn">프로젝트 의뢰하기</a>
 </section>

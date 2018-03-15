@@ -3,7 +3,7 @@
     <p class="home-hero-des" style="color:white;">
         코리아 통번역 센터는 전문 번역 서비스는 물론<br>
         소프트웨어 현지화, 국제 회의 맞춤 통역 서비스 등을 제공하는<br>
-        대한민국 대표 언어 전문 서비스 기업입니다
+        대한민국 대표 언어 전문 서비스 기업입니다.
     </p>
     <a href="/translation_order/selectType" class="home-btn">프로젝트 의뢰하기</a>
 </section>
@@ -82,7 +82,7 @@
 <section class="home-section home-section__portfolio">
     <div class="bc-container">
         <h2 class="home-title">포트폴리오</h2>
-        <p class="home-des">기밀 유지를 원하는 프로젝트의 정보는 공개하지 않습니다</p>
+        <p class="home-des">기밀 유지를 원하는 프로젝트의 정보는 공개하지 않습니다.</p>
         <ul class="home-portfolio">
         <?php foreach ( $portfolioes as $portfolio ): ?>
             <li class="home-portfolio__item" style="cursor:pointer;" onclick="location.href='/translation_order/<?=$portfolio->id?>'">
