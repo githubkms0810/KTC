@@ -39,7 +39,7 @@
 		  <h4>생년월일</h4>
  
 		<p class="project_select icon">
-			<select name="birth_month" class="budget" style="width:33%; display:inline-block;">
+			<select name="birth_year" class="budget" style="width:33%; display:inline-block;">
 				<option value="">연도</option>
 				<option  <?=DEBUG === false ? set_select("birth_year","1939") : "selected"?>>1939</option>
 				<option  <?=set_select("birth_year","1940")?>>1940</option>

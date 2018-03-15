@@ -288,10 +288,10 @@ class Freelancer_m extends Pagination_Model
 	protected function _searchData()
     {
         return array(
-			"title"=>array("displayName"=>"이름","fieldName"=>"{$this->as}.name"),
-			"desc"=>array("displayName"=>"내용","fieldName"=>"desc","kind"=>"textfull-or"),
-			"titleDesc"=>array("displayName"=>"제목+내용","fieldName"=>["b_c.title","desc"],"kind"=>["or","textfull-or"]),
-			"displayName"=>array("displayName"=>"글쓴이","fieldName"=>"u.displayName"),
+			"name"=>array("displayName"=>"이름","fieldName"=>"{$this->as}.name"),
+			"phone"=>array("displayName"=>"개인연락처","fieldName"=>"{$this->as}.phone"),
+			"birth"=>array("displayName"=>"생일년도","fieldName"=>"{$this->as}.birth_year"),
+			"id"=>array("displayName"=>"ID","fieldName"=>"{$this->as}.id"),
 		);
 		
 	}
