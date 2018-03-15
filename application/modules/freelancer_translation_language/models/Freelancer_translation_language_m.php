@@ -122,7 +122,7 @@ class Freelancer_translation_language_m extends Pagination_Model
 	// }
 	//------ @cusotm
 	public function updateByFreelancerIdAndLanguages($freelancerId, $languages){
-		$this->db->where("freelancer_id");
+		$this->db->where("freelancer_id",$freelancerId);
 		$this->db->delete($this->table);
 		foreach ($languages as $language) {
 			$insert_id=$this->addByFreelancerIdAndLanguage($freelancerId,$language);

@@ -46,7 +46,10 @@ class Admin extends \Admin_Controller {
             }
         }
     }
-     
+    public function updateAjax($id)
+    {
+        parent::update($id);
+    }
     public function update($id)
     {
         $this->freelancer_m->setRulesWhenAdd();

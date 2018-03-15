@@ -159,7 +159,7 @@
 
 		<ul class="project_form-list">
 		<li>
-		<input type="radio" name="translation_direction" value="외국어->한국어" <?=my_set_checked($row,"translation_direction","외국어->한국어")?> checked id="free_radio_1">
+		<input type="radio" name="translation_direction" value="외국어->한국어" <?=my_set_checked($row,"translation_direction","외국어->한국어",true)?> id="free_radio_1">
 		<label for="free_radio_1">외국어 -> 한국어</label>
 		</li>
 	<li>

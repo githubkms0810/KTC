@@ -115,7 +115,7 @@
         <td class="jy-td-name">승인상태</td>
         <td colspan="1"><?=$row->is_admin_confirm?></td>
         <td colspan="3">
-          <form <?=$this->ajax_helper->form("/admin/freelancer/update/{$row->id}")?>>
+          <form <?=$this->ajax_helper->form("/admin/freelancer/updateAjax/{$row->id}")?>>
               <div class="form-group">
                   <label for="sel1">변경</label>
                   <select name="is_admin_confirm" class="form-control" id="sel1">

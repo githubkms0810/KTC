@@ -170,7 +170,8 @@ class Freelancer_m extends Pagination_Model
 		$this->set_post("account_bank");
 		$this->set_post("account_number");
 		$this->set_post("account_name");
-		$this->set_post("translation_direction");
+		$this->db->set("translation_direction",$_POST["translation_direction"]);
+		// $this->set_post("translation_direction");
 		$this->set_post("is_employed");
 		$this->set_post("university");
 		$this->set_post("university_major");

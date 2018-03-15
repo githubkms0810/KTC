@@ -352,7 +352,6 @@ if(!function_exists('my_set_checked')){
         else if(!isset($_POST[$name]) && !property_exists($obj,$name) ){
             return '';
         }
-
     }
 }
 
