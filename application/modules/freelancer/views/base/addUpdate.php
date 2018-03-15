@@ -17,7 +17,7 @@
     <p class="home-hero-des-freelancer">
         코리아 통번역 센터와 함께<br class="br_free">
         더 좋은 번역 산업의 미래를 만들어가고 싶으시다면<br class="br_free">
-        아래 지원서를 작성해주세요
+        아래 지원서를 작성해주세요.
     </p>
     <a href="/translation_order/list" class="home-btn">포트폴리오 보러가기</a>
 </section>
