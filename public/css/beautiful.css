@@ -390,6 +390,7 @@ template {
   height: 50px;
   line-height: 50px;
   border-radius: 30px;
+  box-shadow: 0 5px 30px 0px rgba(231, 172, 3, 0.35);
 }
 
 .home-btn_small {
