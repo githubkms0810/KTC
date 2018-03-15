@@ -45,7 +45,7 @@
         <div class="join-wrap">
             <div class="join-tit">
                 저희는 총 <b>1,172명</b>건의 프로젝트를 맡았습니다!<br>
-                지금 의뢰하시면 <b>318명</b>의 통번역사를 만나보실 수 있어요
+                지금 의뢰하시면 <b>318명</b>의 통번역사를 만나보실 수 있어요.
             </div>
             <div class="join-list">
                 <ul>
