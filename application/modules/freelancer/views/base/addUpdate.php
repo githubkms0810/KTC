@@ -175,7 +175,7 @@
 
 		<ul class="project_form-list">
 		<li>
-			<input type="radio" name="is_employed" value="1" <?=DEBUG === false ? set_checkbox("is_employed","1") : "checked" ?>  id="is_employed-1">
+			<input type="radio" name="is_employed" value="1" <?=DEBUG === false ? set_checkbox("is_employed","1") : "checked" ?>  id="is_employed-1" checked>
 			<label for="is_employed-1">유</label>
 		</li>
 		<li>
@@ -184,27 +184,18 @@
 		</li>
 		</ul>
 	</div>
-
-
-
-
-
-
 	<div>
 		<h4>학력 사항</h4>
-
 		<ul class="project_form-list" style="margin-bottom:1px;">
 				  <li>
-					  <input type="radio" name="is_school_graduate" value="1" onclick="div_OnOff(this.value,'school');" <?=set_checkbox("is_school_graduate","1",true)?> id="free_want-1">
-					  <label for="free_want-1"><?php $equipment="요청"?>대학원</label>
+					  <input type="radio" name="is_school_graduate" value="0" onclick="div_OnOff(this.value,'school');" <?=set_checkbox("is_school_graduate","1",true)?> id="free_want-1" checked>
+					  <label for="free_want-1"><?php $equipment="요청"?>대학교</label>
 				  </li>
-					  
 				  <li>
-					  <input type="radio" name="is_school_graduate" value="0" onclick="div_OnOff(this.value,'school');" <?=set_checkbox("is_school_graduate","0")?> id="free_want-2" checked>
-					  <label for="free_want-2"><?php $equipment="미요청"?>대학교</label>
+					  <input type="radio" name="is_school_graduate" value="1" onclick="div_OnOff(this.value,'school');" <?=set_checkbox("is_school_graduate","0")?> id="free_want-2">
+					  <label for="free_want-2"><?php $equipment="미요청"?>대학원</label>
 				  </li>
 			  </ul>
-
 		<div class="icon">
 		  <label class="project_label" for="free_schoolname">대학명</label>
 		  <input class="company" type="text" name="university" value="<?=DEBUG === false ? set_value("university") : "대학교이름 테스트"?>" id="free_schoolname">
