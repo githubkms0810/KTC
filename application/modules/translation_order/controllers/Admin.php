@@ -15,7 +15,68 @@ class Admin extends \Admin_Controller {
             $this->translation_order_m->addForDebug();
         }
     }
+    public function add()
+    {
+        $this->translation_order_m->setRulesWhenAdd();
+        
+          if($this->form_validation->run() === false){
+              $data["mode"] = "add";
+              $data['type'] = get("type");
+              $data["row"] = (object)[];
+              $data["content_view"] = "base/addUpdate";
+              $this->template->render($data);
+          }
+          else{
+            
+              $this->db->trans_start();
+              $this->load->model('file/file_m');
+              $group_id=$this->file_m->add();
+              $this->db->set("file_group_id",$group_id);
+              $insert_id=$this->translation_order_m->addByPostData();
+              $this->db->trans_complete();
+              
+              if($this->db->trans_status() === false){
+                  alert("추가 실패.ERRORCODE :".transectionError);
+                  my_redirect($this->referer);
+              }
+              else{            
+                  my_redirect("/admin/translation_order/get/$insert_id");
+              }
+          }
+    }
+    public function updateAjax($id)
+    {
+        parent::update($id);
+    }
 
+    public function update($id)
+    {
+        $this->translation_order_m->setRulesWhenAdd();
+          if($this->form_validation->run() === false){
+              $data["mode"] = "updateOnPost/$id";
+              $data['type'] = get("type");
+              $data["row"] =  $this->translation_order_m->get($id);
+              $data["content_view"] = "base/addUpdate";
+              $this->template->render($data);
+          }
+          else{
+            
+            $this->db->trans_start();
+            $this->translation_order_m->updateByPostData();
+            $group_id = $this->translation_order_m->p_get($id,"file_group_id")->file_group_id;
+            $this->load->model('file/file_m');
+            $this->file_m->add("user",$group_id);
+            $this->db->trans_complete();
+            
+            if($this->db->trans_status() === false){
+                alert("추가 실패.ERRORCODE :".transectionError);
+                my_redirect($this->referer);
+            }
+            else{            
+                my_redirect("/admin/translation_order/get/$insert_id");
+            }
+        }
+    }
     public function get($id)
     {
         $data['row'] = $row = $this->{$this->modelName}->get($id);

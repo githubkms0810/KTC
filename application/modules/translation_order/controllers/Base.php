@@ -59,12 +59,13 @@ class Base extends \Base_Controller {
         $this->translation_order_m->setRulesWhenAdd();
       
         if($this->form_validation->run() === false){
+            $data["mode"] = "add";
+            $data["row"] = (object)[];
             $data['type'] = get("type");
             $data["content_view"] = "base/addUpdate";
             $this->template->render($data);
         }
         else{
-          
             $this->db->trans_start();
             $this->load->model('file/file_m');
             $group_id=$this->file_m->add();

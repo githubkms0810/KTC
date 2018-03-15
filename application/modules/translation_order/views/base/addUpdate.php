@@ -16,7 +16,7 @@
   <a href="/translation_order/list" class="home-btn">포트폴리오 보러가기</a>
 </section>
 <!--번역,통역 폼 시작-->
-  <form action="/translation_order/add" method="post"  enctype="multipart/form-data" class="project_form floating-labels" style="margin-top:100px; margin-bottom:150px;">
+  <form action="<?=$this->className ==="admin" ? "/admin": ""?>/translation_order/<?=$mode?>" method="post"  enctype="multipart/form-data" class="project_form floating-labels" style="margin-top:100px; margin-bottom:150px;">
 	  <input type="hidden" name="type" value="<?=$type?>">
 	  <fieldset>
 		  
@@ -61,11 +61,11 @@
 		  <div>
 			  <ul class="project_form-list">
 				  <li>
-					  <input type="radio" name="buyer" value="회사" <?=set_checkbox("buyer","회사",true)?> id="project_select-1">
+					  <input type="radio" name="buyer" value="회사" <?=my_set_checked($row,"buyer","회사",true)?> id="project_select-1">
 					  <label for="project_select-1">기업</label>
 				  </li>
 				  <li>
-					  <input type="radio" name="buyer" value="개인" <?=set_checkbox("buyer","개인")?> id="project_select-2">
+					  <input type="radio" name="buyer" value="개인" <?=my_set_checked($row,"buyer","개인")?> id="project_select-2">
 					  <label for="project_select-2">개인</label>
 				  </li>
 			  </ul>

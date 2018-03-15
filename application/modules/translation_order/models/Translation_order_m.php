@@ -15,36 +15,61 @@ class Translation_order_m extends Pagination_Model
 	}
 	
 	//------@component addUpdate  정의
-	// protected function _component_addUpdate()
-	// {
-	// 	return array(
-	// 		array(
-	// 			array("method"=>"text","fieldName"=>["total_price"],"displayName"=>["총가격"],"inputName"=>""),
-	// 			array("inputName"=>"name","displayName"=>"이름"),
-	// 			array("inputName"=>"version","type"=>"radio","inputValue"=>["정식","베타"],"inputDisplayName"=>["정식","베타"],"displayName"=>"버전"),
-	// 			array("method"=>"summernote","inputName"=>"desc","displayName"=>"설명"),
-	// 			array("updateDefault"=>"displayName","method"=>"inputSearch","table"=>"user","searchField"=>["displayName","userName","name"],"searchFieldDisplayName"=>["별명","아이디","이름"],"displayName"=>"유저검색","inputName"=>"user_id","inputValue"=>"id"),
-	// 			array("type"=>"hidden","inputName"=>"product_id","default"=>function($row){return $row->id;}),
-	// 			array("type"=>"number","inputName"=>"num","displayName"=>"개수"),
-	//			array("method"=>"ajaxImage","displayName"=>"프로필 사진","inputName"=>"profile_image", "default"=>"/public/images/unknown.png"),
-	// 		),
-	// 		array(
-	// 			"moduleName"=>"product_order_detail",
-	// 			array("type"=>"hidden","inputName"=>"order_id","default"=>function($row){return $row->id;}),
-	// 			array("updateDefault"=>false,"method"=>"inputSearch","table"=>"product","searchField"=>["name"],"searchFieldDisplayName"=>["상품이름"],"displayName"=>"주문 디테일 추가","inputName"=>"product_id","inputValue"=>"id"),
-	// 			array("type"=>"number","inputName"=>"num","displayName"=>"개수"),
-	// 			array("type"=>"number","inputName"=>"price","displayName"=>"가격"),
+	protected function _component_addUpdate()
+	{
+		return array(
+			array(
+				array("inputName"=>"type","type"=>"radio","inputValue"=>["번역","통역"],"inputDisplayName"=>["번역","통역"],"displayName"=>"타입"),
+				array("inputName"=>"translation_status","type"=>"radio","inputValue"=>["전달중","전달완료","진행중","완료"],"inputDisplayName"=>["전달중","전달완료","진행중","완료"],"displayName"=>"상태"),
+				array("inputName"=>"buyer","type"=>"radio","inputValue"=>["회사","개인"],"inputDisplayName"=>["회사","개인"],"displayName"=>"의뢰자종류"),
+				array("inputName"=>"company","displayName"=>"회사"),
+				array("inputName"=>"department","displayName"=>"부서"),
+				array("inputName"=>"company_phone","displayName"=>"회사연락처"),
+				array("inputName"=>"manager","displayName"=>"담당자"),
+				array("inputName"=>"manager_phone","displayName"=>"담당자연락처"),
+				array("inputName"=>"personal_name","displayName"=>"개인이름"),
+				array("inputName"=>"personal_phone","displayName"=>"개인연락처"),
+				array("inputName"=>"fax","displayName"=>"팩스"),
+				array("inputName"=>"email","displayName"=>"이메일"),
+				array("inputName"=>"translation_kind","displayName"=>"번역종류"),
+				array("inputName"=>"translation_before","displayName"=>"번역전"),
+				array("inputName"=>"translation_after","displayName"=>"번역후"),
+				array("inputName"=>"deadline","displayName"=>"마감일"),
+				array("inputName"=>"budget","displayName"=>"예산"),
+				array("inputName"=>"requirements","displayName"=>"요구사항"),
+				array("inputName"=>"translation_after","displayName"=>"번역후"),
+				array("inputName"=>"is_get_tax_bill","type"=>"radio","inputValue"=>["0","1"],"inputDisplayName"=>["미발행","발행"],"displayName"=>"세금계산서"),
+				array("inputName"=>"is_get_cash_receipt","type"=>"radio","inputValue"=>["0","1"],"inputDisplayName"=>["미발행","발행"],"displayName"=>"현금영수증"),
+				array("inputName"=>"is_use_confidential","type"=>"radio","inputValue"=>["0","1"],"inputDisplayName"=>["비유지","유지"],"displayName"=>"기밀유지"),
+				array("inputName"=>"interpret_kind","displayName"=>"통역종류"),
+				array("inputName"=>"interpret_post_number","displayName"=>"통역 우편번호"),
+				array("inputName"=>"interpret_new_address","displayName"=>"통역 도로명 주소"),
+				array("inputName"=>"interpret_old_address","displayName"=>"통역 지번 주소"),
+				array("inputName"=>"interpret_address_detail","displayName"=>"통역 상세주소"),
+				array("inputName"=>"interpret_start_date","displayName"=>"통역 시작날자"),
+				array("inputName"=>"interpret_end_date","displayName"=>"통역 끝 날자"),
+				array("inputName"=>"is_need_equiment","type"=>"radio","inputValue"=>["0","1"],"inputDisplayName"=>["필요없음","필요"],"displayName"=>"통역장비"),
+				array("type"=>"number","inputName"=>"num_equiment","displayName"=>"장비개수"),
+				array("inputName"=>"is_need_profile","type"=>"radio","inputValue"=>["0","1"],"inputDisplayName"=>["필요없음","필요"],"displayName"=>"프로필"),
+				array("method"=>"ajaxImage","displayName"=>"포트폴리오 이미지","inputName"=>"image", "default"=>portfolioDefaultImage),
+			),
+			// array(
+			// 	"moduleName"=>"product_order_detail",
+			// 	array("type"=>"hidden","inputName"=>"order_id","default"=>function($row){return $row->id;}),
+			// 	array("updateDefault"=>false,"method"=>"inputSearch","table"=>"product","searchField"=>["name"],"searchFieldDisplayName"=>["상품이름"],"displayName"=>"주문 디테일 추가","inputName"=>"product_id","inputValue"=>"id"),
+			// 	array("type"=>"number","inputName"=>"num","displayName"=>"개수"),
+			// 	array("type"=>"number","inputName"=>"price","displayName"=>"가격"),
 				
-	// 			"rows" => array(
-	// 				"displayName" =>"주문 디테일",
-	// 				"variableName"=>"product_order_details",
-	// 				"moduleName"=>"product_order_detail",
-	// 				"alertButton"=>false,
-	// 				array("method"=>"text","fieldName"=>["product_name","num","price"],"displayName"=>["이름","개수","개당 가격"],"href"=>function($row){return "/admin/product_order_detail/update/{$row->id}";}),
-	// 			),
-	// 		),
-	// 	);
-	// }
+			// 	"rows" => array(
+			// 		"displayName" =>"주문 디테일",
+			// 		"variableName"=>"product_order_details",
+			// 		"moduleName"=>"product_order_detail",
+			// 		"alertButton"=>false,
+			// 		array("method"=>"text","fieldName"=>["product_name","num","price"],"displayName"=>["이름","개수","개당 가격"],"href"=>function($row){return "/admin/product_order_detail/update/{$row->id}";}),
+			// 	),
+			// ),
+		);
+	}
 	// protected function _component_add()
 	// {
 	// 	return array();
@@ -194,48 +219,57 @@ class Translation_order_m extends Pagination_Model
 		$this->db->set("is_portfolio","1");			
 		return  $this->p_add();
 	}
+	public function updateByPostData()
+	{
+		$this->setPostDataWhenAddUpdate();
+		return $this->p_update($id);
+	}
 	public function addByPostData()
 	{
-		$this->load->library("post_helper");
-
-		$this->set_post("type");
-		$this->set_post("buyer");
-		$this->set_post("company");
-		$this->set_post("department");
-		$this->set_post("manager");
-		$this->set_post("company_phone");
-		$this->set_post("manager_phone");
-		$this->set_post("personal_name");
-		$this->set_post("personal_phone");
-		$this->set_post("fax");
-		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_exist_fax","1");
-		$this->set("email",$this->post_helper->makeEmailByPostData());
-		$this->set_post("interpret_kind");
-		$this->set_post("translation_kind");
-		$this->set_post("translation_before");
-		$this->set_post("translation_after");
-		$this->set_post("interpret_post_number");
-		$this->set_post("interpret_new_address");
-		$this->set_post("interpret_old_address");
-		$this->set_post("interpret_address_detail");
-		$this->set_post("interpret_start_date");
-		$this->set_post("interpret_end_date");
-		$this->set_post("interpret_pay_date");
-		$this->set_post("budget");
-		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_need_equiment","0");
-		$this->set_post("num_equiment");
-		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_need_profile","0");
-		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_exist_budget","1");
-		$this->set_post("requirements");
-		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_get_tax_bill","0");
-		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_get_cash_receipt","0");
-		$this->post_helper->ifNullSetQueryByDefaultOrDo("is_use_confidential","0");
-		$this->set_post("message");
+		$this->setPostDataWhenAddUpdate();
 		
 		$insert_id= $this->p_add();
 		return $insert_id;
 	}
 	
+	private function setPostDataWhenAddUpdate()
+	{
+		$this->load->library("post_helper");
+		
+				$this->set_post("type");
+				$this->set_post("buyer");
+				$this->set_post("company");
+				$this->set_post("department");
+				$this->set_post("manager");
+				$this->set_post("company_phone");
+				$this->set_post("manager_phone");
+				$this->set_post("personal_name");
+				$this->set_post("personal_phone");
+				$this->set_post("fax");
+				$this->post_helper->ifNullSetQueryByDefaultOrDo("is_exist_fax","1");
+				$this->set("email",$this->post_helper->makeEmailByPostData());
+				$this->set_post("interpret_kind");
+				$this->set_post("translation_kind");
+				$this->set_post("translation_before");
+				$this->set_post("translation_after");
+				$this->set_post("interpret_post_number");
+				$this->set_post("interpret_new_address");
+				$this->set_post("interpret_old_address");
+				$this->set_post("interpret_address_detail");
+				$this->set_post("interpret_start_date");
+				$this->set_post("interpret_end_date");
+				$this->set_post("interpret_pay_date");
+				$this->set_post("budget");
+				$this->post_helper->ifNullSetQueryByDefaultOrDo("is_need_equiment","0");
+				$this->set_post("num_equiment");
+				$this->post_helper->ifNullSetQueryByDefaultOrDo("is_need_profile","0");
+				$this->post_helper->ifNullSetQueryByDefaultOrDo("is_exist_budget","1");
+				$this->set_post("requirements");
+				$this->post_helper->ifNullSetQueryByDefaultOrDo("is_get_tax_bill","0");
+				$this->post_helper->ifNullSetQueryByDefaultOrDo("is_get_cash_receipt","0");
+				$this->post_helper->ifNullSetQueryByDefaultOrDo("is_use_confidential","0");
+				$this->set_post("message");
+	}
 	//------ @query @list@Get 정의
 		
 	protected function _select()

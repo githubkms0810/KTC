@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col-sm-4"><h3>상태: <?=$row->translation_status?></h3></div>
     <div class="col-sm-4">
-        <form <?=$this->ajax_helper->form("/admin/translation_order/update/{$row->id}")?>>
+        <form <?=$this->ajax_helper->form("/admin/translation_order/updateAjax/{$row->id}")?>>
         <div class="form-group">
             <label for="sel1">상태변경</label>
             <select name="translation_status" class="form-control" id="sel1">
@@ -187,7 +187,7 @@
         <td class="jy-td-name">분야 설정</td>
         <td colspan="4" ><?=$row->field?></td>
         <td colspan="4" >
-        <form <?=$this->ajax_helper->form("/admin/translation_order/update/{$row->id}")?>>
+        <form <?=$this->ajax_helper->form("/admin/translation_order/updateAjax/{$row->id}")?>>
                     <input type="text" name ="field">
                 <button class="btn btn-default">확인</button>
             </form>
@@ -198,7 +198,7 @@
         <td class="jy-td-name">포트폴리오 여부</td>
         <td colspan="4" ><?=$row->is_portfolio?></td>
         <td colspan="4">
-            <form <?=$this->ajax_helper->form("/admin/translation_order/update/{$row->id}")?>>
+            <form <?=$this->ajax_helper->form("/admin/translation_order/updateAjax/{$row->id}")?>>
                 <div class="form-group">
                     <label for="sel1">변경</label>
                     <select name="is_portfolio" class="form-control" id="sel1">
@@ -231,7 +231,7 @@
 
 <div class="row">
     <div class="col-sm-12">
-        <form <?=$this->ajax_helper->form("/admin/translation_order/update/{$row->id}")?>>
+        <form <?=$this->ajax_helper->form("/admin/translation_order/updateAjax/{$row->id}")?>>
         <?=$this->component->ajaxImage(["displayName"=>"포트폴리오 대표이미지 변경","inputName"=>"image","row"=>$row,"default"=>portfolioDefaultImage])?>
         <button class="btn btn-default" type="submit">보내기</button>
         </form>
