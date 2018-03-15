@@ -111,6 +111,25 @@
         <td class="jy-td-name">관리자 메모</td>
         <td colspan="8"><?=$row->admin_memo?></td>
       </tr>
+      <tr>
+        <td class="jy-td-name">승인상태</td>
+        <td colspan="1"><?=$row->is_admin_confirm?></td>
+        <td colspan="3">
+          <form <?=$this->ajax_helper->form("/admin/freelancer/update/{$row->id}")?>>
+              <div class="form-group">
+                  <label for="sel1">변경</label>
+                  <select name="is_admin_confirm" class="form-control" id="sel1">
+                      <option value="1">승인</option>
+                      <option value="0">비승인</option>
+                  </select>
+              </div>
+              <button class="btn btn-default">확인</button>
+          </form>
+        </td>
+        <td colspan="4">
+        <h4><a class="btn btn-default" target="_blank" href="/admin/email/add?email=<?=$row->email?>">이메일 보내기</a></h4>
+        </td>
+      </tr>
     </tbody>
   </table>
 
@@ -129,27 +148,5 @@
 </div>
 
 <hr>
-
-<div class="row">
-    <div class="col-sm-4">
-    <h4>승인 상태 : <?=$row->is_admin_confirm?> 
-    </h4>
-    </div>
-    <div class="col-sm-4">
-        <form <?=$this->ajax_helper->form("/admin/freelancer/update/{$row->id}")?>>
-            <div class="form-group">
-                <label for="sel1">변경</label>
-                <select name="is_admin_confirm" class="form-control" id="sel1">
-                    <option value="1">승인</option>
-                    <option value="0">비승인</option>
-                </select>
-            </div>
-            <button class="btn btn-default">확인</button>
-        </form>
-    </div>
-    <div class="col-sm-4">
-        <h4><button class="btn btn-default clickable" target="_blank" data-href="/admin/email/add?email=<?=$row->email?>">이메일 보내기</button></h4>
-    </div>
-</div>
 
 <br>

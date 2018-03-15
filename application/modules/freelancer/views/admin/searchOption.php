@@ -29,7 +29,7 @@
 
         
         <tr>
-            <td class="jy-td-name jy-line-height">분야</td>
+            <td class="jy-td-name jy-line-height">분야상세</td>
             <td colspan="2">
                 <input type="hidden" name="searchKeyOption[]" value="freelancer_translation_field.field_detail">
                 <input type="text" name="searchValueOption[]" value="<?=set_value("searchValueOption[2]")?>">
