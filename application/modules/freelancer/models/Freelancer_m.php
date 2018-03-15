@@ -122,9 +122,7 @@ class Freelancer_m extends Pagination_Model
 	public function setRulesWhenAdd()
 	{
 		$this->form_validation->set_rules('name', '이름', 'trim|required|min_length[1]|max_length[12]');
-		$this->form_validation->set_rules('phone_first', '휴대폰', 'trim|required');
-		$this->form_validation->set_rules('phone_second', '휴대폰', 'trim|required');
-		$this->form_validation->set_rules('phone_third', '휴대폰', 'trim|required');
+		$this->form_validation->set_rules('phone', '휴대폰', 'trim|required');
 		$this->form_validation->set_rules('new_address', '주소', 'trim|required');
 		$this->form_validation->set_rules('address_detail', '상세주소', 'trim|required');
 		$this->form_validation->set_rules('apply_field', '지원분야', 'trim|required');
@@ -147,7 +145,7 @@ class Freelancer_m extends Pagination_Model
 		$this->set_post("birth_month");
 		$this->set_post("birth_day");
 		$this->set_post("sex");
-		$this->set("phone",$this->post_helper->makePhoneByPostData());
+		$this->set_post("phone");
 		$this->set("email",$this->post_helper->makeEmailByPostData());
 		$this->set_post("post_number");
 		// $this->set_post("is_have_career");

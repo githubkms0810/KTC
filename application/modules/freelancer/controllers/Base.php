@@ -22,6 +22,7 @@ class Base extends \Base_Controller {
     public function add(){
         $this->freelancer_m->setRulesWhenAdd();
         if($this->form_validation->run() === false){
+          
             $data["content_view"] = "base/addUpdate";
             $data["languages"]=explode("," ,$this->setting->translation_languages);
             $this->template->render($data);
@@ -41,7 +42,7 @@ class Base extends \Base_Controller {
                 my_redirect($this->referer);
             }
             else{
-                alert("프리랜서 등록이 완료 되었습니다.\\r 신청서는 수정/삭제가 불가능합니다. \rr 검수 후 이메일 통보해드리겠습니다..\\r메인페이지로 이동합니다.");
+                alert("프리랜서 등록이 완료 되었습니다.\\r신청서는 수정/삭제가 불가능합니다. \\r검수 후 이메일 통보해드리겠습니다.\\r메인페이지로 이동합니다.");
                 my_redirect("/");
             }
         }
