@@ -21,7 +21,7 @@ class Admin extends \Admin_Controller {
     {
         $this->freelancer_m->setRulesWhenAdd();
         if($this->form_validation->run() === false){
-            $data["content_view"] = "admin/addUpdate";
+            $data["content_view"] = "base/addUpdate";
             $data["mode"] = "add";
             $data["row"] = (object)[];
             $data["languages"]=explode("," ,$this->setting->translation_languages);
@@ -53,6 +53,7 @@ class Admin extends \Admin_Controller {
         
         $data["languages"]=explode("," ,$this->setting->translation_languages);
         $data["mode"] = "update";
+        $data["content_view"] = "base/addUpdate";
         $data["row"] = $this->freelancer_m->p_get($id);
         $this->data += $data;
         parent::update($id);

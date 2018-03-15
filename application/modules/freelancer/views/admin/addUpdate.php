@@ -123,13 +123,6 @@
 
 	<div>
 		<h4>계좌정보</h4>
-		<p class="project_select icon">
-			<input  value="<?=DEBUG === false ? set_value("fax_third") : "팩스번호3" ?>"  placeholder="111-1111-1111111" class="budget" type="text" name="fax_third" id="project_name" required>
-		</p>
-	</div>
-
-	<div>
-		<h4>계좌정보</h4>
 
 		<p class="project_select icon_account">
 			<select name="account_bank" class="budget" style="width:24%; display:inline-block;">

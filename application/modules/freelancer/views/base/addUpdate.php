@@ -11,17 +11,20 @@
 
 
 <!--프리랜서지원폼 시작-->
+<?php if ( $this->className ==="base" ): ?>
 <section class="home-hero-freelancer">
-    <h2 class="home-hero-title-freelancer">프리랜서 지원하기</h2>
+	<h2 class="home-hero-title-freelancer">프리랜서 지원하기</h2>
     <p class="home-hero-des-freelancer">
-        코리아 통번역 센터와 함께<br class="br_free">
+		코리아 통번역 센터와 함께<br class="br_free">
         더 좋은 번역 산업의 미래를 만들어가고 싶으시다면<br class="br_free">
         아래 지원서를 작성해주세요.
     </p>
     <a href="/translation_order/list" class="home-btn">포트폴리오 보러가기</a>
 </section>
+<?php endif; ?>
+
 <div id="free_wrapper" style="margin: 100px 0 150px; 0;">
-<form action="/freelancer/add" method="post"  onsubmit="" class="project_form floating-labels" enctype="multipart/form-data">
+<form action="<?=$this->className === "admin"? "/admin" : "" ?>/freelancer/add" method="post"  onsubmit="" class="project_form floating-labels" enctype="multipart/form-data">
 <fieldset>
 	
 	<legend>프리랜서 지원</legend>
@@ -31,7 +34,7 @@
 	<!--개인일때-->
 	<div class="icon">
 		<label class="project_label" for="free_name">이름</label>
-		<input value="<?=DEBUG === false ? set_value("name") : "이름테스트" ?>" class="user" type="text" name="name" id="free_name" required>
+		<input value="<?=DEBUG === false ? my_set_value($row,"name") : "이름테스트" ?>" class="user" type="text" name="name" id="free_name" required>
 	</div> 
 
 	<div>
@@ -40,19 +43,19 @@
 		<p class="project_select icon">
 			<select name="birth_year" class="budget" style="width:33%; display:inline-block;">
 				<option value="">연도</option>
-				<option  <?=DEBUG === false ? set_select("birth_year","1939") : "selected"?>>1939</option>
-				<option  <?=set_select("birth_year","1940")?>>1940</option>
+				<option  <?=DEBUG === false ? my_set_selected($row,"birth_year","1939") : "selected"?>>1939</option>
+				<option  <?=my_set_selected($row,"birth_year","1940")?>>1940</option>
 		    </select>
 		    <select name="birth_month" class="budget" style="width:32%; display:inline-block;">
 				<option  value="">월</option>
 				<?php for ( $i = 1 ; $i <=12 ; $i++ ): ?>
-					<option <?=DEBUG === false ? set_select("birth_month",$i) : "selected"?>><?=$i?></option>
+					<option <?=DEBUG === false ? my_set_selected($row,"birth_month",$i) : "selected"?>><?=$i?></option>
 				<?php endfor; ?>
 			</select>
 			<select name="birth_day" class="budget" style="width:33%; display:inline-block;">
 			  	<option  value="">일</option>
 				<?php for ( $i = 1 ; $i <=31 ; $i++ ): ?>
-					<option <?=DEBUG === false ? set_select("birth_day",$i) : "selected"?>><?=$i?></option>
+					<option <?=DEBUG === false ? my_set_selected($row,"birth_day",$i) : "selected"?>><?=$i?></option>
 				<?php endfor; ?>
 			</select>
 		</p>
@@ -63,11 +66,11 @@
 
 		<ul class="project_form-list">
 			<li>
-				<input type="radio" name="sex" value="남성" <?=set_checkbox("sex","남성",true)?> id="free_radio_sex1">
+				<input type="radio" name="sex" value="남성" <?=my_set_checked($row,"sex","남성",true)?> id="free_radio_sex1">
 				<label for="free_radio_sex1">남성</label>
 			</li>
 			<li>
-				<input type="radio" name="sex" value="여성" <?=set_checkbox("sex","여성")?> id="free_radio_sex2">
+				<input type="radio" name="sex" value="여성" <?=my_set_checked($row,"sex","여성")?> id="free_radio_sex2">
 				<label for="free_radio_sex2">여성</label>
 			</li>
 		</ul>
@@ -76,16 +79,16 @@
 
 	<div class="icon">
 		<label class="project_label" for="free_phone">연락처</label>
-		<input value="<?=DEBUG === false ? set_value("phone") : "개인번호3" ?>" class="budget" type="text" name="phone" id="free_phone" required>
+		<input value="<?=DEBUG === false ? my_set_value($row,"phone") : "개인번호3" ?>" class="budget" type="text" name="phone" id="free_phone" required>
 	</div> 
 
 	<div class="icon">
 		<label style="width:49.5%;" class="project_label" for="email">E-mail</label>
-		<input value="<?=DEBUG === false ? set_value("email_first") : "emailtestr" ?>" style="width:49.5%; display:inline-block;" class="email" type="text" name="email_first" id="free_email">
+		<input value="<?=DEBUG === false ? my_set_value( isset($row->email) ? $this->post_helper->extractUserNameOnEmail($row->email) : null,"email_first") : "emailtestr" ?>" style="width:49.5%; display:inline-block;" class="email" type="text" name="email_first" id="free_email">
 		<select style="width:49.5%; display:inline-block;" class="email" name="email_second">
-			<option <?=set_select("email_second","naver.com")?>>@naver.com</option>
-			<option <?=set_select("email_second","gmail.com")?>>@gmail.com</option>
-			<option <?=set_select("email_second","daum.net")?>>@daum.net</option>
+			<option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@naver.com")?>>@naver.com</option>
+			<option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@gmail.com")?>>@gmail.com</option>
+			<option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@daum.net")?>>@daum.net</option>
 		</select>
 	
 	</div>
@@ -93,9 +96,9 @@
 	<div>
 		<div class="icon" style="width:79%; display:inline-block; margin-top:1px; margin-bottom:1px;">
 			<h4>주소</h4>
-			<input value="<?=DEBUG === false ? set_value("new_address") : "주소테스트" ?>" class="email" type="text" name="new_address" required id="sample4_roadAddress" value=" " readonly>
-			<input type="hidden" id="sample4_postcode" name="post_number" value="<?=DEBUG === false ? set_value("post_number"): "지번테스트" ?>">
-			<input type="hidden" id="sample4_jibunAddress" name="old_address" value="<?=DEBUG === false ? set_value("old_address"): "구주소 테스트" ?>">
+			<input value="<?=DEBUG === false ? my_set_value($row,"new_address") : "주소테스트" ?>" class="email" type="text" name="new_address" required id="sample4_roadAddress" value=" " readonly>
+			<input type="hidden" id="sample4_postcode" name="post_number" value="<?=DEBUG === false ? my_set_value($row,"post_number"): "지번테스트" ?>">
+			<input type="hidden" id="sample4_jibunAddress" name="old_address" value="<?=DEBUG === false ? my_set_value($row,"old_address"): "구주소 테스트" ?>">
 
 		
 		</div>
@@ -104,7 +107,7 @@
 		</div>
 		<div class="icon" style="margin-top:20px;">
 			<label class="project_label" for="project_detailaddress">상세 주소</label>
-			<input value="<?=DEBUG === false ? set_value("address_detail") : "상세주소테스트" ?>" class="email" type="text" name="address_detail" id="free_address" required>
+			<input value="<?=DEBUG === false ? my_set_value($row,"address_detail") : "상세주소테스트" ?>" class="email" type="text" name="address_detail" id="free_address" required>
 			<span id="guide" style="color:#999"></span>
 		</div>
 	</div>
@@ -114,11 +117,11 @@
 
 		<ul class="project_form-list">
 			<li>
-				<input type="radio" name="apply_field" value="통역" <?=set_checkbox("apply_field","통역",true)?> id="free_radio_apply1">
+				<input type="radio" name="apply_field" value="통역" <?=my_set_checked($row,"apply_field","통역",true)?> id="free_radio_apply1">
 				<label for="free_radio_apply1">통역</label>
 			</li>
 			<li>
-				<input type="radio" name="apply_field" value="번역" <?=set_checkbox("apply_field","번역")?> id="free_radio_apply2">
+				<input type="radio" name="apply_field" value="번역" <?=my_set_checked($row,"apply_field","번역")?> id="free_radio_apply2">
 				<label for="free_radio_apply2">번역</label>
 			</li>
 		</ul>
@@ -130,11 +133,11 @@
 		<p class="project_select icon_account">
 			<select name="account_bank" class="budget" style="width:24%; display:inline-block;">
 				<option value="">은행</option>
-				<option value="신한" <?=DEBUG === false ? set_select("account_bank","신한") : "selected"?>>신한</option>
-			    <option value="국민" <?=set_select("account_bank","국민")?>>국민</option>
+				<option value="신한" <?=DEBUG === false ? my_set_selected($row,"account_bank","신한") : "selected"?>>신한</option>
+			    <option value="국민" <?=my_set_selected($row,"account_bank","국민")?>>국민</option>
 			</select>
-			<input value="<?=DEBUG === false ? set_value("account_number") : "1245967" ?>" placeholder="계좌번호" type="text" name="account_number" id="free_account" required style="display:inline-block; width: 50%;">
-			<input value="<?=DEBUG === false ? set_value("account_name") : "예금주테스트" ?>" placeholder="예금주" type="text" name="account_name" id="free_account" required style="width: 23%; display:inline-block;">
+			<input value="<?=DEBUG === false ? my_set_value($row,"account_number") : "1245967" ?>" placeholder="계좌번호" type="text" name="account_number" id="free_account" required style="display:inline-block; width: 50%;">
+			<input value="<?=DEBUG === false ? my_set_value($row,"account_name") : "예금주테스트" ?>" placeholder="예금주" type="text" name="account_name" id="free_account" required style="width: 23%; display:inline-block;">
 		</p>
 	</div>
 
@@ -144,7 +147,7 @@
 		<ul class="project_form-list">
 			<?php $i=1; foreach ( $languages as $language ): ?>
 			<li>
-			<input type="checkbox" name="languages[]" value="<?=$language?>" <?=DEBUG === false ? set_checkbox("languages[]",$language) : "checked"?> id="free_checkbox-<?=$i?>">
+			<input type="checkbox" name="languages[]" value="<?=$language?>" <?=DEBUG === false ? my_set_checked($row,"languages[]",$language) : "checked"?> id="free_checkbox-<?=$i?>">
 			<label for="free_checkbox-<?=$i?>"><?=$language?></label>
 		</li>
 		<?php $i++; endforeach; ?>
@@ -156,15 +159,15 @@
 
 		<ul class="project_form-list">
 		<li>
-		<input type="radio" name="translation_direction" value="외국어->한국어" <?=set_checkbox("translation_direction","외국어->한국어")?> checked id="free_radio_1">
+		<input type="radio" name="translation_direction" value="외국어->한국어" <?=my_set_checked($row,"translation_direction","외국어->한국어")?> checked id="free_radio_1">
 		<label for="free_radio_1">외국어 -> 한국어</label>
 		</li>
 	<li>
-		<input type="radio" name="translation_direction" value="한국어->외국어" <?=set_checkbox("translation_direction","한국어->외국어")?> id="free_radio_2">
+		<input type="radio" name="translation_direction" value="한국어->외국어" <?=my_set_checked($row,"translation_direction","한국어->외국어")?> id="free_radio_2">
 		<label for="free_radio_2">한국어 -> 외국어</label>
 	</li>
 	<li>
-		<input type="radio" name="translation_direction" value="외국어<->한국어" <?=set_checkbox("translation_direction","외국어<->한국어")?> id="free_radio_3">
+		<input type="radio" name="translation_direction" value="외국어<->한국어" <?=my_set_checked($row,"translation_direction","외국어<->한국어")?> id="free_radio_3">
 		<label for="free_radio_3">외국어 <-> 한국어</label>
 	</li>
 		</ul>
@@ -175,11 +178,11 @@
 
 		<ul class="project_form-list">
 		<li>
-			<input type="radio" name="is_employed" value="1" <?=DEBUG === false ? set_checkbox("is_employed","1") : "checked" ?>  id="is_employed-1" checked>
+			<input type="radio" name="is_employed" value="1" <?=DEBUG === false ? my_set_checked($row,"is_employed","1") : "checked" ?>  id="is_employed-1" checked>
 			<label for="is_employed-1">유</label>
 		</li>
 		<li>
-			<input type="radio" name="is_employed" value="0" <?=set_checkbox("is_employed","0")?> id="is_employed-2">
+			<input type="radio" name="is_employed" value="0" <?=my_set_checked($row,"is_employed","0")?> id="is_employed-2">
 			<label for="is_employed-2">무</label>
 		</li>
 		</ul>
@@ -188,29 +191,29 @@
 		<h4>학력 사항</h4>
 		<ul class="project_form-list" style="margin-bottom:1px;">
 				  <li>
-					  <input type="radio" name="is_school_graduate" value="0" onclick="div_OnOff(this.value,'school');" <?=set_checkbox("is_school_graduate","1",true)?> id="free_want-1" checked>
+					  <input type="radio" name="is_school_graduate" value="0" onclick="div_OnOff(this.value,'school');" <?=my_set_checked($row,"is_school_graduate","1",true)?> id="free_want-1" checked>
 					  <label for="free_want-1"><?php $equipment="요청"?>대학교</label>
 				  </li>
 				  <li>
-					  <input type="radio" name="is_school_graduate" value="1" onclick="div_OnOff(this.value,'school');" <?=set_checkbox("is_school_graduate","0")?> id="free_want-2">
+					  <input type="radio" name="is_school_graduate" value="1" onclick="div_OnOff(this.value,'school');" <?=my_set_checked($row,"is_school_graduate","0")?> id="free_want-2">
 					  <label for="free_want-2"><?php $equipment="미요청"?>대학원</label>
 				  </li>
 			  </ul>
 		<div class="icon">
 		  <label class="project_label" for="free_schoolname">대학명</label>
-		  <input class="company" type="text" name="university" value="<?=DEBUG === false ? set_value("university") : "대학교이름 테스트"?>" id="free_schoolname">
+		  <input class="company" type="text" name="university" value="<?=DEBUG === false ? my_set_value($row,"university") : "대학교이름 테스트"?>" id="free_schoolname">
 		</div> 
 
 		<div class="icon">
 		  <label class="project_label" for="free_subname">전공명</label>
-		  <input class="company" type="text" name="university_major" value="<?=DEBUG === false ? set_value("university_major") : "대학교전공 테스트"?>" id="free_subname">
+		  <input class="company" type="text" name="university_major" value="<?=DEBUG === false ? my_set_value($row,"university_major") : "대학교전공 테스트"?>" id="free_subname">
 		</div>
 
 
 		  <div id="school" style="display:none;">
 			<div class="icon">
 				<label style="width:45%;" class="project_label" for="free_graduate_schoolname">대학원명</label>
-				<input class="company" type="text" name="graduate_school" value="<?=DEBUG === false ? set_value("graduate_school") : "대학원이름 테스트"?>" style="width:49.5%; display:inline-block;" id="free_graduate_schoolname">
+				<input class="company" type="text" name="graduate_school" value="<?=DEBUG === false ? my_set_value($row,"graduate_school") : "대학원이름 테스트"?>" style="width:49.5%; display:inline-block;" id="free_graduate_schoolname">
 				<select style="width:49.5%; display:inline-block;" class="email" name="graduate_school_degree">
 					<option>학위</option>	
 					<option <?=set_select("graduate_school_degree","석사")?>>석사</option>
@@ -220,7 +223,7 @@
 			</div>
 			<div class="icon">
 		  		<label class="project_label" for="free_graduate_schoolsubname">전공명</label>
-		  		<input class="company" type="text" name="graduate_school_major" value="<?=DEBUG === false ? set_value("graduate_school_major") : "대학원전공 테스트"?>" id="free_graduate_schoolsubname">
+		  		<input class="company" type="text" name="graduate_school_major" value="<?=DEBUG === false ? my_set_value($row,"graduate_school_major") : "대학원전공 테스트"?>" id="free_graduate_schoolsubname">
 			</div>
 
 		</div>

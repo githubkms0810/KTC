@@ -294,8 +294,17 @@ if(!function_exists('my_set_value')){
         $ci = &get_instance();
         if(isset($_POST[$name])){
             return $_POST[$name];
-        }else if(property_exists($obj,$name) ){
-            return $obj->$name;
+        }
+        else if ($obj === null)
+        {
+            return "";
+        }
+        else if(is_object($obj)&&property_exists($obj,$name) ){
+                return $obj->$name;
+        }
+        else if( is_string( $obj) && isset($obj) && $obj !== null)
+        {
+            return $obj;
         }
         else
         {
