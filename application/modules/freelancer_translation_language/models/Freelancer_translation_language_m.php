@@ -121,12 +121,20 @@ class Freelancer_translation_language_m extends Pagination_Model
 	// 	$this->form_validation->set_rules('name', '이름', 'trim|required');
 	// }
 	//------ @cusotm
+	public function updateByFreelancerIdAndLanguages($freelancerId, $languages){
+		$this->db->where("freelancer_id");
+		$this->db->delete($this->table);
+		foreach ($languages as $language) {
+			$insert_id=$this->addByFreelancerIdAndLanguage($freelancerId,$language);
+		}
+	}
 
 	public function addByFreelancerIdAndLanguages($freelancerId, $languages){
 		foreach ($languages as $language) {
 			$insert_id=$this->addByFreelancerIdAndLanguage($freelancerId,$language);
 		}
 	}
+	
 	private function addByFreelancerIdAndLanguage($freelancerId, $language){
 		$this->set("freelancer_id",$freelancerId);
 		$this->set("language",$language);

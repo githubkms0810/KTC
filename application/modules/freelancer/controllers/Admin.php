@@ -42,21 +42,45 @@ class Admin extends \Admin_Controller {
                 my_redirect($this->referer);
             }
             else{
-                my_redirect("/admin/freelancer/list");
+                my_redirect("/admin/freelancer/get/$insert_id");
             }
         }
     }
      
     public function update($id)
     {
-      
-        
-        $data["languages"]=explode("," ,$this->setting->translation_languages);
-        $data["mode"] = "update";
-        $data["content_view"] = "base/addUpdate";
-        $data["row"] = $this->freelancer_m->p_get($id);
-        $this->data += $data;
-        parent::update($id);
+        $this->freelancer_m->setRulesWhenAdd();
+        if($this->form_validation->run() === false){
+            $data["content_view"] = "base/addUpdate";
+            $data["mode"] = "update/$id";
+            $data["row"] = $this->freelancer_m->get($id);
+            $data["languages"]=explode("," ,$this->setting->translation_languages);
+            $this->template->render($data);
+        }
+        else{
+            $this->db->trans_start();
+            $this->freelancer_m->updateByPostData($id);
+            $file_group_id = $this->freelancer_m->p_get($id,"file_group_id")->file_group_id;
+            $this->load->model('file/file_m');
+            $group_id=$this->file_m->add("user",$file_group_id);
+            $this->load->model("freelancer_translation_language/freelancer_translation_language_m");
+            $this->freelancer_translation_language_m->updateByFreelancerIdAndLanguages($id,post('languages'));
+            $this->db->trans_complete();
+            if($this->db->trans_status() === false){
+                alert("추가 실패.ERRORCODE :".transectionError);
+                my_redirect($this->referer);
+            }
+            else{
+                my_redirect("/admin/freelancer/get/$id");
+            }
+        }
+
+        // $data["languages"]=explode("," ,$this->setting->translation_languages);
+        // $data["mode"] = "update";
+        // $data["content_view"] = "base/addUpdate";
+        // $data["row"] = $this->freelancer_m->get($id);
+        // $this->data += $data;
+        // parent::update($id);
     }
     public function get($id)
     {

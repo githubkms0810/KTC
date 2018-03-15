@@ -22,8 +22,9 @@ class Base extends \Base_Controller {
     public function add(){
         $this->freelancer_m->setRulesWhenAdd();
         if($this->form_validation->run() === false){
-            $data["row"] = (object)[];
+            $data["row"] = (object)["is_graduate_school"=>null];
             $data["content_view"] = "base/addUpdate";
+            $data["mode"] = "add";
             $data["languages"]=explode("," ,$this->setting->translation_languages);
             $this->template->render($data);
         }

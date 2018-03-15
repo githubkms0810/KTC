@@ -137,7 +137,21 @@ class Freelancer_m extends Pagination_Model
 		$this->set("file_group_id",$file_group_id);
 		return $this->addByPostData();
 	}
+	public function updateByPostData($id)
+	{
+		$this->setPostDataWhenAddUpdate();
+		return $this->p_update($id);
+	}
 	private function addByPostData()
+	{
+		$this->setPostDataWhenAddUpdate();
+		$insert_id= $this->p_add();
+
+		$this->load->model("count_m");
+		$this->count_m->plusOneToField("num_freelancer");
+		return $insert_id;
+	}
+	private function setPostDataWhenAddUpdate()
 	{
 		$this->load->library("post_helper");
 		$this->set_post("name");
@@ -160,17 +174,11 @@ class Freelancer_m extends Pagination_Model
 		$this->set_post("is_employed");
 		$this->set_post("university");
 		$this->set_post("university_major");
+		$this->set_post("is_graduate_school");
 		$this->set_post("graduate_school");
 		$this->set_post("graduate_school_degree");
 		$this->set_post("graduate_school_major");
-		
-		$insert_id= $this->p_add();
-
-		$this->load->model("count_m");
-		$this->count_m->plusOneToField("num_freelancer");
-		return $insert_id;
 	}
-	
 	public function delete($id)
 	{
 		$this->load->model("count_m");
@@ -211,7 +219,7 @@ class Freelancer_m extends Pagination_Model
 	protected function _from()
 	{
 		$this->db->from("$this->table as {$this->as}");
-		$this->db->join("(select freelancer_id, group_concat(language) as language from freelancer_translation_language GROUP BY freelancer_id) freelancer_translation_language ","{$this->as}.id = freelancer_translation_language.freelancer_id","LEFT");
+		$this->db->join("(select freelancer_id, group_concat(language) as languages from freelancer_translation_language GROUP BY freelancer_id) freelancer_translation_language ","{$this->as}.id = freelancer_translation_language.freelancer_id","LEFT");
 		$this->db->join("(select freelancer_id, group_concat(detail) as field_detail from freelancer_translation_field GROUP BY freelancer_id) freelancer_translation_field ","{$this->as}.id = freelancer_translation_field.freelancer_id","LEFT");
 		// $this->db->join("freelancer_translation_language as f_t_l","{$this->as}.id = f_t_l.freelancer_id","LEFT");
 	}
@@ -219,7 +227,7 @@ class Freelancer_m extends Pagination_Model
 	protected function _get_admin()
 	{
 		$this->db->select("
-		freelancer_translation_language.language,
+		freelancer_translation_language.languages,
 		freelancer_translation_field.field_detail,
 		");
 	}

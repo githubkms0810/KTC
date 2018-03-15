@@ -24,7 +24,7 @@
 <?php endif; ?>
 
 <div id="free_wrapper" style="margin: 100px 0 150px; 0;">
-<form action="<?=$this->className === "admin"? "/admin" : "" ?>/freelancer/add" method="post"  onsubmit="" class="project_form floating-labels" enctype="multipart/form-data">
+<form action="<?=$this->className === "admin"? "/admin" : "" ?>/freelancer/<?=$mode?>" method="post"  onsubmit="" class="project_form floating-labels" enctype="multipart/form-data">
 <fieldset>
 	
 	<legend>프리랜서 지원</legend>
@@ -147,7 +147,7 @@
 		<ul class="project_form-list">
 			<?php $i=1; foreach ( $languages as $language ): ?>
 			<li>
-			<input type="checkbox" name="languages[]" value="<?=$language?>" <?=DEBUG === false ? my_set_checked($row,"languages[]",$language) : "checked"?> id="free_checkbox-<?=$i?>">
+			<input type="checkbox" name="languages[]" value="<?=$language?>" <?=DEBUG === false ? my_set_checked($row,"languages",$language,false,",") : "checked"?> id="free_checkbox-<?=$i?>">
 			<label for="free_checkbox-<?=$i?>"><?=$language?></label>
 		</li>
 		<?php $i++; endforeach; ?>
@@ -178,7 +178,7 @@
 
 		<ul class="project_form-list">
 		<li>
-			<input type="radio" name="is_employed" value="1" <?=DEBUG === false ? my_set_checked($row,"is_employed","1") : "checked" ?>  id="is_employed-1" checked>
+			<input type="radio" name="is_employed" value="1" <?=DEBUG === false ? my_set_checked($row,"is_employed","1") : "checked" ?>  id="is_employed-1">
 			<label for="is_employed-1">유</label>
 		</li>
 		<li>
@@ -191,11 +191,11 @@
 		<h4>학력 사항</h4>
 		<ul class="project_form-list" style="margin-bottom:1px;">
 				  <li>
-					  <input type="radio" name="is_school_graduate" value="0" onclick="div_OnOff(this.value,'school');" <?=my_set_checked($row,"is_school_graduate","1",true)?> id="free_want-1" checked>
+					  <input type="radio" name="is_graduate_school" value="0" onclick="div_OnOff(this.value,'school');" <?=my_set_checked($row,"is_graduate_school","0",true)?> id="free_want-1">
 					  <label for="free_want-1"><?php $equipment="요청"?>대학교</label>
 				  </li>
 				  <li>
-					  <input type="radio" name="is_school_graduate" value="1" onclick="div_OnOff(this.value,'school');" <?=my_set_checked($row,"is_school_graduate","0")?> id="free_want-2">
+					  <input type="radio" name="is_graduate_school" value="1" onclick="div_OnOff(this.value,'school');" <?=my_set_checked($row,"is_graduate_school","1")?> id="free_want-2">
 					  <label for="free_want-2"><?php $equipment="미요청"?>대학원</label>
 				  </li>
 			  </ul>
@@ -238,6 +238,13 @@
 					   document.getElementById(id).style.display = "none"; // 숨김
 				   }
 			  }
+				//어드민페이지 업데이트 페이지에서 대학원이라면 대학원필드 보이게 시작
+			  <?php if($row->is_graduate_school ==="1"):?>
+			  	$(document).ready(function(){
+					document.getElementById("school").style.display = ""; // 보여줌
+				  });
+				//어드민페이지 업데이트 페이지에서 대학원이라면 대학원필드 보이게 끝
+			<?php endif;?>
 		  </script>
 
 	<!--첨부파일폼시작-->

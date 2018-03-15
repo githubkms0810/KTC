@@ -329,12 +329,21 @@ if(!function_exists('my_set_value_input')){
 
 
 if(!function_exists('my_set_checked')){
-    function my_set_checked($obj, $name,$value,$default = false){
+    function my_set_checked($obj, $name,$value,$default = false,$splitChar=null){
         $value = (string)$value;
         if(isset($_POST[$name]) && $_POST[$name]  === $value){
             return "checked";
-        }else if(!isset($_POST[$name]) && property_exists($obj,$name) && $value === $obj->$name){
-            return "checked";
+        }else if(!isset($_POST[$name]) && property_exists($obj,$name)){
+            if($splitChar!==null)
+            {
+                $arr=explode($splitChar,$obj->$name) ;
+                foreach ($arr as $key2 => $value2) {
+                    if($value === $value2)
+                        return "checked";
+                }
+            }
+            if($value === $obj->$name)
+                return "checked";
         }
         else if($default === true)
         {

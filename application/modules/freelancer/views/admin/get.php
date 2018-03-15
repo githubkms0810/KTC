@@ -71,7 +71,7 @@
       </tr>
       <tr>
         <td class="jy-td-name">언어종류</td>
-        <td colspan="8"><?=$row->language?></td>
+        <td colspan="8"><?=$row->languages?></td>
       </tr>
       <tr>
         <td class="jy-td-name">분야</td>
