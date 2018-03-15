@@ -78,7 +78,7 @@
 		<h4>전화번호</h4>
 
 		<p class="project_select icon">
-			<input value="<?=DEBUG === false ? set_value("phone_second") : "개인번호3" ?>" placeholder="5678" class="budget" type="text" name="phone_second" id="free_phone" required>
+			<input value="<?=DEBUG === false ? set_value("phone") : "개인번호3" ?>" placeholder="5678" class="budget" type="text" name="phone" id="free_phone" required>
 		</p>
 	</div>
 
@@ -108,6 +108,7 @@
 		<div class="icon" style="margin-top:20px;">
 			<label class="project_label" for="project_detailaddress">상세 주소</label>
 			<input value="<?=DEBUG === false ? set_value("address_detail") : "상세주소테스트" ?>" class="email" type="text" name="address_detail" id="free_address" required>
+			<span id="guide" style="color:#999"></span>
 		</div>
 	</div>
 
@@ -137,7 +138,7 @@
 		<h4>계좌정보</h4>
 
 		<p class="project_select icon_account">
-			<select name="birth_month" class="budget" style="width:24%; display:inline-block;">
+			<select name="account_bank" class="budget" style="width:24%; display:inline-block;">
 				<option value="">은행</option>
 				<option value="신한" <?=DEBUG === false ? set_select("account_bank","신한") : "selected"?>>신한</option>
 			    <option value="국민" <?=set_select("account_bank","국민")?>>국민</option>
@@ -153,7 +154,7 @@
 		<ul class="project_form-list">
 			<?php $i=1; foreach ( $languages as $language ): ?>
 			<li>
-			<input type="checkbox" name="languages[]" value="<?=$language?>" <?=DEBUG === false ? set_checkbox("languages[]",$language) : "unchecked"?> id="free_checkbox-<?=$i?>">
+			<input type="checkbox" name="languages[]" value="<?=$language?>" <?=DEBUG === false ? set_checkbox("languages[]",$language) : "checked"?> id="free_checkbox-<?=$i?>">
 			<label for="free_checkbox-<?=$i?>"><?=$language?></label>
 		</li>
 		<?php $i++; endforeach; ?>
@@ -184,11 +185,11 @@
 
 		<ul class="project_form-list">
 		<li>
-			<input type="radio" name="is_employed" value="유" <?=set_checkbox("is_employed","유")?> id="is_employed-1">
+			<input type="radio" name="is_employed" value="1" <?=DEBUG === false ? set_checkbox("is_employed","1") : "checked" ?>  id="is_employed-1">
 			<label for="is_employed-1">유</label>
 		</li>
 		<li>
-			<input type="radio" name="is_employed" value="무" <?=set_checkbox("is_employed","무")?> id="is_employed-2">
+			<input type="radio" name="is_employed" value="0" <?=set_checkbox("is_employed","0")?> id="is_employed-2">
 			<label for="is_employed-2">무</label>
 		</li>
 		</ul>
