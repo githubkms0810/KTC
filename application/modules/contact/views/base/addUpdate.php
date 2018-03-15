@@ -52,8 +52,8 @@
 					<span class="focus-input100"></span>
 				</div>
 
-				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="담당자명을 입력해주세요.">
-					<span class="label-input100">담당자명</span>
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="담당자를 입력해주세요.">
+					<span class="label-input100">담당자</span>
 					<input class="input100" type="text" name="manager" value="<?=DEBUG === true ? "테스트 담당자명": ""?>">
 					<span class="focus-input100"></span>
 				</div>
