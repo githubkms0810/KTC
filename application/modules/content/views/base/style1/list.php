@@ -29,8 +29,8 @@
 	================================================== -->
 	<section class="featured-posts">
 	<div class="section-title">
-		<h2><span><a href="/content/list?board_key=notice">공지사항</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="/content/list?board_key=faq">FAQ</a></span></h2>
+		<h2><span><a href="/content/list?board_key=notice" style="color: #292b2c; font-weight: 400; font-size: 22px;">공지사항</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/content/list?board_key=faq" style="color: #292b2c; font-weight: 400; font-size: 22px;">FAQ</a></span></h2>
 		
 	</div>
 	<div class="card-columns listfeaturedtag">
