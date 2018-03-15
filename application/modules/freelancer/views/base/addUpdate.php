@@ -22,7 +22,7 @@
     <a href="/translation_order/list" class="home-btn">포트폴리오 보러가기</a>
 </section>
 <div id="free_wrapper">
-<form action="/freelancer/add" method="post"  enctype="multipart/form-data" class="project_form floating-labels" >
+<form action="/freelancer/add" method="post"  onsubmit="" class="project_form floating-labels" enctype="multipart/form-data">
 <fieldset>
 	
 	<legend>프리랜서 지원</legend>
@@ -84,7 +84,7 @@
 
 	<div class="icon">
 		<label style="width:49.5%;" class="project_label" for="email">Email</label>
-		<input value="<?=DEBUG === false ? set_value("email_first") : "emailtestr" ?>" style="width:49.5%; display:inline-block;" class="email" type="email" name="email_first" id="free_email">
+		<input value="<?=DEBUG === false ? set_value("email_first") : "emailtestr" ?>" style="width:49.5%; display:inline-block;" class="email" type="text" name="email_first" id="free_email">
 		<select style="width:49.5%; display:inline-block;" class="email" name="email_second">
 			<option <?=set_select("email_second","naver.com")?>>@naver.com</option>
 			<option <?=set_select("email_second","gmail.com")?>>@gmail.com</option>
@@ -136,14 +136,14 @@
 	<div>
 		<h4>계좌정보</h4>
 
-		<p class="project_select icon">
+		<p class="project_select icon_account">
 			<select name="birth_month" class="budget" style="width:24%; display:inline-block;">
 				<option value="">은행</option>
 				<option value="신한" <?=DEBUG === false ? set_select("account_bank","신한") : "selected"?>>신한</option>
 			    <option value="국민" <?=set_select("account_bank","국민")?>>국민</option>
 			</select>
-			<input value="<?=DEBUG === false ? set_value("account_number") : "1245967" ?>" placeholder="계좌번호" class="budget" type="text" name="account_number" id="free_phone" required style="display:inline-block; width: 50%;">
-			<input value="<?=DEBUG === false ? set_value("account_name") : "예금주테스트" ?>" placeholder="예금주" class="budget" type="text" name="account_name" id="free_phone" required style="width: 23%; display:inline-block;">
+			<input value="<?=DEBUG === false ? set_value("account_number") : "1245967" ?>" placeholder="계좌번호" type="text" name="account_number" id="free_account" required style="display:inline-block; width: 50%;">
+			<input value="<?=DEBUG === false ? set_value("account_name") : "예금주테스트" ?>" placeholder="예금주" type="text" name="account_name" id="free_account" required style="width: 23%; display:inline-block;">
 		</p>
 	</div>
 
