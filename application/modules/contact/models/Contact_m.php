@@ -191,6 +191,7 @@ class Contact_m extends Pagination_Model
 	{
 		return array(
 			array("displayName"=>"ID","fieldName"=>"id"),
+			array("displayName"=>"회사","fieldName"=>"company_name"),
 			array("displayName"=>"담당자명","fieldName"=>"manager"),
 			array("displayName"=>"내용","fieldName"=>"desc"),
 			array("displayName"=>"읽음/안읽음","fieldName"=>"is_reading"),
@@ -201,7 +202,10 @@ class Contact_m extends Pagination_Model
 	{
 		return array(
 			array("displayName"=>"ID","fieldName"=>"id"),
+			array("displayName"=>"회사이름","fieldName"=>"company_name"),
 			array("displayName"=>"담당자명","fieldName"=>"manager"),
+			array("displayName"=>"담당자연락처","fieldName"=>"manager_phone"),
+			array("displayName"=>"이메일","fieldName"=>"email"),
 			array("displayName"=>"내용","fieldName"=>"desc"),
 			array("displayName"=>"읽음/안읽음","fieldName"=>"is_reading"),
 			array("displayName"=>"생성일","fieldName"=>"created"),

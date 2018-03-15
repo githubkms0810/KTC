@@ -288,8 +288,11 @@ class Translation_order_m extends Pagination_Model
 	{
 		return array(
 			array("displayName"=>"ID","fieldName"=>"id"),
-			array("displayName"=>"종류","fieldName"=>"type"),
-			array("displayName"=>"상태","fieldName"=>"translation_status"),
+			array("displayName"=>"고객이름","fieldName"=>"personal_name"),
+			array("displayName"=>"회사","fieldName"=>"company"),
+			array("displayName"=>"포트폴리오 여부","fieldName"=>"is_portfolio"),
+			// array("displayName"=>"종류","fieldName"=>"type"),
+			// array("displayName"=>"상태","fieldName"=>"translation_status"),
 			array("displayName"=>"생성일","fieldName"=>"created"),
 		);
 	}

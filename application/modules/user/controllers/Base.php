@@ -61,6 +61,7 @@ class Base extends \Base_Controller {
     }
     public function get($id=null)
     {
+        return;
         if($this->userstate->isLogin() === false)
         {
             alert("잘못된 접근");
@@ -218,6 +219,7 @@ class Base extends \Base_Controller {
     }
     public function update($id =null)
     {
+        return;
         //get
         if ($this->input->method() === "get") 
         {

@@ -50,21 +50,21 @@
 
 
 1. 불필요 메뉴 및 영역 삭제
-- http://localhost/admin/main/index?mainMenu=%EB%A9%94%EC%9D%B8
-- http://localhost/admin/main/index?mainMenu=main&subMenu=dashboard&mainMenu=main&subMenu=dashboard
-- http://localhost/user/update
-- http://localhost/user/get
-- ads
-2. 프리랜서 페이지에서 사이드바 메뉴 순서 변경
-- 프리랜서 / 설정 순서
+<!-- - http://localhost/admin/main/index?mainMenu=%EB%A9%94%EC%9D%B8 -->
+<!-- - http://localhost/admin/main/index?mainMenu=main&subMenu=dashboard&mainMenu=main&subMenu=dashboard -->
+<!-- - http://localhost/user/update -->
+<!-- - http://localhost/user/get -->
+<!-- - ads -->
+<!-- 2. 프리랜서 페이지에서 사이드바 메뉴 순서 변경 -->
+<!-- - 프리랜서 / 설정 순서 -->
 3. 프리랜서 추가/수정 시 항목 이름 변경
-4. 번역/통역 메뉴에서 기밀 보안 파일 설정 삭제
-5. 기밀 보안 파일 설정 페이지 메인 -> 설정으로 이동 (기존 설정 항목은 삭제)
-6. 번역/통역 의뢰 페이지의 리스트 상에서 고객 이름, 회사, 포트폴리오로 노출 상태 확인하는 항목 추가
+<!-- 4. 번역/통역 메뉴에서 기밀 보안 파일 설정 삭제 -->
+<!-- 5. 기밀 보안 파일 설정 페이지 메인 -> 설정으로 이동 (기존 설정 항목은 삭제) -->
+<!-- 6. 번역/통역 의뢰 페이지의 리스트 상에서 고객 이름, 회사, 포트폴리오로 노출 상태 확인하는 항목 추가 -->
 7. 번역/통역 의뢰 추가/수정 시 항목 이름 변경
-8. 제휴 문의 리스트에서 회사 이름 항목 추가
-9. 제휴 문의 상세보기에서 회사 이름, 이메일, 담당자 연락처가 보이지 않음
-10. 제휴 문의에서 추가/수정 버튼이 왜 필요한지
+<!-- 8. 제휴 문의 리스트에서 회사 이름 항목 추가 -->
+<!-- 9. 제휴 문의 상세보기에서 회사 이름, 이메일, 담당자 연락처가 보이지 않음 -->
+<!-- 10. 제휴 문의에서 추가/수정 버튼이 왜 필요한지 -->
 11. 이메일 페이지가 어디에서 사용되는지
-12. 관리자가 고객센터에 글 쓰려면 어떻게 해야 하는지
-어드민 체크해본거에요
+<!-- 12. 관리자가 고객센터에 글 쓰려면 어떻게 해야 하는지 -->
+<!-- 어드민 체크해본거에요 -->

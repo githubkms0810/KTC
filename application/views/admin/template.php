@@ -201,7 +201,7 @@
       <!-- 사이드바 -->
 
     </div>
-    <article class="col-sm-8 text-left"> 
+    <article class="col-sm-9 text-left"> 
 
         <!-- 메인 -->
         <div style="margin-top:50px;"></div>
@@ -210,15 +210,15 @@
         <!-- 메인 -->
 
     </article>
-    <div class="col-sm-2 sidenav">
+    <div class="col-sm-1 sidenav">
 
       <!-- 오른쪽 사이드바 -->
-      <div class="well">
+      <!-- <div class="well">
         <p>ADS</p>
       </div>
       <div class="well">
         <p>ADS</p>
-      </div>
+      </div> -->
       <!-- 오른쪽 사이드바 -->
 
     </div>
