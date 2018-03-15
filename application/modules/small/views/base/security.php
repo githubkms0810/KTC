@@ -31,10 +31,7 @@
                                     <div class="img"><span><img src="/public/subpage/css/001_jobdance/images/j-icon01.png" alt=""></span></div>
                                     <div class="name">기밀 유지 협약</div>
                                     <div class="txts">
-                                    NDA(Non-Disclosure Agreement)가<br> 체결된 중요 문서군은 프로젝트 단위로 각기 다른<br> 문서 보안 시스템을 통하여<br>
-                                    관리/보호하고 있으며, 프로젝트 종료 후 <br>일정 기간 내에 파기를 원칙으로 하고 있습니다<br><br>
-                                    코리아 통번역 센터 NDA.doc<br class="one">
-                                        1,297mb
+                                    NDA(Non-Disclosure Agreement)가<br class="one"> 체결된 중요 문서군은 프로젝트 단위로<br class="one"> 각기 다른 문서 보안 시스템을 통하여<br class="one"> 관리/보호하고 있으며, 프로젝트 종료 후 <br class="one">일정 기간 내에 파기를 원칙으로 하고 있습니다
                                     </div>
                                 </div>
                                 <div class="btn">다운로드</div>
