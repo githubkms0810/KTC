@@ -8,6 +8,7 @@ class Admin extends \Admin_Controller {
     public function __construct()
     {
         parent::__construct();
+        $this->load->library('post_helper');
     }
     public function insertPortfolioForDebug()
     {
@@ -53,7 +54,7 @@ class Admin extends \Admin_Controller {
     {
         $this->translation_order_m->setRulesWhenAdd();
           if($this->form_validation->run() === false){
-              $data["mode"] = "updateOnPost/$id";
+              $data["mode"] = "update/$id";
               $data['type'] = get("type");
               $data["row"] =  $this->translation_order_m->get($id);
               $data["content_view"] = "base/addUpdate";
@@ -62,10 +63,17 @@ class Admin extends \Admin_Controller {
           else{
             
             $this->db->trans_start();
-            $this->translation_order_m->updateByPostData();
+            $this->translation_order_m->updateByPostData($id);
             $group_id = $this->translation_order_m->p_get($id,"file_group_id")->file_group_id;
             $this->load->model('file/file_m');
-            $this->file_m->add("user",$group_id);
+            if($group_id !== null)
+                $this->file_m->add("user",$group_id);
+            else
+            {
+                $group_id=$this->file_m->add();
+                $this->db->set("file_group_id",$group_id);
+                $this->translation_order_m->p_update($id);
+            }
             $this->db->trans_complete();
             
             if($this->db->trans_status() === false){
@@ -73,7 +81,7 @@ class Admin extends \Admin_Controller {
                 my_redirect($this->referer);
             }
             else{            
-                my_redirect("/admin/translation_order/get/$insert_id");
+                my_redirect("/admin/translation_order/get/$id");
             }
         }
     }

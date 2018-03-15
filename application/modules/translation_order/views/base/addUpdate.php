@@ -8,6 +8,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
 <!--jQuery UI 라이브러리 js파일-->
 <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script> 
+<?php if ( $this->className === "base" ): ?>
 <section class="home-hero-project">
   <h2 class="home-hero-title-project">프로젝트 의뢰하기</h2>
   <p class="home-hero-des-project">
@@ -15,6 +16,7 @@
   </p>
   <a href="/translation_order/list" class="home-btn">포트폴리오 보러가기</a>
 </section>
+<?php endif; ?>
 <!--번역,통역 폼 시작-->
   <form action="<?=$this->className ==="admin" ? "/admin": ""?>/translation_order/<?=$mode?>" method="post"  enctype="multipart/form-data" class="project_form floating-labels" style="margin-top:100px; margin-bottom:150px;">
 	  <input type="hidden" name="type" value="<?=$type?>">
@@ -22,41 +24,39 @@
 		  
 		  <legend><?=$type?></legend>
 		  <script>
-
 			  $(document).ready(function() {
 				
-				//검색하고 나서 결과를 보여줄때 검색 조건을 그대로 노출
-				//if("${buyer}" == "회사"){ //buyer 가 회사 일 경우 셋팅
-				if("buyer" == "회사"){
-				  
-					//라디오 버튼 값으로 선택
-					$('input:radio[name="buyer"][value="회사"]').prop('checked', true);
-					//개인 hide
-					$( "#viewPersonal" ).hide();
-					//회사 show
-					$( "#viewCompany" ).show();
-				}
+				setViewByCompanyOrPersonal(getCompanyOrPersonalByCheckedInput());
 
-			  $("input[name='buyer']:radio").change(function () {
-				  //라디오 버튼 값을 가져온다.
-				  var buyer = this.value;
-									
-				  if(buyer == "회사"){//회사인 경우
+				$("input[name='buyer']:radio").change(function () {
+					//라디오 버튼 값을 가져온다.
+					var buyer = this.value;
+					setViewByCompanyOrPersonal(buyer);
+										
+					});
+			  });
+			  function setViewByCompanyOrPersonal(companyOrPersonal)
+			  {
+				if(companyOrPersonal == "회사"){//회사인 경우
 					  //회사 일때 개인 hide
 					  $( "#viewPersonal" ).hide();
 					  //회사 일때 회사 카테고리 show
 					  $( "#viewCompany" ).show();
 				  }
-				  else if(buyer == "개인"){//개인인 경우
+				  else if(companyOrPersonal == "개인"){//개인인 경우
 					  //개인 일때 개인 카테고리 show
 					  $( "#viewPersonal" ).show();
 					  //개인 일때 회사 카테고리 hide
 					  $( "#viewCompany" ).hide();
 				  }
-									
-				  });
-			  });
-			  
+			  }
+			  function getCompanyOrPersonalByCheckedInput()
+			  {
+				if($('input:radio[name="buyer"][value="회사"]').prop('checked'))
+					return "회사"
+				else if($('input:radio[name="buyer"][value="개인"]').prop('checked'))
+					return "개인"
+			  }
 		  </script>
 		  <div>
 			  <ul class="project_form-list">
@@ -75,37 +75,38 @@
 
               <div class="icon">
                   <label class="project_label" for="company">회사명</label>
-                  <input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("company") : "회사이름테스트" ?>" id="project_company" required>
+                  <input class="company" type="text" name="company" value="<?=DEBUG === false ? my_set_value($row,"company") : "회사이름테스트" ?>" id="project_company" required>
               </div> 
 
               <div class="icon">
                   <label class="project_label" for="department">부서</label>
-                  <input class="company" type="text" name="department" value="<?=DEBUG === false ? set_value("department") : "부서이름테스트" ?>" id="project_depart" required>
+                  <input class="company" type="text" name="department" value="<?=DEBUG === false ? my_set_value($row,"department") : "부서이름테스트" ?>" id="project_depart" required>
               </div>
               <div class="icon">
                      <label class="project_label" for="company_phone">회사 연락처</label>
-                      <input value="<?=DEBUG === false ? set_value("company_phone") : "회사번호3" ?>" class="budget" type="text" name="company_phone" id="project_name" required>
+                      <input value="<?=DEBUG === false ? my_set_value($row,"company_phone") : "회사번호3" ?>" class="budget" type="text" name="company_phone" id="project_name" required>
               </div>
               <div class="icon">
                       <label class="project_label" for="fax">FAX</label>
-                      <input  value="<?=DEBUG === false ? set_value("fax") : "팩스번호3" ?>" class="budget" type="text" name="fax" id="project_name" required>
+                      <input  value="<?=DEBUG === false ? my_set_value($row,"fax") : "팩스번호3" ?>" class="budget" type="text" name="fax" id="project_name" required>
               </div>
               <div class="icon">
                   <label class="project_label" for="manager">담당자</label>
-                  <input class="user" type="text" name="manager"  value="<?=DEBUG === false ? set_value("manager") : "매니저이름 테스트" ?>" id="project_name" required>
+                  <input class="user" type="text" name="manager"  value="<?=DEBUG === false ? my_set_value($row,"manager") : "매니저이름 테스트" ?>" id="project_name" required>
               </div> 
               <div class="icon">
                     <label class="project_label" for="manager_phone">담당자 연락처</label>
-                    <input value="<?=DEBUG === false ? set_value("manager_phone") : "매니저번호3" ?>" class="budget" type="text" name="manager_phone" id="project_name" required>
+                    <input value="<?=DEBUG === false ? my_set_value($row,"manager_phone") : "매니저번호3" ?>" class="budget" type="text" name="manager_phone" id="project_name" required>
               </div>
               <div class="icon">
                   <label style="width:49.5%;" class="project_label" for="project_email">담당자 E-mail</label>
-                  <input value="<?=DEBUG === false ? set_value("email_first") : "emailtest@test.com" ?>" style="width:49.5%; display:inline-block;" class="email" type="text" name="email_first" id="project_email">
+                  <input value="<?=DEBUG === false ? my_set_value( isset($row->email) ? $this->post_helper->extractUserNameOnEmail($row->email) : null,"email_first") : "emailtestr" ?>" style="width:49.5%; display:inline-block;" class="email" type="text" name="email_first" id="free_email">
                   <select style="width:49.5%; display:inline-block;" class="email" name="email_second">
-                      <option <?=set_select("email_second")?>>@naver.com</option>
-                      <option <?=set_select("email_second")?>>@gmail.com</option>
-                      <option <?=set_select("email_second")?>>@hanmail.net</option>
-                      <option <?=set_select("email_second")?>>@daum.net</option>
+				  	<option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@naver.com")?>>@naver.com</option>
+					<option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@gmail.com")?>>@gmail.com</option>
+					<option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@hanmail.net")?>>@hanmail.net</option>
+					<option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@daum.net")?>>@daum.net</option>
+
                   </select>
               </div>
 		  </div>
@@ -113,20 +114,20 @@
           <div  id="viewPersonal">
               <div class="icon">
                   <label class="project_label" for="personal_name">이름</label>
-                  <input value="<?=DEBUG === false ? set_value("personal_name") : "개인이름테스트" ?>" class="user" type="text" name="personal_name" id="project_alonename" required>
+                  <input value="<?=DEBUG === false ? my_set_value($row,"personal_name") : "개인이름테스트" ?>" class="user" type="text" name="personal_name" id="project_alonename" required>
               </div> 
               <div class="icon">
                       <label class="project_label" for="personal_phone">연락처</label>
-                      <input value="<?=DEBUG === false ? set_value("personal_phone") : "개인번호3" ?>" class="budget" type="text" name="personal_phone" id="project_name" required>
+                      <input value="<?=DEBUG === false ? my_set_value($row,"personal_phone") : "개인번호3" ?>" class="budget" type="text" name="personal_phone" id="project_name" required>
               </div>
               <div class="icon">
                   <label style="width:49.5%;" class="project_label" for="project_email">E-mail</label>
-                  <input value="<?=DEBUG === false ? set_value("email_first") : "emailtest@test.com" ?>" style="width:49.5%; display:inline-block;" class="email" type="text" name="email_first" id="project_email">
+                  	<input value="<?=DEBUG === false ? my_set_value( isset($row->email) ? $this->post_helper->extractUserNameOnEmail($row->email) : null,"email_first") : "emailtestr" ?>" style="width:49.5%; display:inline-block;" class="email" type="text" name="email_first" id="free_email">
                   <select style="width:49.5%; display:inline-block;" class="email" name="email_second">
-                      <option <?=set_select("email_second")?>>@naver.com</option>
-                      <option <?=set_select("email_second")?>>@gmail.com</option>
-                      <option <?=set_select("email_second")?>>@hanmail.net</option>
-                      <option <?=set_select("email_second")?>>@daum.net</option>
+				  <option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@naver.com")?>>@naver.com</option>
+				  <option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@gmail.com")?>>@gmail.com</option>
+				  <option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@hanmail.net")?>>@hanmail.net</option>
+				  <option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@daum.net")?>>@daum.net</option>
                   </select>
               </div>
 		  </div>
@@ -145,9 +146,9 @@
 			  <p class="project_select icon">
 				  <select name="interpret_kind" class="budget">
 					  <option value="">선택해주세요.</option>
-					  <option <?=DEBUG === true ? "selected" : ""?> <?=set_select("interpret_kind")?>>포도</option>
-					  <option <?=set_select("interpret_kind")?>>사과</option>
-					  <option <?=set_select("interpret_kind")?>>오렌지</option>
+					  <option <?=DEBUG === true ? "selected" : ""?> <?=my_set_selected($row,"interpret_kind","포도")?>>포도</option>
+					  <option <?=my_set_selected($row,"interpret_kind","사과")?>>사과</option>
+					  <option <?=my_set_selected($row,"interpret_kind","오렌지")?>>오렌지</option>
 				  </select>
 			  </p>
 		  </div> 
@@ -157,9 +158,9 @@
 			  <p class="project_select icon">
 				  <select name="translation_kind" class="budget">
 					  <option value="">선택해주세요.</option>
-					  <option <?=set_select("translation_kind")?> <?=DEBUG === true ? "selected" : ""?>>이것</option>
-					  <option <?=set_select("translation_kind")?>>저것</option>
-					  <option <?=set_select("translation_kind")?>>그것</option>
+					  <option <?=my_set_selected($row,"translation_kind","이것")?> <?=DEBUG === true ? "selected" : ""?>>이것</option>
+					  <option <?=my_set_selected($row,"translation_kind","저것")?>>저것</option>
+					  <option <?=my_set_selected($row,"translation_kind","그것")?>>그것</option>
 				  </select>
 			  </p>
 		  </div>
@@ -175,9 +176,9 @@
 			  <p class="project_select icon">
 				  <select name="translation_kind" class="budget">
 					  <option  value="">선택해주세요.</option>
-					  <option  <?=set_select("translation_kind")?> <?=DEBUG === true ? "selected" : ""?>>이것</option>
-					  <option  <?=set_select("translation_kind")?>>저것</option>
-					  <option <?=set_select("translation_kind")?>>그것</option>
+					  <option  <?=my_set_selected($row,"translation_kind","이것")?> <?=DEBUG === true ? "selected" : ""?>>이것</option>
+					  <option  <?=my_set_selected($row,"translation_kind","저것")?>>저것</option>
+					  <option <?=my_set_selected($row,"translation_kind","그것")?>>그것</option>
 				  </select>
 			  </p>
 		  </div>
@@ -192,15 +193,15 @@
 			  <p class="project_select icon">
 				  <select name="translation_before" class="budget" style="width:49.5%; display:inline-block;">
 					  <option  value="">시작 언어</option>
-					  <option <?=set_select("translation_before")?> <?=DEBUG === true ? "selected" : ""?>>포도</option>
-					  <option <?=set_select("translation_before")?>>사과</option>
-					  <option <?=set_select("translation_before")?>>오렌지</option>
+					  <option <?=my_set_selected($row,"translation_before","포도")?> <?=DEBUG === true ? "selected" : ""?>>포도</option>
+					  <option <?=my_set_selected($row,"translation_before","사과")?>>사과</option>
+					  <option <?=my_set_selected($row,"translation_before","오렌지")?>>오렌지</option>
 				  </select>
 				  <select name="translation_after" class="budget" style="width:49.5%; display:inline-block;">
 					  <option  value="">번역 언어</option>
-					  <option <?=set_select("translation_after")?> <?=DEBUG === true ? "selected" : ""?> >포도</option>
-					  <option <?=set_select("translation_after")?>>사과</option>
-					  <option <?=set_select("translation_after")?>>오렌지</option>
+					  <option <?=my_set_selected($row,"translation_after","포도")?> <?=DEBUG === true ? "selected" : ""?> >포도</option>
+					  <option <?=my_set_selected($row,"translation_after","사과")?>>사과</option>
+					  <option <?=my_set_selected($row,"translation_after","오렌지")?>>오렌지</option>
 				  </select>
 			  </p>
 		  </div>
@@ -211,16 +212,16 @@
 		  <div>
 			  <h4>통역 장소</h4>
 			  <div class="icon" style="width:79%; display:inline-block; margin-top:1px; margin-bottom:1px;">
-				  <input value="<?=DEBUG === false ? set_value("interpret_new_address") : "주소테스트" ?>" class="email" type="text" name="interpret_new_address" id="sample4_roadAddress" readonly>
-				  <input value="<?=DEBUG === false ? set_value("interpret_old_address") : "지번주소테스트" ?>" id="sample4_jibunAddress"type="hidden" name="interpret_old_address">
-				  <input value="<?=DEBUG === false ? set_value("interpret_post_number") : "우편번호테스트" ?>" id="sample4_postcode"type="hidden" name="interpret_post_number">
+				  <input value="<?=DEBUG === false ? my_set_value($row,"interpret_new_address") : "주소테스트" ?>" class="email" type="text" name="interpret_new_address" id="sample4_roadAddress" readonly>
+				  <input value="<?=DEBUG === false ? my_set_value($row,"interpret_old_address") : "지번주소테스트" ?>" id="sample4_jibunAddress"type="hidden" name="interpret_old_address">
+				  <input value="<?=DEBUG === false ? my_set_value($row,"interpret_post_number") : "우편번호테스트" ?>" id="sample4_postcode"type="hidden" name="interpret_post_number">
 			  </div>
 			  <div style="width:20%; display:inline-block; margin-bottom:1px;" class="project_form">
 				  <button type="button " onclick="sample4_execDaumPostcode(); return false;" class="projectlang_add" style="background-color:#09a5dd; height:50px;">추가</button>
 			  </div>
 			  <div class="icon" style="margin-top:20px;">
 				  <label class="project_label" for="project_detailaddress">상세 주소</label>
-				  <input value="<?=DEBUG === false ? set_value("interpret_address_detail") : "상세주소테스트" ?>" class="email" type="text" name="interpret_address_detail" id="project_detailaddress">
+				  <input value="<?=DEBUG === false ? my_set_value($row,"interpret_address_detail") : "상세주소테스트" ?>" class="email" type="text" name="interpret_address_detail" id="project_detailaddress">
 				  <span id="guide" style="color:#999"></span>
 			  </div>
 		  </div>
@@ -261,9 +262,9 @@
 			  <h4>통역 일정</h4>
 
 			  <div class="icon">
-				  <input type="text" value="<?=DEBUG === false ? set_value("interpret_start_date") : "시작날짜테스트" ?>" placeholder="시작 날짜" style="width:47.5%; display:inline-block;" class="email" name="interpret_start_date" id="datepicker1" readonly>
+				  <input type="text" value="<?=DEBUG === false ? my_set_value($row,"interpret_start_date") : "시작날짜테스트" ?>" placeholder="시작 날짜" style="width:47.5%; display:inline-block;" class="email" name="interpret_start_date" id="datepicker1" readonly>
 				  ~
-				  <input type="text" value="<?=DEBUG === false ? set_value("interpret_end_date") : "종료날자테스트" ?>" placeholder="종료 날짜" style="width:47.5%; display:inline-block;" class="email" name="interpret_end_date" id="datepicker2" readonly>
+				  <input type="text" value="<?=DEBUG === false ? my_set_value($row,"interpret_end_date") : "종료날자테스트" ?>" placeholder="종료 날짜" style="width:47.5%; display:inline-block;" class="email" name="interpret_end_date" id="datepicker2" readonly>
 		  
 			  </div>
 		  </div>
@@ -271,11 +272,11 @@
 		  <div>  
 			  <div class="icon">
 				  <label class="project_label" for="budget">예산</label>
-				  <input type="text" value="<?=DEBUG === false ? set_value("budget") : "예산테스트" ?>" class="email" name="budget" id="project_budget">			
+				  <input type="text" value="<?=DEBUG === false ? my_set_value($row,"budget") : "예산테스트" ?>" class="email" name="budget" id="project_budget">			
 			  </div>
 				  <ul class="project_form-list">
 					  <li>
-						  <input class="project_form-list" type="checkbox" name="is_exist_budget" value="0" <?=set_checkbox("is_exist_budget","0")?> id="project_budgetyet">
+						  <input class="project_form-list" type="checkbox" name="is_exist_budget" value="0" <?=my_set_checked($row,"is_exist_budget","0")?> id="project_budgetyet">
 						  <label for="project_budgetyet">미정</label>
 					  </li>
 				  </ul>
@@ -287,12 +288,12 @@
   
 			  <ul class="project_form-list" style="margin-bottom:1px;">
 				  <li>
-					  <input type="radio" name="is_need_equiment" value="1" onclick="div_OnOff(this.value,'equip_num');" <?=set_checkbox("is_need_equiment","1",true)?> id="project_want-1">
+					  <input type="radio" name="is_need_equiment" value="1" onclick="div_OnOff(this.value,'equip_num');" <?=my_set_checked($row,"is_need_equiment","1",true)?> id="project_want-1">
 					  <label for="project_want-1"><?php $equipment="요청"?>요청</label>
 				  </li>
 					  
 				  <li>
-					  <input type="radio" name="is_need_equiment" value="0" onclick="div_OnOff(this.value,'equip_num');" <?=set_checkbox("is_need_equiment","0")?> id="project_want-2" checked>
+					  <input type="radio" name="is_need_equiment" value="0" onclick="div_OnOff(this.value,'equip_num');" <?=my_set_checked($row,"is_need_equiment","0")?> id="project_want-2" checked>
 					  <label for="project_want-2"><?php $equipment="미요청"?>미요청</label>
 				  </li>
 			  </ul>
@@ -325,12 +326,12 @@
   
 			  <ul class="project_form-list">
 				  <li>
-					  <input type="radio" name="is_need_profile" value="1" <?=set_checkbox("is_need_profile","1",true)?> id="project_profile-1" >
+					  <input type="radio" name="is_need_profile" value="1" <?=my_set_checked($row,"is_need_profile","1",true)?> id="project_profile-1" >
 					  <label for="project_profile-1">요청</label>
 				  </li>
 					  
 				  <li>
-					  <input type="radio" name="is_need_profile" value="0" <?=set_checkbox("is_need_profile","0")?> id="project_profile-2">
+					  <input type="radio" name="is_need_profile" value="0" <?=my_set_checked($row,"is_need_profile","0")?> id="project_profile-2">
 					  <label for="project_profile-2">미요청</label>
 				  </li>
 			  </ul>
@@ -370,7 +371,7 @@
 			  <h4>희망 납기일</h4>
 
 			  <div class="icon">
-				  <input type="text" value="<?=DEBUG === false ? set_value("interpret_pay_date") : "납기일테스트" ?>" placeholder="희망 납기일" class="email" name="interpret_pay_date" id="datepicker3" readonly>
+				  <input type="text" value="<?=DEBUG === false ? my_set_value($row,"interpret_pay_date") : "납기일테스트" ?>" placeholder="희망 납기일" class="email" name="interpret_pay_date" id="datepicker3" readonly>
 			  </div>
 		  </div>
 
@@ -380,11 +381,11 @@
 			  <h4>번역 예산</h4>
   
 			  <div class="icon" style="margin-bottom:10px;">
-				  <input type="text" value="<?=DEBUG === false ? set_value("budget") : "예산테스트" ?>" placeholder="$1,000" class="email" name="budget" id="project_budget">			
+				  <input type="text" value="<?=DEBUG === false ? my_set_value($row,"budget") : "예산테스트" ?>" placeholder="$1,000" class="email" name="budget" id="project_budget">			
 			  </div>
 				  <ul class="project_form-list">
 					  <li>
-						  <input class="project_form-list" type="checkbox" name="is_exist_budget" value="0" <?=set_checkbox("is_exist_budget","0")?> id="project_budgetyet">
+						  <input class="project_form-list" type="checkbox" name="is_exist_budget" value="0" <?=my_set_checked($row,"is_exist_budget","0")?> id="project_budgetyet">
 						  <label for="project_budgetyet">미정</label>
 					  </li>
 				  </ul>
@@ -397,24 +398,24 @@
 		  <div>
             <div class="icon">
                 <label class="project_label" for="project_textarea">요구 사항</label>
-                <textarea class="message" name="message" id="project_textarea" required><?=DEBUG === false ? set_value("message") : "메세지테스트" ?></textarea>
+                <textarea class="message" name="message" id="project_textarea" required><?=DEBUG === false ? my_set_value($row,"message") : "메세지테스트" ?></textarea>
             </div>
 		  </div>
   
 		  <div>
 			  <ul class="project_form-list">
 				  <li>
-					  <input type="checkbox" name="is_get_tax_bill" value="1" <?=set_checkbox("is_get_tax_bill","1")?> id="project_checkbox-1">
+					  <input type="checkbox" name="is_get_tax_bill" value="1" <?=my_set_checked($row,"is_get_tax_bill","1")?> id="project_checkbox-1">
 					  <label for="project_checkbox-1">세금 계산서</label>
 				  </li>
   
 				  <li>
-					  <input type="checkbox" name="is_get_cash_receipt" value="1" <?=set_checkbox("is_get_cash_receipt","1")?> id="project_checkbox-2">
+					  <input type="checkbox" name="is_get_cash_receipt" value="1" <?=my_set_checked($row,"is_get_cash_receipt","1")?> id="project_checkbox-2">
 					  <label for="project_checkbox-2">현금 영수증</label>
 				  </li>
   
 				  <li>
-					  <input type="checkbox" name="is_use_confidential" value="1" <?=set_checkbox("is_use_confidential","1")?> id="project_checkbox-3">
+					  <input type="checkbox" name="is_use_confidential" value="1" <?=my_set_checked($row,"is_use_confidential","1")?> id="project_checkbox-3">
 					  <label for="project_checkbox-3">기밀 유지</label>
 				  </li>
 			  </ul>

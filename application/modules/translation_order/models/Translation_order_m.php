@@ -219,7 +219,7 @@ class Translation_order_m extends Pagination_Model
 		$this->db->set("is_portfolio","1");			
 		return  $this->p_add();
 	}
-	public function updateByPostData()
+	public function updateByPostData($id)
 	{
 		$this->setPostDataWhenAddUpdate();
 		return $this->p_update($id);

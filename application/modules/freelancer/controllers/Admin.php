@@ -65,7 +65,15 @@ class Admin extends \Admin_Controller {
             $this->freelancer_m->updateByPostData($id);
             $file_group_id = $this->freelancer_m->p_get($id,"file_group_id")->file_group_id;
             $this->load->model('file/file_m');
-            $group_id=$this->file_m->add("user",$file_group_id);
+            if($file_group_id !== null)
+                $this->file_m->add("user",$file_group_id);
+            else
+            {
+                $file_group_id=$this->file_m->add();
+                $this->db->set("file_group_id",$file_group_id);
+                $this->freelancer_m->p_update($id);
+            }
+
             $this->load->model("freelancer_translation_language/freelancer_translation_language_m");
             $this->freelancer_translation_language_m->updateByFreelancerIdAndLanguages($id,post('languages'));
             $this->db->trans_complete();
