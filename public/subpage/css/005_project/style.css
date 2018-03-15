@@ -372,6 +372,9 @@ Custom icons
 .project_form .icon input, .project_form .icon select, .project_form .icon textarea {
   padding-left: 54px !important;
 }
+.project_form .icon_account select {
+  padding-left: 54px !important;
+}
 .project_form .user {
   background: url("../../img/project_icon-user.svg") no-repeat 16px center;
 }

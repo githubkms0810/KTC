@@ -142,7 +142,7 @@
 
 		  <div class="icon">
 			  <label style="width:49.5%;" class="project_label" for="project_email">Email</label>
-			  <input value="<?=DEBUG === false ? set_value("email_first") : "emailtest@test.com" ?>" style="width:49.5%; display:inline-block;" class="email" type="email" name="email_first" id="project_email">
+			  <input value="<?=DEBUG === false ? set_value("email_first") : "emailtest@test.com" ?>" style="width:49.5%; display:inline-block;" class="email" type="text" name="email_first" id="project_email">
 			  <select style="width:49.5%; display:inline-block;" class="email" name="email_second">
 				  <option <?=set_select("email_second")?>>@naver.com</option>
 				  <option <?=set_select("email_second")?>>@gmail.com</option>
