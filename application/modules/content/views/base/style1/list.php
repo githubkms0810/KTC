@@ -10,7 +10,7 @@
         편한 시간에 편한 방법으로 문의주세요<br>
         모든 상담은 열려있습니다.
     </p>
-    <a href="/translation_order/selectType" class="home-btn">프로젝트 의뢰하기</a>
+    <a href="#" class="home-btn">02-6738-8220</a>
 </section>
 
 <!-- Begin Site Title
