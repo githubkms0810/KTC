@@ -281,11 +281,11 @@ button {
 
 
 button.projectlang_add:hover {
-  background: #42a2e1;
+  background: #09aee1;
 }
 button.projectlang_add:focus {
   outline: none;
-  background: #2b3e51;
+  background: #09aee1;
 }
 button.projectlang_add:active {
   -webkit-transform: scale(0.9);
