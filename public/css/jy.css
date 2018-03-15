@@ -3,3 +3,8 @@
     color: #eeeeee;
     width:150px;
 }
+
+.jy-line-height{
+    font-size: 15px;
+    line-height: 2 !important;
+}
