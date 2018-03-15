@@ -9,7 +9,12 @@ class Admin extends \Admin_Controller {
     {
         parent::__construct();
     }
-    
+    public function list()
+    {
+        $data["languages"]=explode("," ,$this->setting->translation_languages);
+        $this->data += $data;
+        parent::list();
+    }
  
     
     public function get($id)

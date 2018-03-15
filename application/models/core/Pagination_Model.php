@@ -34,17 +34,26 @@ abstract class Pagination_Model extends Public_Model{
         //전체 열갯수 구하기
         $searchKey =get_post("searchKey");
         $searchValue =get_post("searchValue");
+        $searchKeyOption =get_post("searchKeyOption");
+        $searchValueOption =get_post("searchValueOption");
         if($searchKey !== null && $searchKey !== '')//검색 일떄
         {
-           
+            foreach ($searchKeyOption as $key=>$value) 
+            {
+                if(isset($searchKeyOption[$key]) && isset($searchValueOption[$key]))
+                {
+                    $this->_callbackSearchOption($searchKeyOption[$key],$searchValueOption[$key]);
+                }
+            }
             foreach ($searchKey as $key=>$value) 
             {
-                if(isset($searchKey[$key]) && isset($searchValue[$key]) && DEBUG === false)
+                if(isset($searchKey[$key]) && isset($searchValue[$key]))
                 {
                     $this->_callbackSearch($searchKey[$key],$searchValue[$key]);
                 }
             }
             $total_rows = $get_num_rows_func();
+            var_dump($this->db->last_query());
         }
         else if(($get_count_field === null || $this->className ==="admin") && $isIgnoreCountOnAdminPage === false) //일반
         {
@@ -67,6 +76,14 @@ abstract class Pagination_Model extends Public_Model{
         //열 데이터 구하기
         if($searchKey !== null && $searchKey !== '')//검색 일떄
         {
+            foreach ($searchKeyOption as $key=>$value) 
+            {
+                // if(isset($searchKey[$key]) && isset($searchValue[$key]) && DEBUG === false)
+                if(isset($searchKeyOption[$key]) && isset($searchValueOption[$key]))
+                {
+                    $this->_callbackSearchOption($searchKeyOption[$key],$searchValueOption[$key]);
+                }
+            }
             foreach ($searchKey as $key=>$value) 
             {
                 $this->_callbackSearch($searchKey[$key],$searchValue[$key]);
@@ -87,6 +104,11 @@ abstract class Pagination_Model extends Public_Model{
  
     
     //검색------
+    public function _callbackSearchOption($key,$value)
+    {
+        if($value !== "" && $value !== null)
+            $this->db->like($key,$value);
+    }
     public function searchData()
     {
         $method = "_searchData_{$this->className}";
@@ -145,7 +167,8 @@ abstract class Pagination_Model extends Public_Model{
                 }
                 else
                 {
-                    $this->db->{$kind[$kindKey]}($fieldName,$value);
+                    if($value !== "" && $value !== null)
+                        $this->db->{$kind[$kindKey]}($fieldName,$value);
                 }
 
             }

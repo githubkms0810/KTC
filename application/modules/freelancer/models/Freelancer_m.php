@@ -285,16 +285,16 @@ class Freelancer_m extends Pagination_Model
 	//------@search 검색을 허용할 필드들을 정의합니다 
 
 
-	// protected function _searchData()
-    // {
-    //     return array(
-	// 		"title"=>array("displayName"=>"제목","fieldName"=>"b_c.title","kind"=>"or"),
-	// 		"desc"=>array("displayName"=>"내용","fieldName"=>"desc","kind"=>"textfull-or"),
-	// 		"titleDesc"=>array("displayName"=>"제목+내용","fieldName"=>["b_c.title","desc"],"kind"=>["or","textfull-or"]),
-	// 		"displayName"=>array("displayName"=>"글쓴이","fieldName"=>"u.displayName","kind"=>"or"),
-	// 	);
+	protected function _searchData()
+    {
+        return array(
+			"title"=>array("displayName"=>"이름","fieldName"=>"{$this->as}.name"),
+			"desc"=>array("displayName"=>"내용","fieldName"=>"desc","kind"=>"textfull-or"),
+			"titleDesc"=>array("displayName"=>"제목+내용","fieldName"=>["b_c.title","desc"],"kind"=>["or","textfull-or"]),
+			"displayName"=>array("displayName"=>"글쓴이","fieldName"=>"u.displayName"),
+		);
 		
-	// }
+	}
 	// protected function _searchData_admin()
 	// {
 	// 	return array(

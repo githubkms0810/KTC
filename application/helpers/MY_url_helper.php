@@ -91,7 +91,7 @@ function my_current_url(string $querystring = null)
  * @param boolean true : contain queryString , false : else
  * @return void
  */
-function my_site_url(string $uri,$sw_querystring = true,$xss_clean =null){
+function my_site_url(string $uri,$sw_querystring = true,$xss_clean =null,$eceptedQuerystringKeys = []){
     $ci = &get_instance();
 
     if(($startIdx =strpos($uri,"?")) === false)
@@ -124,12 +124,39 @@ function my_site_url(string $uri,$sw_querystring = true,$xss_clean =null){
             }
           
             if($sw){  // 중복되지않고 해당 key가 없을떄
+                    
                 $querystring .= "$key=$value&";
             }
            
         }
         $querystring =substr($querystring,0, strlen($querystring)-1);
     }
+
+    if(count($eceptedQuerystringKeys) >= 1)
+    {
+        parse_str($querystring, $arr_queryString2);
+        $querystring ='';
+        foreach($arr_queryString2 as $key=>$value){
+            if(in_array($key,$eceptedQuerystringKeys))
+            {
+                continue;              
+            }
+            if(!is_array($value))
+            {
+                $querystring .= "$key=$value&";
+            }
+            else
+            {
+                foreach ($value as $key2 => $value2) {
+                    $querystring .= "{$key2}[]=$value2&";
+                }
+            }
+                
+        }
+        $querystring =substr($querystring,0, strlen($querystring)-1);
+    }
+    
+
     // $url =$_SERVER['SCRIPT_NAME'];
     if(strlen($ci->config->item("index_page")) !==0 )
         $url ="/";

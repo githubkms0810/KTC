@@ -1,5 +1,5 @@
 <?php if ( count($searchDataList) !== 0 ): ?>
-<form style="margin-top:10px; width:260px; margin:0 auto;" class="form-inline" <?=$this->ajax_helper->form_get(my_site_url("/{$moduleName}/list",true,false))?> >
+<form style="margin-top:10px; width:260px; margin:0 auto;" class="form-inline" <?=$this->ajax_helper->form_get(my_site_url("/{$moduleName}/list",true,false,["offset"]))?> >
 <!-- <form style="margin-top:10px;" class="form-inline" action="<?=my_site_url("/{$moduleName}/list")?>"> -->
 	<div class="form-group">
 	
