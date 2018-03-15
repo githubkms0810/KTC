@@ -2,7 +2,7 @@
 <link type="text/css" media="all" href="/public/subpage/css/002_sub/customer/mediumish.css" rel="stylesheet">
 
 <section class="home-hero-cs">
-    <h2 class="home-hero-title-cs">고객센터</h2>
+    <h2 class="home-hero-title-cs" style="font-weight:bold;">고객센터</h2>
     <p class="home-hero-des-cs">
         편한 시간에 편한 방법으로 문의주세요<br>
         모든 상담은 열려있습니다.
@@ -51,7 +51,7 @@
 
 		<!-- Begin Post -->
 		<div class="col-md-8 col-md-offset-2 col-xs-12">
-			<div class="mainheading">
+			<div class="mainheading" style="margin-top:100px;">
 
 				<!-- Begin Top Meta -->
                 <!-- 불필요해보여서 주석처리 함 시작 -->
@@ -77,13 +77,13 @@
 			<!-- End Featured Image -->
 
 			<!-- Begin Post Content -->
-			<div class="article-post">
+			<div class="article-post" style="margin-bottom:50px;">
                 <?=$row->desc?>
 			
 			</div>
 			<!-- End Post Content -->
 <!-- Begin Tags -->
-            <div class="after-post-tags">
+            <div class="after-post-tags" style="margin-bottom:150px;">
 				<ul class="tags">
 					<li><a href="<?=my_site_url("/content/list")?>">목록으로</a></li>
 				</ul>

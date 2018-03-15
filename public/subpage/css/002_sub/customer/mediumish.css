@@ -329,7 +329,7 @@ ul.tags li {
 }
 ul.tags li a {
 	background:rgba(0,0,0,.05);
-	color:rgba(0,0,0,.6);
+	color:#000;
 	border-radius:3px;
 	padding:5px 10px;
 }

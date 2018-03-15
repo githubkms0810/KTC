@@ -1364,5 +1364,8 @@ template {
   }
 }
 
-/*# sourceMappingURL=beautiful.css.map */
+.article-post img {
+    max-width: 100%;
+}
 
+/*# sourceMappingURL=beautiful.css.map */
