@@ -552,7 +552,7 @@ template {
 .home-hero-title {
   font-size: 40px;
   line-height: 60px;
-  padding: 70px 0 60px;
+  padding: 70px 0 20px;
 }
 .home-hero-des {
   font-size: 18px;
@@ -569,6 +569,11 @@ template {
   }
   .home-hero-des {
     margin-bottom: 60px;
+  }
+}
+@media (max-width: 600px) {
+  .home-hero-title {
+    line-height: 50px;
   }
 }
 @media (max-width: 520px) {
