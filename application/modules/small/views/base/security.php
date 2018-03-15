@@ -4,7 +4,7 @@
         코리아 통번역 센터는 보안 정책을 실시하고 있으며,<br>
         고객님의 기밀 사항을 철저하게 보호해드리고 있습니다.
     </p>
-    <a href="/small/portfolio_list" class="home-btn">포트폴리오 보러가기</a>
+    <a href="/translation_order/list" class="home-btn">포트폴리오 보러가기</a>
 </section>
 
 <link rel="stylesheet" type="text/css" href="/public/subpage/css/001_jobdance/css/jquery.bxslider.css" media="all">

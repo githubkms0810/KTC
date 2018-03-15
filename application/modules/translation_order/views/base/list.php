@@ -9,7 +9,6 @@
 </section>
 <section class="home-section home-section__portfolio">
     <div class="bc-container" >
-        <p class="home-des">기밀 유지를 원하는 프로젝트의 정보는 공개하지 않습니다</p>
         <ul class="home-portfolio-list" id="jscroll-wapper">
             <div>
                 <a href="/translation_order/listWithJscroll?offset=0&limit=<?=$this->limit?>" class="jscroll-next">끝</a>

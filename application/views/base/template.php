@@ -65,7 +65,7 @@
                     <div>
                         <a href="/small/partnership">업무 제휴 문의</a>
                         <a href="/small/security">기밀 유지 정책</a>
-                        <a href="/small/service_center_list">고객센터</a>
+                        <a href="/content/list?board_key=notice">고객센터</a>
                     </div>
                 </div>
                 <div class="home-footer__info">

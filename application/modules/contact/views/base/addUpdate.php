@@ -74,7 +74,7 @@
 				<div class="container-contact100-form-btn">
 					<button class="contact100-form-btn">
 						<span>
-							Submit
+							문의하기
 							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
 						</span>
 					</button>
@@ -82,7 +82,7 @@
 			</form>
 
 			<span class="contact100-more">
-				For any question contact our 24/7 call center: <span class="contact100-more-highlight">+001 345 6889</span>
+				빠른 답변을 원하시면 콜 센터로 문의해주세요. <span class="contact100-more-highlight">02-6738-8220</span>
 			</span>
 		</div>
 	</div>
