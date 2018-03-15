@@ -184,6 +184,17 @@
         <td colspan="8" ><?=$row->message?></td>
       </tr>
       <tr>
+        <td class="jy-td-name">분야 설정</td>
+        <td colspan="4" ><?=$row->field?></td>
+        <td colspan="4" >
+        <form <?=$this->ajax_helper->form("/admin/translation_order/update/{$row->id}")?>>
+                    <input type="text" name ="field">
+                <button class="btn btn-default">확인</button>
+            </form>
+        </td>
+      </tr>
+
+      <tr>
         <td class="jy-td-name">포트폴리오 여부</td>
         <td colspan="4" ><?=$row->is_portfolio?></td>
         <td colspan="4">
