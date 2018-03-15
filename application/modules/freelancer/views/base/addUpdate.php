@@ -22,7 +22,7 @@
     <a href="/translation_order/list" class="home-btn">포트폴리오 보러가기</a>
 </section>
 <div id="free_wrapper">
-<form action="/translation_order/add" method="post"  enctype="multipart/form-data" class="project_form floating-labels" >
+<form action="/freelancer/add" method="post"  enctype="multipart/form-data" class="project_form floating-labels" >
 <fieldset>
 	
 	<legend>프리랜서 지원</legend>
@@ -31,29 +31,45 @@
 
 	<!--개인일때-->
 	<div class="icon">
-		<label class="project_label" for="personal_name">이름</label>
-		<input value="<?=DEBUG === false ? set_value("personal_name") : "개인이름테스트" ?>" class="user" type="text" name="personal_name" id="project_alonename" required>
+		<label class="project_label" for="free_name">이름</label>
+		<input value="<?=DEBUG === false ? set_value("name") : "이름테스트" ?>" class="user" type="text" name="name" id="free_name" required>
 	</div> 
 
 	<div>
-		<h4>생년월일</h4>
-
+		  <h4>생년월일</h4>
+ 
 		<p class="project_select icon">
-			<input value="<?=DEBUG === false ? set_value("personal_phone_third") : "개인번호3" ?>" placeholder="5678" class="budget" type="text" name="personal_phone_third" id="project_name" required>
+			<select name="birth_month" class="budget" style="width:33%; display:inline-block;">
+				<option value="">연도</option>
+				<option  <?=DEBUG === false ? set_select("birth_year","1939") : "selected"?>>1939</option>
+				<option  <?=set_select("birth_year","1940")?>>1940</option>
+		    </select>
+		    <select name="birth_month" class="budget" style="width:32%; display:inline-block;">
+				<option  value="">월</option>
+				<?php for ( $i = 1 ; $i <=12 ; $i++ ): ?>
+					<option <?=DEBUG === false ? set_select("birth_month",$i) : "selected"?>><?=$i?></option>
+				<?php endfor; ?>
+			</select>
+			<select name="birth_day" class="budget" style="width:33%; display:inline-block;">
+			  	<option  value="">일</option>
+				<?php for ( $i = 1 ; $i <=31 ; $i++ ): ?>
+					<option <?=DEBUG === false ? set_select("birth_day",$i) : "selected"?>><?=$i?></option>
+				<?php endfor; ?>
+			</select>
 		</p>
 	</div>
 
-  <div>
+    <div>
 		<h4>성별</h4>
 
 		<ul class="project_form-list">
 			<li>
-				<input type="radio" name="sex" value="남성" <?=set_checkbox("sex","남성",true)?> id="free_sex-1">
-				<label for="free_sex-1">남성</label>
+				<input type="radio" name="sex" value="남성" <?=set_checkbox("sex","남성",true)?> id="free_radio_sex1">
+				<label for="free_radio_sex1">남성</label>
 			</li>
 			<li>
-				<input type="radio" name="sex" value="여성" <?=set_checkbox("sex","여성")?> id="free_sex-2">
-				<label for="free_sex-2">여성</label>
+				<input type="radio" name="sex" value="여성" <?=set_checkbox("sex","여성")?> id="free_radio_sex2">
+				<label for="free_radio_sex2">여성</label>
 			</li>
 		</ul>
 	</div>
@@ -62,18 +78,17 @@
 		<h4>전화번호</h4>
 
 		<p class="project_select icon">
-			<input value="<?=DEBUG === false ? set_value("personal_phone_third") : "개인번호3" ?>" placeholder="5678" class="budget" type="text" name="personal_phone_third" id="project_name" required>
+			<input value="<?=DEBUG === false ? set_value("phone_second") : "개인번호3" ?>" placeholder="5678" class="budget" type="text" name="phone_second" id="free_phone" required>
 		</p>
 	</div>
 
 	<div class="icon">
 		<label style="width:49.5%;" class="project_label" for="email">Email</label>
-		<input value="<?=DEBUG === false ? set_value("email_first") : "emailtest@test.com" ?>" style="width:49.5%; display:inline-block;" class="email" type="email" name="email_first" id="project_email">
+		<input value="<?=DEBUG === false ? set_value("email_first") : "emailtestr" ?>" style="width:49.5%; display:inline-block;" class="email" type="email" name="email_first" id="free_email">
 		<select style="width:49.5%; display:inline-block;" class="email" name="email_second">
-			<option <?=set_select("email_second")?>>@naver.com</option>
-			<option <?=set_select("email_second")?>>@gmail.com</option>
-			<option <?=set_select("email_second")?>>@hanmail.net</option>
-			<option <?=set_select("email_second")?>>@daum.net</option>
+			<option <?=set_select("email_second","naver.com")?>>@naver.com</option>
+			<option <?=set_select("email_second","gmail.com")?>>@gmail.com</option>
+			<option <?=set_select("email_second","daum.net")?>>@daum.net</option>
 		</select>
 	
 	</div>
@@ -81,16 +96,18 @@
 	<div>
 		<div class="icon" style="width:79%; display:inline-block; margin-top:1px; margin-bottom:1px;">
 			<label class="project_label" for="project_address">주소</label>
-			<input value="<?=DEBUG === false ? set_value("interpret_new_address") : "주소테스트" ?>" class="email" type="text" name="interpret_new_address" id="sample4_roadAddress" readonly>
-			<input value="<?=DEBUG === false ? set_value("interpret_old_address") : "지번주소테스트" ?>" id="sample4_jibunAddress"type="hidden" name="interpret_old_address">
-			<input value="<?=DEBUG === false ? set_value("interpret_post_number") : "우편번호테스트" ?>" id="sample4_postcode"type="hidden" name="interpret_post_number">
+			<input value="<?=DEBUG === false ? set_value("new_address") : "주소테스트" ?>" class="email" type="text" name="new_address" required id="sample4_roadAddress" readonly>
+			<input type="hidden" id="sample4_postcode" name="post_number" value="<?=DEBUG === false ? set_value("post_number"): "지번테스트" ?>">
+			<input type="hidden" id="sample4_jibunAddress" name="old_address" value="<?=DEBUG === false ? set_value("old_address"): "구주소 테스트" ?>">
+
+		
 		</div>
 		<div style="width:20%; display:inline-block; margin-bottom:1px;" class="project_form">
-			<button type="button " onclick="sample4_execDaumPostcode(); return false;" class="projectlang_add">추가</button>
+			<button type="button " onclick="sample4_execDaumPostcode(); return false;" class="projectlang_add">찾기</button>
 		</div>
 		<div class="icon" style="margin-top:20px;">
 			<label class="project_label" for="project_detailaddress">상세 주소</label>
-			<input value="<?=DEBUG === false ? set_value("interpret_address_detail") : "상세주소테스트" ?>" class="email" type="text" name="interpret_address_detail" id="project_detailaddress">
+			<input value="<?=DEBUG === false ? set_value("address_detail") : "상세주소테스트" ?>" class="email" type="text" name="address_detail" id="free_address" required>
 		</div>
 	</div>
 
@@ -99,12 +116,12 @@
 
 		<ul class="project_form-list">
 			<li>
-				<input type="radio" name="translation" value="통역" <?=set_checkbox("translation","통역",true)?> id="free_translation-1">
-				<label for="free_translation-1">통역</label>
+				<input type="radio" name="apply_field" value="통역" <?=set_checkbox("apply_field","통역",true)?> id="free_radio_apply1">
+				<label for="free_radio_apply1">통역</label>
 			</li>
 			<li>
-				<input type="radio" name="translation" value="번역" <?=set_checkbox("translation","번역")?> id="free_translation-2">
-				<label for="free_translation-2">번역</label>
+				<input type="radio" name="apply_field" value="번역" <?=set_checkbox("apply_field","번역")?> id="free_radio_apply2">
+				<label for="free_radio_apply2">번역</label>
 			</li>
 		</ul>
 	</div>
@@ -113,6 +130,20 @@
 		<h4>계좌정보</h4>
 		<p class="project_select icon">
 			<input  value="<?=DEBUG === false ? set_value("fax_third") : "팩스번호3" ?>"  placeholder="111-1111-1111111" class="budget" type="text" name="fax_third" id="project_name" required>
+		</p>
+	</div>
+
+	<div>
+		<h4>계좌정보</h4>
+
+		<p class="project_select icon">
+			<select name="birth_month" class="budget" style="width:24%; display:inline-block;">
+				<option value="">은행</option>
+				<option value="신한" <?=DEBUG === false ? set_select("account_bank","신한") : "selected"?>>신한</option>
+			    <option value="국민" <?=set_select("account_bank","국민")?>>국민</option>
+			</select>
+			<input value="<?=DEBUG === false ? set_value("account_number") : "1245967" ?>" placeholder="계좌번호" class="budget" type="text" name="account_number" id="free_phone" required style="display:inline-block; width: 50%;">
+			<input value="<?=DEBUG === false ? set_value("account_name") : "예금주테스트" ?>" placeholder="예금주" class="budget" type="text" name="account_name" id="free_phone" required style="width: 23%; display:inline-block;">
 		</p>
 	</div>
 
@@ -184,31 +215,30 @@
 			  </ul>
 
 		<div class="icon">
-		  <label class="project_label" for="company">대학명</label>
-		  <input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("university") : "대학교이름 테스트"?>" id="free_schoolname">
+		  <label class="project_label" for="free_schoolname">대학명</label>
+		  <input class="company" type="text" name="university" value="<?=DEBUG === false ? set_value("university") : "대학교이름 테스트"?>" id="free_schoolname">
 		</div> 
 
 		<div class="icon">
-		  <label class="project_label" for="company">전공명</label>
-		  <input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("university_major") : "대학교전공 테스트"?>" id="free_subname">
+		  <label class="project_label" for="free_subname">전공명</label>
+		  <input class="company" type="text" name="university_major" value="<?=DEBUG === false ? set_value("university_major") : "대학교전공 테스트"?>" id="free_subname">
 		</div>
 
 
 		  <div id="school" style="display:none;">
 			<div class="icon">
-				<label style="width:45%;" class="project_label" for="company">대학원명</label>
-				<input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("graduate_school") : "대학원이름 테스트"?>" style="width:49.5%; display:inline-block;" id="free_graduate_schoolname">
-				<select style="width:49.5%; display:inline-block;" class="email" name="email_second">
-					<option <?=set_select("email_second")?>>학위</option>	
-					<option <?=set_select("email_second")?>>석사</option>
-					<option <?=set_select("email_second")?>>박사</option>
-					<option <?=set_select("email_second")?>>학사</option>
-					<option <?=set_select("email_second")?>>헤헤</option>
+				<label style="width:45%;" class="project_label" for="free_graduate_schoolname">대학원명</label>
+				<input class="company" type="text" name="graduate_school" value="<?=DEBUG === false ? set_value("graduate_school") : "대학원이름 테스트"?>" style="width:49.5%; display:inline-block;" id="free_graduate_schoolname">
+				<select style="width:49.5%; display:inline-block;" class="email" name="graduate_school_degree">
+					<option>학위</option>	
+					<option <?=set_select("graduate_school_degree","석사")?>>석사</option>
+					<option <?=set_select("graduate_school_degree","박사")?>>박사</option>
+					<option <?=set_select("graduate_school_degree","학사")?>>학사</option>
 				</select>
 			</div>
 			<div class="icon">
-		  		<label class="project_label" for="company">전공명</label>
-		  		<input class="company" type="text" name="company" value="<?=DEBUG === false ? set_value("graduate_school_major") : "대학원전공 테스트"?>" id="free_graduate_schoolsubname">
+		  		<label class="project_label" for="free_graduate_schoolsubname">전공명</label>
+		  		<input class="company" type="text" name="graduate_school_major" value="<?=DEBUG === false ? set_value("graduate_school_major") : "대학원전공 테스트"?>" id="free_graduate_schoolsubname">
 			</div>
 
 		</div>
@@ -241,13 +271,7 @@
 </fieldset>
 </form>
 	</div>
-  <script type="text/javascript">
-  var elems = Array.prototype.slice.call(document.querySelectorAll('.free_js-switch'));
   
-  elems.forEach(function(html) {
-	var switchery = new Switchery(html);
-  });
-  </script>
 <!--프리랜서지원폼 끝-->  
 <script src="/public/subpage/js/005_project/main.js"></script>
 
