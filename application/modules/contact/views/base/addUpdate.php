@@ -30,8 +30,8 @@
 			<i class="fa fa-envelope-o" aria-hidden="true"></i>
 		</button>
 
-		<div class="wrap-contact100">
-			<button class="contact100-btn-hide">
+		<div style="z-index:999999 !important;" class="wrap-contact100">
+			<button  style="z-index:999999 !important;" class="contact100-btn-hide">
 				<i class="fa fa-close" aria-hidden="true"></i>
 			</button>
 

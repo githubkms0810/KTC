@@ -1,3 +1,2 @@
 
-
-<?=include(APPPATH."/views/admin/addUpdate.php")?>
+<?php include(APPPATH."/views/admin/addUpdate.php")?>
