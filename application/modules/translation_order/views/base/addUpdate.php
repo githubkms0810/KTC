@@ -238,6 +238,7 @@
 			  <div class="icon" style="margin-top:20px;">
 				  <label class="project_label" for="project_detailaddress">상세 주소</label>
 				  <input value="<?=DEBUG === false ? set_value("interpret_address_detail") : "상세주소테스트" ?>" class="email" type="text" name="interpret_address_detail" id="project_detailaddress">
+				  <span id="guide" style="color:#999"></span>
 			  </div>
 		  </div>
 		  
