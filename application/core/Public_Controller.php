@@ -164,7 +164,7 @@ class Public_Controller extends MX_Controller {
 			$this->db->trans_start();	
 			$insert_id =$this->{$this->modelName}->add();
 			$this->db->trans_complete();
-
+				
 			if ($this->db->trans_status() === FALSE) 
 				$this->ajax_helper->set_flashMessage("추가 실패.","danger");
 			else

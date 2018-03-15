@@ -30,7 +30,14 @@ class Post_helper
             $this->ci->db->set($field,$default);
         else
             $this->ci->db->set($field,$value);
-
+    }
+    public function extractUserNameOnEmail($email)
+    {
+        return substr($email,0,strpos($email,"@"));
+    }
+    public function extractHostOnEmail($email)
+    {
+        return substr($email,strpos($email,"@"));
     }
 }
 

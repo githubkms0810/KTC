@@ -8,6 +8,7 @@ class Admin extends \Admin_Controller {
     public function __construct()
     {
         parent::__construct();
+        $this->load->library('post_helper');
     }
     public function list()
     {
@@ -16,7 +17,46 @@ class Admin extends \Admin_Controller {
         parent::list();
     }
  
-    
+    public function add()
+    {
+        $this->freelancer_m->setRulesWhenAdd();
+        if($this->form_validation->run() === false){
+            $data["content_view"] = "admin/addUpdate";
+            $data["mode"] = "add";
+            $data["row"] = (object)[];
+            $data["languages"]=explode("," ,$this->setting->translation_languages);
+            $this->template->render($data);
+        }
+        else{
+         
+            $this->db->trans_start();
+            $this->load->model('file/file_m');
+            $group_id=$this->file_m->add();
+            $insert_id=$this->freelancer_m->addByPostDataAndByFileGroupId($group_id);
+            $this->load->model("freelancer_translation_language/freelancer_translation_language_m");
+            $this->freelancer_translation_language_m->addByFreelancerIdAndLanguages($insert_id,post('languages'));
+            $this->db->trans_complete();
+            
+            if($this->db->trans_status() === false){
+                alert("추가 실패.ERRORCODE :".transectionError);
+                my_redirect($this->referer);
+            }
+            else{
+                my_redirect("/admin/freelancer/list");
+            }
+        }
+    }
+     
+    public function update($id)
+    {
+      
+        
+        $data["languages"]=explode("," ,$this->setting->translation_languages);
+        $data["mode"] = "update";
+        $data["row"] = $this->freelancer_m->p_get($id);
+        $this->data += $data;
+        parent::update($id);
+    }
     public function get($id)
     {
         $data['row'] = $row = $this->{$this->modelName}->get($id);

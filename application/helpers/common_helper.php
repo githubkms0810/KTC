@@ -320,14 +320,19 @@ if(!function_exists('my_set_value_input')){
 
 
 if(!function_exists('my_set_checked')){
-    function my_set_checked($obj, $name,$value){
+    function my_set_checked($obj, $name,$value,$default = false){
         $value = (string)$value;
         if(isset($_POST[$name]) && $_POST[$name]  === $value){
             return "checked";
-        }else if(!isset($_POST[$name]) && !property_exists($obj,$name) ){
-            return '';
         }else if(!isset($_POST[$name]) && property_exists($obj,$name) && $value === $obj->$name){
             return "checked";
+        }
+        else if($default === true)
+        {
+            return "checked";
+        }
+        else if(!isset($_POST[$name]) && !property_exists($obj,$name) ){
+            return '';
         }
 
     }
@@ -345,7 +350,6 @@ if(!function_exists('my_set_checked_arr')){
         }
     }
 }
-
 
 if(!function_exists('my_set_selected')){
     function my_set_selected($obj, $name,$value){
