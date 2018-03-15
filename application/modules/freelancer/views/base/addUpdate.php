@@ -1,4 +1,3 @@
-
 <!--projectform-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="/public/subpage/css/005_project/style.css"> <!-- Resource style -->
@@ -21,7 +20,7 @@
     </p>
     <a href="/translation_order/list" class="home-btn">포트폴리오 보러가기</a>
 </section>
-<div id="free_wrapper">
+<div id="free_wrapper" style="margin: 100px 0 150px; 0;">
 <form action="/freelancer/add" method="post"  onsubmit="" class="project_form floating-labels" enctype="multipart/form-data">
 <fieldset>
 	
@@ -74,16 +73,14 @@
 		</ul>
 	</div>
 
-	<div>
-		<h4>전화번호</h4>
-
-		<p class="project_select icon">
-			<input value="<?=DEBUG === false ? set_value("phone") : "개인번호3" ?>" placeholder="5678" class="budget" type="text" name="phone" id="free_phone" required>
-		</p>
-	</div>
 
 	<div class="icon">
-		<label style="width:49.5%;" class="project_label" for="email">Email</label>
+		<label class="project_label" for="free_phone">연락처</label>
+		<input value="<?=DEBUG === false ? set_value("phone") : "개인번호3" ?>" class="budget" type="text" name="phone" id="free_phone" required>
+	</div> 
+
+	<div class="icon">
+		<label style="width:49.5%;" class="project_label" for="email">E-mail</label>
 		<input value="<?=DEBUG === false ? set_value("email_first") : "emailtestr" ?>" style="width:49.5%; display:inline-block;" class="email" type="text" name="email_first" id="free_email">
 		<select style="width:49.5%; display:inline-block;" class="email" name="email_second">
 			<option <?=set_select("email_second","naver.com")?>>@naver.com</option>
@@ -95,15 +92,15 @@
 
 	<div>
 		<div class="icon" style="width:79%; display:inline-block; margin-top:1px; margin-bottom:1px;">
-			<label class="project_label" for="project_address">주소</label>
-			<input value="<?=DEBUG === false ? set_value("new_address") : "주소테스트" ?>" class="email" type="text" name="new_address" required id="sample4_roadAddress" readonly>
+			<h4>주소</h4>
+			<input value="<?=DEBUG === false ? set_value("new_address") : "주소테스트" ?>" class="email" type="text" name="new_address" required id="sample4_roadAddress" value=" " readonly>
 			<input type="hidden" id="sample4_postcode" name="post_number" value="<?=DEBUG === false ? set_value("post_number"): "지번테스트" ?>">
 			<input type="hidden" id="sample4_jibunAddress" name="old_address" value="<?=DEBUG === false ? set_value("old_address"): "구주소 테스트" ?>">
 
 		
 		</div>
 		<div style="width:20%; display:inline-block; margin-bottom:1px;" class="project_form">
-			<button type="button " onclick="sample4_execDaumPostcode(); return false;" class="projectlang_add">찾기</button>
+			<button type="button " style="background-color:#09aee1; font-weight:400;" onclick="sample4_execDaumPostcode(); return false;" class="projectlang_add">찾기</button>
 		</div>
 		<div class="icon" style="margin-top:20px;">
 			<label class="project_label" for="project_detailaddress">상세 주소</label>
@@ -113,7 +110,7 @@
 	</div>
 
 	<div>
-		<h4>지원분야</h4>
+		<h4>지원 분야</h4>
 
 		<ul class="project_form-list">
 			<li>
@@ -128,14 +125,7 @@
 	</div>
 
 	<div>
-		<h4>계좌정보</h4>
-		<p class="project_select icon">
-			<input  value="<?=DEBUG === false ? set_value("fax_third") : "팩스번호3" ?>"  placeholder="111-1111-1111111" class="budget" type="text" name="fax_third" id="project_name" required>
-		</p>
-	</div>
-
-	<div>
-		<h4>계좌정보</h4>
+		<h4>계좌 정보</h4>
 
 		<p class="project_select icon_account">
 			<select name="account_bank" class="budget" style="width:24%; display:inline-block;">
@@ -149,7 +139,7 @@
 	</div>
 
 		<div >
-		<h4>사용언어</h4>
+		<h4>사용 언어</h4>
 		<?=form_error("languages[]")?>
 		<ul class="project_form-list">
 			<?php $i=1; foreach ( $languages as $language ): ?>
@@ -162,20 +152,20 @@
 	</div>
 
 	<div>
-		<h4>언어방향</h4>
+		<h4>언어 방향</h4>
 
 		<ul class="project_form-list">
 		<li>
 		<input type="radio" name="translation_direction" value="외국어->한국어" <?=set_checkbox("translation_direction","외국어->한국어")?> checked id="free_radio_1">
-		<label for="free_radio_1">외국어->한국어</label>
+		<label for="free_radio_1">외국어 -> 한국어</label>
 		</li>
 	<li>
 		<input type="radio" name="translation_direction" value="한국어->외국어" <?=set_checkbox("translation_direction","한국어->외국어")?> id="free_radio_2">
-		<label for="free_radio_2">한국어->외국어</label>
+		<label for="free_radio_2">한국어 -> 외국어</label>
 	</li>
 	<li>
 		<input type="radio" name="translation_direction" value="외국어<->한국어" <?=set_checkbox("translation_direction","외국어<->한국어")?> id="free_radio_3">
-		<label for="free_radio_3">외국어<->한국어</label>
+		<label for="free_radio_3">외국어 <-> 한국어</label>
 	</li>
 		</ul>
 	</div>
