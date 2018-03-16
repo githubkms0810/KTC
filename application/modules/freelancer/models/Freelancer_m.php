@@ -297,9 +297,9 @@ class Freelancer_m extends Pagination_Model
 	protected function _searchData()
     {
         return array(
-			"name"=>array("displayName"=>"이름","fieldName"=>"{$this->as}.name"),
-			"phone"=>array("displayName"=>"개인연락처","fieldName"=>"{$this->as}.phone"),
-			"birth"=>array("displayName"=>"생일년도","fieldName"=>"{$this->as}.birth_year"),
+			"name"=>array("displayName"=>"이름","fieldName"=>"{$this->as}.name","kind"=>"like"),
+			"phone"=>array("displayName"=>"개인연락처","fieldName"=>"{$this->as}.phone","kind"=>"like"),
+			"birth"=>array("displayName"=>"생일년도","fieldName"=>"{$this->as}.birth_year","kind"=>"like"),
 			"id"=>array("displayName"=>"ID","fieldName"=>"{$this->as}.id"),
 		);
 		

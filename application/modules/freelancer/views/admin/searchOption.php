@@ -51,7 +51,7 @@
 
             <td class="jy-td-name jy-line-height">언어</td>
             <td colspan="2">
-                <input type="hidden" name="searchKeyOption[]" value="freelancer_translation_language.language">
+                <input type="hidden" name="searchKeyOption[]" value="freelancer_translation_language.languages">
                
                 <select class="form-control" name="searchValueOption[]" id="">
                     <option value ="">선택</option>
