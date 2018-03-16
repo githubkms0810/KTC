@@ -42,17 +42,34 @@
 					  $( "#viewPersonal" ).hide();
 					  //회사 일때 회사 카테고리 show
 					  $( "#viewCompany" ).show();
-					  removePersonalEmailName();
-					  setManagerEmailName();
+					  removeAttrNameOnPersonalEmail();
+					  setAttrNameOnManagerEmail();
+					  settAttrRequriedManagerPhone(true);
+					  settAttrRequriedPersonalPhone(false);
 				  }
 				  else if(companyOrPersonal == "개인"){//개인인 경우
 					  //개인 일때 개인 카테고리 show
 					  $( "#viewPersonal" ).show();
 					  //개인 일때 회사 카테고리 hide
 					  $( "#viewCompany" ).hide();
-					  removeManagerEmailName();
-					  setPersonalEmailName();
+					  removeAttrNameOnManagerEmail();
+					  setAttrNameOnPersonalEmail();
+					  settAttrRequriedManagerPhone(false);
+					  settAttrRequriedPersonalPhone(true);
 				  }
+			  }
+			  function settAttrRequriedPersonalPhone(value)
+			  {
+				setAttrRequiredBySelector(value,"input[name=personal_phone]");  
+			  }
+			  function settAttrRequriedManagerPhone(value)
+			  {
+				setAttrRequiredBySelector(value,"input[name=manager_phone]");
+			  }
+
+			  function setAttrRequiredBySelector(value,selector)
+			  {
+					$(selector).prop('required',value);
 			  }
 			  function getCompanyOrPersonalByCheckedInput()
 			  {
@@ -61,25 +78,30 @@
 				else if($('input:radio[name="buyer"][value="개인"]').prop('checked'))
 					return "개인";
 			  }
-			  function removeManagerEmailName()
+			  function removeAttrNameOnManagerEmail()
 			  {	
-				  $("#manager_email_first").attr("name","");
-				  $("#manager_email_second").attr("name","");
+				setNameBySelector("","#manager_email_first");
+				setNameBySelector("","#manager_email_second");
 			  }
-			  function removePersonalEmailName()
+			  function removeAttrNameOnPersonalEmail()
 			  {	
-				  $("#personal_email_first").attr("name","");
-				  $("#personal_email_second").attr("name","");
+				setNameBySelector("","#personal_email_first");
+				setNameBySelector("","#personal_email_second");
 			  }
-			  function setManagerEmailName()
+			  function setAttrNameOnManagerEmail()
 			  {	
-				  $("#manager_email_first").attr("name","email_first");
-				  $("#manager_email_second").attr("name","email_second");
+				setNameBySelector("email_first","#manager_email_first");
+				setNameBySelector("email_second","#manager_email_second");
 			  }
-			  function setPersonalEmailName()
+			  
+			  function setAttrNameOnPersonalEmail()
 			  {	
-				  $("#personal_email_first").attr("name","email_first");
-				  $("#personal_email_second").attr("name","email_second");
+				setNameBySelector("email_first","#personal_email_first");
+				setNameBySelector("email_second","#personal_email_second");
+			  }
+			  function setNameBySelector(nameValue,selector)
+			  {
+					$(selector).attr("name",nameValue);
 			  }
 		  </script>
 		  <div>
@@ -99,28 +121,28 @@
 
               <div class="icon">
                   <label class="project_label" for="company">회사명</label>
-                  <input class="company" type="text" name="company" value="<?=DEBUG === false ? my_set_value($row,"company") : "회사이름테스트" ?>" id="project_company" required>
+                  <input class="company" type="text" name="company" value="<?=DEBUG === false ? my_set_value($row,"company") : "회사이름테스트" ?>" id="project_company" >
               </div> 
 
               <div class="icon">
                   <label class="project_label" for="department">부서</label>
-                  <input class="company" type="text" name="department" value="<?=DEBUG === false ? my_set_value($row,"department") : "부서이름테스트" ?>" id="project_depart" required>
+                  <input class="company" type="text" name="department" value="<?=DEBUG === false ? my_set_value($row,"department") : "부서이름테스트" ?>" id="project_depart" >
               </div>
               <div class="icon">
                      <label class="project_label" for="company_phone">회사 연락처</label>
-                      <input value="<?=DEBUG === false ? my_set_value($row,"company_phone") : "회사번호3" ?>" class="budget" type="text" name="company_phone" id="project_name" required>
+                      <input value="<?=DEBUG === false ? my_set_value($row,"company_phone") : "회사번호3" ?>" class="budget" type="text" name="company_phone" id="project_name" >
               </div>
               <div class="icon">
                       <label class="project_label" for="fax">FAX</label>
-                      <input  value="<?=DEBUG === false ? my_set_value($row,"fax") : "팩스번호3" ?>" class="budget" type="text" name="fax" id="project_name" required>
+                      <input  value="<?=DEBUG === false ? my_set_value($row,"fax") : "팩스번호3" ?>" class="budget" type="text" name="fax" id="project_name" >
               </div>
               <div class="icon">
                   <label class="project_label" for="manager">담당자</label>
-                  <input class="user" type="text" name="manager"  value="<?=DEBUG === false ? my_set_value($row,"manager") : "매니저이름 테스트" ?>" id="project_name" required>
+                  <input class="user" type="text" name="manager"  value="<?=DEBUG === false ? my_set_value($row,"manager") : "매니저이름 테스트" ?>" id="project_name" >
               </div> 
               <div class="icon">
                     <label class="project_label" for="manager_phone">담당자 연락처</label>
-                    <input value="<?=DEBUG === false ? my_set_value($row,"manager_phone") : "매니저번호3" ?>" class="budget" type="text" name="manager_phone" id="project_name" required>
+                    <input value="<?=DEBUG === false ? my_set_value($row,"manager_phone") : "매니저번호3" ?>" class="budget" type="text" name="manager_phone" id="project_name" >
               </div>
               <div class="icon">
                   <label style="width:49.5%;" class="project_label" for="project_email">담당자 E-mail</label>
@@ -138,11 +160,11 @@
           <div  id="viewPersonal">
               <div class="icon">
                   <label class="project_label" for="personal_name">이름</label>
-                  <input value="<?=DEBUG === false ? my_set_value($row,"personal_name") : "개인이름테스트" ?>" class="user" type="text" name="personal_name" id="project_alonename" required>
+                  <input value="<?=DEBUG === false ? my_set_value($row,"personal_name") : "개인이름테스트" ?>" class="user" type="text" name="personal_name" id="project_alonename" >
               </div> 
               <div class="icon">
                       <label class="project_label" for="personal_phone">연락처</label>
-                      <input value="<?=DEBUG === false ? my_set_value($row,"personal_phone") : "개인번호3" ?>" class="budget" type="text" name="personal_phone" id="project_name" required>
+                      <input value="<?=DEBUG === false ? my_set_value($row,"personal_phone") : "개인번호3" ?>" class="budget" type="text" name="personal_phone" id="project_name" >
               </div>
               <div class="icon">
                   <label style="width:49.5%;" class="project_label" for="project_email">E-mail</label>
@@ -422,7 +444,7 @@
 		  <div>
             <div class="icon">
                 <label class="project_label" for="project_textarea">요구 사항</label>
-                <textarea class="message" name="message" id="project_textarea" required><?=DEBUG === false ? my_set_value($row,"message") : "메세지테스트" ?></textarea>
+                <textarea class="message" name="message" id="project_textarea" ><?=DEBUG === false ? my_set_value($row,"message") : "메세지테스트" ?></textarea>
             </div>
 		  </div>
   

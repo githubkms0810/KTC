@@ -122,15 +122,15 @@ class Freelancer_m extends Pagination_Model
 	public function setRulesWhenAdd()
 	{
 		$this->form_validation->set_rules('name', '이름', 'trim|required|min_length[1]|max_length[12]');
-		$this->form_validation->set_rules('phone', '휴대폰', 'trim|required');
-		$this->form_validation->set_rules('new_address', '주소', 'trim|required');
-		$this->form_validation->set_rules('address_detail', '상세주소', 'trim|required');
-		$this->form_validation->set_rules('apply_field', '지원분야', 'trim|required');
-		$this->form_validation->set_rules('account_bank', '은행이름', 'trim|required');
-		$this->form_validation->set_rules('account_number', '계좌번호', 'trim|required');
-		$this->form_validation->set_rules('account_name', '예금주', 'trim|required');
+		// $this->form_validation->set_rules('phone', '휴대폰', 'trim|required');
+		// $this->form_validation->set_rules('new_address', '주소', 'trim|required');
+		// $this->form_validation->set_rules('address_detail', '상세주소', 'trim|required');
+		// $this->form_validation->set_rules('apply_field', '지원분야', 'trim|required');
+		// $this->form_validation->set_rules('account_bank', '은행이름', 'trim|required');
+		// $this->form_validation->set_rules('account_number', '계좌번호', 'trim|required');
+		// $this->form_validation->set_rules('account_name', '예금주', 'trim|required');
 		$this->form_validation->set_rules('languages[]', '사용언어', 'trim|required');
-		$this->form_validation->set_rules('translation_direction', '언어방향', 'trim|required');
+		// $this->form_validation->set_rules('translation_direction', '언어방향', 'trim|required');
 	}
 	public function addByPostDataAndByFileGroupId($file_group_id)
 	{

@@ -147,7 +147,7 @@
 
 		<div >
 		<h4>사용 언어</h4>
-		<?=form_error("languages[]")?>
+		<span style="color:red !important;"><?=form_error("languages[]",null,null)?></span>
 		<ul class="project_form-list">
 			<?php $i=1; foreach ( $languages as $language ): ?>
 			<li>

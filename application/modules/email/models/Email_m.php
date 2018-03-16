@@ -159,7 +159,7 @@ class Email_m extends Pagination_Model
 	}
 	protected function _from()
 	{
-		$this->db->from("$this->table as {$this->as}");
+		$this->db->from("{$this->table} as {$this->as}");
 		// $this->db->join("user as u","{$this->as}.user_id = u.id","LEFT");
 	}
 	protected function _get_admin()
@@ -179,15 +179,16 @@ class Email_m extends Pagination_Model
 	
 
 	//@listGet 필드네임 정의
-	//admin
-	// public function listData_admin()
-	// {
-	// 	return array(
-	// 		array("displayName"=>"ID","fieldName"=>"id"),
-	// 		array("displayName"=>"이름","fieldName"=>"name"),
-	// 		array("displayName"=>"보이기","fieldName"=>"is_display"),
-	// 	);
-	// }
+	// admin
+	public function listData_admin()
+	{
+		return array(
+			array("displayName"=>"ID","fieldName"=>"id"),
+			array("displayName"=>"제목","fieldName"=>"title"),
+			array("displayName"=>"받는사람","fieldName"=>"to"),
+			array("displayName"=>"생성일","fieldName"=>"created"),
+		);
+	}
 	// public function getData_admin()
 	// {
 	// 	return array(
