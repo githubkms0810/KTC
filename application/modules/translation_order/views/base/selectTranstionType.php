@@ -1,5 +1,5 @@
 <section class="home-hero-project">
-    <h2 class="home-hero-title-project">프로젝트 의뢰하기</h2>
+    <h2 class="home-hero-title-project">프로젝트 의뢰</h2>
     <p class="home-hero-des-project">
         고객님의 의뢰에 최선을 다하는 코리아 통번역 센터입니다!
     </p>
