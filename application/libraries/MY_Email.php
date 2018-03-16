@@ -13,7 +13,6 @@ class MY_Email extends CI_Email {
 		if($this->from === null) throw new RuntimeException("no define tihs->from");
 		$host =$_SERVER["HTTP_HOST"];
 		
-		
 		$this->from("{$this->from}@$host", $subject);
 		$this->to($to);
 		

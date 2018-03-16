@@ -20,7 +20,7 @@ class Admin extends \Admin_Controller {
             $this->template->render($data);
         } else {
 
-            $from = "admin";
+            $from = "adminn";
             $this->email->from = $from;
             $this->email->send_email(post("to"),post("title"),post("desc"));
             $this->db->set("from","{$from}@".$_SERVER["HTTP_HOST"]);
