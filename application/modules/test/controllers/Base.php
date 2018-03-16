@@ -8,6 +8,8 @@ class Base extends \Base_Controller {
 	{
         parent::__construct();
         // $this->get =  new get/ListPgi();
+        if($this->userstate->isDeveloper() === false)
+            exit;
     }
 
     
