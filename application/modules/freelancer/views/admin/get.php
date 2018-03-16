@@ -1,4 +1,8 @@
+
 <link rel="stylesheet" href="/public/css/jy.css">
+<a class="btn btn-default clickable " style="height:30px; padding-top:4px;" href="/admin/freelancer/update/<?=$row->id?>">상세 수정하러 가기</a>
+<br>
+<br>
 <table class="table table-bordered">
     
     <tbody>
@@ -105,19 +109,34 @@
       </tr>
       <tr>
         <td class="jy-td-name">관리자 점수</td>
-        <td colspan="8"><?=$row->admin_score?></td>
+        <td colspan="4"><?=$row->admin_score?></td>
+        <td colspan="4">
+          <form style="display:inline-block" <?=$this->ajax_helper->form("/admin/freelancer/updateAjax/{$row->id}")?>>
+                <div style="display:inline-block" class="form-group">
+                <input name="admin_score" type="number" class="form-control" id="usr">
+                </div>
+                <button class="btn btn-default">확인</button>
+            </form>
+        </td>
       </tr>
       <tr>
         <td class="jy-td-name">관리자 메모</td>
-        <td colspan="8"><?=$row->admin_memo?></td>
+        <td colspan="4"><?=$row->admin_memo?></td>
+        <td colspan="4">
+          <form style="display:inline-block" <?=$this->ajax_helper->form("/admin/freelancer/updateAjax/{$row->id}")?>>
+                <div style="display:inline-block" class="form-group">
+                <input name="admin_memo" type="text" class="form-control" id="usr">
+                </div>
+                <button class="btn btn-default">확인</button>
+            </form>
+        </td>
       </tr>
       <tr>
         <td class="jy-td-name">승인상태</td>
         <td colspan="1"><?=$row->is_admin_confirm?></td>
         <td colspan="3">
-          <form <?=$this->ajax_helper->form("/admin/freelancer/updateAjax/{$row->id}")?>>
-              <div class="form-group">
-                  <label for="sel1">변경</label>
+          <form style="display:inline-block" <?=$this->ajax_helper->form("/admin/freelancer/updateAjax/{$row->id}")?>>
+              <div style="display:inline-block" class="form-group">
                   <select name="is_admin_confirm" class="form-control" id="sel1">
                       <option value="1">승인</option>
                       <option value="0">비승인</option>
@@ -153,4 +172,7 @@
 
 <hr>
 
+<br>
+<a class="btn btn-default clickable " style="height:30px; padding-top:4px;" href="/admin/freelancer/update/<?=$row->id?>">상세 수정하러 가기</a>
+<br>
 <br>

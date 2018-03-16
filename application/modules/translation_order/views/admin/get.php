@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/public/css/jy.css">
 
 
-<button type="button" class="btn btn-default clickable " style="height:30px; padding-top:4px;" data-href="/admin/translation_order/update/<?=$row->id?>?type=<?=$row->type?>&amp;mainMenu=translation_order&amp;subMenu=translation_order_list">상세 수정하러 가기</button>
+<a  class="btn btn-default clickable " style="height:30px; padding-top:4px;"  href="/admin/translation_order/update/<?=$row->id?>?type=<?=$row->type?>&amp;mainMenu=translation_order&amp;subMenu=translation_order_list">상세 수정하러 가기</a>
 
 <hr/>
 <div class="row">
@@ -274,7 +274,7 @@
     
 </div>
 <hr/>
-<button type="button" class="btn btn-default clickable " style="height:30px; padding-top:4px;" data-href="/admin/translation_order/update/<?=$row->id?>?type=<?=$row->type?>&amp;mainMenu=translation_order&amp;subMenu=translation_order_list">상세 수정하러 가기</button>
+<a  class="btn btn-default clickable " style="height:30px; padding-top:4px;"  href="/admin/translation_order/update/<?=$row->id?>?type=<?=$row->type?>&amp;mainMenu=translation_order&amp;subMenu=translation_order_list">상세 수정하러 가기</a>
 
 <br>
 <br>
