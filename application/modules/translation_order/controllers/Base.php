@@ -13,8 +13,10 @@ class Base extends \Base_Controller {
     {
         $this->db->where("id","1");
         $countRow=$this->db->get("count")->row();
-        $num_portfoilo=$this->db->query("SELECT count(*) as count FROM translation_order")->row()->count;
-        $data["num_portfoilo"] = $num_portfoilo;
+        $num_translation=$this->db->query("SELECT count(*) as count FROM translation_order WHERE is_portfolio = 1 AND type= '번역' ")->row()->count;
+        $num_interpert=$this->db->query("SELECT count(*) as count FROM translation_order WHERE is_portfolio = 1 AND type= '통역' ")->row()->count;
+        $data["num_translation"] = $num_translation;
+        $data["num_interpert"] = $num_interpert;
         $data["num_freelancer"] =$countRow->num_freelancer;
         $data["content_view"] = 'base/selectTranstionType';
         $this->template->render($data);
