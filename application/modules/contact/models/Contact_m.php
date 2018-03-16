@@ -235,16 +235,17 @@ class Contact_m extends Pagination_Model
 	//------@search 검색을 허용할 필드들을 정의합니다 
 
 
-	// protected function _searchData()
-    // {
-    //     return array(
-	// 		"title"=>array("displayName"=>"제목","fieldName"=>"b_c.title","kind"=>"or"),
-	// 		"desc"=>array("displayName"=>"내용","fieldName"=>"desc","kind"=>"textfull-or"),
-	// 		"titleDesc"=>array("displayName"=>"제목+내용","fieldName"=>["b_c.title","desc"],"kind"=>["or","textfull-or"]),
-	// 		"displayName"=>array("displayName"=>"글쓴이","fieldName"=>"u.displayName","kind"=>"or"),
-	// 	);
+	protected function _searchData()
+    {
+        return array(
+			"company_name"=>array("displayName"=>"회사","fieldName"=>"{$this->as}.company_name"),
+			"manager"=>array("displayName"=>"담당자","fieldName"=>"{$this->as}.manager"),
+			"manager_phone"=>array("displayName"=>"담당자 번호","fieldName"=>"{$this->as}.manager_phone"),
+			"email"=>array("displayName"=>"이메일","fieldName"=>"{$this->as}.email"),
+			"id"=>array("displayName"=>"ID","fieldName"=>"{$this->as}.id"),
+		);
 		
-	// }
+	}
 	// protected function _searchData_admin()
 	// {
 	// 	return array(

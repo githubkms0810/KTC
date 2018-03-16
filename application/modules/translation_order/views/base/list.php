@@ -11,7 +11,7 @@
     <div class="bc-container" >
         <ul class="home-portfolio-list" id="jscroll-wapper">
             <div>
-                <a href="/translation_order/listWithJscroll?offset=0&limit=<?=$this->limit?>" class="jscroll-next">없음</a>
+                <a href="/translation_order/listWithJscroll?offset=0&limit=<?=$this->limit?>" class="jscroll-next"></a>
             </div>
         </ul>
     </div>

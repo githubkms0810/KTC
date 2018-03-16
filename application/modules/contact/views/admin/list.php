@@ -57,9 +57,7 @@
 			</tbody>
 		</table>
 		</div>
-		<button type="button" class="btn btn-default clickable" data-href="<?=my_site_url("/admin/{$moduleName}/add")?>">추가</button>
 		<br>
-		<button  style="margin-top:10px;" class="btn btn-default clickable" type="submit">선택한것 모두 삭제</button>
 	</form>
 	<div class="text-center">
 			<?=$this->pagination->create_links();?>

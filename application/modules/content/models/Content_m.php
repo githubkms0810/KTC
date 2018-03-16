@@ -186,7 +186,12 @@ class Content_M extends Pagination_Model
 		$this->form_validation->set_rules('desc', '내용', 'trim|required');
 		$this->file_m->set_rules("file");
 	}
-
+	
+	protected function _set_rules_add_admin()
+	{
+		$this->form_validation->set_rules('board_key', '게시판종류', 'trim|required');
+	}
+	
 	protected function _set_rules_add_base()
 	{
 		 ///손님일때 추가 유효성 검사

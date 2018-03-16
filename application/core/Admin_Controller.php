@@ -25,7 +25,7 @@ class Admin_Controller extends Public_Controller
         if($this->userstate->isDeveloper()){
             $this->menudata_creator->addMainMenu("유저","user","users",site_url("admin/user/list"));
         }
-        $this->menudata_creator->addMainMenu("게시판","board","contents",site_url("admin/board/list"));
+        $this->menudata_creator->addMainMenu("게시판","board","contents",site_url("admin/content/list"));
         $this->menudata_creator->addMainMenu("프리랜서","freelancer","freelancer_list",site_url("admin/freelancer/list"));
         $this->menudata_creator->addMainMenu("번역/통역","translation_order","translation_order_list",site_url("admin/translation_order/list"));
         $this->menudata_creator->addMainMenu("제휴문의","contact","contact_list",site_url("admin/contact/list"));
