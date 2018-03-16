@@ -14,7 +14,7 @@
         <script src="/public/js/beautiful.js"></script>
     </head>
     <body class="home">
-        <header class="home-header">
+        <header  class="home-header">
             <div class="bc-container">
                 <h1 class="home-header__logo">
                     <a href="/" style="font-size: 28px !important;"><img src="/public/images/logo.png" style="vertical-align: baseline;" alt="KTC"></a>

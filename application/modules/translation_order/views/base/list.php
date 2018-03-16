@@ -24,7 +24,7 @@
 			$('#jscroll-wapper').jscroll({
 				autoTrigger: true,
 				padding: 0,
-				loadingHtml: '<img src="public/images/loading.gif" alt="Loading" />',
+				loadingHtml: '<img src="/public/images/loading.gif" alt="Loading" />',
 				nextSelector: 'a.jscroll-next:last',
                 autoTriggerUntil : <?=$num_pages?>,
 			});

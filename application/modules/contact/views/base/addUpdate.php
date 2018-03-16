@@ -21,17 +21,22 @@
 	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/css/util.css">
 	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/css/main.css">
 <!--===============================================================================================-->
-
+<script>
+function chageZIndexBySelector(zIndexValue,selector)
+{
+	document.querySelector(selector).style.zIndex  = zIndexValue;
+}
+</script>
 
 	<div class="container-contact100">
-		<div class="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
 
-		<button class="contact100-btn-show">
+		<div class="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
+		<button class="contact100-btn-show" onclick="chageZIndexBySelector(99999,'.container-contact100');">
 			<i class="fa fa-envelope-o" aria-hidden="true"></i>
 		</button>
 
-		<div style="z-index:999999 !important;" class="wrap-contact100">
-			<button  style="z-index:999999 !important;" class="contact100-btn-hide">
+		<div  class="wrap-contact100">
+			<button class="contact100-btn-hide" onclick="chageZIndexBySelector(0,'.container-contact100');">
 				<i class="fa fa-close" aria-hidden="true"></i>
 			</button>
 

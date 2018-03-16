@@ -42,12 +42,16 @@
 					  $( "#viewPersonal" ).hide();
 					  //회사 일때 회사 카테고리 show
 					  $( "#viewCompany" ).show();
+					  removePersonalEmailName();
+					  setManagerEmailName();
 				  }
 				  else if(companyOrPersonal == "개인"){//개인인 경우
 					  //개인 일때 개인 카테고리 show
 					  $( "#viewPersonal" ).show();
 					  //개인 일때 회사 카테고리 hide
 					  $( "#viewCompany" ).hide();
+					  removeManagerEmailName();
+					  setPersonalEmailName();
 				  }
 			  }
 			  function getCompanyOrPersonalByCheckedInput()
@@ -56,6 +60,26 @@
 					return "회사";
 				else if($('input:radio[name="buyer"][value="개인"]').prop('checked'))
 					return "개인";
+			  }
+			  function removeManagerEmailName()
+			  {	
+				  $("#manager_email_first").attr("name","");
+				  $("#manager_email_second").attr("name","");
+			  }
+			  function removePersonalEmailName()
+			  {	
+				  $("#personal_email_first").attr("name","");
+				  $("#personal_email_second").attr("name","");
+			  }
+			  function setManagerEmailName()
+			  {	
+				  $("#manager_email_first").attr("name","email_first");
+				  $("#manager_email_second").attr("name","email_second");
+			  }
+			  function setPersonalEmailName()
+			  {	
+				  $("#personal_email_first").attr("name","email_first");
+				  $("#personal_email_second").attr("name","email_second");
 			  }
 		  </script>
 		  <div>
@@ -100,8 +124,8 @@
               </div>
               <div class="icon">
                   <label style="width:49.5%;" class="project_label" for="project_email">담당자 E-mail</label>
-                  <input value="<?=DEBUG === false ? my_set_value( isset($row->email) ? $this->post_helper->extractUserNameOnEmail($row->email) : null,"email_first") : "emailtestr" ?>" style="width:49.5%; display:inline-block;" class="email" type="text" name="email_first" id="free_email">
-                  <select style="width:49.5%; display:inline-block;" class="email" name="email_second">
+                  <input value="<?=DEBUG === false ? my_set_value( isset($row->email) ? $this->post_helper->extractUserNameOnEmail($row->email) : null,"email_first") : "emailtestr" ?>" style="width:49.5%; display:inline-block;" class="email" type="text" name="email_first" id="manager_email_first">
+                  <select style="width:49.5%; display:inline-block;" class="email" name="email_second" id="manager_email_second">
 				  	<option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@naver.com")?>>@naver.com</option>
 					<option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@gmail.com")?>>@gmail.com</option>
 					<option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@hanmail.net")?>>@hanmail.net</option>
@@ -122,8 +146,8 @@
               </div>
               <div class="icon">
                   <label style="width:49.5%;" class="project_label" for="project_email">E-mail</label>
-                  	<input value="<?=DEBUG === false ? my_set_value( isset($row->email) ? $this->post_helper->extractUserNameOnEmail($row->email) : null,"email_first") : "emailtestr" ?>" style="width:49.5%; display:inline-block;" class="email" type="text" name="email_first" id="free_email">
-                  <select style="width:49.5%; display:inline-block;" class="email" name="email_second">
+                  	<input value="<?=DEBUG === false ? my_set_value( isset($row->email) ? $this->post_helper->extractUserNameOnEmail($row->email) : null,"email_first") : "emailtestr" ?>" style="width:49.5%; display:inline-block;" class="email" type="text" name="email_first" id="personal_email_first">
+                  <select style="width:49.5%; display:inline-block;" class="email" name="email_second" id="personal_email_second">
 				  <option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@naver.com")?>>@naver.com</option>
 				  <option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@gmail.com")?>>@gmail.com</option>
 				  <option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@hanmail.net")?>>@hanmail.net</option>
