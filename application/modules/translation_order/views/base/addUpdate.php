@@ -53,9 +53,9 @@
 			  function getCompanyOrPersonalByCheckedInput()
 			  {
 				if($('input:radio[name="buyer"][value="회사"]').prop('checked'))
-					return "회사"
+					return "회사";
 				else if($('input:radio[name="buyer"][value="개인"]').prop('checked'))
-					return "개인"
+					return "개인";
 			  }
 		  </script>
 		  <div>

@@ -43,8 +43,12 @@
 		<p class="project_select icon">
 			<select name="birth_year" class="budget" style="width:33%; display:inline-block;">
 				<option value="">연도</option>
-				<option  <?=DEBUG === false ? my_set_selected($row,"birth_year","1939") : "selected"?>>1939</option>
-				<option  <?=my_set_selected($row,"birth_year","1940")?>>1940</option>
+				<?php 
+				$numOfMinus = 90;
+				$startYear = date('Y', strtotime("-$numOfMinus years"));
+				 for ( $i = 0 ; $i < $numOfMinus-10 ; $i++ ): $year=$startYear + $i;?>
+					<option  <?=my_set_selected($row,"birth_year",$year)?>><?=$year?></option>
+				<?php endfor; ?>
 		    </select>
 		    <select name="birth_month" class="budget" style="width:32%; display:inline-block;">
 				<option  value="">월</option>
