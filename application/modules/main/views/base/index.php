@@ -67,17 +67,79 @@
 </section>
 <section class="home-section home-section_padding">
     <div class="bc-container">
+        <img src="/public/images/peolple.png">
         <div>
-            <h2 class="home-title">통번역 산업<sapn>의 표준화</sapn></h2>
-            <p class="home-des">
-                코리아 통번역 센터는 대한민국의 통번역 산업의 표준화를 위해 노력하고 있습니다.<br class="br">
-                전시적 언어 자원 관리 시스템, 인재 데이터베이스, 전 프로젝트 PM을 통한<br class="br">
-                책임 공정 및 상시 CS팀 운영 등으로 주먹구구식 운영을 지양하고,<br class="br">
-                프로젝트 통합 관리 시스템을 도입함으로 통번역 산업의 표준화에 앞장서고 있습니다.
+            <h2 class="home-title"><span>완벽한 </span>통번역<span>의 중요성</span></h2>
+            <p class="home-des" style="font-size:16px">
+                코리아 통번역 센터는 는 영어, 일본어, 중국어 등 <br class="br">
+                사용도가 높은 언어는 물론 다문화 사회로 나아가는 과도기에 <br class="br">
+                점점 증가하는 다국 언어까지, 전 세계 120개 국가, <br class="br">
+                50개 이상의 언어로 현지화 서비스를 지원합니다.
             </p>
         </div>
-        <img src="/public/images/peolple.png">
     </div>
+</section>
+<section class="home-section home-section__project">
+    <div class="bc-container">
+        <h2 class="home-title">프로젝트 진행 절차</h2>
+        <ul class="home-list">
+            <li class="home-list__item">
+                <div class="home-list__num">
+                    <span>1</span>
+                </div>
+                <h4 class="home-list__title">고객 상담</h4>
+                <p class="home-list__des">
+                    통번역 전문 PM이 일시, 장소, 내용 등<br class="br">
+                    고객의 요구를 정확히 분석합니다.
+                </p>
+            </li>
+            <li class="home-list__item">
+                <div class="home-list__num">
+                    <span>2</span>
+                </div>
+                <h4 class="home-list__title">고객 상담</h4>
+                <p class="home-list__des">
+                    통번역 전문 PM이 일시, 장소, 내용 등<br class="br">
+                    고객의 요구를 정확히 분석합니다.
+                </p>
+            </li>
+            <li class="home-list__item">
+                <div class="home-list__num">
+                    <span>3</span>
+                </div>
+                <h4 class="home-list__title">고객 상담</h4>
+                <p class="home-list__des">
+                    통번역 전문 PM이 일시, 장소, 내용 등<br class="br">
+                    고객의 요구를 정확히 분석합니다.
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="home-map">
+    <style>
+      #map {
+        height: 500px;
+        width: 100%;
+       }
+    </style>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 37.616217, lng: 126.834748};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom:15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKbIHosDBHBNIkoV-t6x-Fl1EpBE-rQc4&callback=initMap">
+    </script>
 </section>
 <section class="home-section home-section__portfolio">
     <div class="bc-container">
