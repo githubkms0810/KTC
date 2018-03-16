@@ -10,7 +10,7 @@
         편한 시간에 편한 방법으로 문의주세요. <br class="br_portfolio">
         모든 상담은 열려있습니다.
     </p>
-    <a href="#" class="home-btn">02-6738-8220</a>
+    <a href="#" class="home-btn">카카오톡 KTC8220</a>
 </section>
 
 <!-- Begin Site Title

@@ -129,3 +129,70 @@
         <a href="/translation_order/list" class="home-btn">다른 프로젝트 보기</a>
     </div>
 </section>
+<section class="home-map">
+    <style>
+      #map {
+        height: 500px;
+        width: 100%;
+       }
+    </style>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 37.616217, lng: 126.834748};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom:15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKbIHosDBHBNIkoV-t6x-Fl1EpBE-rQc4&callback=initMap">
+    </script>
+</section>
+<section class="home-section">
+    <div class="bc-container">
+        <h2 class="home-title">고객 만족<sapn> 경영 시스템</sapn></h2>
+        <ul class="home-text">
+            <li class="home-text__item home-text__item_right">
+                <p>
+                    고객님의 소중한 의견을 존중하여<br class="br_aboutus2">
+                    항상 고객의 입장에서 생각하고 행동하겠습니다.
+                </p>
+                <img src="/public/images/profile.png">
+            </li>
+            <li class="home-text__item">
+                <p>
+                    고객님의 소중한 의견을 존중하여<br class="br_aboutus2">
+                    항상 고객의 입장에서 생각하고 행동하겠습니다.
+                </p>
+                <img src="/public/images/profile.png">
+            </li>
+            <li class="home-text__item home-text__item_right">
+                <p>
+                    고객님의 소중한 의견을 존중하여<br class="br_aboutus2">
+                    항상 고객의 입장에서 생각하고 행동하겠습니다.
+                </p>
+                <img src="/public/images/profile.png">
+            </li>
+            <li class="home-text__item">
+                <p>
+                    고객님의 소중한 의견을 존중하여<br class="br_aboutus2">
+                    항상 고객의 입장에서 생각하고 행동하겠습니다.
+                </p>
+                <img src="/public/images/profile.png">
+            </li>
+            <li class="home-text__item home-text__item_right">
+                <p>
+                    고객님의 소중한 의견을 존중하여<br class="br_aboutus2">
+                    항상 고객의 입장에서 생각하고 행동하겠습니다.
+                </p>
+                <img src="/public/images/profile.png">
+            </li>
+        </ul>
+    </div>
+</section>
