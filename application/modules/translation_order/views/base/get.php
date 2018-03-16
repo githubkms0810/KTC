@@ -216,7 +216,7 @@
 		<div class="row listrecent listrelated">
 			<?php foreach ( $portfolioes as $portfolio ): ?>
 				<!-- begin post -->
-				<div class="col-md-4" style="cursor:pointer;" onclick="location.href='#'">
+				<div class="col-md-4" style="cursor:pointer;" onclick="location.href='<?="/translation_order/get/$portfolio->id"?>'">
 					<div class="card">
 						<img class="img-fluid img-thumb" src="assets/img/demopic/9.jpg" alt="">
 						<div class="card-block">

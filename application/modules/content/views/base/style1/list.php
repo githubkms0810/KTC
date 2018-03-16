@@ -39,7 +39,7 @@
 					<div class="card-block">
 						<h2 class="card-title"><?=$row->title?></h2>
 						<h4 class="card-text">
-							<?=renderDescriptionToPreview($row->desc)?>
+							<?=renderDescriptionToPreview($row->desc,90)?>
 							
 						</h4>
 						<div class="metafooter">

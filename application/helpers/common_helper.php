@@ -4,11 +4,16 @@
 
 
 if(!function_exists('renderDescriptionToPreview')){
-    function renderDescriptionToPreview(string $desc)
+    function renderDescriptionToPreview(string $desc,int $numOfWords = 120)
     {
+
         $desc =addslashes(preg_replace("/<img[^>]+\>/i", "", $desc));
-        if(strlen($desc)  > 120)
-            $desc =mb_substr($desc,0,120)."...";
+        $desc=str_replace("<br>","",$desc);
+        $desc=str_replace("<p>","",$desc);
+        $desc=str_replace("</p>","",$desc);
+        if(strlen($desc)  > $numOfWords)
+        $desc =mb_substr($desc,0,$numOfWords)."...";
+        $desc = "<span style='color: black'>{$desc}</span>";
         return $desc; 
             
     }   
