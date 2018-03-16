@@ -137,7 +137,11 @@
 
 <?php foreach ( $application_files as $application_file ): ?>
 <div class="row">
-    <div class="col-sm-12"><h4>지원서파일 : <a href="/download/<?=$application_file->id?>"><?=$application_file->original_name?></a></h4></div>
+    <div class="col-sm-12">
+      <h4 style="display:inline-block" >지원서파일 : <a href="/download/<?=$application_file->id?>"><?=$application_file->original_name?></a></h4>
+      &nbsp
+      <a style="display:inline-block" class="btn btn-default" <?=$this->ajax_helper->anchor("/file/delete/{$application_file->id}","복구할 방법이 없습니다 정말 삭제 하시겠습니까?")?>>삭제</a>
+    </div>
 </div>
 <?php endforeach; ?>
 <div class="row">

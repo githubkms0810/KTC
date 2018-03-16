@@ -1,6 +1,9 @@
 
 <link rel="stylesheet" href="/public/css/jy.css">
 
+
+<button type="button" class="btn btn-default clickable " style="height:30px; padding-top:4px;" data-href="/admin/translation_order/update/<?=$row->id?>?type=<?=$row->type?>&amp;mainMenu=translation_order&amp;subMenu=translation_order_list">상세 수정하러 가기</button>
+
 <hr/>
 <div class="row">
     <div class="col-sm-4"><h3>상태: <?=$row->translation_status?></h3></div>
@@ -175,10 +178,7 @@
         <td class="jy-td-name">현금 영수증</td>
         <td colspan="8" ><?=$row->is_get_cash_receipt?></td>
       </tr>
-      <tr>
-        <td class="jy-td-name">기밀 여부</td>
-        <td colspan="8" ><?=$row->is_use_confidential?></td>
-      </tr>
+     
       <tr>
         <td class="jy-td-name">메세지 여부</td>
         <td colspan="8" ><?=$row->message?></td>
@@ -193,20 +193,33 @@
             </form>
         </td>
       </tr>
-
+      <tr>
+        <td class="jy-td-name">기밀 여부</td>
+        <td colspan="4" ><?=$row->is_use_confidential?></td>
+        <td colspan="4" >
+        <form style="display:inline-block" <?=$this->ajax_helper->form("/admin/translation_order/updateAjax/{$row->id}")?>>
+                <div style="display:inline-block" class="form-group">
+                    <select name="is_use_confidential" class="form-control" id="sel1">
+                        <option value="1">기밀ON</option>
+                        <option value="0">기밀OFF</option>
+                    </select>
+                </div>
+                <button style="display:inline-block" class="btn btn-default">확인</button>
+            </form>
+        </td>
+      </tr>
       <tr>
         <td class="jy-td-name">포트폴리오 여부</td>
         <td colspan="4" ><?=$row->is_portfolio?></td>
         <td colspan="4">
-            <form <?=$this->ajax_helper->form("/admin/translation_order/updateAjax/{$row->id}")?>>
-                <div class="form-group">
-                    <label for="sel1">변경</label>
+            <form style="display:inline-block" <?=$this->ajax_helper->form("/admin/translation_order/updateAjax/{$row->id}")?>>
+                <div style="display:inline-block" class="form-group">
                     <select name="is_portfolio" class="form-control" id="sel1">
                         <option value="1">포트폴리오로 전환</option>
                         <option value="0">비전환</option>
                     </select>
                 </div>
-                <button class="btn btn-default">확인</button>
+                <button style="display:inline-block" class="btn btn-default">확인</button>
             </form>
         </td>
       </tr>
@@ -223,12 +236,34 @@
 </div>
 <?php foreach ( $files as $file ): ?>
 <div class="row">
-    <div class="col-sm-12"><h4><a href="/download/<?=$file->id?>"><?=$file->original_name?></a></h4></div>
+    <div class="col-sm-12">
+    <h4 style="display:inline-block"><a href="/download/<?=$file->id?>"><?=$file->original_name?></a></h4>
+    &nbsp
+    <a style="display:inline-block" class="btn btn-default" <?=$this->ajax_helper->anchor("/file/delete/{$file->id}","복구할 방법이 없습니다 정말 삭제 하시겠습니까?")?>>삭제</a>
+    </div>
 </div>
 <?php endforeach; ?>
 
 <hr/>
 
+
+<div class="row">
+    <div class="col-sm-12">
+    <form <?=$this->ajax_helper->form("/admin/translation_order/updateAjax/{$row->id}")?>>
+    
+        <div class="form-group">
+            <label for="usr">프로젝트 이름</label>
+            <input name="title" type="text" class="form-control" id="usr" value="<?=my_set_value($row,"title")?>">
+        </div>
+        <div class="form-group">
+            <label for="comment">업무내용</label>
+            <textarea name="desc" class="form-control" rows="5" id="comment"><?=my_set_value($row,"desc")?></textarea>
+        </div>
+        <button class="btn btn-default" type="submit">보내기</button>
+    </form>
+    </div>
+</div>
+<hr/>
 <div class="row">
     <div class="col-sm-12">
         <form <?=$this->ajax_helper->form("/admin/translation_order/updateAjax/{$row->id}")?>>
@@ -236,8 +271,10 @@
         <button class="btn btn-default" type="submit">보내기</button>
         </form>
     </div>
+    
 </div>
-
+<hr/>
+<button type="button" class="btn btn-default clickable " style="height:30px; padding-top:4px;" data-href="/admin/translation_order/update/<?=$row->id?>?type=<?=$row->type?>&amp;mainMenu=translation_order&amp;subMenu=translation_order_list">상세 수정하러 가기</button>
 
 <br>
 <br>
