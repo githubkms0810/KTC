@@ -1,7 +1,7 @@
 <section class="home-hero-security">
     <h2 class="home-hero-title-security">기밀 유지 정책</h2>
     <p class="home-hero-des-security">
-        코리아 통번역 센터는 보안 정책을 실시하고 있으며,<br>
+        코리아 통번역 센터는 보안 정책을 실시하고 있으며,<br class="br_portfolio">
         고객님의 기밀 사항을 철저하게 보호해드리고 있습니다.
     </p>
     <a href="/translation_order/list" class="home-btn">포트폴리오 보러가기</a>
