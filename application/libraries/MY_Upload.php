@@ -46,6 +46,19 @@ class MY_Upload extends CI_Upload {
         
         return true;
     }
+    public function vlidationFileSize($fileName,$limitSize)
+    {
+        $fileSizeValidation = true;
+        if(isset($_FILES[$fileName]["size"]))
+        foreach ($_FILES[$fileName]["size"] as $size) {
+            if($size >= $limitSize)
+            {
+                $fileSizeValidation = false;
+                break;
+            }
+        }        
+        return $fileSizeValidation;
+    }
     public function validation($kind,$inputConfig=array())
     {
         if(($this->returnNone()) === false)  return array("result"=>"none"); //보낸 파일이없다면 return

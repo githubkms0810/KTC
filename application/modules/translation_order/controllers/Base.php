@@ -57,12 +57,13 @@ class Base extends \Base_Controller {
     {
 
         $this->translation_order_m->setRulesWhenAdd();
-      
-        if($this->form_validation->run() === false){
+        $fileSizeValidation  = $this->upload->vlidationFileSize("files",2000000);
+        if($this->form_validation->run() === false || $fileSizeValidation === false){
             $data["mode"] = "add";
             $data["row"] = (object)[];
             $data['type'] = get("type");
             $data["content_view"] = "base/addUpdate";
+            if($fileSizeValidation === false) alert("파일 업로드 용량은 2mb 이하만 가능합니다.");
             $this->template->render($data);
         }
         else{
@@ -79,7 +80,7 @@ class Base extends \Base_Controller {
             }
             else{            
                 alert("의뢰가 신청 되었습니다. 연락드리겠습니다.\\r메인페이지로 이동합니다.");
-                my_redirect("/");
+                // my_redirect("/");
             }
         }
     }

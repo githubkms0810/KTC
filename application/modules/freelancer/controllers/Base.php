@@ -21,11 +21,13 @@ class Base extends \Base_Controller {
 //     }
     public function add(){
         $this->freelancer_m->setRulesWhenAdd();
-        if($this->form_validation->run() === false){
+        $fileSizeValidation  = $this->upload->vlidationFileSize("files",2000000);
+        if($this->form_validation->run() === false || $fileSizeValidation === false){
             $data["row"] = (object)["is_graduate_school"=>null];
             $data["content_view"] = "base/addUpdate";
             $data["mode"] = "add";
             $data["languages"]=explode("," ,$this->setting->translation_languages);
+            if($fileSizeValidation === false) alert("파일 업로드 용량은 2mb 이하만 가능합니다.");
             $this->template->render($data);
         }
         else{
