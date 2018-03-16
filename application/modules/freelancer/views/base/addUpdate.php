@@ -34,7 +34,7 @@
 	<!--개인일때-->
 	<div class="icon">
 		<label class="project_label" for="free_name">이름</label>
-		<input value="<?=DEBUG === false ? my_set_value($row,"name") : "이름테스트" ?>" class="user" type="text" name="name" id="free_name" required>
+		<input value="<?=DEBUG === false ? my_set_value($row,"name") : "이름테스트" ?>" class="user" type="text" name="name" id="free_name" style="width:99%;" required>
 	</div> 
 
 	<div>
@@ -83,7 +83,7 @@
 
 	<div class="icon">
 		<label class="project_label" for="free_phone">연락처</label>
-		<input value="<?=DEBUG === false ? my_set_value($row,"phone") : "개인번호3" ?>" class="budget" type="text" name="phone" id="free_phone" required>
+		<input value="<?=DEBUG === false ? my_set_value($row,"phone") : "개인번호3" ?>" class="budget" type="text" name="phone" id="free_phone" style="width:99%;" required>
 	</div> 
 
 	<div class="icon">
@@ -111,7 +111,7 @@
 		</div>
 		<div class="icon" style="margin-top:20px;">
 			<label class="project_label" for="project_detailaddress">상세 주소</label>
-			<input value="<?=DEBUG === false ? my_set_value($row,"address_detail") : "상세주소테스트" ?>" class="email" type="text" name="address_detail" id="free_address" required>
+			<input value="<?=DEBUG === false ? my_set_value($row,"address_detail") : "상세주소테스트" ?>" class="email" type="text" name="address_detail" id="free_address" style="width:99%;" required>
 			<span id="guide" style="color:#999"></span>
 		</div>
 	</div>
