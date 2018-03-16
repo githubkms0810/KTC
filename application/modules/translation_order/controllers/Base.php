@@ -11,6 +11,11 @@ class Base extends \Base_Controller {
     }
     public function selectType()
     {
+        $this->db->where("id","1");
+        $countRow=$this->db->get("count")->row();
+        $num_portfoilo=$this->db->query("SELECT count(*) as count FROM translation_order")->row()->count;
+        $data["num_portfoilo"] = $num_portfoilo;
+        $data["num_freelancer"] =$countRow->num_freelancer;
         $data["content_view"] = 'base/selectTranstionType';
         $this->template->render($data);
         

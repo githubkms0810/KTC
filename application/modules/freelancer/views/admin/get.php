@@ -163,12 +163,13 @@
     </div>
 </div>
 <?php endforeach; ?>
-<div class="row">
+<!-- 아래 주석풀꺼면 a링크 download 속성으로 간단하게 다운하게 되면 될듯?(최신브라우저만 지원...) -->
+<!-- <div class="row">
     <div class="col-sm-12"><h4>지원서파일 : <?=$row->application_file_directory1?></h4></div>
 </div>
 <div class="row">
     <div class="col-sm-12"><h4>지원서파일 : <?=$row->application_file_directory2?></h4></div>
-</div>
+</div> -->
 
 <hr>
 

@@ -125,6 +125,7 @@ echo "<br>";
 
    private function convertEstimateToapplication_file_directory($estimate2)
    {
+      $estimate2=str_replace("upload/","",$estimate2); 
       return "/public/upload/regacy/{$estimate2}";
    }
 

@@ -1,1 +1,1 @@
-this is <?=$moduleName?> index page.
+<h1>KTC 관리자 페이에 오신걸 환영합니다!</h1>
