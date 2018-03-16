@@ -38,6 +38,7 @@ abstract class Pagination_Model extends Public_Model{
         $searchValueOption =get_post("searchValueOption");
         if($searchKey !== null && $searchKey !== '')//검색 일떄
         {
+            if($searchKeyOption !==null)
             foreach ($searchKeyOption as $key=>$value) 
             {
                 if(isset($searchKeyOption[$key]) && isset($searchValueOption[$key]))
@@ -45,6 +46,7 @@ abstract class Pagination_Model extends Public_Model{
                     $this->_callbackSearchOption($searchKeyOption[$key],$searchValueOption[$key]);
                 }
             }
+            if($searchKey !==null)
             foreach ($searchKey as $key=>$value) 
             {
                 if(isset($searchKey[$key]) && isset($searchValue[$key]))
@@ -76,6 +78,7 @@ abstract class Pagination_Model extends Public_Model{
         //열 데이터 구하기
         if($searchKey !== null && $searchKey !== '')//검색 일떄
         {
+            if($searchKeyOption !==null)
             foreach ($searchKeyOption as $key=>$value) 
             {
                 // if(isset($searchKey[$key]) && isset($searchValue[$key]) && DEBUG === false)
@@ -84,6 +87,7 @@ abstract class Pagination_Model extends Public_Model{
                     $this->_callbackSearchOption($searchKeyOption[$key],$searchValueOption[$key]);
                 }
             }
+            if($searchKey !==null)
             foreach ($searchKey as $key=>$value) 
             {
                 $this->_callbackSearch($searchKey[$key],$searchValue[$key]);
@@ -107,7 +111,10 @@ abstract class Pagination_Model extends Public_Model{
     public function _callbackSearchOption($key,$value)
     {
         if($value !== "" && $value !== null)
+        {
+            $value=str_replace("&lt;","<",$value);
             $this->db->like($key,$value);
+        }
     }
     public function searchData()
     {
