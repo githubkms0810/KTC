@@ -1368,4 +1368,8 @@ template {
     max-width: 100%;
 }
 
+.article-post {
+    font-family: "Spoqa Han Sans", san-serif !important;
+}
+
 /*# sourceMappingURL=beautiful.css.map */
