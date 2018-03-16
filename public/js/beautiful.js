@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 
   // 로고 슬라이더 시간 단위는 밀리세컨드 입니다. 1000ms = 1초
-  var duration = 15000;
+  var duration = 17500;
 
   var home_logo = $('.home-logo--list');
 

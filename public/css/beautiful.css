@@ -773,9 +773,8 @@ template {
   margin-bottom: 30px;
 }
 .home-section_padding img {
-  margin-bottom: -146px;
   width: 80%;
-  max-width: 501px;
+  max-width: 326px;
 }
 .home-section_padding .bc-container:after {
   content: "";
@@ -785,21 +784,21 @@ template {
 
 @media (min-width: 1150px) {
   .home-section_padding {
-    padding-bottom: 115px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .home-section_padding div div {
     float: left;
-    margin-top: 40px;
-    margin-left: 40px;
+    margin-top: 125px;
   }
   .home-section_padding h2 {
     text-align: left;
   }
   .home-section_padding img {
-    margin-right: 40px;
-    float: right;
-    margin-top: -20px;
-    width: 501px;
+    float: left;
+    margin-right: 80px;
+    margin-left: 150px;
+    width: 326px;
   }
 }
 @media (max-width: 1150px) {
@@ -823,10 +822,11 @@ template {
 
 @media (min-width: 1240px) {
   .home-section_padding div div {
-    margin-left: 70px;
+    margin-top: 125px;
   }
   .home-section_padding img {
     margin-right: 80px;
+    margin-left: 150px;
   }
 }
 /*  */

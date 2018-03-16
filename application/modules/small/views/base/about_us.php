@@ -65,6 +65,20 @@
         </ul>
     </div>
 </section>
+<section class="home-section home-section_padding">
+    <div class="bc-container">
+        <div>
+            <h2 class="home-title">통번역 산업<sapn>의 표준화</sapn></h2>
+            <p class="home-des">
+                코리아 통번역 센터는 대한민국의 통번역 산업의 표준화를 위해 노력하고 있습니다.<br class="br">
+                전시적 언어 자원 관리 시스템, 인재 데이터베이스, 전 프로젝트 PM을 통한<br class="br">
+                책임 공정 및 상시 CS팀 운영 등으로 주먹구구식 운영을 지양하고,<br class="br">
+                프로젝트 통합 관리 시스템을 도입함으로 통번역 산업의 표준화에 앞장서고 있습니다.
+            </p>
+        </div>
+        <img src="/public/images/peolple.png">
+    </div>
+</section>
 <section class="home-section home-section__project">
     <div class="bc-container">
         <h2 class="home-title">프로젝트 진행 절차</h2>
@@ -176,10 +190,6 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKbIHosDBHBNIkoV-t6x-Fl1EpBE-rQc4&callback=initMap">
     </script>
-  </body>
-</html>
-
-
 </section>
 <section class="home-section">
     <div class="bc-container">
