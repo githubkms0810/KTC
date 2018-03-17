@@ -28,7 +28,7 @@ class Admin_Controller extends Public_Controller
         $this->menudata_creator->addMainMenu("프리랜서","freelancer","freelancer_list",site_url("admin/freelancer/list"));
         $this->menudata_creator->addMainMenu("번역/통역","translation_order","translation_order_list",site_url("admin/translation_order/list"));
         $this->menudata_creator->addMainMenu("제휴문의","contact","contact_list",site_url("admin/contact/list"));
-        $this->menudata_creator->addMainMenu("이메일","email","email_list",site_url("admin/email/list"));
+        $this->menudata_creator->addMainMenu("이메일","email","","http://mail.".$_SERVER["HTTP_HOST"],false,"_blank");
         
 
 		return $this->menudata_creator->getMainMenus();
@@ -51,7 +51,7 @@ class Admin_Controller extends Public_Controller
 		$this->menudata_creator->addSubMenu("freelancer","프리랜서","freelancer_list",site_url("admin/freelancer/list"));
 		$this->menudata_creator->addSubMenu("freelancer","설정","freelancer_setting",site_url("admin/freelancer/setting"));
 		$this->menudata_creator->addSubMenu("translation_order","번역/통역 의뢰","translation_order_list",site_url("admin/translation_order/list"));
-		$this->menudata_creator->addSubMenu("email","이메일","email_list",site_url("admin/email/list"));
+		// $this->menudata_creator->addSubMenu("email","이메일","email_list",site_url("admin/email/list"));
 	
 		return $this->menudata_creator->getSubMenus();
 	}

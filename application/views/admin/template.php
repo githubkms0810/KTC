@@ -178,7 +178,7 @@
       <?php else: ?>     
       <li><img class="img-circle" style="width:50px;" src="<?=$this->user->profile_image?>" alt=""></li>
         <li><a href="/user/get"> <?=$this->user->displayName?>님 환영합니다.</a></li>
-        <li><a href="<?=site_url("user/update")?>" >내정보수정</a></li>
+        <!-- <li><a href="<?=site_url("user/update")?>" >내정보수정</a></li> -->
         <li><a <?=$this->ajax_helper->anchor("/user/logout")?> >로그아웃</a></li>
       <?php endif;?>   
      

@@ -64,7 +64,7 @@ class Base extends \Base_Controller {
     {
 
         $this->translation_order_m->setRulesWhenAdd();
-        $fileSizeValidation  = $this->upload->vlidationFileSize("files",2000000);
+        $fileSizeValidation  = $this->upload->vlidationFileSize("files",uploadLimitSize);
         if($this->form_validation->run() === false || $fileSizeValidation === false){
             $data["mode"] = "add";
             $data["row"] = (object)[];
@@ -87,7 +87,7 @@ class Base extends \Base_Controller {
             }
             else{            
                 alert("의뢰가 신청 되었습니다. 연락드리겠습니다.\\r메인페이지로 이동합니다.");
-                // my_redirect("/");
+                my_redirect("/");
             }
         }
     }

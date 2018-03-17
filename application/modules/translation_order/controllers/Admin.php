@@ -19,12 +19,13 @@ class Admin extends \Admin_Controller {
     public function add()
     {
         $this->translation_order_m->setRulesWhenAdd();
-        
-          if($this->form_validation->run() === false){
+        $fileSizeValidation  = $this->upload->vlidationFileSize("files",uploadLimitSize);
+        if($this->form_validation->run() === false || $fileSizeValidation === false){
               $data["mode"] = "add";
               $data['type'] = get("type");
               $data["row"] = (object)[];
               $data["content_view"] = "base/addUpdate";
+              if($fileSizeValidation === false) alert("업로드는 파일 하나당 2mb 이하만 가능합니다.");
               $this->template->render($data);
           }
           else{
@@ -53,11 +54,13 @@ class Admin extends \Admin_Controller {
     public function update($id)
     {
         $this->translation_order_m->setRulesWhenAdd();
-          if($this->form_validation->run() === false){
+        $fileSizeValidation  = $this->upload->vlidationFileSize("files",uploadLimitSize);
+        if($this->form_validation->run() === false || $fileSizeValidation === false){
               $data["mode"] = "update/$id";
               $data['type'] = get("type");
               $data["row"] =  $this->translation_order_m->get($id);
               $data["content_view"] = "base/addUpdate";
+              if($fileSizeValidation === false) alert("업로드는 파일 하나당 2mb 이하만 가능합니다.");
               $this->template->render($data);
           }
           else{
@@ -97,6 +100,7 @@ class Admin extends \Admin_Controller {
     public function setting()
     {
         $this->load->model('setting_m');
+      
         //get
         if ($this->input->method() !== "post") 
         {

@@ -336,11 +336,20 @@ if(!function_exists('my_set_value_input')){
 if(!function_exists('my_set_checked')){
     function my_set_checked($obj, $name,$value,$default = false,$splitChar=null){
         $value = (string)$value;
-        if(isset($_POST[$name]) && $_POST[$name]  === $value){
+        if(isset($_POST[$name])){
+            if($_POST[$name]  === $value)
             return "checked";
-        }else if(!isset($_POST[$name]) && property_exists($obj,$name)){
-            if($splitChar!==null)
+            if(is_array($_POST[$name]))
             {
+                foreach ($_POST[$name] as $key2 => $value2) {
+                    if($value2 === $value)
+                    return "checked";
+                }
+            }
+        }
+        else if(!isset($_POST[$name]) && property_exists($obj,$name)){
+            if($splitChar!==null)
+            { 
                 $arr=explode($splitChar,$obj->$name) ;
                 foreach ($arr as $key2 => $value2) {
                     if($value === $value2)

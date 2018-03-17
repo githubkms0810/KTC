@@ -21,7 +21,7 @@ class Base extends \Base_Controller {
 //     }
     public function add(){
         $this->freelancer_m->setRulesWhenAdd();
-        $fileSizeValidation  = $this->upload->vlidationFileSize("files",2000000);
+        $fileSizeValidation  = $this->upload->vlidationFileSize("files",uploadLimitSize);
         if($this->form_validation->run() === false || $fileSizeValidation === false){
             $data["row"] = (object)["is_graduate_school"=>null];
             $data["content_view"] = "base/addUpdate";
