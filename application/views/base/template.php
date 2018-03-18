@@ -14,6 +14,32 @@
         <script src="/public/js/beautiful.js"></script>
     </head>
     <body class="home">
+        <!-- Channel Plugin Scripts -->
+        <script>
+          window.channelPluginSettings = {
+            "pluginKey": "8d3f0699-35e0-4425-a77e-8470a9c0ee80"
+          };
+          (function() {
+            var node = document.createElement('div');
+            node.id = 'ch-plugin';
+            document.body.appendChild(node);
+            var async_load = function() {
+              var s = document.createElement('script');
+              s.type = 'text/javascript';
+              s.async = true;
+              s.src = '//cdn.channel.io/plugin/ch-plugin-web.js';
+              s.charset = 'UTF-8';
+              var x = document.getElementsByTagName('script')[0];
+              x.parentNode.insertBefore(s, x);
+            };
+            if (window.attachEvent) {
+              window.attachEvent('onload', async_load);
+            } else {
+              window.addEventListener('DOMContentLoaded', async_load, false);
+            }
+          })();
+        </script>
+        <!-- End Channel Plugin -->
         <header  class="home-header">
             <div class="bc-container">
                 <h1 class="home-header__logo">
