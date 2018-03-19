@@ -269,8 +269,7 @@
 	<div class="row">
 	    <h4>이력서 및 포트폴리오</h4>
 		<div class="col s12">
-		    <button class="replace">파일 업로드</button>
-			<input multiple="multiple" type="file" name="files[]" style="opacity: 0; position: relative;" />
+            <button type="button" onclick="$('#jy-input-file').click();" class="replace">파일 업로드</button><input id="jy-input-file" multiple="multiple" type="file" name="files[]" style="display:none;" />
 			<!-- <iframe class="iframe_dynamic_height" height="100px;" width="100%" maginwidth="0" marginheight="0" frameborder="0"  scrolling="no"  src="/file/upload" ></iframe>
 			<script  src="/public/subpage/js/000_fileuproad/iframe-dynmic-height.js"></script> -->
 		</div>
