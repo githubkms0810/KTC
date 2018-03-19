@@ -6,7 +6,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-html {
+ html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -414,12 +414,17 @@ template {
 .home-header {
   height: 82px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  background-color: transparent;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   right: 0;
   z-index: 100;
+}
+.unchage-header{
+  background-color: transparent;
+}
+.change-header {
+  background-color:white;
 }
 .home-header .bc-container {
   position: relative;
@@ -429,10 +434,16 @@ template {
 }
 .home-header__logo a {
   display: inline-block;
+  border-bottom: 2px solid #fff;
   height: 82px;
   line-height: 82px;
   padding: 0 10px;
+}
+.unchange-header__logo a {
   border-bottom: 2px solid #fff;
+}
+.change-header__logo a {
+  border-bottom: 2px solid #000;
 }
 .home-header__logo_remove a {
   border-bottom: none;
@@ -494,6 +505,12 @@ template {
     margin-left: 20px;
     margin-top: 20px;
   }
+  .unchange-home-nav__list > li:last-child {
+    border: 2px solid #fff;
+  }
+  .change-home-nav__list > li:last-child {
+    border: 2px solid #000;
+  }
   .home-nav__list > li:last-child a {
     height: 40px;
     line-height: 40px;
@@ -528,13 +545,19 @@ template {
     display: block;
   }
   .home-nav a {
-    color: #fff !important;
     font-size: 14px;
+    color: #fff !important;
     display: inline-block;
     height: 82px;
     line-height: 82px;
     padding: 0 25px;
     margin-bottom: 0;
+  }
+  .unchange-home-nav a{
+    color: #fff !important;
+  }
+  .change-home-nav a{
+    color: #000 !important;
   }
   .home-nav a:hover {
     border-bottom: 2px solid #fff;
