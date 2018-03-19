@@ -640,9 +640,10 @@ template {
 .home-hero-security {
   text-align: center;
   color: #fff;
-  background-image: linear-gradient(#8491fa 20%, #59bff8);
+  background-image: url(../images/hero-security-bg.png);
   background-position: center top;
   padding: 182px 20px 100px 20px;
+  height: 100vh;
 }
 .home-hero-title-security {
   font-size: 40px;

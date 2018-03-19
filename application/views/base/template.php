@@ -106,7 +106,7 @@
                     <h4><b>CONTACT</b></h4>
                     <p><span><b>TEL</b></span>&nbsp;&nbsp;&nbsp;02-6738-8220</p>
                     <p><span><b>FAX</b></span>&nbsp;&nbsp;&nbsp;02-6499-8220</p>
-                    <p><span><b>E-MAIL</b></span>&nbsp;&nbsp;&nbsp;ktx@ktrans.kr</p>
+                    <p><span><b>E-MAIL</b></span>&nbsp;&nbsp;&nbsp;ktc@ktrans.kr</p>
                 </div>
                 <div class="home-footer__info">
                     <h4><b>INFORMATION</b></h4>
