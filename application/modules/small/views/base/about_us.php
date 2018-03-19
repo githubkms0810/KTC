@@ -77,7 +77,7 @@
                 프로젝트 통합 관리 시스템을 도입함으로 통번역 산업의 표준화에 앞장서고 있습니다.
             </p>
         </div>
-        <img src="/public/images/peolple.png" class="image">
+        <img src="/public/images/peolple2.png" class="image">
     </div>
 </section>
 <section class="home-section home-section__project">

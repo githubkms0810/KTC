@@ -425,7 +425,7 @@ template {
 }
 .change-header {
   background-color:white;
-  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0 4px 20px rgba(149,186,219,0.25);
 }
 .home-header .bc-container {
   position: relative;
@@ -561,7 +561,8 @@ template {
     color: #fff !important;
   }
   .change-home-nav a{
-    color: #000 !important;
+    color: #4d4d4d !important;
+    font-weight: bold;
   }
   .home-nav a:hover {
     border-bottom: 2px solid #fff;
@@ -621,7 +622,7 @@ template {
 .home-hero-about_us {
   text-align: center;
   color: #fff;
-  background-image: linear-gradient(#8491fa 20%, #59bff8);
+  background-image: url(../images/hero-bg-aboutus.png);
   background-position: center top;
   padding: 182px 20px 100px 20px;
 }
@@ -737,7 +738,7 @@ template {
 .home-hero-portfolio {
   text-align: center;
   color: #fff;
-  background-image: linear-gradient(#8491fa 20%, #59bff8);
+  background-image: url(../images/hero-bg-portfolio.png);
   background-position: center top;
   padding: 182px 20px 100px 20px;
 }
