@@ -264,7 +264,7 @@
 	<!--첨부파일폼 끝-->
 
 	<div>
-		<input type="submit" value="신청">
+		<input type="submit" value="지원하기">
 	</div>
 </fieldset>
 </form>
