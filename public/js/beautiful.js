@@ -41,7 +41,7 @@ $(document).ready(function(){
 $(function() {
   //caches a jQuery object containing the header element
   var header = $(".home-header");
-  var logo = $(".home-header__logo");
+  var logobar = $(".home-header__logo");
   var color = $(".home-nav");
   var list = $(".home-nav__list");
   $(window).scroll(function() {
@@ -49,13 +49,11 @@ $(function() {
 
       if (scroll >= 0.1) {
         header.removeClass('unchange-header').addClass("change-header");
-        logo.removeClass('unchange-header__logo').addClass("change-header__logo");
         color.removeClass('unchange-home-nav').addClass("change-home-nav");
         list.removeClass('unchange-home-nav__list').addClass("change-home-nav__list");
 
       } else {
         header.removeClass("change-header").addClass('unchange-header');
-        logo.removeClass("change-header__logo").addClass('unchange-header__logo');
         color.removeClass("change-home-nav").addClass('unchange-home-nav');
         list.removeClass("change-home-nav__list").addClass('unchange-home-nav__list');
       }
