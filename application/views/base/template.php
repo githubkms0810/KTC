@@ -51,7 +51,7 @@
         <header  class="home-header">
             <div class="bc-container">
                 <h1 class="home-header__logo">
-                    <a href="/" style="font-size: 28px !important;"><img src="/public/images/logo.png" style="vertical-align: baseline; font-family: 'Spoqa Han Sans', sans-serif;" alt="KTC"></a>
+                    <a href="/" style="font-size: 28px !important; font-family: 'Spoqa Han Sans', sans-serif;"><img src="/public/images/logo.png" style="vertical-align: baseline;" alt="KTC"></a>
                 </h1>
                 <span class="home-nav--btn">
                     <img src="/public/images/menu.png" alt="nav">
