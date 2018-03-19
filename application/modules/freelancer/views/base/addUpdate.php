@@ -164,15 +164,15 @@
 		<ul class="project_form-list">
 		<li>
 		<input type="radio" name="translation_direction" value="외국어->한국어" <?=my_set_checked($row,"translation_direction","외국어->한국어",true)?> id="free_radio_1">
-		<label for="free_radio_1">외국어 -> 한국어</label>
+		<label for="free_radio_1">외국어 → 한국어</label>
 		</li>
 	<li>
 		<input type="radio" name="translation_direction" value="한국어->외국어" <?=my_set_checked($row,"translation_direction","한국어->외국어")?> id="free_radio_2">
-		<label for="free_radio_2">한국어 -> 외국어</label>
+		<label for="free_radio_2">한국어 ← 외국어</label>
 	</li>
 	<li>
 		<input type="radio" name="translation_direction" value="외국어<->한국어" <?=my_set_checked($row,"translation_direction","외국어<->한국어")?> id="free_radio_3">
-		<label for="free_radio_3">외국어 <-> 한국어</label>
+		<label for="free_radio_3">외국어 ↔ 한국어</label>
 	</li>
 		</ul>
 	</div>
@@ -250,6 +250,7 @@
 				//어드민페이지 업데이트 페이지에서 대학원이라면 대학원필드 보이게 끝
 			<?php endif;?>
 		  </script>
+    </div>
 
 	<!--첨부파일폼시작-->
 	<div class="row">
@@ -268,11 +269,10 @@
 	</div>
 </fieldset>
 </form>
-	</div>
+</div>
   
 <!--프리랜서지원폼 끝-->  
 <script src="/public/subpage/js/005_project/main.js"></script>
-
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script>
   //본 예제에서는 도로명 주소 표기 방식에 대한 법령에 따라, 내려오는 데이터를 조합하여 올바른 주소를 구성하는 방법을 설명합니다.

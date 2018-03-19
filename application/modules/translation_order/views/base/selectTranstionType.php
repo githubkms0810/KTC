@@ -44,9 +44,8 @@
         </div>
         <div class="join-wrap">
             <div class="join-tit">
-                저희는 총 <b><?=$num_translation+34?></b>건의 번역과<br>
-                저희는 총 <b><?=$num_interpert+294?></b>건의 통역을 맡았습니다!<br>
-                지금 의뢰하시면 <b><?=$num_freelancer?>명</b>의 통번역사를 만나보실 수 있어요.
+                저희는 총 <b><?=$num_translation+34?></b>건의 번역과 <b><?=$num_interpert+294?></b>건의 통역을 맡았습니다!<br>
+                지금 의뢰하시면 <b><?=$num_freelancer?>명</b>의 통번역사가 함께합니다.
             </div>
             <div class="join-list">
                 <ul>
