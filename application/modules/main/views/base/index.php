@@ -68,11 +68,20 @@
 </section>
 <section class="home-section home-section__project_main" style="padding-top:100px; padding-bottom:100px;">
     <div class="bc-container">
-        <h2 class="home-title" data-animation="flipInX" data-timeout="300">코리아 통번역 센터<span>가 드리는</span> 약속</h2>
+        <h2 class="home-title" data-animation="flipInX" data-timeout="300">고객님<span>께 드리는</span> 약속</h2>
         <ul class="home-list">
             <li class="home-list__item_main">
                 <div class="home-list__num_main">
                     <span>1</span>
+                </div>
+                <h4 class="home-list__title_main">누적된 노하우</h4>
+                <p class="home-list__des_main">
+                    다년간 대기업, 공기업의 다양한 프로젝트를 성공적으로 마무리하여 노하우가 있습니다.
+                </p>
+            </li>
+            <li class="home-list__item_main">
+                <div class="home-list__num_main">
+                    <span>2</span>
                 </div>
                 <h4 class="home-list__title_main">세심한 관리</h4>
                 <p class="home-list__des_main">
@@ -81,20 +90,11 @@
             </li>
             <li class="home-list__item_main">
                 <div class="home-list__num_main">
-                    <span>2</span>
+                    <span>3</span>
                 </div>
                 <h4 class="home-list__title_main">철저한 사전 조사</h4>
                 <p class="home-list__des_main">
                     KTC는 최고의 품질을 위해 철저한 사전 조사로 완벽한 고증을 자랑합니다.
-                </p>
-            </li>
-            <li class="home-list__item_main">
-                <div class="home-list__num_main">
-                    <span>3</span>
-                </div>
-                <h4 class="home-list__title_main">누적된 노하우</h4>
-                <p class="home-list__des_main">
-                    다년간 대기업, 공기업의 다양한 프로젝트를 성공적으로 마무리하여 노하우가 있습니다.
                 </p>
             </li>
         </ul>

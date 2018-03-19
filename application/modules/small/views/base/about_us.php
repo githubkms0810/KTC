@@ -66,7 +66,7 @@
         </ul>
     </div>
 </section>
-<section class="home-section home-section_padding">
+<section class="home-section home-section_padding2">
     <div class="bc-container">
         <div>
             <h2 class="home-title">통번역 산업<sapn>의 표준화</sapn></h2>
@@ -90,78 +90,61 @@
                 </div>
                 <h4 class="home-list__title">고객 상담</h4>
                 <p class="home-list__des">
-                    통번역 전문 PM이 일시, 장소, 내용 등<br class="br">
-                    고객의 요구를 정확히 분석합니다.
+                    통번역 전문 PM이 일시, 장소, 내용 등 고객의 요구를 정확히 분석합니다.
                 </p>
             </li>
             <li class="home-list__item">
                 <div class="home-list__num">
                     <span>2</span>
                 </div>
-                <h4 class="home-list__title">고객 상담</h4>
+                <h4 class="home-list__title">견적서 발송 및 검토</h4>
                 <p class="home-list__des">
-                    통번역 전문 PM이 일시, 장소, 내용 등<br class="br">
-                    고객의 요구를 정확히 분석합니다.
+                    견적을 의뢰하시면 30분 이내로 합리적인 견적서 발송합니다.
                 </p>
             </li>
             <li class="home-list__item">
                 <div class="home-list__num">
-                    <span>2</span>
+                    <span>3</span>
                 </div>
-                <h4 class="home-list__title">고객 상담</h4>
+                <h4 class="home-list__title">계약 체결</h4>
                 <p class="home-list__des">
-                    통번역 전문 PM이 일시, 장소, 내용 등<br class="br">
-                    고객의 요구를 정확히 분석합니다.
+                    견적서 비용에 따라 전액 또는 일부 결제 확인 후, 통번역사 배정합니다.
                 </p>
             </li>
             <li class="home-list__item">
                 <div class="home-list__num">
-                    <span>2</span>
+                    <span>4</span>
                 </div>
-                <h4 class="home-list__title">고객 상담</h4>
+                <h4 class="home-list__title">팀 구성</h4>
                 <p class="home-list__des">
-                    통번역 전문 PM이 일시, 장소, 내용 등<br class="br">
-                    고객의 요구를 정확히 분석합니다.
+                    해당 분야 전문 프로젝트 관리자를 배치한 후, 팀을 구성합니다.
                 </p>
             </li>
             <li class="home-list__item">
                 <div class="home-list__num">
-                    <span>2</span>
+                    <span>5</span>
                 </div>
-                <h4 class="home-list__title">고객 상담</h4>
+                <h4 class="home-list__title">착수</h4>
                 <p class="home-list__des">
-                    통번역 전문 PM이 일시, 장소, 내용 등<br class="br">
-                    고객의 요구를 정확히 분석합니다.
+                    본격적으로 엄선된 고급 통번역사의 실력을 제대로 느끼실 수 있습니다.
                 </p>
             </li>
             <li class="home-list__item">
                 <div class="home-list__num">
-                    <span>2</span>
+                    <span>6</span>
                 </div>
-                <h4 class="home-list__title">고객 상담</h4>
+                <h4 class="home-list__title">잔금 처리</h4>
                 <p class="home-list__des">
-                    통번역 전문 PM이 일시, 장소, 내용 등<br class="br">
-                    고객의 요구를 정확히 분석합니다.
+                    완성된 작업물에 따라 피드백 과정을 거친 뒤 잔금을 입금합니다.
                 </p>
             </li>
             <li class="home-list__item">
                 <div class="home-list__num">
-                    <span>2</span>
+                    <span>7</span>
                 </div>
-                <h4 class="home-list__title">고객 상담</h4>
+                <h4 class="home-list__title">사후 관리</h4>
                 <p class="home-list__des">
-                    통번역 전문 PM이 일시, 장소, 내용 등<br class="br">
-                    고객의 요구를 정확히 분석합니다.
-                </p>
-            </li>
-            <li class="home-list__item">
-                <div class="home-list__num">
-                    <span>2</span>
-                </div>
-                <h4 class="home-list__title">고객 상담</h4>
-                <p class="home-list__des">
-                    통번역 전문 PM이 일시, 장소, 내용 등<br class="br">
-                    고객의 요구를 정확히 분석합니다.
+                    걱정마세요. 코리아 통번역 센터는 최상의 사후 관리 서비를 지원합니다.
                 </p>
             </li>
         </ul>
@@ -193,7 +176,7 @@
     </script>
 </section>
 <section class="home-section">
-    <div class="bc-container">
+    <div class="bc-container" style="max-width:1024px;">
         <h2 class="home-title">고객 만족<sapn> 경영 시스템</sapn></h2>
         <ul class="home-text">
             <li class="home-text__item home-text__item_right">
@@ -201,14 +184,42 @@
                     고객님의 소중한 의견을 존중하여<br class="br_aboutus2">
                     항상 고객의 입장에서 생각하고 행동하겠습니다.
                 </p>
-                <img src="/public/images/profile.png">
+                <img src="/public/images/profile1.png">
             </li>
             <li class="home-text__item">
                 <p>
-                    고객님의 소중한 의견을 존중하여<br class="br_aboutus2">
-                    항상 고객의 입장에서 생각하고 행동하겠습니다.
+                    고객님의 요청사항을<br class="br_aboutus2">
+                    정확, 신속, 친절하게 처리하겠습니다.
                 </p>
-                <img src="/public/images/profile.png">
+                <img src="/public/images/profile2.png">
+            </li>
+            <li class="home-text__item">
+                <p>
+                    고객 만족 경영 시스템, 3CS를 도입하여<br class="br_aboutus2">
+                    고객 만족을 위하여 끊임없이 노력하겠습니다.
+                </p>
+                <img src="/public/images/profile3.png">
+            </li>
+            <li class="home-text__item">
+                <p>
+                    고객님의 정보 보호를 위하여<br class="br_aboutus2">
+                    보안 사항을 철저히 지키겠습니다.
+                </p>
+                <img src="/public/images/profile4.png">
+            </li>
+            <li class="home-text__item">
+                <p>
+                    저희는 고객님의 작은 소리에도<br class="br_aboutus2">
+                    귀 기울이며 잘못된 점은 즉시 바로잡겠습니다.
+                </p>
+                <img src="/public/images/profile5.png">
+            </li>
+            <li class="home-text__item">
+                <p>
+                    앞으로도 고객님께 최상의 서비스를 제공하고<br class="br_aboutus2">
+                    대한민국 대표로서의 사명을 다하겠습니다.
+                </p>
+                <img src="/public/images/profile6.png">
             </li>
         </ul>
     </div>

@@ -415,7 +415,7 @@
 			  <h4>번역 예산</h4>
   
 			  <div class="icon" style="margin-bottom:10px;">
-				  <input type="text" value="<?=DEBUG === false ? my_set_value($row,"budget") : "예산테스트" ?>" placeholder="$1,000" class="email" name="budget" id="project_budget">			
+				  <input type="text" value="<?=DEBUG === false ? my_set_value($row,"budget") : "예산테스트" ?>" placeholder="1,000원" class="email" name="budget" id="project_budget">			
 			  </div>
 				  <ul class="project_form-list">
 					  <li>
