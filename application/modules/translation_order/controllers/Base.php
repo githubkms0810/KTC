@@ -38,6 +38,10 @@ class Base extends \Base_Controller {
             $portfolio=$this->changeConfidential($portfolio);
 
         $this->db->where("type",$portfolioType);
+        $num_translation=$this->db->query("SELECT count(*) as count FROM translation_order WHERE is_portfolio = 1 AND type= '번역' ")->row()->count;
+        $num_interpert=$this->db->query("SELECT count(*) as count FROM translation_order WHERE is_portfolio = 1 AND type= '통역' ")->row()->count;
+        $data["num_translation"] = $num_translation;
+        $data["num_interpert"] = $num_interpert;
         $data["portfolioes"] = $this->translation_order_m->listIsPortfolioWithLimit(3,0);
         $data["portfolio"] = $portfolio;
 		$data["content_view"] = "base/get";
