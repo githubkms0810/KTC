@@ -137,8 +137,26 @@
 		<p class="project_select icon_account">
 			<select name="account_bank" class="budget" style="width:24%; display:inline-block;">
 				<option value="">은행</option>
-				<option value="신한" <?=DEBUG === false ? my_set_selected($row,"account_bank","신한") : "selected"?>>신한</option>
-			    <option value="국민" <?=my_set_selected($row,"account_bank","국민")?>>국민</option>
+			    <option value="NH농협은행" <?=my_set_selected($row,"account_bank","NH농협은행")?>>NH농협은행</option>
+			    <option value="우리은행" <?=my_set_selected($row,"account_bank","우리은행")?>>우리은행</option>
+			    <option value="SC은행" <?=my_set_selected($row,"account_bank","SC은행")?>>SC은행</option>
+			    <option value="기업은행" <?=my_set_selected($row,"account_bank","기업은행")?>>기업은행</option>
+			    <option value="수협중앙회" <?=my_set_selected($row,"account_bank","수협중앙회")?>>수협중앙회</option>
+			    <option value="신한은행" <?=my_set_selected($row,"account_bank","신한은행")?>>신한은행</option>
+			    <option value="한국씨티은행" <?=my_set_selected($row,"account_bank","한국씨티은행")?>>한국씨티은행</option>
+			    <option value="대구은행" <?=my_set_selected($row,"account_bank","대구은행")?>>대구은행</option>
+                <option value="부산은행" <?=my_set_selected($row,"account_bank","부산은행")?>>부산은행</option>
+                <option value="한국산업은행" <?=my_set_selected($row,"account_bank","한국산업은행")?>>한국산업은행</option>
+                <option value="광주은행" <?=my_set_selected($row,"account_bank","광주은행")?>>광주은행</option>
+                <option value="제주은행" <?=my_set_selected($row,"account_bank","제주은행")?>>제주은행</option>
+                <option value="전북은행" <?=my_set_selected($row,"account_bank","전북은행")?>>전북은행</option>
+                <option value="경남은행" <?=my_set_selected($row,"account_bank","경남은행")?>>경남은행</option>
+                <option value="KEB 하나은행" <?=my_set_selected($row,"account_bank","KEB 하나은행")?>>KEB 하나은행</option>
+                <option value="새마을금고" <?=my_set_selected($row,"account_bank","국민")?>>새마을금고</option>
+                <option value="우체국" <?=my_set_selected($row,"account_bank","국민")?>>우체국</option>
+                <option value="새마을금고" <?=my_set_selected($row,"account_bank","국민")?>>새마을금고</option>
+                <option value="신협" <?=my_set_selected($row,"account_bank","국민")?>>신협</option>
+                <option value="산림조합" <?=my_set_selected($row,"account_bank","국민")?>>산림조합</option>
 			</select>
 			<input value="<?=DEBUG === false ? my_set_value($row,"account_number") : "1245967" ?>" placeholder="계좌번호" type="text" name="account_number" id="free_account" required style="display:inline-block; width: 50%;">
 			<input value="<?=DEBUG === false ? my_set_value($row,"account_name") : "예금주테스트" ?>" placeholder="예금주" type="text" name="account_name" id="free_account" required style="width: 23%; display:inline-block;">
