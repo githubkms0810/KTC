@@ -1,11 +1,12 @@
 <section class="home-hero-about_us">
+    <div class="animated fadeInUp">
     <h2 class="home-hero-title-about_us">회사 소개</h2>
     <p class="home-hero-des-about_us">
         코리아 통번역 센터는 전문 번역 서비스는 물론<br class="br_aboutus">
         소프트웨어 현지화, 국제 회의 맞춤 통역 서비스 등을 제공하는<br class="br_aboutus">
         대한민국 대표 언어 전문 서비스 기업입니다.
     </p>
-    <a href="/translation_order/list" class="home-btn">포트폴리오 보러가기</a>
+    <a href="/translation_order/list" class="home-btn">포트폴리오 보러가기</a></div>
 </section>
 <section class="home-logo">
     <div class="home-logo__wrap">
@@ -76,7 +77,7 @@
                 프로젝트 통합 관리 시스템을 도입함으로 통번역 산업의 표준화에 앞장서고 있습니다.
             </p>
         </div>
-        <img src="/public/images/peolple.png">
+        <img src="/public/images/peolple.png" class="image">
     </div>
 </section>
 <section class="home-section home-section__project">
@@ -212,3 +213,18 @@
         </ul>
     </div>
 </section>
+<script>
+    // Changing the defaults
+window.sr = ScrollReveal({ reset: true });
+
+// Customizing a reveal set
+sr.reveal('.home-title', { duration: 1500 });
+
+sr.reveal('.home-des',{duration:1500});
+
+sr.reveal('.home-list__item',{duration:1500});
+
+sr.reveal('.home-text__item',{duration:1500});
+
+sr.reveal('.image',{duration:1500});
+</script>

@@ -1,11 +1,12 @@
 <section class="home-hero-portfolio">
+	<div class="animated fadeInUp">
     <h2 class="home-hero-title-portfolio">포트폴리오</h2>
     <p class="home-hero-des-portfolio">
         코리아 통번역 센터는 다년간의 노하우로<br>
-        총 3,125개의 프로젝트를<br>
+        총 <?=$num_translation?>개의 프로젝트를<br>
         성공적으로 마무리하였습니다.
     </p>
-    <a href="/translation_order/selectType" class="home-btn">프로젝트 의뢰하기</a>
+    <a href="/translation_order/selectType" class="home-btn">프로젝트 의뢰하기</a></div>
 </section>
 
 
@@ -260,3 +261,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="/public/subpage/js/002_sub/customer/bootstrap.min.js"></script>
 <script src="/public/subpage/js/002_sub/customer/ie10-viewport-bug-workaround.js"></script>
+
+<script>
+    // Changing the defaults
+window.sr = ScrollReveal({ reset: true });
+
+// Customizing a reveal set
+sr.reveal('.portfolio_content-sort', { duration: 1500 });
+
+sr.reveal('.container',{duration:1500});
+
+</script>

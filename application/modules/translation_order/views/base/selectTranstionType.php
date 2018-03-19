@@ -1,9 +1,10 @@
 <section class="home-hero-project">
+    <div class="animated fadeInUp">
     <h2 class="home-hero-title-project">프로젝트 의뢰</h2>
     <p class="home-hero-des-project">
         고객님의 의뢰에 최선을 다하는 코리아 통번역 센터입니다!
     </p>
-    <a href="/translation_order/list" class="home-btn">포트폴리오 보러가기</a>
+    <a href="/translation_order/list" class="home-btn">포트폴리오 보러가기</a></div>
 </section>
 
 <link rel="stylesheet" type="text/css" href="/public/subpage/css/001_jobdance/css/jquery.bxslider.css" media="all">
@@ -19,7 +20,7 @@
 <div class="wrap">
     <div class="sub-content">
         <div class="join-navi">
-            <div>
+            <div class="navianim">
                 <ul>
                     <li class="on">
                         <div class="fix">
@@ -49,7 +50,7 @@
             </div>
             <div class="join-list">
                 <ul>
-                    <li>
+                    <li class="join-listanim">
                         <div>
                             <a href="/translation_order/add?type=통역">
                                 <div class="poi">
@@ -64,7 +65,7 @@
                             </a>
                         </div>
                     </li>
-                    <li>
+                    <li class="join-listanim">
                         <div>
                             <a href="/translation_order/add?type=번역">
                                 <div class="poi">
@@ -84,3 +85,13 @@
         </div>	
     </div>
 </div>
+
+<script>
+    // Changing the defaults
+window.sr = ScrollReveal({ reset: true });
+
+// Customizing a reveal set
+sr.reveal('.navianim', { duration: 1500 });
+sr.reveal('.join-listanim', { duration: 1500 });
+sr.reveal('.join-tit', { duration: 1500 });
+</script>

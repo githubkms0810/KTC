@@ -10,11 +10,12 @@
 <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script> 
 <?php if ( $this->className === "base" ): ?>
 <section class="home-hero-project">
+	<div class="animated fadeInUp">
   <h2 class="home-hero-title-project">프로젝트 의뢰</h2>
   <p class="home-hero-des-project">
 	  고객님의 의뢰에 최선을 다하는 코리아 통번역 센터입니다!
   </p>
-  <a href="/translation_order/list" class="home-btn">포트폴리오 보러가기</a>
+  <a href="/translation_order/list" class="home-btn">포트폴리오 보러가기</a></div>
 </section>
 <?php endif; ?>
 <!--번역,통역 폼 시작-->
