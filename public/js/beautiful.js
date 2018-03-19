@@ -44,8 +44,8 @@ $(function() {
   var logobar = $(".home-header__logo");
   var color = $(".home-nav");
   var list = $(".home-nav__list");
-  var colorLogo =$("#jy-color-logo");
-  var whiteLogo =$("#jy-white-logo");
+  var colorLogo =$("#jy-color-logo-img");
+  var whiteLogo =$("#jy-white-logo-img");
   $(window).scroll(function() {
       var scroll = $(window).scrollTop();
 
@@ -53,14 +53,14 @@ $(function() {
         header.removeClass('unchange-header').addClass("change-header");
         color.removeClass('unchange-home-nav').addClass("change-home-nav");
         list.removeClass('unchange-home-nav__list').addClass("change-home-nav__list");
-        colorLogo.css("display","block");
         whiteLogo.css("display","none");
+        colorLogo.css("display","inline-block");
       } else {
         header.removeClass("change-header").addClass('unchange-header');
         color.removeClass("change-home-nav").addClass('unchange-home-nav');
         list.removeClass("change-home-nav__list").addClass('unchange-home-nav__list');
+        whiteLogo.css("display","inline-block");
         colorLogo.css("display","none");
-        whiteLogo.css("display","block");
       }
   });
 });

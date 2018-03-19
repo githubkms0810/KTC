@@ -51,8 +51,10 @@
         <header  class="home-header">
             <div class="bc-container">
                 <h1 class="home-header__logo">
-                    <a id="jy-white-logo" href="/" style="font-size: 28px !important; font-family: 'Spoqa Han Sans', sans-serif;"><img src="/public/images/logo.png" style="vertical-align: baseline;" alt="KTC"></a>
-                    <a id="jy-color-logo" style="display:none;" href="/" style="font-size: 28px !important; font-family: 'Spoqa Han Sans', sans-serif;"><img src="/public/images/logo_on.png" style="vertical-align: baseline;" alt="KTC"></a>
+                    <a  href="/" style="font-size: 28px !important; font-family: 'Spoqa Han Sans', sans-serif;">
+                    <img id="jy-white-logo-img" src="/public/images/logo.png" style="vertical-align: baseline;" alt="KTC">
+                    <img id="jy-color-logo-img" style="display:none;" src="/public/images/logo_on.png" style="vertical-align: baseline;" alt="KTC">
+                    </a> 
                 </h1>
                 <span class="home-nav--btn">
                     <img src="/public/images/menu.png" alt="nav">
