@@ -425,6 +425,7 @@ template {
 }
 .change-header {
   background-color:white;
+  border-bottom: 1px solid #eaeaea;
 }
 .home-header .bc-container {
   position: relative;
@@ -509,7 +510,10 @@ template {
     border: 2px solid #fff;
   }
   .change-home-nav__list > li:last-child {
-    border: 2px solid #000;
+    background-color: #22b8e3;
+  }
+  .change-home-nav__list > li:last-child a {
+    color: #fff !important;
   }
   .home-nav__list > li:last-child a {
     height: 40px;
