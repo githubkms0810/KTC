@@ -469,15 +469,17 @@
 
 		  <!--첨부파일폼시작-->
 		  <div class="row">
+			  <h4>프로젝트 관련 자료</h4>
 			  <div class="col s12">
-				  <input multiple="multiple" type="file" name="files[]" />
+			      <button class="replace">파일 업로드</button>
+				  <input multiple="multiple" type="file" name="files[]" style="opacity: 0; position: relative;" />
 				  <!-- <iframe class="iframe_dynamic_height" height="100px;" width="100%" maginwidth="0" marginheight="0" frameborder="0"  scrolling="no"  src="/file/upload" ></iframe>
 				  <script  src="/public/subpage/js/000_fileuproad/iframe-dynmic-height.js"></script> -->
 			  </div>
 		  </div>
 		  <!--첨부파일폼 끝-->  
 		  <div>
-				<input type="submit" value="Send Message">
+				<input type="submit" value="의뢰하기">
 		  </div>
 	  </fieldset>
   </form>

@@ -1488,4 +1488,10 @@ template {
     font-family: "Spoqa Han Sans", san-serif !important;
 }
 
+.replace {
+    background-color: #09a5dd;
+    height: 50px;
+    font-weight: 400;
+}
+
 /*# sourceMappingURL=beautiful.css.map */
