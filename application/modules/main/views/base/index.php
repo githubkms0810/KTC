@@ -1,11 +1,12 @@
 <section class="home-hero">
+    <div class="animated fadeInUp">
     <h2 class="home-hero-title">대한민국 대표<br>언어 전문<br class="display"> 서비스 기업</h2>
     <p class="home-hero-des" style="color:white;">
         코리아 통번역 센터는 전문 번역 서비스는 물론<br>
         소프트웨어 현지화, 국제 회의 맞춤 통역 서비스 등을 제공하는<br>
         대한민국 대표 언어 전문 서비스 기업입니다.
-    </p>
-    <a href="/translation_order/selectType" class="home-btn">프로젝트 의뢰하기</a>
+</p>
+    <a href="/translation_order/selectType" class="home-btn">프로젝트 의뢰하기</a></div>
 </section>
 <section class="home-logo">
     <div class="home-logo__wrap">
@@ -67,7 +68,7 @@
 </section>
 <section class="home-section home-section__project_main" style="padding-top:100px; padding-bottom:100px;">
     <div class="bc-container">
-        <h2 class="home-title">코리아 통번역 센터<span>가 드리는</span> 약속</h2>
+        <h2 class="home-title" data-animation="flipInX" data-timeout="300">코리아 통번역 센터<span>가 드리는</span> 약속</h2>
         <ul class="home-list">
             <li class="home-list__item_main">
                 <div class="home-list__num_main">
@@ -101,7 +102,7 @@
 </section>
 <section class="home-section home-section_padding">
     <div class="bc-container">
-        <img src="/public/images/peolple.png">
+        <img src="/public/images/peolple.png" class="image">
         <div>
             <h2 class="home-title"><span>완벽한 </span>통번역<span>의 중요성</span></h2>
             <p class="home-des" style="font-size:16px">
@@ -126,6 +127,24 @@
             
         <?php endforeach; ?>
         </ul>
-        <a href="/translation_order/list" class="home-btn">다른 프로젝트 보기</a>
+        <div class="btn"><a href="/translation_order/list" class="home-btn">다른 프로젝트 보기</a></div>
     </div>
 </section>
+
+<script>
+    // Changing the defaults
+window.sr = ScrollReveal({ reset: true });
+
+// Customizing a reveal set
+sr.reveal('.home-title', { duration: 1500 });
+
+sr.reveal('.home-des',{duration:1500});
+
+sr.reveal('.home-list__item_main',{duration:1500});
+
+sr.reveal('.home-portfolio__item',{duration:1500});
+
+sr.reveal('.btn',{duration:1500});
+
+sr.reveal('.image',{duration:1500});
+</script>

@@ -87,14 +87,8 @@
 	</div> 
 
 	<div class="icon">
-		<label style="width:49.5%;" class="project_label" for="email">E-mail</label>
-		<input value="<?=DEBUG === false ? my_set_value( isset($row->email) ? $this->post_helper->extractUserNameOnEmail($row->email) : null,"email_first") : "emailtestr" ?>" style="width:49.5%; display:inline-block;" class="email" type="text" name="email_first" id="free_email">
-		<select style="width:49.5%; display:inline-block;" class="email" name="email_second">
-			<option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@naver.com")?>>@naver.com</option>
-			<option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@gmail.com")?>>@gmail.com</option>
-			<option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@daum.net")?>>@daum.net</option>
-		</select>
-	
+		<label class="project_label" for="email">E-mail</label>
+		<input value="<?=DEBUG === false ? my_set_value( isset($row->email) ? $this->post_helper->extractUserNameOnEmail($row->email) : null,"email_first") : "emailtestr" ?>" style="width:99%;" class="email" type="text" name="email_first" id="free_email">
 	</div>
 
 	<div>
@@ -200,7 +194,7 @@
 
 		<ul class="project_form-list">
 		<li>
-			<input type="radio" name="is_employed" value="1" <?=DEBUG === false ? my_set_checked($row,"is_employed","1") : "checked" ?>  id="is_employed-1">
+			<input type="radio" name="is_employed" value="1" <?=DEBUG === false ? my_set_checked($row,"is_employed","1") : "checked" ?>  id="is_employed-1" checked>
 			<label for="is_employed-1">유</label>
 		</li>
 		<li>
@@ -213,7 +207,7 @@
 		<h4>학력 사항</h4>
 		<ul class="project_form-list" style="margin-bottom:1px;">
 				  <li>
-					  <input type="radio" name="is_graduate_school" value="0" onclick="div_OnOff(this.value,'school');" <?=my_set_checked($row,"is_graduate_school","0",true)?> id="free_want-1">
+					  <input type="radio" name="is_graduate_school" value="0" onclick="div_OnOff(this.value,'school');" <?=my_set_checked($row,"is_graduate_school","0",true)?> id="free_want-1" checked>
 					  <label for="free_want-1"><?php $equipment="요청"?>대학교</label>
 				  </li>
 				  <li>

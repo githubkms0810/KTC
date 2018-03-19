@@ -146,14 +146,7 @@
               </div>
               <div class="icon">
                   <label style="width:49.5%;" class="project_label" for="project_email">담당자 E-mail</label>
-                  <input value="<?=DEBUG === false ? my_set_value( isset($row->email) ? $this->post_helper->extractUserNameOnEmail($row->email) : null,"email_first") : "emailtestr" ?>" style="width:49.5%; display:inline-block;" class="email" type="text" name="email_first" id="manager_email_first">
-                  <select style="width:49.5%; display:inline-block;" class="email" name="email_second" id="manager_email_second">
-				  	<option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@naver.com")?>>@naver.com</option>
-					<option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@gmail.com")?>>@gmail.com</option>
-					<option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@hanmail.net")?>>@hanmail.net</option>
-					<option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@daum.net")?>>@daum.net</option>
-
-                  </select>
+                  <input value="<?=DEBUG === false ? my_set_value( isset($row->email) ? $this->post_helper->extractUserNameOnEmail($row->email) : null,"email_first") : "emailtestr" ?>" class="email" type="text" name="email_first" id="manager_email_first">
               </div>
 		  </div>
 		  <!--개인일때-->
@@ -168,13 +161,7 @@
               </div>
               <div class="icon">
                   <label style="width:49.5%;" class="project_label" for="project_email">E-mail</label>
-                  	<input value="<?=DEBUG === false ? my_set_value( isset($row->email) ? $this->post_helper->extractUserNameOnEmail($row->email) : null,"email_first") : "emailtestr" ?>" style="width:49.5%; display:inline-block;" class="email" type="text" name="email_first" id="personal_email_first">
-                  <select style="width:49.5%; display:inline-block;" class="email" name="email_second" id="personal_email_second">
-				  <option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@naver.com")?>>@naver.com</option>
-				  <option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@gmail.com")?>>@gmail.com</option>
-				  <option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@hanmail.net")?>>@hanmail.net</option>
-				  <option <?=my_set_selected(!isset($row->email) ? null : $this->post_helper->extractHostOnEmail($row->email),"email_second","@daum.net")?>>@daum.net</option>
-                  </select>
+                  	<input value="<?=DEBUG === false ? my_set_value( isset($row->email) ? $this->post_helper->extractUserNameOnEmail($row->email) : null,"email_first") : "emailtestr" ?>" class="email" type="text" name="email_first" id="personal_email_first">
               </div>
 		  </div>
 	  </fieldset>

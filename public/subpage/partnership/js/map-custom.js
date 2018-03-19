@@ -15,8 +15,8 @@
                 img_pin = 'images/icons/location.png';
             }
             if (data_map_x == null || data_map_y == null) {
-                data_map_x = 40.007749;
-                data_map_y = -93.266572;
+                data_map_x = 37.616217;
+                data_map_y = 126.834748;
             }
             if (scrollwhell == null) {
                 scrollwhell = 0;
@@ -196,7 +196,7 @@
 
             var latitude = data_map_x,
                 longitude = data_map_y,
-                map_zoom = 14;
+                map_zoom = 13;
 
             var locations = [
                 ['Welcome', latitude, longitude, 2]
@@ -204,7 +204,7 @@
 
             if (selector_map !== undefined) {
                 var map = new google.maps.Map(document.getElementById('google_map'), {
-                    zoom: 13,
+                    zoom: 14,
                     scrollwheel: false,
                     zoomControl: false,  
                     disableDoubleClickZoom: true,
