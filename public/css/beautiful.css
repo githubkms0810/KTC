@@ -334,7 +334,7 @@ template {
 /* common */
 .home {
   font-size: 14px;
-  font-family: "Spoqa Han Sans", san-serif;
+  font-family: "Nanum Gothic", san-serif;
   margin: 0;
 }
 .home * {
@@ -351,7 +351,7 @@ template {
 }
 .home a {
   text-decoration: none;
-  font-family: "Spoqa Han Sans", san-serif;
+  font-family: "Nanum Gothic", san-serif;
 }
 
 .home-section {
@@ -1485,7 +1485,7 @@ template {
 }
 
 .article-post {
-    font-family: "Spoqa Han Sans", san-serif !important;
+    font-family: "Nanum Gothic", san-serif !important;
 }
 
 .replace {
