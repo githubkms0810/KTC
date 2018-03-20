@@ -68,15 +68,17 @@
 </section>
 <section class="home-section home-section__project_main" style="padding-top:100px; padding-bottom:100px;">
     <div class="bc-container">
-        <h2 class="home-title" data-animation="flipInX" data-timeout="300">고객님<span>께 드리는</span> 약속</h2>
+        <h2 class="home-title" data-animation="flipInX" data-timeout="300" style="line-height:50px;">코리아 통번역 센터<span>는</span><br>최상의 서비스<span>를 제공합니다.</span></h2>
         <ul class="home-list">
             <li class="home-list__item_main">
                 <div class="home-list__num_main">
                     <span>1</span>
                 </div>
-                <h4 class="home-list__title_main">누적된 노하우</h4>
+                <h4 class="home-list__title_main">축척된 노하우</h4>
                 <p class="home-list__des_main">
-                    다년간 대기업, 공기업의 다양한 프로젝트를 성공적으로 마무리하여 노하우가 있습니다.
+                    다년간 대기업, 공기업의<br>
+                    다양한 프로젝트를<br>
+                    성공적으로 마무리하였습니다.
                 </p>
             </li>
             <li class="home-list__item_main">
@@ -85,7 +87,9 @@
                 </div>
                 <h4 class="home-list__title_main">세심한 관리</h4>
                 <p class="home-list__des_main">
-                    전문 PM이 통번역사 선정부터 일시, 장소, 내용 등 고객의 요구를 정확히 분석합니다.
+                    전문 PM이 통번역사 선정부터<br>
+                    일시, 장소, 내용 등<br>
+                    고객을 정확히 분석합니다.
                 </p>
             </li>
             <li class="home-list__item_main">
@@ -94,7 +98,9 @@
                 </div>
                 <h4 class="home-list__title_main">철저한 사전 조사</h4>
                 <p class="home-list__des_main">
-                    KTC는 최고의 품질을 위해 철저한 사전 조사로 완벽한 고증을 자랑합니다.
+                    KTC는 최고의 품질을 위해<br>
+                    철저한 사전 조사로<br>
+                    완벽한 고증을 자랑합니다.
                 </p>
             </li>
         </ul>
@@ -116,7 +122,15 @@
     </div>
 </section>
 -->
-<section class="home-section home-section__project" style="background-image: linear-gradient(#b0b8fc 20%, #90d1fc); height:150px;">
+<section class="home-section home-section__project" style="background-image: linear-gradient(#b0b8fc 20%, #90d1fc); padding:75px 0;">
+    <div>
+        <div>
+            프로젝트 의뢰하기
+        </div>
+        <div>
+            프로젝트 의뢰하기
+        </div>
+    </div>
 </section>
 <section class="home-section home-section__project">
     <div class="bc-container">
@@ -128,7 +142,9 @@
                 </div>
                 <h4 class="home-list__title">고객 상담</h4>
                 <p class="home-list__des">
-                    통번역 전문 PM이 일시, 장소, 내용 등 고객의 요구를 정확히 분석합니다.
+                    통번역 전문 PM이<br>
+                    일시, 장소, 내용 등을<br>
+                    정확히 분석합니다.
                 </p>
             </li>
             <li class="home-list__item">
@@ -137,7 +153,9 @@
                 </div>
                 <h4 class="home-list__title">견적서 발송 및 검토</h4>
                 <p class="home-list__des">
-                    견적을 의뢰하시면 30분 이내로 합리적인 견적서 발송합니다.
+                    견적을 의뢰하시면<br>
+                    30분 이내로 합리적인<br>
+                    견적서 발송합니다.
                 </p>
             </li>
             <li class="home-list__item">
@@ -146,7 +164,9 @@
                 </div>
                 <h4 class="home-list__title">계약 체결</h4>
                 <p class="home-list__des">
-                    견적서 비용에 따라 전액 또는 일부 결제 확인 후, 통번역사 배정합니다.
+                    견적 비용에 따라<br>
+                    전액 또는 일부를<br>
+                    계약금으로 확인합니다.
                 </p>
             </li>
             <li class="home-list__item">
@@ -155,7 +175,9 @@
                 </div>
                 <h4 class="home-list__title">팀 구성</h4>
                 <p class="home-list__des">
-                    해당 분야 전문 프로젝트 관리자를 배치한 후, 팀을 구성합니다.
+                    해당 분야의<br>
+                    전문 PM 배치 후<br>
+                    팀을 구성합니다.
                 </p>
             </li>
             <li class="home-list__item">
@@ -164,7 +186,9 @@
                 </div>
                 <h4 class="home-list__title">착수</h4>
                 <p class="home-list__des">
-                    본격적으로 엄선된 고급 통번역사의 실력을 제대로 느끼실 수 있습니다.
+                    본격적으로 엄선된<br>
+                    고급 통번역사의 실력을<br>
+                    느끼실 수 있습니다.
                 </p>
             </li>
             <li class="home-list__item">
@@ -173,7 +197,9 @@
                 </div>
                 <h4 class="home-list__title">잔금 처리</h4>
                 <p class="home-list__des">
-                    완성된 작업물에 따라 피드백 과정을 거친 뒤 잔금을 입금합니다.
+                    완성된 작업물에 따라<br>
+                    피드백 과정을 거친 뒤<br>
+                    잔금을 입금합니다.
                 </p>
             </li>
             <li class="home-list__item">
@@ -182,7 +208,9 @@
                 </div>
                 <h4 class="home-list__title">사후 관리</h4>
                 <p class="home-list__des">
-                    걱정마세요. 코리아 통번역 센터는 최상의 사후 관리 서비를 지원합니다.
+                    걱정마세요.<br>
+                    저흰 최고의 사후 관리를<br>
+                    지원합니다.
                 </p>
             </li>
         </ul>
