@@ -1518,7 +1518,7 @@ template {
   background-image: url(../images/tail-2.png);
 }
 .home-text__item:nth-child(2n-1) img {
-  left: initial;
+  left: auto;
   right: 0;
 }
 
