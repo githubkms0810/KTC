@@ -20,6 +20,7 @@
         crossorigin="anonymous"></script>
         <script src="/public/js/beautiful.js"></script>
         <script src="/public/js/scrollreveal.js"></script>
+        <script src="/public/js/jy.js"></script>
     </head>
     <body class="home">
     <!-- Channel Plugin Scripts -->
@@ -126,6 +127,6 @@
                 &copy; 2017 <b>KTC</b>. All Rights Reserved.
             </div>
         </footer>
-        <script src="/public/js/jy.js"></script>
+       
     </body>
 </html>
