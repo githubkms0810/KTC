@@ -100,6 +100,7 @@
         </ul>
     </div>
 </section>
+<!--
 <section class="home-section home-section_padding">
     <div class="bc-container">
         <img src="/public/images/peolple.png" class="image">
@@ -112,6 +113,79 @@
                 50개 이상의 언어로 현지화 서비스를 지원합니다.
             </p>
         </div>
+    </div>
+</section>
+-->
+<section class="home-section home-section__project" style="background-image: linear-gradient(#b0b8fc 20%, #90d1fc); height:150px;">
+</section>
+<section class="home-section home-section__project">
+    <div class="bc-container">
+        <h2 class="home-title">프로젝트 진행 절차</h2>
+        <ul class="home-list">
+            <li class="home-list__item">
+                <div class="home-list__num">
+                    <span>1</span>
+                </div>
+                <h4 class="home-list__title">고객 상담</h4>
+                <p class="home-list__des">
+                    통번역 전문 PM이 일시, 장소, 내용 등 고객의 요구를 정확히 분석합니다.
+                </p>
+            </li>
+            <li class="home-list__item">
+                <div class="home-list__num">
+                    <span>2</span>
+                </div>
+                <h4 class="home-list__title">견적서 발송 및 검토</h4>
+                <p class="home-list__des">
+                    견적을 의뢰하시면 30분 이내로 합리적인 견적서 발송합니다.
+                </p>
+            </li>
+            <li class="home-list__item">
+                <div class="home-list__num">
+                    <span>3</span>
+                </div>
+                <h4 class="home-list__title">계약 체결</h4>
+                <p class="home-list__des">
+                    견적서 비용에 따라 전액 또는 일부 결제 확인 후, 통번역사 배정합니다.
+                </p>
+            </li>
+            <li class="home-list__item">
+                <div class="home-list__num">
+                    <span>4</span>
+                </div>
+                <h4 class="home-list__title">팀 구성</h4>
+                <p class="home-list__des">
+                    해당 분야 전문 프로젝트 관리자를 배치한 후, 팀을 구성합니다.
+                </p>
+            </li>
+            <li class="home-list__item">
+                <div class="home-list__num">
+                    <span>5</span>
+                </div>
+                <h4 class="home-list__title">착수</h4>
+                <p class="home-list__des">
+                    본격적으로 엄선된 고급 통번역사의 실력을 제대로 느끼실 수 있습니다.
+                </p>
+            </li>
+            <li class="home-list__item">
+                <div class="home-list__num">
+                    <span>6</span>
+                </div>
+                <h4 class="home-list__title">잔금 처리</h4>
+                <p class="home-list__des">
+                    완성된 작업물에 따라 피드백 과정을 거친 뒤 잔금을 입금합니다.
+                </p>
+            </li>
+            <li class="home-list__item">
+                <div class="home-list__num">
+                    <span>7</span>
+                </div>
+                <h4 class="home-list__title">사후 관리</h4>
+                <p class="home-list__des">
+                    걱정마세요. 코리아 통번역 센터는 최상의 사후 관리 서비를 지원합니다.
+                </p>
+            </li>
+        </ul>
     </div>
 </section>
 <section class="home-section home-section__portfolio">
