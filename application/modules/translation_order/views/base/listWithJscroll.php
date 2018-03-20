@@ -57,9 +57,6 @@
                     <!-- Begin Post Content -->
                     <div class="article-post">
                         <div class="portfolio_content-sort">
-                        <span class="meta-footer-thumb">
-                            <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal">
-                        </span>
                         <span class="author-meta">
                         <span class="post-name">
                             종류</span><br/>
@@ -68,9 +65,6 @@
                         </div>
 
                         <div class="portfolio_content-sort">
-                        <span class="meta-footer-thumb">
-                            <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal">
-                        </span>
                         <span class="author-meta">
                         <span class="post-name">
                             분야</span><br/>
@@ -79,9 +73,6 @@
                         </div>
 
                         <div class="portfolio_content-sort">
-                        <span class="meta-footer-thumb">
-                            <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal">
-                        </span>
                         <span class="author-meta">
                         <span class="post-name">
                             프로젝트 이름</span><br/>
@@ -90,9 +81,6 @@
                         </div>
 
                         <div class="portfolio_content-sort">
-                        <span class="meta-footer-thumb">
-                            <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal">
-                        </span>
                         <span class="author-meta">
                         <span class="post-name">
                         <?php if ( $portfolio->buyer ==="회사" ): ?>
@@ -106,9 +94,6 @@
                         </div>
 
                         <div class="portfolio_content-sort">
-                        <span class="meta-footer-thumb">
-                            <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal">
-                        </span>
                         <span class="author-meta">
                         <span class="post-name">
                             언어쌍</span><br/>
@@ -117,9 +102,6 @@
                         </div>
 
                         <div class="portfolio_content-sort">
-                        <span class="meta-footer-thumb">
-                            <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal">
-                        </span>
                         <span class="author-meta">
                         <span class="post-name">
                             업무 내용</span><br/>
@@ -128,9 +110,6 @@
                         </div>
 
                         <div class="portfolio_content-sort">
-                        <span class="meta-footer-thumb">
-                            <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal">
-                        </span>
                         <span class="author-meta">
                         <span class="post-name">
                             기간</span><br/>
@@ -139,9 +118,6 @@
                         </div>
 
                         <div class="portfolio_content-sort">
-                        <span class="meta-footer-thumb">
-                            <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal">
-                        </span>
                         <span class="author-meta">
                         <span class="post-name">
                             기밀여부</span><br/>
@@ -151,9 +127,6 @@
 
                         <?php if ( $portfolio->type ==="통역" ): ?>
                         <div class="portfolio_content-sort">
-                        <span class="meta-footer-thumb">
-                            <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal">
-                        </span>
                         <span class="author-meta">
                         <span class="post-name">
                             통역종류</span><br/>
