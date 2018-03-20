@@ -93,16 +93,13 @@
 	</div>
 
 	<div>
-		<div class="icon" style="width:79%; display:inline-block; margin-top:1px; margin-bottom:1px;">
+		<div class="icon" style="width:99%;">
 			<h4>주소</h4>
-			<input value="<?=DEBUG === false ? my_set_value($row,"new_address") : "주소테스트" ?>" class="email" type="text" name="new_address" required id="sample4_roadAddress" value=" " readonly>
+			<input value="<?=DEBUG === false ? my_set_value($row,"new_address") : "주소테스트" ?>" onclick="sample4_execDaumPostcode(); return false;" placeholder="주소" class="email" type="text" name="new_address" required id="sample4_roadAddress" value=" " readonly>
 			<input type="hidden" id="sample4_postcode" name="post_number" value="<?=DEBUG === false ? my_set_value($row,"post_number"): "지번테스트" ?>">
 			<input type="hidden" id="sample4_jibunAddress" name="old_address" value="<?=DEBUG === false ? my_set_value($row,"old_address"): "구주소 테스트" ?>">
 
 		
-		</div>
-		<div style="width:20%; display:inline-block; margin-bottom:1px;" class="project_form">
-			<button type="button " style="background-color:#09aee1; font-weight:400;" onclick="sample4_execDaumPostcode(); return false;" class="projectlang_add">찾기</button>
 		</div>
 		<div class="icon" style="margin-top:20px;">
 			<label class="project_label" for="project_detailaddress">상세 주소</label>
