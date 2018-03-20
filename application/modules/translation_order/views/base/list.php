@@ -1,4 +1,4 @@
-<div class="jy-dim"></div>
+<div class="jy-dim" onclick="Portfolio.Close(this);"></div>
 <link type="text/css" media="all" href="/public/subpage/css/002_sub/customer/bootstrap.min.css" rel="stylesheet">
 <link type="text/css" media="all" href="/public/subpage/css/002_sub/customer/mediumish.css" rel="stylesheet">
 
