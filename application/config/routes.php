@@ -60,6 +60,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 //test
+
 $route['test/test1'] = 'test/base/test1';
 $route['test/test2'] = 'test/base/test2';
 $route['test/(:any)'] = 'test/base/$1';

@@ -2,7 +2,7 @@
 <span class="jy-portfolio-item-wrapper">
 <div class="container-contact100" style="display:none; position:fixed !important;">
     <div  class="wrap-contact100"  style="width:100%;display:block;" >
-        <button class="contact100-btn-hide" onclick="Portfolio.ClosePortfolio(this);">
+        <button class="contact100-btn-hide" onclick="Portfolio.Close(this);">
             <i class="fa fa-close" aria-hidden="true"></i>
         </button>
 
@@ -186,7 +186,7 @@
 
 
 <!-- <li class="home-portfolio__itemlist" style="cursor:pointer;" onclick="location.href='/translation_order/<?=$portfolio->id?>';"> -->
-<li class="home-portfolio__itemlist" style="cursor:pointer;" onclick="Portfolio.ClickPortfolio(this); return false;" >
+<li class="home-portfolio__itemlist" style="cursor:pointer;" onclick="Portfolio.Open(this); return false;" >
     <img src="<?=$portfolio->image?>">
     <!-- <a href="/translation_order/<?=$portfolio->id?>">열람하기</a> -->
     <a href="#" style="color: #677871;">열람하기</a>

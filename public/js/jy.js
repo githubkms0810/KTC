@@ -12,7 +12,7 @@ var Jy;
             var _$JyDim = $(".jy-dim");
             function Portfolio(){
             }
-            Portfolio.prototype.ClickPortfolio = function(t){
+            Portfolio.prototype.Open = function(t){
                 $this =$(t);
                 $wrapper = _GetItemWapper($this);
                 $ModalContainer =_GetModalContainer($wrapper);
@@ -30,7 +30,7 @@ var Jy;
                 // $("#jscroll-wapper").css('z-index','99999');
                 // $(".bc-container").css('z-index','99999');
             }
-            Portfolio.prototype.ClosePortfolio =  function(t)
+            Portfolio.prototype.Close =  function(t)
             {
                 $this =$(t);
                 $wrapper = _GetItemWapper($this);
