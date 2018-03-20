@@ -74,9 +74,9 @@
                             <a href="#">함께하기</a>
                             <ul>
                                 <li>
-                                    <a style="font-size:12px;" href="/freelancer/add">프리랜서 지원</a>
-                                    <a style="font-size:12px;" href="/contact/add">업무 제휴 문의</a>
-                                    <a style="font-size:12px;" href="/small/security">기밀 유지 정책</a>
+                                    <a style="font-size:12px; font-weight:400;" href="/freelancer/add">프리랜서 지원</a>
+                                    <a style="font-size:12px; font-weight:400;" href="/contact/add">업무 제휴 문의</a>
+                                    <a style="font-size:12px; font-weight:400;" href="/small/security">기밀 유지 정책</a>
                                 </li>
                             </ul>
                         </li>
@@ -84,7 +84,7 @@
                             <a href="/content/list?board_key=notice">고객센터</a>
                         </li>
                         <li>
-                            <a href="/translation_order/selectType">의뢰하기</a>
+                            <a href="/translation_order/selectType" style="font-weight:400;">의뢰하기</a>
                         </li>
                     </ul>
                 </nav>
