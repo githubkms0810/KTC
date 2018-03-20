@@ -10,33 +10,26 @@ var Jy;
         var Portfolio = (function(){
 
             var _$JyDim = $(".jy-dim");
+            var _$ModalContainer;
             function Portfolio(){
             }
             Portfolio.prototype.Open = function(t){
                 $this =$(t);
                 $wrapper = _GetItemWapper($this);
-                $ModalContainer =_GetModalContainer($wrapper);
-                $ModalContainer.css('display','block');
+                _$ModalContainer =_GetModalContainer($wrapper);
+                _$ModalContainer.css('display','block');
                 _$JyDim.css("display","block");
                 $wrapper.css('z-index','999999');
-                $ModalContainer.css('z-index','99999');
-                // $ModalContainer.css('position','fixed !important');
-                $ModalContainer[0].style.top = "40px";
-                $ModalContainer[0].style.marginTop= "40px";
-                // $ModalContainer.css('margin-top','20');
+                _$ModalContainer.css('z-index','99999');
+                _$ModalContainer[0].style.top = "60px";
+                $("body").css("overflow","hidden");
 
-                // $(".jscroll-inner").css('z-index','99999');
-                // $(".home-section__portfolio").css('z-index','99999');
-                // $("#jscroll-wapper").css('z-index','99999');
-                // $(".bc-container").css('z-index','99999');
             }
             Portfolio.prototype.Close =  function(t)
             {
-                $this =$(t);
-                $wrapper = _GetItemWapper($this);
-                $ModalContainer =_GetModalContainer($wrapper);
-                $ModalContainer.css('display','none');
+                _$ModalContainer.css('display','none');
                 _$JyDim.css("display","none");
+                $("body").css("overflow","auto");
             }
             var _GetModalContainer = function($wrapper){
                 return $($wrapper.children(".container-contact100")[0]);
