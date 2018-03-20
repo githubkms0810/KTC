@@ -17,12 +17,12 @@ var Jy;
                 $wrapper = _GetItemWapper($this);
                 $ModalContainer =_GetModalContainer($wrapper);
                 $ModalContainer.css('display','block');
-                // _$JyDim.css("display","block");
+                _$JyDim.css("display","block");
                 $wrapper.css('z-index','999999');
                 $ModalContainer.css('z-index','99999');
                 // $ModalContainer.css('position','fixed !important');
-                $ModalContainer[0].style.top = 0;
-                // $ModalContainer[0].style.marginTop= 0;
+                $ModalContainer[0].style.top = "40px";
+                $ModalContainer[0].style.marginTop= "40px";
                 // $ModalContainer.css('margin-top','20');
 
                 // $(".jscroll-inner").css('z-index','99999');
