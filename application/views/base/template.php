@@ -126,5 +126,6 @@
                 &copy; 2017 <b>KTC</b>. All Rights Reserved.
             </div>
         </footer>
+        <script src="/public/js/jy.js"></script>
     </body>
 </html>

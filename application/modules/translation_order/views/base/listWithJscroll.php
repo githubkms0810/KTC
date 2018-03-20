@@ -7,10 +7,9 @@
 <?php foreach ( $portfolioes as $portfolio ): ?>
 
 <span class="jy-portfolio-item-wrapper">
-
-<div class="container-contact100" style="margin-top:1px; position:fixed;display:none;">
+<div class="container-contact100" style="display:none; position:fixed !important;">
     <div  class="wrap-contact100"  style="width:100%;display:block;" >
-        <button class="contact100-btn-hide" onclick="ClosePortfolio(this);">
+        <button class="contact100-btn-hide" onclick="Portfolio.ClosePortfolio(this);">
             <i class="fa fa-close" aria-hidden="true"></i>
         </button>
 
@@ -198,7 +197,7 @@
 
 
 <!-- <li class="home-portfolio__itemlist" style="cursor:pointer;" onclick="location.href='/translation_order/<?=$portfolio->id?>';"> -->
-<li class="home-portfolio__itemlist" style="cursor:pointer;" onclick="ClickPortfolio(this); return false;" >
+<li class="home-portfolio__itemlist" style="cursor:pointer;" onclick="Portfolio.ClickPortfolio(this); return false;" >
     <img src="<?=$portfolio->image?>">
     <!-- <a href="/translation_order/<?=$portfolio->id?>">열람하기</a> -->
     <a href="#">열람하기</a>
@@ -220,24 +219,8 @@ window.sr = ScrollReveal({ reset: true });
 sr.reveal('.home-portfolio__itemlist', { duration: 1500 });
 </script>
 
-<script>
-function ClickPortfolio(t)
-{
-    $this =$(t);
-    console.log($this);
-    $wrapper =$this.parent(".jy-portfolio-item-wrapper");
-    console.log($wrapper);
-    $ContentContainer=$($wrapper.children(".container-contact100")[0]);
-    console.log($ContentContainer);
-    $ContentContainer.css('display','block');
-    $jyDim = $(".jy-dim");
-    $jyDim.css("display","block");
-    // $('.container-contact100').css('display','block');
-}
 
-function ClosePortfolio(t)
-{
-    
-    $('.container-contact100').css('display','none')
-}
+
+<script>
+    var Portfolio = new Jy.KTC.Portfolio();
 </script>
