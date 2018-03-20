@@ -209,7 +209,3 @@ sr.reveal('.home-portfolio__itemlist', { duration: 1500 });
 </script>
 
 
-
-<script>
-    var Portfolio = new Jy.KTC.Portfolio();
-</script>

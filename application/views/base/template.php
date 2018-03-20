@@ -21,8 +21,12 @@
         <script src="/public/js/beautiful.js"></script>
         <script src="/public/js/scrollreveal.js"></script>
          
+
+
+        
     </head>
     <body class="home">
+    <div class="jy-dim" onclick="Portfolio.Close(this);"></div>
     <!-- Channel Plugin Scripts -->
     <script>
       window.channelPluginSettings = {
@@ -128,5 +132,9 @@
             </div>
         </footer>
         <script src="/public/js/jy.js"></script>
+        <script>
+    var Portfolio = new Jy.KTC.Portfolio();
+</script>
+
     </body>
 </html>
