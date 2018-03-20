@@ -672,12 +672,13 @@ template {
 }
 /* home-hero-security */
 .home-hero-security {
-  text-align: center;
+  display:table;
   color: #fff;
   background-image: url(../images/hero-security-bg.png);
   background-position: center top;
   padding: 182px 20px 100px 20px;
   height: 100vh;
+  width:100%;
 }
 .home-hero-title-security {
   font-size: 40px;

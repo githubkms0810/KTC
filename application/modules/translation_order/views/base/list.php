@@ -3,7 +3,7 @@
     <h2 class="home-hero-title-portfolio">포트폴리오</h2>
     <p class="home-hero-des-portfolio">
         코리아 통번역 센터는 다년간의 노하우로<br class="br_portfolio">
-        총 <?=$num_translation?>개의 프로젝트를<br class="br_portfolio">
+        총 <b class="count"><?=$num_translation?></b>개의 번역과 <b class="count"><?=$num_interpert?></b>건의 통역 프로젝트를<br class="br_portfolio">
         성공적으로 마무리하였습니다.
     </p>
     <a href="/translation_order/selectType" class="home-btn">프로젝트 의뢰하기</a></div>
@@ -31,3 +31,24 @@
 </script>
 <!-- 무한스크롤 스크립트 끝 -->
 
+<script>
+    // Changing the defaults
+window.sr = ScrollReveal({ reset: true });
+
+// Customizing a reveal set
+sr.reveal('.home-portfolio-list', { duration: 1500 });
+
+</script>
+<script>
+    $('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 2000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
+</script>

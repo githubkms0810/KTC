@@ -45,8 +45,8 @@
         </div>
         <div class="join-wrap">
             <div class="join-tit">
-                저희는 총 <b><?=$num_translation+34?></b>건의 번역과 <b><?=$num_interpert+294?></b>건의 통역을 맡았습니다!<br>
-                지금 의뢰하시면 <b><?=$num_freelancer?>명</b>의 통번역사가 함께합니다.
+                저희는 총 <b class="count"><?=$num_translation+34?></b>건의 번역과 <b class="count"><?=$num_interpert+294?></b>건의 통역을 맡았습니다!<br>
+                지금 의뢰하시면 <b class="count"><?=$num_freelancer?></b>명의 통번역사가 함께합니다.
             </div>
             <div class="join-list">
                 <ul>
@@ -94,4 +94,17 @@ window.sr = ScrollReveal({ reset: true });
 sr.reveal('.navianim', { duration: 1500 });
 sr.reveal('.join-listanim', { duration: 1500 });
 sr.reveal('.join-tit', { duration: 1500 });
+</script>
+<script>
+    $('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 2000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
 </script>
