@@ -206,7 +206,7 @@
         <p class="home-des" style="font-size:16px;">기밀 유지를 원하는 프로젝트의 정보는 공개하지 않습니다.</p>
         <ul class="home-portfolio">
         <?php foreach ( $portfolioes as $portfolio ): ?>
-            <li class="home-portfolio__item" style="cursor:pointer;" onclick="location.href='http://localhost/translation_order/list'">
+            <li class="home-portfolio__item" style="cursor:pointer;" onclick="location.href='/translation_order/list'">
                 <img src="<?=$portfolio->image?>">
                 <a href="/translation_order/<?=$portfolio->id?>">열람하기</a>
             </li>
