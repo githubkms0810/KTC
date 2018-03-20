@@ -233,4 +233,8 @@ sr.reveal('.home-portfolio__item',{duration:1500});
 sr.reveal('.btn',{duration:1500});
 
 sr.reveal('.image',{duration:1500});
+
+sr.reveal('.home-list__item',{duration:1500});
+
+sr.reveal('.home-text__item',{duration:1500});
 </script>

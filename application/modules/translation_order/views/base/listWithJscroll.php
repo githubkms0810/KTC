@@ -1,11 +1,4 @@
-
-
-
-
-
-
 <?php foreach ( $portfolioes as $portfolio ): ?>
-
 <span class="jy-portfolio-item-wrapper">
 <div class="container-contact100" style="display:none; position:fixed !important;">
     <div  class="wrap-contact100"  style="width:100%;display:block;" >
@@ -15,15 +8,11 @@
 
         <div class="contact100-form validate-form">
             <span class="contact100-form-title" style="font-weight:bold;">
-                제휴 문의
+                <?=$portfolio->title?>
             </span>
-
-
-                    <!-- Begin Article
-        ================================================== -->
+        <!-- Begin Article================================================== -->
         <div class="container">
             <div class="row">
-
                 <!-- Begin Fixed Left Share -->
                 <div class="col-md-2 col-xs-12">
                     <div class="share" style="display:none;">
@@ -200,7 +189,7 @@
 <li class="home-portfolio__itemlist" style="cursor:pointer;" onclick="Portfolio.ClickPortfolio(this); return false;" >
     <img src="<?=$portfolio->image?>">
     <!-- <a href="/translation_order/<?=$portfolio->id?>">열람하기</a> -->
-    <a href="#">열람하기</a>
+    <a href="#" style="color: #677871;">열람하기</a>
     <?php if ( DEBUG === true ): ?>
         <h1><?=$portfolio->id?></h1>
     <?php endif; ?>
