@@ -106,29 +106,13 @@
         </ul>
     </div>
 </section>
-<!--
-<section class="home-section home-section_padding">
-    <div class="bc-container">
-        <img src="/public/images/peolple.png" class="image">
-        <div>
-            <h2 class="home-title"><span>완벽한 </span>통번역<span>의 중요성</span></h2>
-            <p class="home-des" style="font-size:16px">
-                코리아 통번역 센터는 영어, 일본어, 중국어 등 <br class="br">
-                사용도가 높은 언어는 물론 다문화 사회로 나아가는 과도기에 <br class="br">
-                점점 증가하는 다국 언어까지, 전 세계 120개 국가, <br class="br">
-                50개 이상의 언어로 현지화 서비스를 지원합니다.
-            </p>
-        </div>
-    </div>
-</section>
--->
 <section class="home-section home-section__project" style="background-image: linear-gradient(#b0b8fc 20%, #90d1fc); padding:75px 0;">
     <div>
         <div>
             프로젝트 의뢰하기
         </div>
-        <div>
-            프로젝트 의뢰하기
+        <div style="width:150px; height:50px; border: 2px solid #000;">
+            <a href="#">프로젝트 의뢰하기</a>
         </div>
     </div>
 </section>
