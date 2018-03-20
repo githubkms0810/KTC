@@ -225,7 +225,7 @@
 			  <h4>번역 언어쌍</h4>
   
 			  <p class="project_select icon">
-				  <select name="translation_before" class="budget" style="width:49.5%; display:inline-block;">
+				  <select name="translation_before" class="budget" style="width:49.4%; display:inline-block;">
 					  <option  value="">시작 언어</option>
 					  <option <?=my_set_selected($row,"translation_before","포도")?> <?=DEBUG === true ? "selected" : ""?>>포도</option>
 					  <option <?=my_set_selected($row,"translation_before","사과")?>>사과</option>
@@ -245,13 +245,10 @@
 <br>
 		  <div>
 			  <h4>통역 장소</h4>
-			  <div class="icon" style="width:79%; display:inline-block; margin-top:1px; margin-bottom:1px;">
-				  <input value="<?=DEBUG === false ? my_set_value($row,"interpret_new_address") : "주소테스트" ?>" class="email" type="text" name="interpret_new_address" id="sample4_roadAddress" readonly>
+			  <div class="icon" onclick="sample4_execDaumPostcode(); return false;" >
+				  <input value="<?=DEBUG === false ? my_set_value($row,"interpret_new_address") : "주소테스트" ?>" class="email" type="text" name="interpret_new_address" id="sample4_roadAddress" placeholder="주소" readonly>
 				  <input value="<?=DEBUG === false ? my_set_value($row,"interpret_old_address") : "지번주소테스트" ?>" id="sample4_jibunAddress"type="hidden" name="interpret_old_address">
 				  <input value="<?=DEBUG === false ? my_set_value($row,"interpret_post_number") : "우편번호테스트" ?>" id="sample4_postcode"type="hidden" name="interpret_post_number">
-			  </div>
-			  <div style="width:20%; display:inline-block; margin-bottom:1px;" class="project_form">
-				  <button type="button " onclick="sample4_execDaumPostcode(); return false;" class="projectlang_add" style="background-color:#09a5dd; height:50px;">추가</button>
 			  </div>
 			  <div class="icon" style="margin-top:20px;">
 				  <label class="project_label" for="project_detailaddress">상세 주소</label>
@@ -296,9 +293,8 @@
 			  <h4>통역 일정</h4>
 
 			  <div class="icon">
-				  <input type="text" value="<?=DEBUG === false ? my_set_value($row,"interpret_start_date") : "시작날짜테스트" ?>" placeholder="시작 날짜" style="width:47.5%; display:inline-block;" class="email" name="interpret_start_date" id="datepicker1" readonly>
-				  ~
-				  <input type="text" value="<?=DEBUG === false ? my_set_value($row,"interpret_end_date") : "종료날자테스트" ?>" placeholder="종료 날짜" style="width:47.5%; display:inline-block;" class="email" name="interpret_end_date" id="datepicker2" readonly>
+				  <input type="text" value="<?=DEBUG === false ? my_set_value($row,"interpret_start_date") : "시작날짜테스트" ?>" placeholder="시작 날짜" style="width:49.4%; display:inline-block;" class="email" name="interpret_start_date" id="datepicker1" readonly>
+				  <input type="text" value="<?=DEBUG === false ? my_set_value($row,"interpret_end_date") : "종료날자테스트" ?>" placeholder="종료 날짜" style="width:49.5%; display:inline-block;" class="email" name="interpret_end_date" id="datepicker2" readonly>
 		  
 			  </div>
 		  </div>
