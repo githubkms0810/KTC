@@ -59,7 +59,8 @@
                     </a> 
                 </h1>
                 <span class="home-nav--btn">
-                    <img src="/public/images/menu.png" alt="nav">
+                    <img id="white-menu-img" src="/public/images/menu.png" style="vertical-align: baseline;" alt="nav">
+                    <img id="color-menu-img" src="/public/images/menu_on.png" style="vertical-align: baseline; display:none;" alt="nav">  
                 </span>
                 <nav class="home-nav">
                     <ul class="home-nav__list">

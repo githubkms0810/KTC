@@ -141,6 +141,8 @@ $(function() {
   var list = $(".home-nav__list");
   var colorLogo =$("#jy-color-logo-img");
   var whiteLogo =$("#jy-white-logo-img");
+  var colormenu =$("#color-menu-img");
+  var whitemenu =$("#white-menu-img");
   $(window).scroll(function() {
       var scroll = $(window).scrollTop();
 
@@ -150,12 +152,16 @@ $(function() {
         list.removeClass('unchange-home-nav__list').addClass("change-home-nav__list");
         whiteLogo.css("display","none");
         colorLogo.css("display","inline-block");
+        whitemenu.css("display","none");
+        colormenu.css("display","inline-block");
       } else {
         header.removeClass("change-header").addClass('unchange-header');
         color.removeClass("change-home-nav").addClass('unchange-home-nav');
         list.removeClass("change-home-nav__list").addClass('unchange-home-nav__list');
         whiteLogo.css("display","inline-block");
         colorLogo.css("display","none");
+        whitemenu.css("display","inline-block");
+        colormenu.css("display","none");
       }
   });
 });
