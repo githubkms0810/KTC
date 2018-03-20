@@ -1,3 +1,7 @@
+<div class="jy-dim"></div>
+<link type="text/css" media="all" href="/public/subpage/css/002_sub/customer/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" media="all" href="/public/subpage/css/002_sub/customer/mediumish.css" rel="stylesheet">
+
 
 <!--===============================================================================================-->
 <link rel="icon" type="image/png" href="/public/subpage/partnership/images/icons/favicon.ico"/>
@@ -82,25 +86,5 @@ sr.reveal('.home-portfolio-list', { duration: 1500 });
 </script>
 
 
-<!-- <div class="contact100-map" id="google_map" data-map-x="37.616217" data-map-y="126.834748" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div> -->
-<!--===============================================================================================-->
-<!-- <script src="/public/subpage/partnership/vendor/jquery/jquery-3.2.1.min.js"></script> -->
-<!--===============================================================================================-->
-	<script src="/public/subpage/partnership/vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-	<script src="/public/subpage/partnership/vendor/bootstrap/js/popper.js"></script>
-	<script src="/public/subpage/partnership/vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="/public/subpage/partnership/vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="/public/subpage/partnership/vendor/daterangepicker/moment.min.js"></script>
-	<script src="/public/subpage/partnership/vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-	<script src="/public/subpage/partnership/vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script> -->
-	<!-- <script src="/public/subpage/partnership/js/map-custom.js"></script> -->
-<!--===============================================================================================-->
-	<script src="/public/subpage/partnership/js/main.js"></script>
 
 
