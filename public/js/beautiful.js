@@ -41,7 +41,6 @@ $(document).ready(function(){
 $(function() {
   //caches a jQuery object containing the header element
   var header = $(".home-header");
-  var logobar = $(".home-header__logo");
   var color = $(".home-nav");
   var list = $(".home-nav__list");
   var colorLogo =$("#jy-color-logo-img");
