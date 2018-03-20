@@ -22,7 +22,7 @@
 	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/css/main.css">
 <!--===============================================================================================-->
 <script>
-function chageZIndexBySelector(zIndexValue,selector)
+function changeZIndexBySelector(zIndexValue,selector)
 {
 	document.querySelector(selector).style.zIndex  = zIndexValue;
 }
@@ -37,12 +37,12 @@ scrollTop: $('.container-contact100').offset().top
 
 	<div class="container-contact100" style="margin-top:1px;">
 		<div class="contact100-map" id="google_map" data-map-x="37.616217" data-map-y="126.834748" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
-		<button class="contact100-btn-show" onclick="chageZIndexBySelector(99999,'.container-contact100');">
+		<button class="contact100-btn-show" onclick="changeZIndexBySelector(99999,'.container-contact100');">
 			<i class="fa fa-envelope-o" aria-hidden="true"></i>
 		</button>
 
 		<div  class="wrap-contact100">
-			<button class="contact100-btn-hide" onclick="chageZIndexBySelector(0,'.container-contact100');">
+			<button class="contact100-btn-hide" onclick="changeZIndexBySelector(0,'.container-contact100');">
 				<i class="fa fa-close" aria-hidden="true"></i>
 			</button>
 
