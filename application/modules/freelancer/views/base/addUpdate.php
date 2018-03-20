@@ -57,7 +57,7 @@
 					<option <?=DEBUG === false ? my_set_selected($row,"birth_month",$i) : "selected"?>><?=$i?></option>
 				<?php endfor; ?>
 			</select>
-			<select name="birth_day" class="budget" style="width:33%; display:inline-block;">
+			<select name="birth_day" class="budget" style="width:32.8%; display:inline-block;">
 			  	<option  value="">일</option>
 				<?php for ( $i = 1 ; $i <=31 ; $i++ ): ?>
 					<option <?=DEBUG === false ? my_set_selected($row,"birth_day",$i) : "selected"?>><?=$i?></option>
