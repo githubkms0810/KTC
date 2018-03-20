@@ -426,6 +426,11 @@ template {
 .change-header {
   background-color:white;
   box-shadow: 0 4px 20px rgba(149,186,219,0.25);
+  height: 80px;
+  border-bottom: 0;
+}
+.change-header .home-header__logo a {
+  border-bottom: 0;
 }
 .home-header .bc-container {
   position: relative;
