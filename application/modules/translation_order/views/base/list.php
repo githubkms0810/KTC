@@ -1,3 +1,29 @@
+
+<!--===============================================================================================-->
+<link rel="icon" type="image/png" href="/public/subpage/partnership/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/css/main.css">
+<!--===============================================================================================-->
+
+
+
 <section class="home-hero-portfolio">
     <div class="animated fadeInUp">
     <h2 class="home-hero-title-portfolio">포트폴리오</h2>
@@ -31,6 +57,8 @@
 </script>
 <!-- 무한스크롤 스크립트 끝 -->
 
+
+
 <script>
     // Changing the defaults
 window.sr = ScrollReveal({ reset: true });
@@ -52,3 +80,27 @@ sr.reveal('.home-portfolio-list', { duration: 1500 });
     });
 });
 </script>
+
+
+<!-- <div class="contact100-map" id="google_map" data-map-x="37.616217" data-map-y="126.834748" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div> -->
+<!--===============================================================================================-->
+<!-- <script src="/public/subpage/partnership/vendor/jquery/jquery-3.2.1.min.js"></script> -->
+<!--===============================================================================================-->
+	<script src="/public/subpage/partnership/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/public/subpage/partnership/vendor/bootstrap/js/popper.js"></script>
+	<script src="/public/subpage/partnership/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/public/subpage/partnership/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/public/subpage/partnership/vendor/daterangepicker/moment.min.js"></script>
+	<script src="/public/subpage/partnership/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="/public/subpage/partnership/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script> -->
+	<!-- <script src="/public/subpage/partnership/js/map-custom.js"></script> -->
+<!--===============================================================================================-->
+	<script src="/public/subpage/partnership/js/main.js"></script>
+
+

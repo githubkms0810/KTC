@@ -21,12 +21,7 @@
 	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/css/util.css">
 	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/css/main.css">
 <!--===============================================================================================-->
-<script>
-function changeZIndexBySelector(zIndexValue,selector)
-{
-	document.querySelector(selector).style.zIndex  = zIndexValue;
-}
-</script>
+
 <script>
 $(document).ready(function () {
 $('html, body').animate({
