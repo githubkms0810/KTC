@@ -1,3 +1,6 @@
+/* 이렇게 링크해서 사용하면 됩니다 */
+@import url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css);
+
 /* author: BEAUTIFUL CSS */
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -334,7 +337,7 @@ template {
 /* common */
 .home {
   font-size: 14px;
-  font-family: "Nanum Gothic", san-serif;
+  font-family: "Nanum Barun Gothic", san-serif;
   margin: 0;
 }
 .home * {
@@ -351,7 +354,7 @@ template {
 }
 .home a {
   text-decoration: none;
-  font-family: "Nanum Gothic", san-serif;
+  font-family: "Nanum Barun Gothic", san-serif;
 }
 
 .home-section {
@@ -1611,7 +1614,7 @@ template {
 }
 
 .article-post {
-    font-family: "Nanum Gothic", san-serif !important;
+    font-family: "Nanum Barun Gothic", san-serif !important;
 }
 
 .replace {
