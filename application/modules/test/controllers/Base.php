@@ -21,7 +21,6 @@ class Base extends \Base_Controller {
     */
     public function index()
     {
-        
        $this->load->view("test");
     }
     public function payapp_request()
