@@ -3,7 +3,7 @@
     <h2 class="home-hero-title-portfolio">포트폴리오</h2>
     <p class="home-hero-des-portfolio">
         코리아 통번역 센터는 다년간의 노하우로<br class="br_portfolio">
-        총 <b class="count"><?=$num_translation?></b>개의 번역과 <b class="count"><?=$num_interpert?></b>건의 통역 프로젝트를<br class="br_portfolio">
+        총 <b class="count"><?=$num_translation?></b>건의 번역과 <b class="count"><?=$num_interpert?></b>건의 통역 프로젝트를<br class="br_portfolio">
         성공적으로 마무리하였습니다.
     </p>
     <a href="/translation_order/selectType" class="home-btn">프로젝트 의뢰하기</a></div>
