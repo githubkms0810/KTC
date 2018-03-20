@@ -63,14 +63,7 @@
 
 
 
-<script>
-    // Changing the defaults
-window.sr = ScrollReveal({ reset: true });
 
-// Customizing a reveal set
-// sr.reveal('.home-portfolio-list', { duration: 1500 });
-
-</script>
 <script>
     $('.count').each(function () {
     $(this).prop('Counter',0).animate({

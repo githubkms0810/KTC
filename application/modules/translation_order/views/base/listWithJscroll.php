@@ -200,13 +200,7 @@
     <a href="/translation_order/listWithJscroll?offset=<?=$offset+$limit?>&limit=<?=$limit?>" class="jscroll-next"></a>
 </div>
 
-<script>
-    // Changing the defaults
-window.sr = ScrollReveal({ reset: true });
 
-// Customizing a reveal set
-sr.reveal('.home-portfolio__itemlist', { duration: 1500 });
-</script>
 
 
 
