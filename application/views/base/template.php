@@ -20,7 +20,7 @@
         crossorigin="anonymous"></script>
         <script src="/public/js/beautiful.js"></script>
         <script src="/public/js/scrollreveal.js"></script>
-        <script src="/public/js/jy.js"></script>
+         <script src="/public/js/jy.js"></script>
     </head>
     <body class="home">
     <!-- Channel Plugin Scripts -->

@@ -68,7 +68,7 @@
 window.sr = ScrollReveal({ reset: true });
 
 // Customizing a reveal set
-sr.reveal('.home-portfolio-list', { duration: 1500 });
+// sr.reveal('.home-portfolio-list', { duration: 1500 });
 
 </script>
 <script>
