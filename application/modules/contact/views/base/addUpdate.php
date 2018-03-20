@@ -125,3 +125,31 @@ function chageZIndexBySelector(zIndexValue,selector)
 
   gtag('config', 'UA-23581568-13');
 </script>
+<script>
+$(function() {
+  //caches a jQuery object containing the header element
+  var header = $(".home-header");
+  var logobar = $(".home-header__logo");
+  var color = $(".home-nav");
+  var list = $(".home-nav__list");
+  var colorLogo =$("#jy-color-logo-img");
+  var whiteLogo =$("#jy-white-logo-img");
+  $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+
+      if (scroll <=100000000) {
+        header.removeClass('unchange-header').addClass("change-header");
+        color.removeClass('unchange-home-nav').addClass("change-home-nav");
+        list.removeClass('unchange-home-nav__list').addClass("change-home-nav__list");
+        whiteLogo.css("display","none");
+        colorLogo.css("display","inline-block");
+      } else {
+        header.removeClass("change-header").addClass('unchange-header');
+        color.removeClass("change-home-nav").addClass('unchange-home-nav');
+        list.removeClass("change-home-nav__list").addClass('unchange-home-nav__list');
+        whiteLogo.css("display","inline-block");
+        colorLogo.css("display","none");
+      }
+  });
+});
+</script>
