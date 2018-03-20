@@ -106,13 +106,13 @@
         </ul>
     </div>
 </section>
-<section class="home-section home-section__project" style="background-image: linear-gradient(#b0b8fc 20%, #90d1fc); padding:75px 0;">
-    <div>
-        <div>
-            프로젝트 의뢰하기
+<section class="home-section home-section__project" style="background-color: #8188fe; padding:50px 0;">
+    <div class="ms">
+        <div class="ms1">
+            지금 바로 의뢰해보세요!
         </div>
-        <div style="width:150px; height:50px; border: 2px solid #000;">
-            <a href="#">프로젝트 의뢰하기</a>
+        <div class="ms2">
+            <a href="/translation_order/selectType" style="color: #997f34;">바로 의뢰하기</a>
         </div>
     </div>
 </section>

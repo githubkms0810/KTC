@@ -3248,4 +3248,29 @@ template {
     font-weight: 400;
 }
 
+
+.ms {
+    display: table;
+    margin: 0 auto;
+}
+.ms .ms1 {
+    color: #fff;
+    font-size: 24px;
+    display: table-cell;
+    padding-right: 30px;
+    line-height: 20px;
+}
+.ms .ms2 {
+    width: 180px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #fed45c;
+    box-shadow: 0 5px 30px 0px rgba(231, 172, 3, 0.35);
+    font-size: 18px;
+    display: table-cell;
+    line-height: 50px;
+}
+
+
+
 /*# sourceMappingURL=beautiful.css.map */
