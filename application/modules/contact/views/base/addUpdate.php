@@ -27,8 +27,15 @@ function chageZIndexBySelector(zIndexValue,selector)
 	document.querySelector(selector).style.zIndex  = zIndexValue;
 }
 </script>
+<script>
+$(document).ready(function () {
+$('html, body').animate({
+scrollTop: $('.container-contact100').offset().top
+}, 'slow');
+});
+</script>
 
-	<div class="container-contact100">
+	<div class="container-contact100" style="margin-top:1px;">
 		<div class="contact100-map" id="google_map" data-map-x="37.616217" data-map-y="126.834748" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
 		<button class="contact100-btn-show" onclick="chageZIndexBySelector(99999,'.container-contact100');">
 			<i class="fa fa-envelope-o" aria-hidden="true"></i>
