@@ -54,7 +54,7 @@
                     <a  href="/" style="font-size: 28px !important; font-family: 'Spoqa Han Sans', sans-serif;">
                     <!-- 동적으로 두이미지중 하나만 씀 (beautiful.js)시작 -->
                     <img id="jy-white-logo-img" src="/public/images/logo.png" style="vertical-align: baseline;" alt="KTC">
-                    <img id="jy-color-logo-img" style="display:none;" src="/public/images/logo_on.png" style="vertical-align: baseline;" alt="KTC">
+                    <img id="jy-color-logo-img" style="vertical-align: baseline; display:none;" src="/public/images/logo_on.png" style="vertical-align: baseline;" alt="KTC">
                     <!-- 동적으로 두이미지중 하나만 씀 (beautiful.js)끝 -->
                     </a> 
                 </h1>
