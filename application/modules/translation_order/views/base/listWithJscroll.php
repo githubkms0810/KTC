@@ -1,6 +1,6 @@
 <?php foreach ( $portfolioes as $portfolio ): ?>
 <span class="jy-portfolio-item-wrapper">
-<div class="container-contact100" style="width:80%;display:none; position:fixed !important;">
+<div class="container-contact100" style="width:80%;display:none; position:fixed !important; position: absolute; top: 60%; left: 10%;">
     <div  class="wrap-contact100"  style="width:100%;display:block;" >
         <button class="contact100-btn-hide" onclick="Portfolio.Close(this);">
             <i class="fa fa-close" aria-hidden="true"></i>
@@ -209,3 +209,7 @@ sr.reveal('.home-portfolio__itemlist', { duration: 1500 });
 </script>
 
 
+
+<script>
+    var Portfolio = new Jy.KTC.Portfolio();
+</script>
