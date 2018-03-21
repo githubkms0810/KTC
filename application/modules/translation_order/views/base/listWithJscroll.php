@@ -1,7 +1,7 @@
 <?php foreach ( $portfolioes as $portfolio ): ?>
 <span class="jy-portfolio-item-wrapper">
 <div class="container-contact100" style="width:100%; display:none; position:fixed !important; position: absolute; left:0px;">
-    <div  class="wrap-contact100"  style="width:80%;display:block; max-width:300px;" >
+    <div  class="wrap-contact100"  style="width:80%;display:block; max-width:300px;padding:0px;" >
         <button class="contact100-btn-hide" onclick="Portfolio.Close(this);">
             <i class="fa fa-close" aria-hidden="true"></i>
         </button>
@@ -20,34 +20,34 @@
                     <!-- End Featured Image -->
 
                     <!-- Begin Post Content -->
-                    <div class="article-post">
-                        <div class="portfolio_content-sort">
-                        <span class="author-meta">
-                        <span class="post-name">
-                        <?php if ( $portfolio->buyer ==="회사" ): ?>
-                            회사</span><br/>
-                            <span class="post-date"><?=$portfolio->company?></span>
-                        <?php elseif($portfolio->buyer ==="개인"): ?>
-                            의뢰자</span><br/>
-                            <span class="post-date"><?=$portfolio->personal_name?></span>
-                        <?php endif ?>
-                        </span>
+                    <div class="article-post jy-align-center" >
+                        <div class="portfolio_content-sort jy-align-center" >
+                            <span class="author-meta jy-align-center">
+                            <?php if ( $portfolio->buyer ==="회사" ): ?>
+                                <span class="post-name">회사</span>
+                                <br/>
+                                <span class="post-date"><?=$portfolio->company?></span>
+                            <?php elseif($portfolio->buyer ==="개인"): ?>
+                                <span class="post-name">의뢰자</span><br/>
+                                <span class="post-date"><?=$portfolio->personal_name?></span>
+                            <?php endif ?>
+                            </span>
                         </div>
                         
-                        <div class="portfolio_content-sort">
-                        <span class="author-meta">
-                        <span class="post-name">
-                            언어쌍</span><br/>
-                        <span class="post-date"><?=$portfolio->translation_before?>/<?=$portfolio->translation_after?></span>
-                        </span>
+                        <div class="portfolio_content-sort  jy-align-center">
+                            <span class="author-meta  jy-align-center">
+                                <span class="post-name">언어쌍</span>
+                                <br/>
+                                <span class="post-date"><?=$portfolio->translation_before?>/<?=$portfolio->translation_after?></span>
+                            </span>
                         </div>
 
-                        <div class="portfolio_content-sort">
-                        <span class="author-meta">
-                        <span class="post-name">
-                            내용</span><br/>
-                        <span class="post-date"><?=$portfolio->desc?></span>
-                        </span>
+                        <div class="portfolio_content-sort  jy-align-center">
+                            <span class="author-meta  jy-align-center">
+                                <span class="post-name">내용</span>
+                                <br/>
+                                <span class="post-date"><?=$portfolio->desc?></span>
+                            </span>
                         </div>
                     </div>
                     <!-- End Post Content -->
