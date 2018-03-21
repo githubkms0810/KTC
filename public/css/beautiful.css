@@ -3271,6 +3271,30 @@ template {
     line-height: 50px;
 }
 
-
+@media (max-width: 370px) {
+  .ms .ms1 {
+    display: table-row;
+    height: 45px;
+  }
+  .ms .ms2 {
+    display: inline-table;
+  }
+  .rightnow{
+    display:none;
+  }
+}
+@media(max-width:470px){
+  .ms .ms1 {
+    line-height: 30px;
+  }
+  .ms .ms2 {
+    vertical-align: middle;
+  }
+}
+@media(min-width: 470px){
+  .rightnow{
+    display:none;
+  }
+}
 
 /*# sourceMappingURL=beautiful.css.map */

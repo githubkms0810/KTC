@@ -109,7 +109,7 @@
 <section class="home-section home-section__project" style="background-color: #8188fe; padding:50px 0;">
     <div class="ms">
         <div class="ms1">
-            지금 바로 의뢰해보세요!
+            지금 바로 <br class="rightnow">의뢰해보세요!
         </div>
         <div class="ms2">
             <a href="/translation_order/selectType" style="color: #997f34;">바로 의뢰하기</a>
