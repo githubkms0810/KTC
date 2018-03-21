@@ -56,7 +56,7 @@
         <header  class="home-header">
             <div class="bc-container">
                 <h1 class="home-header__logo">
-                    <a  href="/" style="font-size: 28px !important; font-family: 'Spoqa Han Sans', sans-serif;">
+                    <a href="/" style="font-size: 28px !important; font-family: 'Spoqa Han Sans', sans-serif;">
                     <!-- 동적으로 두이미지중 하나만 씀 (beautiful.js)시작 -->
                     <img id="jy-white-logo-img" src="/public/images/logo.png" style="vertical-align: baseline;" alt="KTC">
                     <img id="jy-color-logo-img" src="/public/images/logo_on.png" style="vertical-align: baseline; display:none;" alt="KTC">
