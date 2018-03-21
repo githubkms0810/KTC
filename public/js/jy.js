@@ -37,7 +37,6 @@ var Jy;
             var _GetItemWapper = function($this){
                 return $($this.parents(".jy-portfolio-item-wrapper")[0]);
             }            
-            var _Get
             return Portfolio;
         })();
         KTC.Portfolio = Portfolio;
