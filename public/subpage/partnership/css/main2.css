@@ -132,8 +132,6 @@ iframe {
 [ Contact ]*/
 
 .container-contact100 {
-  width: 100%;  
-  min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -146,6 +144,9 @@ iframe {
   background: transparent;
   position: relative;
   z-index: 1;
+  overflow-y:scroll;
+  height: 100%;
+  top: 0px !important;
 }
 
 .contact100-map {
@@ -164,6 +165,7 @@ iframe {
   padding: 45px 50px 25px 50px;
   position: relative;
   display: none;
+  margin:0 auto;
 }
 
 .show-wrap-contact100 {
@@ -362,12 +364,18 @@ textarea.input100 {
   }
 }
 
+
 @media (max-width: 768px) {
   .rs1-wrap-input100 {
     width: 100%;    
   }
   .wrap-contact100 {
-    margin-top: 90px;
+    margin-top: 70px;
+  }
+}
+@media (min-width: 600px) {
+  .wrap-contact100 {
+    margin-top: 140px;
   }
 }
 

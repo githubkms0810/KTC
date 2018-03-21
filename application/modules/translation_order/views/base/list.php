@@ -23,7 +23,7 @@
 	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/css/util.css">
-	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/css/main2.css">
 <!--===============================================================================================-->
 
 
