@@ -1,7 +1,7 @@
 <?php foreach ( $portfolioes as $portfolio ): ?>
 <span class="jy-portfolio-item-wrapper">
-<div class="container-contact100" style="width:100%; display:none; position:fixed !important; position: absolute; top: 0px; left:0px;">
-    <div  class="wrap-contact100"  style="width:80%;display:block; left:10%;" >
+<div class="container-contact100" style="width:100%; display:none; position:fixed !important; position: absolute; left:0px;">
+    <div  class="wrap-contact100"  style="width:80%;display:block; max-width:600px;" >
         <button class="contact100-btn-hide" onclick="Portfolio.Close(this);">
             <i class="fa fa-close" aria-hidden="true"></i>
         </button>
@@ -102,28 +102,6 @@
                             개인 이름</span><br/>
                             <span class="post-date"><?=$portfolio->personal_name?></span>
                         <?php endif ?>
-                        </span>
-                        </div>
-
-                        <div class="portfolio_content-sort">
-                        <span class="meta-footer-thumb">
-                            <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal">
-                        </span>
-                        <span class="author-meta">
-                        <span class="post-name">
-                            언어쌍</span><br/>
-                        <span class="post-date"><?=$portfolio->translation_before?>/<?=$portfolio->translation_after?></span>
-                        </span>
-                        </div>
-
-                        <div class="portfolio_content-sort">
-                        <span class="meta-footer-thumb">
-                            <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal">
-                        </span>
-                        <span class="author-meta">
-                        <span class="post-name">
-                            업무 내용</span><br/>
-                        <span class="post-date"><?=$portfolio->desc?></span>
                         </span>
                         </div>
 
