@@ -3270,7 +3270,7 @@ template {
     font-size: 24px;
     display: table-cell;
     padding-right: 30px;
-    line-height: 20px;
+    line-height: 30px;
 }
 .ms .ms2 {
     width: 180px;
@@ -3303,9 +3303,10 @@ template {
     vertical-align: middle;
   }
 }
-@media(min-width: 470px){
+@media(min-width: 770px){
   .rightnow{
     display:none;
+    line-height: 40px;
   }
 }
 
