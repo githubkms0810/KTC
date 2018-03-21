@@ -1,7 +1,7 @@
 <?php foreach ( $portfolioes as $portfolio ): ?>
 <span class="jy-portfolio-item-wrapper">
-<div class="container-contact100" style="width:80%;display:none; position:fixed !important; position: absolute; top: 60%; left: 10%;">
-    <div  class="wrap-contact100"  style="width:100%;display:block;" >
+<div class="container-contact100" style="width:100%; display:none; position:fixed !important; position: absolute; top: 0px; left:0px;">
+    <div  class="wrap-contact100"  style="width:80%;display:block; left:10%;" >
         <button class="contact100-btn-hide" onclick="Portfolio.Close(this);">
             <i class="fa fa-close" aria-hidden="true"></i>
         </button>

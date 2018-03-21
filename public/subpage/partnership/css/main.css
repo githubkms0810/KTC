@@ -132,8 +132,6 @@ iframe {
 [ Contact ]*/
 
 .container-contact100 {
-  width: 100%;  
-  min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -146,6 +144,9 @@ iframe {
   background: transparent;
   position: relative;
   z-index: 1;
+  overflow-y:scroll;
+  height: 100%;
+  top: 0px;
 }
 
 .contact100-map {
