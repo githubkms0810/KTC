@@ -7,6 +7,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/public/images/favicon.ico">
+        <link rel="canonical" href="http://www.ktrans.kr">
+        <meta name="description" content="대한민국 대표 언어 전문 서비스 기업">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="KTC | 코리아 통번역 센터">
+        <meta property="og:description" content="대한민국 대표 언어 전문 서비스 기업">
+        <meta property="og:image" content="/public/images/thum.jpg">
+        <meta property="og:url" content="http://www.ktrans.kr">
         <link rel="stylesheet" type="text/css" media="all" href="/public/subpage/css/reset/styles.css">
         <link rel="stylesheet" href="/public/css/jy.css">
         <link rel="stylesheet" href="/public/css/beautiful.css">
@@ -21,10 +28,6 @@
         crossorigin="anonymous"></script>
         <script src="/public/js/beautiful.js"></script>
         <script src="/public/js/scrollreveal.js"></script>
-         
-
-
-        
     </head>
     <body class="home">
     <div class="jy-dim" onclick="Portfolio.Close(this);"></div>
