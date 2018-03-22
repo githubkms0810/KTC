@@ -6,6 +6,7 @@
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="/favicon.ico">
         <link rel="stylesheet" type="text/css" media="all" href="/public/subpage/css/reset/styles.css">
         <link rel="stylesheet" href="/public/css/jy.css">
         <link rel="stylesheet" href="/public/css/beautiful.css">
