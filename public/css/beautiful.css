@@ -3312,6 +3312,14 @@ template {
     height: 70px;
   }
 }
-
+@media(max-width:430px){
+    .home-portfolio__item {
+      width: 40vw;
+      height: 40vw;
+    }
+    .home-portfolio__itemlist {
+      width: 40vw;
+    }
+}
 
 /*# sourceMappingURL=beautiful.css.map */
