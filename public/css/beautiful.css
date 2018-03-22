@@ -3283,7 +3283,7 @@ template {
     line-height: 50px;
 }
 
-@media (max-width: 370px) {
+@media (max-width: 640px) {
   .ms .ms1 {
     display: table-row;
     height: 45px;
@@ -3291,23 +3291,23 @@ template {
   .ms .ms2 {
     display: inline-table;
   }
-  .rightnow{
-    display:none;
-  }
 }
-@media(max-width:470px){
+@media(min-width:430px){
   .ms .ms1 {
-    line-height: 30px;
+    line-height: 50px;
   }
   .ms .ms2 {
     vertical-align: middle;
   }
-}
-@media(min-width: 770px){
   .rightnow{
     display:none;
-    line-height: 40px;
   }
 }
+@media(max-width:430px){
+  .ms .ms1 {
+    height: 70px;
+  }
+}
+
 
 /*# sourceMappingURL=beautiful.css.map */
