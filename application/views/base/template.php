@@ -97,7 +97,7 @@
         </header>
         <?=$this->load->views($content_view)?>
         <footer class="home-footer">
-            <div class="bc-container" style="padding: 0 60px;">
+            <div class="bc-container">
                 <div class="home-footer__sitemap">
                     <h4><b>SITEMAP</b></h4>
                     <div>

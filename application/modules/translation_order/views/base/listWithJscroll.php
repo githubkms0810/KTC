@@ -6,7 +6,7 @@
             <i class="fa fa-close" aria-hidden="true"></i>
         </button>
 
-        <div class="contact100-form validate-form">
+        <div class="contact100-form validate-form" style="padding-bottom:0;">
         <!-- Begin Article================================================== -->
         <div class="container">
             <div class="row">
@@ -24,29 +24,29 @@
                         <div class="portfolio_content-sort jy-align-center" >
                             <span class="author-meta jy-align-center">
                             <?php if ( $portfolio->buyer ==="회사" ): ?>
-                                <span class="post-name">회사</span>
+                                <span class="post-name" style="font-size: 14px;">CLIENT</span>
                                 <br/>
-                                <span class="post-date"><?=$portfolio->company?></span>
+                                <span class="post-date" style="font-size: 14px;"><?=$portfolio->company?></span>
                             <?php elseif($portfolio->buyer ==="개인"): ?>
-                                <span class="post-name">의뢰자</span><br/>
-                                <span class="post-date"><?=$portfolio->personal_name?></span>
+                                <span class="post-name" style="font-size: 14px;">CLIENT</span><br/>
+                                <span class="post-date" style="font-size: 14px;"><?=$portfolio->personal_name?></span>
                             <?php endif ?>
                             </span>
                         </div>
                         
                         <div class="portfolio_content-sort  jy-align-center">
                             <span class="author-meta  jy-align-center">
-                                <span class="post-name">언어쌍</span>
+                                <span class="post-name" style="font-size: 14px;">TRANSLATION</span>
                                 <br/>
-                                <span class="post-date"><?=$portfolio->translation_before?>/<?=$portfolio->translation_after?></span>
+                                <span class="post-date" style="font-size: 14px;"><?=$portfolio->translation_before?>/<?=$portfolio->translation_after?></span>
                             </span>
                         </div>
 
                         <div class="portfolio_content-sort  jy-align-center">
                             <span class="author-meta  jy-align-center">
-                                <span class="post-name">내용</span>
+                                <span class="post-name" style="font-size: 14px;">CONTENTS</span>
                                 <br/>
-                                <span class="post-date"><?=$portfolio->desc?></span>
+                                <span class="post-date" style="font-size: 14px;"><?=$portfolio->desc?></span>
                             </span>
                         </div>
                     </div>

@@ -68,7 +68,7 @@
 </section>
 <section class="home-section home-section__project_main" style="padding-top:100px; padding-bottom:100px;">
     <div class="bc-container">
-        <h2 class="home-title" data-animation="flipInX" data-timeout="300" style="line-height:50px;">코리아 통번역 센터<span>는</span><br>최상의 서비스<span>를 제공합니다.</span></h2>
+        <h2 class="home-title" data-animation="flipInX" data-timeout="300" style="line-height:50px;">코리아 통번역 센터<span>는</span><br>최상의 서비스<span>를 드립니다</span></h2>
         <ul class="home-list">
             <li class="home-list__item_main">
                 <div class="home-list__num_main">
@@ -76,9 +76,9 @@
                 </div>
                 <h4 class="home-list__title_main">축척된 노하우</h4>
                 <p class="home-list__des_main">
-                    다년간 대기업, 공기업의<br>
+                    다년간 대기업/공기업의<br>
                     다양한 프로젝트를<br>
-                    성공적으로 마무리하였습니다.
+                    완벽히 마무리했습니다.
                 </p>
             </li>
             <li class="home-list__item_main">
@@ -87,7 +87,7 @@
                 </div>
                 <h4 class="home-list__title_main">세심한 관리</h4>
                 <p class="home-list__des_main">
-                    전문 PM이 통번역사 선정부터<br>
+                    통번역사 선정부터<br>
                     일시, 장소, 내용 등<br>
                     고객을 정확히 분석합니다.
                 </p>
@@ -135,7 +135,7 @@
                 <div class="home-list__num">
                     <span>2</span>
                 </div>
-                <h4 class="home-list__title">견적서 발송 및 검토</h4>
+                <h4 class="home-list__title">견적서 발송</h4>
                 <p class="home-list__des">
                     견적을 의뢰하시면<br>
                     30분 이내로 합리적인<br>

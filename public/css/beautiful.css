@@ -2040,7 +2040,7 @@ template {
 }
 
 .bc-container {
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 /* home */
@@ -3190,6 +3190,10 @@ template {
 .home-footer__sitemap {
   width: 100%;
   margin-bottom: 40px;
+}
+.home-footer__sitemap div {
+  width: 50%;
+  display: table-cell;
 }
 .home-footer__sitemap a {
   display: block;
