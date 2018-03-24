@@ -116,9 +116,7 @@ class Base extends \Base_Controller {
             my_redirect($this->referer);
             return;
         }
-        
         //뷰
-
         $data["board"] = $this->board;
         $data['content_view'] = array("base/{$this->kind}/list","base/search");
         $this->data += $data;
