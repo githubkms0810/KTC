@@ -24,7 +24,8 @@ class MY_Upload extends CI_Upload {
         else if($kind === "file")
         {
             $config['max_size'] = uploadLimitSize; //2mg
-            $config['allowed_types'] = 'gif|jpg|jpeg|png|txt|zip|xlsx|xls|hwp';
+            // $config['allowed_types'] = 'gif|jpg|jpeg|png|txt|zip|xlsx|xls|hwp';
+            $config['allowed_types'] = '*';
         }
         else
         {
