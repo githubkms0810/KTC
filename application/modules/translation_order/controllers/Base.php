@@ -95,8 +95,21 @@ class Base extends \Base_Controller {
             }
             else{            
                 $this->load->library("email");
+                $config['mailtype'] = 'html';
+                $this->email->initialize($config);
                 $this->email->from = "admin";
-                $this->email->send_email("santutu@naver.com","test", "description");
+                $title = "kct에서 의뢰가 들어왔습니다.";
+                $href = site_url()."/admin/translation_order/get/".$insert_id;
+                
+                $description = "<a target='_blank' href='$href'>바로가기</a>";
+                ob_start();
+                $data['row'] = $row = $this->translation_order_m->get($insert_id);
+                $this->load->model('file/file_m');
+                $data["files"]  = $this->file_m->list_ByGroupId($row->file_group_id);
+                $this->load->view("admin/email",$data);
+                $description .= ob_get_clean();
+
+                $this->email->send_email("spamkms0810@naver.com",$title, $description);
                 alert("의뢰가 신청 되었습니다. 연락드리겠습니다.\\r메인페이지로 이동합니다.");
                 my_redirect("/");
             }
