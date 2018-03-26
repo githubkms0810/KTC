@@ -74,11 +74,11 @@
                 <div class="home-list__num_main">
                     <span>1</span>
                 </div>
-                <h4 class="home-list__title_main">축척된 노하우</h4>
+                <h4 class="home-list__title_main">철저한 사전 조사</h4>
                 <p class="home-list__des_main">
-                    다년간 대기업/공기업의<br>
-                    다양한 프로젝트를<br>
-                    완벽히 마무리했습니다.
+                    KTC는 최고의 품질을 위해<br>
+                    철저한 사전 조사로<br>
+                    완벽한 고증을 자랑합니다.
                 </p>
             </li>
             <li class="home-list__item_main">
@@ -96,11 +96,11 @@
                 <div class="home-list__num_main">
                     <span>3</span>
                 </div>
-                <h4 class="home-list__title_main">철저한 사전 조사</h4>
+                <h4 class="home-list__title_main">축척된 노하우</h4>
                 <p class="home-list__des_main">
-                    KTC는 최고의 품질을 위해<br>
-                    철저한 사전 조사로<br>
-                    완벽한 고증을 자랑합니다.
+                    다년간 대기업/공기업의<br>
+                    다양한 프로젝트를<br>
+                    완벽히 마무리했습니다.
                 </p>
             </li>
         </ul>
