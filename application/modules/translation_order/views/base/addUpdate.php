@@ -180,69 +180,51 @@
 			  <p class="project_select icon">
 				  <select name="interpret_kind" class="budget">
 					  <option value="">선택해주세요.</option>
-					  <option <?=DEBUG === true ? "selected" : ""?> <?=my_set_selected($row,"interpret_kind","포도")?>>포도</option>
-					  <option <?=my_set_selected($row,"interpret_kind","사과")?>>사과</option>
-					  <option <?=my_set_selected($row,"interpret_kind","오렌지")?>>오렌지</option>
+					  <option <?=DEBUG === true ? "selected" : ""?> <?=my_set_selected($row,"interpret_kind","동시통역")?>>동시통역</option>
+					  <option <?=my_set_selected($row,"interpret_kind","순차통역")?>>순차통역</option>
+					  <option <?=my_set_selected($row,"interpret_kind","수행통역")?>>수행통역</option>
+					  <option <?=my_set_selected($row,"interpret_kind","기타")?>>기타</option>
 				  </select>
 			  </p>
 		  </div> 
 
-		  <div>
-			  <h4>통역 사항</h4>
-			  <p class="project_select icon">
-				  <select name="translation_kind" class="budget">
-					  <option value="">선택해주세요.</option>
-					  <option <?=my_set_selected($row,"translation_kind","이것")?> <?=DEBUG === true ? "selected" : ""?>>이것</option>
-					  <option <?=my_set_selected($row,"translation_kind","저것")?>>저것</option>
-					  <option <?=my_set_selected($row,"translation_kind","그것")?>>그것</option>
-				  </select>
-			  </p>
-		  </div>
+      
+              <div class="icon">
+                  <label class="project_label" for="translation_kind">통역 사항</label>
+                  <input class="budget" type="text" name="translation_kind" value="<?=DEBUG === false ? my_set_value($row,"translation_kind") : "회사이름테스트" ?>">
+              </div> 
+      
+
 
 		  </div>
 		  <?php endif; ?>
-
-		  <?php if ( $type === "번역" ): ?>
 		  <div>
-
-		  <div>
-			  <h4>통역 사항</h4>
-			  <p class="project_select icon">
-				  <select name="translation_kind" class="budget">
-					  <option  value="">선택해주세요.</option>
-					  <option  <?=my_set_selected($row,"translation_kind","이것")?> <?=DEBUG === true ? "selected" : ""?>>이것</option>
-					  <option  <?=my_set_selected($row,"translation_kind","저것")?>>저것</option>
-					  <option <?=my_set_selected($row,"translation_kind","그것")?>>그것</option>
-				  </select>
-			  </p>
-		  </div>
-
-		  </div>
-		  <?php endif; ?>
-
-
-		  <div>
-			  <h4>번역 언어쌍</h4>
+			  <h4>언어 선택</h4>
   
 			  <p class="project_select icon">
 				  <select name="translation_before" class="budget" style="width:49.4%; display:inline-block;">
-					  <option  value="">시작 언어</option>
-					  <option <?=my_set_selected($row,"translation_before","포도")?> <?=DEBUG === true ? "selected" : ""?>>포도</option>
-					  <option <?=my_set_selected($row,"translation_before","사과")?>>사과</option>
-					  <option <?=my_set_selected($row,"translation_before","오렌지")?>>오렌지</option>
+					  <option selected="selected" <?=my_set_selected($row,"translation_before","한국어")?> <?=DEBUG === true ? "selected" : ""?>>한국어</option>
 				  </select>
 				  <select name="translation_after" class="budget" style="width:49.5%; display:inline-block;">
 					  <option  value="">번역 언어</option>
-					  <option <?=my_set_selected($row,"translation_after","포도")?> <?=DEBUG === true ? "selected" : ""?> >포도</option>
-					  <option <?=my_set_selected($row,"translation_after","사과")?>>사과</option>
-					  <option <?=my_set_selected($row,"translation_after","오렌지")?>>오렌지</option>
+					  <option <?=my_set_selected($row,"translation_after","영어")?> <?=DEBUG === true ? "selected" : ""?> >영어</option>
+					  <option <?=my_set_selected($row,"translation_after","일본어")?>>일본어</option>
+					  <option <?=my_set_selected($row,"translation_after","중국어")?>>중국어</option>
+					  <option <?=my_set_selected($row,"translation_after","프랑스어")?>>프랑스어</option>
+					  <option <?=my_set_selected($row,"translation_after","독일어")?>>독일어</option>
+					  <option <?=my_set_selected($row,"translation_after","스페인어")?>>스페인어</option>
+                      <option <?=my_set_selected($row,"translation_after","러시아어")?>>러시아어</option>
+                      <option <?=my_set_selected($row,"translation_after","베트남어")?>>베트남어</option>
+                      <option <?=my_set_selected($row,"translation_after","태국어")?>>태국어</option>
+                      <option <?=my_set_selected($row,"translation_after","인도네시아어")?>>인도네시아어</option>
+                      <option <?=my_set_selected($row,"translation_after","기타")?>>기타</option>
 				  </select>
 			  </p>
 		  </div>
 
 		  <?php if ( $type === "통역" ): ?>
 		  <div>
-<br>
+            <br>
 		  <div>
 			  <h4>통역 장소</h4>
 			  <div class="icon" onclick="sample4_execDaumPostcode(); return false;" >
@@ -314,7 +296,7 @@
 
 		  </div>
 		  <div style="margin-bottom:1px;">
-			  <h4>통역 장비</h4>
+			  <h4>통역 장비 (ex: 리시버 100개)</h4>
   
 			  <ul class="project_form-list" style="margin-bottom:1px;">
 				  <li>

@@ -45,8 +45,10 @@
         </div>
         <div class="join-wrap">
             <div class="join-tit">
-                저희는 총 <b class="count"><?=$num_translation+34?></b>건의 번역과 <b class="count"><?=$num_interpert+294?></b>건의 통역을 맡았습니다!<br>
-                지금 의뢰하시면 <b class="count"><?=$num_freelancer?></b>명의 통번역사가 함께합니다.
+                담당 PM이 친절하게 답변드리겠습니다.<br>
+                언제든지 의뢰해주세요.
+                <!-- 저희는 총 <b class="count"><?=$num_translation+34?></b>건의 번역과 <b class="count"><?=$num_interpert+294?></b>건의 통역을 맡았습니다!<br>
+                지금 의뢰하시면 <b class="count"><?=$num_freelancer?></b>명의 통번역사가 함께합니다. -->
             </div>
             <div class="join-list">
                 <ul>
@@ -57,8 +59,8 @@
                                     <div class="img"><span><img src="/public/subpage/css/001_jobdance/images/j-icon01.png" alt=""></span></div>
                                     <div class="name">통역</div>
                                     <div class="txt">
-                                        군영과 곧 인생에 끝까지 듣는다.<br class="one">
-                                        용감하고 품고 위하여서, 사라지지 것이다.
+                                        최고의 통역사분들과 함께 하실 수 있습니다. <br class="one">
+                                        의뢰 하시기 전 공지사항을 먼저 확인 해주세요.
                                     </div>
                                 </div>
                                 <div class="btn">의뢰하기</div>
@@ -72,8 +74,8 @@
                                     <div class="img"><span><img src="/public/subpage/css/001_jobdance/images/j-icon02.png" alt=""></span></div>
                                     <div class="name">번역</div>
                                     <div class="txt">
-                                        용감하고 품고 위하여서, 사라지지 것이다.<br class="one">
-                                        군영과 곧 인생에 끝까지 듣는다.
+                                        최대한 빨리 응대해 드리겠습니다. <br class="one">
+                                        의뢰 하시기 전 공지사항을 먼저 확인 해주세요.
                                     </div>
                                 </div>
                                 <div class="btn">의뢰하기</div>
