@@ -109,7 +109,7 @@ class Base extends \Base_Controller {
                 $this->load->view("admin/email",$data);
                 $description .= ob_get_clean();
 
-                $this->email->send_email("spamkms0810@naver.com",$title, $description);
+                $this->email->send_email("ktc@ktrans.kr",$title, $description);
                 alert("의뢰가 신청 되었습니다. 연락드리겠습니다.\\r메인페이지로 이동합니다.");
                 my_redirect("/");
             }
