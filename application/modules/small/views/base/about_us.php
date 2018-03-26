@@ -84,7 +84,7 @@
     <div class="bc-container">
         <img src="/public/images/peolple.png" class="image">
         <div>
-            <h2 class="home-title"><span>완벽한 </span>통번역<span>의 중요성</span></h2>
+            <h2 class="home-title">통·번역<span>을 통한 </span>소통과 협력</h2>
             <p class="home-des" style="font-size:16px">
                 코리아 통번역 센터는 합리적인 프로세스를 기반으로 <br class="br">
                 개인 및 기업간의 상호 소통과 협력을 실현하고자 노력하고 있습니다. <br class="br">

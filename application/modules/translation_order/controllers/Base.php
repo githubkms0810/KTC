@@ -98,7 +98,7 @@ class Base extends \Base_Controller {
                 $config['mailtype'] = 'html';
                 $this->email->initialize($config);
                 $this->email->from = "admin";
-                $title = "kct에서 의뢰가 들어왔습니다.";
+                $title = "KTC에서 의뢰가 들어왔습니다.";
                 $href = site_url()."/admin/translation_order/get/".$insert_id;
                 
                 $description = "<a target='_blank' href='$href'>바로가기</a>";
@@ -110,7 +110,7 @@ class Base extends \Base_Controller {
                 $description .= ob_get_clean();
 
                 $this->email->send_email("ktc@ktrans.kr",$title, $description);
-                alert("의뢰가 신청 되었습니다. 연락드리겠습니다.\\r메인페이지로 이동합니다.");
+                alert("의뢰가 신청 되었습니다. 연락드리겠습니다.\\r메인 페이지로 이동합니다.");
                 my_redirect("/");
             }
         }

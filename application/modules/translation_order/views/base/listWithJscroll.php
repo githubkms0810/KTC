@@ -16,7 +16,7 @@
                 <div class="col-md-8 col-md-offset-2 col-xs-12" style="margin:0 auto;">
 
                     <!-- Begin Featured Image -->
-                    <img class="featured-image img-fluid" src="<?=$portfolio->image?>" alt="">
+                    <img class="featured-image img-fluid" src="<?=$portfolio->image?>" alt="" style="margin-top: 1.5rem;">
                     <!-- End Featured Image -->
 
                     <!-- Begin Post Content -->
