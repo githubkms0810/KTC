@@ -27,6 +27,14 @@
         crossorigin="anonymous"></script>
         <script src="/public/js/beautiful.js"></script>
         <script src="/public/js/scrollreveal.js"></script>
+        <!-- 공통 스크립트 -->
+        <!-- Mirae Log Analysis Script Ver 1.0   -->
+        <script TYPE="text/javascript">
+            var mi_adkey = "mp1e";
+            var mi_script = "<scr"+"ipt "+"type='text/javascr"+"ipt' src='http://log1.toup.net/mirae_log.js?t="+(new Date().getTime())+"' async='true'></scr"+"ipt>"; 
+            document.writeln(mi_script);
+        </script>
+        <!-- Mirae Log Analysis Script END  -->
     </head>
     <body class="home">
     <div class="jy-dim" onclick="Portfolio.Close(this);"></div>
