@@ -185,10 +185,12 @@ class Translation_order_m extends Pagination_Model
 	//------ @cusotm
 	public function listIsPortfolioWithLimit($limit,$offset = "0")
 	{
+	
 		$this->db->where("is_portfolio","1");
 		$this->db->limit($limit,$offset);
 		return $this->list();
 	}
+	
 	public function countPortFolioes()
 	{
 		$this->db->select("count(*) as portfoliio_count");
@@ -282,10 +284,19 @@ class Translation_order_m extends Pagination_Model
     // {
     //     $this->_select();
     // }
-    // protected function _select_base()
-    // {
-    //     $this->_select();
-	// }
+    protected function _select_base()
+    {
+		$queryStr=$this->createIfIsUseConfidential("company").",".
+		$this->createIfIsUseConfidential("personal_name").",".
+		$this->createIfIsUseConfidential("translation_before").",".
+		$this->createIfIsUseConfidential("translation_after").",".
+		$this->createIfIsUseConfidential("desc");
+		$this->db->select("*, {$queryStr}");
+	}
+	private function createIfIsUseConfidential($fieldName)
+	{
+		return "IF({$this->as}.is_use_confidential = 1 , '기밀사항', {$this->as}.{$fieldName}) as `{$fieldName}`";
+	}
 	protected function _select_api()
 	{
 		$this->db->select("
