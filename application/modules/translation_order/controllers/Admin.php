@@ -29,7 +29,6 @@ class Admin extends \Admin_Controller {
               $this->template->render($data);
           }
           else{
-            
               $this->db->trans_start();
               $this->load->model('file/file_m');
               $group_id=$this->file_m->add();

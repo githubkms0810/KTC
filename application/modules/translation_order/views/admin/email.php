@@ -208,6 +208,19 @@
 
 <hr/>
 
+<div class="row">
+    <div class="col-sm-12"><h2>첨부파일 리스트</h2></div>
+</div>
+<?php foreach ( $files as $file ): ?>
+<div class="row">
+    <div class="col-sm-12">
+    <h4 style="display:inline-block"><a href="<?=site_url()?>download/<?=$file->id?>"><?=$file->original_name?></a></h4>
+    </div>
+</div>
+<?php endforeach; ?>
+
+<hr/>
+
 
 
 <br>

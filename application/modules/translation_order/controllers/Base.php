@@ -103,7 +103,7 @@ class Base extends \Base_Controller {
                 
                 $description = "<a target='_blank' href='$href'>바로가기</a>";
                 ob_start();
-                $data['row'] = $row = $this->translation_order_m->get($insert_id);
+                $data['row'] = $row = $this->translation_order_m->p_get($insert_id);
                 $this->load->model('file/file_m');
                 $data["files"]  = $this->file_m->list_ByGroupId($row->file_group_id);
                 $this->load->view("admin/email",$data);
