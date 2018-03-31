@@ -52,7 +52,8 @@ class Admin_Controller extends Public_Controller
 		$this->menudata_creator->addSubMenu("freelancer","설정","freelancer_setting",site_url("admin/freelancer/setting"));
 		$this->menudata_creator->addSubMenu("translation_order","번역/통역 의뢰","translation_order_list",site_url("admin/translation_order/list"));
 		// $this->menudata_creator->addSubMenu("email","이메일","email_list",site_url("admin/email/list"));
-	
+    
+        
 		return $this->menudata_creator->getSubMenus();
 	}
 
