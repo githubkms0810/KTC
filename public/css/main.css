@@ -718,6 +718,12 @@ a, a:focus, a:hover {
   font-size: 24px;
 }
 
+.ppp{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+}
+
 i, sup, sub, u, del {
   color: #42d1ff;
 }
@@ -1843,7 +1849,9 @@ i, sup, sub, u, del {
   padding: 120px 0;
 }
 
-
+h4{
+    font-size: 20px;
+}
 
 @media (max-width: 991px) {
   .section-title p br {
@@ -2139,6 +2147,7 @@ i, sup, sub, u, del {
 }
 
 .single-service {
+  height: 350px;
   text-align: center;
   background-color: #f9f9ff;
   padding: 40px 0;
@@ -2148,17 +2157,18 @@ i, sup, sub, u, del {
   transition: all 0.3s ease 0s;
 }
 
-.single-service a {
+.single-service a,
+.single-service p{
   color: #222;
 }
 
 .single-service:hover {
-  cursor: pointer;
   box-shadow: 0px 20px 20px 0px rgba(157, 157, 157, 0.5);
   color: #fff;
 }
 
-.single-service:hover a {
+.single-service:hover a,
+.single-service:hover p {
   color: #fff;
 }
 
@@ -2265,7 +2275,7 @@ i, sup, sub, u, del {
 }
 
 .single-price {
-  background-color: #fff;
+  background-color: #f9f9ff;
 }
 
 .single-price .top-sec, .single-price .bottom-sec {
@@ -2323,7 +2333,11 @@ i, sup, sub, u, del {
 .single-price:hover .price-btn .lnr {
   color: #222;
 }
-
+@media (min-width:800px){
+    .single-price{
+      margin-bottom: 30px;
+    }
+}
 @media (max-width: 800px) {
   .single-price {
     margin-bottom: 30px;
