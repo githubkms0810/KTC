@@ -21,6 +21,18 @@ class Base extends \Base_Controller {
         $this->template->render($data);
     }
     
+    public function about_interpret()
+    {
+        $data["content_view"] = "base/about_interpret";
+        $this->template->render($data);
+    }
+    
+    public function about_translate()
+    {
+        $data["content_view"] = "base/about_translate";
+        $this->template->render($data);
+    }
+    
     // public function portfolio_list()
     // {
     //     $data["content_view"] = "base/portfolio_list";
