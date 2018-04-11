@@ -22,7 +22,7 @@
         <div class="row d-flex justify-content-center">
             <div class="menu-content pb-60 col-lg-8">
                 <div class="title text-center">
-                    <h1 class="mb-10" style="font-size:40px;"><b>번역의뢰</b> 하시기 전에 확인해 주세요.</h1>
+                    <h1 class="mb-10" style="font-size:40px;"><b>번역의뢰</b> 하시기 전에 <br class="br">확인해 주세요.</h1>
                     <p>번역의뢰 취소 하실 때에는 번역진행후 -시간 이내에 해주십시오.</p>
                 </div>
             </div>
@@ -204,11 +204,10 @@
             <div class="download-button d-flex flex-row justify-content-center mt-30">
                 <a href="/translation_order/selectType">
                     <div class="buttons flex-row d-flex">
-                        <i class="fa fa-apple" aria-hidden="true"></i>
                         <div class="desc">
 
                             <p>
-                                <span>의뢰하기</span> <br>&nbsp;
+                                <span>의뢰하기</span>
                             </p>
 
                         </div>

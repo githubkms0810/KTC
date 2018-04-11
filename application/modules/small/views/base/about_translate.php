@@ -23,7 +23,7 @@
                     <b>통역의뢰</b>하시기 전에<br> 확인해주세요
                 </h1>
                 <p class="mt-20">
-                    한국어를 기본으로 영어/일본어/중국어/프랑스어/스페인어/독일어/<br>러시아어/포르투갈어/태국어/베트남어/인도네시아어/기타 언어 번역가능합니다. <br> 통역 서비스를 문의하실 때에 진행 사항에 따라 사용되는 통역종류가 다르니 참고하여 주십시오.
+                    한국어를 기본으로 영어/일본어/중국어/프랑스어/스페인어/독일어/<br>러시아어/포르투갈어/태국어/베트남어/인도네시아어/기타 언어 번역가능합니다. <br> 통역 서비스를 문의하실 때 진행 사항에 따라 사용되는 통역종류가 다르니 참고하여 주십시오.
                 </p>
                 <a href="/translation_order/selectType" class="btn primary-btn text-uppercase mt-20">의뢰하기</a>
             </div>
@@ -283,11 +283,10 @@
             <div class="download-button d-flex flex-row justify-content-center mt-30">
                 <a href="/translation_order/selectType">
                     <div class="buttons flex-row d-flex">
-                        <i class="fa fa-apple" aria-hidden="true"></i>
                         <div class="desc">
 
                             <p>
-                                <span>의뢰하기</span> <br>&nbsp;
+                                <span>의뢰하기</span>
                             </p>
 
                         </div>
