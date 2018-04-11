@@ -2156,6 +2156,12 @@ h4{
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+.ppp{
+    -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
 
 .single-service a,
 .single-service p{
@@ -2275,18 +2281,20 @@ h4{
 }
 
 .single-price {
-  background-color: #f9f9ff;
+  background-color: #fff;
 }
 
 .single-price .top-sec, .single-price .bottom-sec {
   border-bottom: 1px solid #eeeeee;
-  padding: 40px 40px 22px 40px;
+  padding: 40px 40px 37px 40px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
-
+.bottom-sec p, .end-sec {
+    color:#777;
+}
 .single-price .top-sec br, .single-price .bottom-sec br {
   display: none;
 }
@@ -2296,7 +2304,9 @@ h4{
     display: block;
   }
 }
-
+.top-left div{
+    margin-bottom: 20px;
+}
 .single-price .end-sec {
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -2304,7 +2314,12 @@ h4{
   transition: all 0.3s ease 0s;
   padding: 40px 40px 22px 40px;
 }
-
+.single-price .bottom-sec p {
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
 .single-price .end-sec ul li {
   margin-bottom: 20px;
 }
@@ -2316,13 +2331,12 @@ h4{
   box-shadow: none;
 }
 
-.single-price:hover {
-  cursor: pointer;
-}
-
 .single-price:hover .bottom-sec, .single-price:hover .end-sec {
   box-shadow: 0px 20px 20px 0px rgba(157, 157, 157, 0.5);
   color: #fff;
+}
+.single-price:hover .bottom-sec p{
+    color:#fff;
 }
 
 .single-price:hover .price-btn {
@@ -2448,7 +2462,7 @@ h4{
   border: 1px solid #fff;
 }
 
-.buttons:hover i, .buttons:hover a {
+.buttons:hover i, .buttons:hover a, .buttons:hover .desc p span {
   color: #fff !important;
 }
 
@@ -2773,4 +2787,20 @@ h6 {
 
 .switch-wrap p {
   margin: 0;
+}
+
+.cancle-date div{
+    display: inline-block;
+    width:20%;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #777;
+}
+.cancle-pay div{
+    display: inline-block;
+    width:20%;
+    padding: 10px;
+    text-align: right;
+    border: 1px solid #777;
+
 }

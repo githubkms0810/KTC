@@ -17,7 +17,7 @@
 
 
 <!-- Start cat Area -->
-<section class="cat-area section-gap" id="service" style="border-bottom:1px solid #eaeaea;">
+<section class="cat-area section-gap" id="service">
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="menu-content pb-60 col-lg-8">
@@ -30,7 +30,8 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="single-cat d-flex flex-column">
-                    <span class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-magic-wand"></span></span></span>
+                    <span class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-magic-wand"></span></span>
+                    </span>
                     <h4 class="mb-20" style="margin-top: 23px;">번역 가능 언어</h4>
                     <p>
                         한국어를 기본으로 영어/일본어/중국어/프랑스어/스페인어/독일어/러시아어/포르투갈어/태국어/베트남어/인도네시아어/기타 언어 번역가능합니다.
@@ -39,7 +40,8 @@
             </div>
             <div class="col-lg-4">
                 <div class="single-cat">
-                    <span class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-rocket"></span></span></span>
+                    <span class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-rocket"></span></span>
+                    </span>
                     <h4 class="mt-40 mb-20">파일 첨부시 유의사항</h4>
                     <p>
                         가급적 MS Word 프로그램으로 작성된 문서로 전달 부탁드리며, 부득이하게 PDF 파일로 보내주실시 견적 확인이 오래 걸릴 수 있습니다. 수정이 불가능한 PDF파일을 번역 하실 때에는 원본 문서와 동일하게 문서가 제작되지 않습니다.
@@ -48,16 +50,17 @@
             </div>
             <div class="col-lg-4">
                 <div class="single-cat">
-                    <span class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-bug"></span></span></span>
+                    <span class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-bug"></span></span>
+                    </span>
                     <h4 class="mt-40 mb-20">의뢰 취소 및 환불 규정</h4>
                     <p>
                         번역요금 견적 확인 후, 번역 진행을 원하실 때에는 <b>반드시</b> 견적서를 받으셨던 이메일로 [번역 진행 요청]회신을 보내주시길 바랍니다.
                     </p>
                 </div>
             </div>
-            
+
         </div>
-        
+
         <div class="row d-flex justify-content-center">
             <div class="menu-content col-lg-8">
                 <div class="title text-center">
@@ -74,14 +77,13 @@
 <!-- End cat Area -->
 
 <!-- Start price Area -->
-<section class="cat-area section-gap" id="price">
+<section class="price-area section-gap" id="price">
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="menu-content pb-60 col-lg-8">
                 <div class="title text-center">
-                    <h1 class="mb-10">번역 요금</h1>
-                    <p>MS Word / 한글 프로그램 기준<br>
-                    ** 원어민 감수는 번역 비용에 포함되어 있지않으며, 원어민 감수 진행시 번역료의 100%가 가산 됩니다. **</p>
+                    <h1 class="mb-10 home-title">번역 요금</h1>
+                    <p>MS Word / 한글 프로그램 기준<br> ** 원어민 감수는 번역 비용에 포함되어 있지않으며, 원어민 감수 진행시 번역료의 100%가 가산 됩니다. **</p>
                 </div>
             </div>
         </div>
@@ -91,22 +93,42 @@
                     <div class="top-sec d-flex justify-content-between">
                         <div class="top-left">
                             <h4>한국어에서 외국어로 번역</h4>
+                            <p>한국어 한 단어 당</p>
+
                         </div>
                     </div>
-                    <div class="bottom-sec">
-                        <p>
-                            “Few would argue that, despite the advancements
-                        </p>
-                    </div>
                     <div class="end-sec">
-                        <ul>
-                            <li>2.5 GB Free Photos</li>
-                            <li>Secure Online Transfer Indeed</li>
-                            <li>Unlimited Styles for interface</li>
-                            <li>Reliable Customer Service</li>
-                            <li>Manual Backup Provided</li>
-                        </ul>
-                        <button class="primary-btn price-btn mt-20">Purchase Plan</button>
+                        <div class="top-left">
+                            <div>
+                                <div style="width:49%; display:inline-block;">영어</div>
+                                <div style="width:49%; display:inline-block;">최저 300원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">일본어</div>
+                                <div style="width:49%; display:inline-block;">최저 300원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">중국어</div>
+                                <div style="width:49%; display:inline-block;">최저 300원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">프랑스어</div>
+                                <div style="width:49%; display:inline-block;">최저 600원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">스페인어</div>
+                                <div style="width:49%; display:inline-block;">최저 600원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">독일어</div>
+                                <div style="width:49%; display:inline-block;">최저 600원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">러시아어 등 기타</div>
+                                <div style="width:49%; display:inline-block;">최저 800원</div>
+                            </div>
+                        </div><a href="/translation_order/selectType">
+                        <button class="primary-btn price-btn mt-20">의뢰하기</button></a>
                     </div>
                 </div>
             </div>
@@ -115,22 +137,41 @@
                     <div class="top-sec d-flex justify-content-between">
                         <div class="top-left">
                             <h4>외국어에서 한국어로 번역</h4>
+                            <p>한국어 한 단어 당</p>
                         </div>
                     </div>
-                    <div class="bottom-sec">
-                        <p>
-                            “Few would argue that, despite the advancements
-                        </p>
-                    </div>
                     <div class="end-sec">
-                        <ul>
-                            <li>2.5 GB Free Photos</li>
-                            <li>Secure Online Transfer Indeed</li>
-                            <li>Unlimited Styles for interface</li>
-                            <li>Reliable Customer Service</li>
-                            <li>Manual Backup Provided</li>
-                        </ul>
-                        <button class="primary-btn price-btn mt-20">Purchase Plan</button>
+                        <div class="top-left">
+                            <div>
+                                <div style="width:49%; display:inline-block;">영어</div>
+                                <div style="width:49%; display:inline-block;">최저 200원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">일본어</div>
+                                <div style="width:49%; display:inline-block;">최저 200원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">중국어</div>
+                                <div style="width:49%; display:inline-block;">최저 200원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">프랑스어</div>
+                                <div style="width:49%; display:inline-block;">최저 500원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">스페인어</div>
+                                <div style="width:49%; display:inline-block;">최저 500원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">독일어</div>
+                                <div style="width:49%; display:inline-block;">최저 500원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">러시아어 등 기타</div>
+                                <div style="width:49%; display:inline-block;">최저 800원</div>
+                            </div>
+                        </div><a href="/translation_order/selectType">
+                        <button class="primary-btn price-btn mt-20">의뢰하기</button></a>
                     </div>
                 </div>
             </div>
@@ -141,15 +182,43 @@
                     <h1 class="mb-10">&nbsp;</h1>
                     <div style="width:213px; height:1px; background:#ced0e0; margin:0 auto;"></div>
                     <h3 class="mb-10">&nbsp;</h3>
-                    <p>* 번역 완료 후 A/S *<br> 번역 결과물을 받으신 후, 오타/오역이 있을 시 수정요청 가능합니다.(3개월 내)<br>
-                        번역 결과물을 받으신 후, 내용 추가 하실 경우 20단어 미만 무상으로 번역서비스 해드립니다.(번역 완료 후 , 업무일 기준 3일 이내)  </p>
+                    <p>* 번역 완료 후 A/S *<br> 번역 결과물을 받으신 후, 오타/오역이 있을 시 수정요청 가능합니다.(3개월 내)<br> 번역 결과물을 받으신 후, 내용 추가 하실 경우 20단어 미만 무상으로 번역서비스 해드립니다.<br>(번역 완료 후 , 업무일 기준 3일 이내) </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!-- End price Area -->
+<!-- Start call-to-action Area -->
+<section class="call-to-action-area section-gap">
+    <div class="container">
+        <div class="row justify-content-center top">
+            <div class="col-lg-12">
+                <h1 class="text-white text-center home-title">의뢰하기</h1>
+                <p class="text-white text-center mt-30">
+                    담당 PM이 친절하게 답변드리겠습니다.<br> 언제든지 의뢰해주세요.
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-center d-flex">
+            <div class="download-button d-flex flex-row justify-content-center mt-30">
+                <a href="/translation_order/selectType">
+                    <div class="buttons flex-row d-flex">
+                        <i class="fa fa-apple" aria-hidden="true"></i>
+                        <div class="desc">
 
+                            <p>
+                                <span>의뢰하기</span> <br>&nbsp;
+                            </p>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End call-to-action Area -->
 <script>
     // Changing the defaults
     window.sr = ScrollReveal({
@@ -180,7 +249,7 @@
     sr.reveal('.row', {
         duration: 1500
     });
-    
+
     sr.reveal('.single-faq', {
         duration: 1500
     });

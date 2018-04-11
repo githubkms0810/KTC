@@ -35,7 +35,7 @@
 </section>
 <!-- End about Area -->
 <!-- Start service Area -->
-<section class="service-area section-gap" id="feature" style="border-bottom:1px solid #eaeaea;">
+<section class="service-area section-gap" id="feature">
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="menu-content pb-60 col-lg-8">
@@ -78,13 +78,12 @@
 <!-- End service Area -->
 
 <!-- Start price Area -->
-<section class="cat-area section-gap" id="price" style="border-bottom:1px solid #eaeaea;">
+<section class="price-area section-gap" id="price">
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="menu-content pb-60 col-lg-8">
                 <div class="title text-center">
                     <h1 class="mb-10 home-title">통역요율</h1>
-                    <p>Who are in extremely love with eco friendly system.</p>
                 </div>
             </div>
         </div>
@@ -92,56 +91,137 @@
             <div class="col-lg-6">
                 <div class="single-price">
                     <div class="top-sec d-flex justify-content-between">
-                        <div class="top-left">
+                        <div>
                             <h4>동시&순차 통역</h4>
                         </div>
                     </div>
-                    <div class="bottom-sec">
-                        <div class="top-left">
-                            <h4>영어/일본어/중국어</h4>
-                        </div>
-                        <div class="top-right">
-                            <h3>1시간까지 - 600,000원</h3>
-                            6시간까지 - 900,000원 6시간 초과시 - 100,000원/시간
-                        </div>
+                    <div class="bottom-sec" style="padding: 30px 40px 27px 40px;">
+                        <p>영어/일본어/중국어</p>
                     </div>
                     <div class="end-sec">
-                        <ul>
-                            <li>2.5 GB Free Photos</li>
-                            <li>Secure Online Transfer Indeed</li>
-                            <li>Unlimited Styles for interface</li>
-                            <li>Reliable Customer Service</li>
-                            <li>Manual Backup Provided</li>
-                        </ul>
-                        <button class="primary-btn price-btn mt-20">Purchase Plan</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="single-price">
-                    <div class="top-sec d-flex justify-content-between">
                         <div class="top-left">
-                            <h4>수행 통역</h4>
-                        </div>
-                    </div>
-                    <div class="bottom-sec">
-                        <p>
-                            “Few would argue that, despite the advancements
-                        </p>
-                    </div>
-                    <div class="end-sec">
-                        <ul>
-                            <li>2.5 GB Free Photos</li>
-                            <li>Secure Online Transfer Indeed</li>
-                            <li>Unlimited Styles for interface</li>
-                            <li>Reliable Customer Service</li>
-                            <li>Manual Backup Provided</li>
-                        </ul>
-                        <button class="primary-btn price-btn mt-20">Purchase Plan</button>
+                            <div>
+                                <div style="width:49%; display:inline-block;">1시간까지</div>
+                                <div style="width:49%; display:inline-block;">600,000원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">6시간까지</div>
+                                <div style="width:49%; display:inline-block;">900,000원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">6시간초과시</div>
+                                <div style="width:49%; display:inline-block;">100,000원/시간</div>
+                            </div>
+                        </div><a href="/translation_order/selectType">
+                        <button class="primary-btn price-btn mt-20">의뢰하기</button></a>
+
                     </div>
                 </div>
             </div>
 
+            <div class="col-lg-6">
+                <div class="single-price">
+                    <div class="top-sec d-flex justify-content-between">
+                        <div>
+                            <h4>동시&순차 통역</h4>
+                        </div>
+                    </div>
+                    <div class="bottom-sec" style="padding: 30px 40px 27px 40px;">
+                        <p>프랑스어/독일어/스페인어/러시아어</p>
+                    </div>
+                    <div class="end-sec">
+                        <div class="top-left">
+                            <div>
+                                <div style="width:49%; display:inline-block;">1시간까지</div>
+                                <div style="width:49%; display:inline-block;">700,000원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">6시간까지</div>
+                                <div style="width:49%; display:inline-block;">900,000원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">6시간초과시</div>
+                                <div style="width:49%; display:inline-block;">150,000원/시간</div>
+                            </div>
+                        </div><a href="/translation_order/selectType">
+                        <button class="primary-btn price-btn mt-20">의뢰하기</button></a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="single-price">
+                    <div class="top-sec d-flex justify-content-between">
+                        <div>
+                            <h4>수행 통역</h4>
+                        </div>
+                    </div>
+                    <div class="bottom-sec" style="padding: 30px 40px 27px 40px;">
+                        <p>영어/일본어/중국어</p>
+                    </div>
+                    <div class="end-sec">
+                        <div class="top-left">
+                            <div>
+                                <div style="width:49%; display:inline-block;">1시간까지</div>
+                                <div style="width:49%; display:inline-block;">500,000원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">6시간까지</div>
+                                <div style="width:49%; display:inline-block;">800,000원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">6시간초과시</div>
+                                <div style="width:49%; display:inline-block;">100,000원/시간</div>
+                            </div>
+                        </div><a href="/translation_order/selectType">
+                        <button class="primary-btn price-btn mt-20">의뢰하기</button></a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="single-price">
+                    <div class="top-sec d-flex justify-content-between">
+                        <div>
+                            <h4>수행 통역</h4>
+                        </div>
+                    </div>
+                    <div class="bottom-sec" style="padding: 30px 40px 27px 40px;">
+                        <p>프랑스어/독일어/스페인어/러시아어</p>
+                    </div>
+                    <div class="end-sec">
+                        <div class="top-left">
+                            <div>
+                                <div style="width:49%; display:inline-block;">1시간까지</div>
+                                <div style="width:49%; display:inline-block;">600,000원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">6시간까지</div>
+                                <div style="width:49%; display:inline-block;">900,000원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">6시간초과시</div>
+                                <div style="width:49%; display:inline-block;">150,000원/시간</div>
+                            </div>
+                        </div><a href="/translation_order/selectType">
+                        <button class="primary-btn price-btn mt-20">의뢰하기</button></a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content col-lg-8">
+                <div class="title text-center">
+                    <h1 class="mb-10">&nbsp;</h1>
+                    <div style="width:213px; height:1px; background:#ced0e0; margin:0 auto;"></div>
+                    <h3 class="mb-10">&nbsp;</h3>
+                    <p>* 취소 보상 비용 *<br> 취소일자 당일,전일 - 비용의 100% 보상<br> 취소일자 2~3일 전 - 비용의 70% 보상<br>취소일자 4~5일 전 - 비용의 50% 보상<br>취소일자 6~7일 전 - 비용의 30% 보상</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -180,19 +260,7 @@
                     <img class="d-block mx-auto mb-30" src="/public/images/f6.png" alt="">
                     <h4 style="font-weight: bold;">녹음</h4>
                     <p class="ppp">
-                         통역내용 녹음 시, 통역사와의 <b>사전 합의는 필수</b>입니다.(무단녹음 금지) 통역사와 합의 후, 녹음 시 통역료의 50%가 추가됩니다.(방송 및 온라인 업로드 100%)
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row d-flex align-items-center">
-            <div class="faq-content col-lg-9 col-md-9" style="margin:0 auto;">
-                <div class="single-faq">
-                    <h2>
-                        취소 보상비용
-                    </h2>
-                    <p>
-                        표
+                        통역내용 녹음 시, 통역사와의 <b>사전 합의는 필수</b>입니다.(무단녹음 금지) 통역사와 합의 후, 녹음 시 통역료의 50%가 추가됩니다.(방송 및 온라인 업로드 100%)
                     </p>
                 </div>
             </div>
@@ -200,6 +268,36 @@
     </div>
 </section>
 <!-- End service Area -->
+<!-- Start call-to-action Area -->
+<section class="call-to-action-area section-gap">
+    <div class="container">
+        <div class="row justify-content-center top">
+            <div class="col-lg-12">
+                <h1 class="text-white text-center home-title">의뢰하기</h1>
+                <p class="text-white text-center mt-30">
+                    담당 PM이 친절하게 답변드리겠습니다. <br>언제든지 의뢰해주세요.
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-center d-flex">
+            <div class="download-button d-flex flex-row justify-content-center mt-30">
+                <a href="/translation_order/selectType">
+                    <div class="buttons flex-row d-flex">
+                        <i class="fa fa-apple" aria-hidden="true"></i>
+                        <div class="desc">
+
+                            <p>
+                                <span>의뢰하기</span> <br>&nbsp;
+                            </p>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End call-to-action Area -->
 <script>
     // Changing the defaults
     window.sr = ScrollReveal({

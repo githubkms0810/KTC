@@ -82,7 +82,7 @@
                     <ul class="home-nav__list">
                         <li class="home-nav__item">
                             <a href="/small/about_us">소개</a>
-                            <ul>
+                            <ul style="left:-25px;">
                                 <li>
                                     <a style="font-size:12px; font-weight:400;" href="/small/about_us">회사 소개</a>
                                     <a style="font-size:12px; font-weight:400;" href="/small/about_translate">통역 소개</a>
