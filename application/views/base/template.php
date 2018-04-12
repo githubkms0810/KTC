@@ -84,9 +84,9 @@
                             <a href="/small/about_us">소개</a>
                             <ul style="left:-25px;">
                                 <li>
-                                    <a style="font-size:12px; font-weight:400;" href="/small/about_us">회사 소개</a>
-                                    <a style="font-size:12px; font-weight:400;" href="/small/about_translate">통역 소개</a>
-                                    <a style="font-size:12px; font-weight:400;" href="/small/about_interpret">번역 소개</a>
+                                    <a style="font-size:12px; font-weight:400; border: 0;" href="/small/about_us">회사 소개</a>
+                                    <a style="font-size:12px; font-weight:400; border: 0;" href="/small/about_translate">통역 소개</a>
+                                    <a style="font-size:12px; font-weight:400; border: 0;" href="/small/about_interpret">번역 소개</a>
                                 </li>
                             </ul>
                         </li>
