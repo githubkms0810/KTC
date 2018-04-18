@@ -138,6 +138,7 @@ $(function() {
   var whiteLogo =$("#jy-white-logo-img");
   var colormenu =$("#color-menu-img");
   var whitemenu =$("#white-menu-img");
+  var arrow =$(".home-nav__item");
   $(window).scroll(function() {
       var scroll = $(window).scrollTop();
 
@@ -145,6 +146,7 @@ $(function() {
         header.removeClass('unchange-header').addClass("change-header");
         color.removeClass('unchange-home-nav').addClass("change-home-nav");
         list.removeClass('unchange-home-nav__list').addClass("change-home-nav__list");
+        arrow.css("background-image","url(/public/images/arrow_down_on.png)");
         whiteLogo.css("display","none");
         colorLogo.css("display","inline-block");
         whitemenu.css("display","none");
@@ -153,6 +155,7 @@ $(function() {
         header.removeClass("change-header").addClass('unchange-header');
         color.removeClass("change-home-nav").addClass('unchange-home-nav');
         list.removeClass("change-home-nav__list").addClass('unchange-home-nav__list');
+        arrow.css("background-image","url(/public/images/arrow_down.png)");
         whiteLogo.css("display","inline-block");
         colorLogo.css("display","none");
         whitemenu.css("display","inline-block");
