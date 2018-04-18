@@ -108,13 +108,63 @@
                         <li>
                             <a href="/content/list?board_key=notice">고객 센터</a>
                         </li>
-                        <li>
+                        <li class="pulse">
                             <a href="/translation_order/selectType" style="font-weight:400;">의뢰하기</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </header>
+<style>
+.pulse {
+  display: block;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(255,255,255,0.5);
+  animation: pulse 1.8s infinite;
+}
+.pulse:hover {
+  animation: none;
+}
+/* 버튼도 크기 움직이게 하는거
+@keyframes pulse {
+  0% {
+      -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-box-shadow: 0 0 0 0 rgba(255,255,255,0.5);
+  }
+  70% {
+      -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+      -webkit-box-shadow: 0 0 0 20px rgba(255,255,255,0);
+  }
+  100% {
+      -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+      -webkit-box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  }
+}*/
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(255,255,255,0.4);
+    box-shadow: 0 0 0 0 rgba(255,255,255,0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 20px rgba(255,255,255,0);
+      box-shadow: 0 0 0 20px rgba(255,255,255,0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(255,255,255,0);
+      box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  }
+}
+</style>
         <?=$this->load->views($content_view)?>
         <footer class="home-footer">
             <div class="bc-container">
