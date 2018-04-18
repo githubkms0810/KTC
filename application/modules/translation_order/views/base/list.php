@@ -12,7 +12,6 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/vendor/animate/animate.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="/public/subpage/partnership/vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->

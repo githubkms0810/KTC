@@ -108,7 +108,7 @@
                         <li>
                             <a href="/content/list?board_key=notice">고객 센터</a>
                         </li>
-                        <li class="pulse">
+                        <li class="pulsenow">
                             <a href="/translation_order/selectType" style="font-weight:400;">의뢰하기</a>
                         </li>
                     </ul>
@@ -116,14 +116,14 @@
             </div>
         </header>
 <style>
-.pulse {
+.pulsenow {
   display: block;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 0 0 rgba(255,255,255,0.5);
   animation: pulse 1.8s infinite;
 }
-.pulse:hover {
+.pulsenow:hover {
   animation: none;
 }
 /* 버튼도 크기 움직이게 하는거

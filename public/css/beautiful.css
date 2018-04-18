@@ -520,6 +520,7 @@ template {
   .change-home-nav__list > li:last-child {
     background-color: #22b8e3;
     border: 2px solid #22b8e3;
+    animation: none;
   }
   .change-home-nav__list > li:last-child a {
     color: #fff !important;
