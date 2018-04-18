@@ -80,13 +80,15 @@
                 </span>
                 <nav class="home-nav">
                     <ul class="home-nav__list">
+                        <li>
+                            <a href="/small/about_us">회사 소개</a>
+                        </li>
                         <li class="home-nav__item">
-                            <a href="/small/about_us">소개</a>
-                            <ul style="left:-25px;">
+                            <a href="#">서비스</a>
+                            <ul style="left:-20px;">
                                 <li>
-                                    <a style="font-size:12px; font-weight:400; border: 0;" href="/small/about_us">회사 소개</a>
-                                    <a style="font-size:12px; font-weight:400; border: 0;" href="/small/about_translate">통역 소개</a>
-                                    <a style="font-size:12px; font-weight:400; border: 0;" href="/small/about_interpret">번역 소개</a>
+                                    <a style="font-size:12px; font-weight:400; border: 0;" href="/small/about_translate">통역 서비스</a>
+                                    <a style="font-size:12px; font-weight:400; border: 0;" href="/small/about_interpret">번역 서비스</a>
                                 </li>
                             </ul>
                         </li>

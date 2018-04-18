@@ -8,7 +8,7 @@
 
 <section class="home-hero-about_us">
     <div class="animated fadeInUp">
-        <h2 class="home-hero-title-about_us">ABOUT INTERPRET</h2>
+        <h2 class="home-hero-title-about_us">번역 서비스</h2>
         <p class="home-hero-des-about_us">
             코리아 통번역 센터는 전문 번역 서비스는 물론<br class="br_aboutus"> 소프트웨어 현지화, 국제 회의 맞춤 통역 서비스 등을 제공하는<br class="br_aboutus"> 대한민국 대표 언어 전문 서비스 기업입니다.
         </p>
@@ -101,31 +101,35 @@
                         <div class="top-left">
                             <div>
                                 <div style="width:49%; display:inline-block;">영어</div>
-                                <div style="width:49%; display:inline-block;">최저 300원</div>
+                                <div style="width:49%; display:inline-block;">최저 120원</div>
                             </div>
                             <div>
                                 <div style="width:49%; display:inline-block;">일본어</div>
-                                <div style="width:49%; display:inline-block;">최저 300원</div>
+                                <div style="width:49%; display:inline-block;">최저 120원</div>
                             </div>
                             <div>
                                 <div style="width:49%; display:inline-block;">중국어</div>
-                                <div style="width:49%; display:inline-block;">최저 300원</div>
+                                <div style="width:49%; display:inline-block;">최저 120원</div>
                             </div>
                             <div>
                                 <div style="width:49%; display:inline-block;">프랑스어</div>
-                                <div style="width:49%; display:inline-block;">최저 600원</div>
+                                <div style="width:49%; display:inline-block;">최저 160원</div>
                             </div>
                             <div>
                                 <div style="width:49%; display:inline-block;">스페인어</div>
-                                <div style="width:49%; display:inline-block;">최저 600원</div>
+                                <div style="width:49%; display:inline-block;">최저 160원</div>
                             </div>
                             <div>
                                 <div style="width:49%; display:inline-block;">독일어</div>
-                                <div style="width:49%; display:inline-block;">최저 600원</div>
+                                <div style="width:49%; display:inline-block;">최저 160원</div>
                             </div>
                             <div>
-                                <div style="width:49%; display:inline-block;">러시아어 등 기타</div>
-                                <div style="width:49%; display:inline-block;">최저 800원</div>
+                                <div style="width:49%; display:inline-block;">러시아어</div>
+                                <div style="width:49%; display:inline-block;">최저 160원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">기타 특수언어</div>
+                                <div style="width:49%; display:inline-block;">최저 300원</div>
                             </div>
                         </div><a href="/translation_order/selectType">
                         <button class="primary-btn price-btn mt-20">의뢰하기</button></a>
@@ -144,31 +148,35 @@
                         <div class="top-left">
                             <div>
                                 <div style="width:49%; display:inline-block;">영어</div>
-                                <div style="width:49%; display:inline-block;">최저 200원</div>
+                                <div style="width:49%; display:inline-block;">최저 90원</div>
                             </div>
                             <div>
                                 <div style="width:49%; display:inline-block;">일본어</div>
-                                <div style="width:49%; display:inline-block;">최저 200원</div>
+                                <div style="width:49%; display:inline-block;">최저 90원</div>
                             </div>
                             <div>
                                 <div style="width:49%; display:inline-block;">중국어</div>
-                                <div style="width:49%; display:inline-block;">최저 200원</div>
+                                <div style="width:49%; display:inline-block;">최저 90원</div>
                             </div>
                             <div>
                                 <div style="width:49%; display:inline-block;">프랑스어</div>
-                                <div style="width:49%; display:inline-block;">최저 500원</div>
+                                <div style="width:49%; display:inline-block;">최저 120원</div>
                             </div>
                             <div>
                                 <div style="width:49%; display:inline-block;">스페인어</div>
-                                <div style="width:49%; display:inline-block;">최저 500원</div>
+                                <div style="width:49%; display:inline-block;">최저 120원</div>
                             </div>
                             <div>
                                 <div style="width:49%; display:inline-block;">독일어</div>
-                                <div style="width:49%; display:inline-block;">최저 500원</div>
+                                <div style="width:49%; display:inline-block;">최저 120원</div>
                             </div>
                             <div>
-                                <div style="width:49%; display:inline-block;">러시아어 등 기타</div>
-                                <div style="width:49%; display:inline-block;">최저 800원</div>
+                                <div style="width:49%; display:inline-block;">러시아어</div>
+                                <div style="width:49%; display:inline-block;">최저 120원</div>
+                            </div>
+                            <div>
+                                <div style="width:49%; display:inline-block;">기타 특수언어</div>
+                                <div style="width:49%; display:inline-block;">최저 200원</div>
                             </div>
                         </div><a href="/translation_order/selectType">
                         <button class="primary-btn price-btn mt-20">의뢰하기</button></a>

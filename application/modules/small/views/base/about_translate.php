@@ -8,7 +8,7 @@
 
 <section class="home-hero-about_us">
     <div class="animated fadeInUp">
-        <h2 class="home-hero-title-about_us">ABOUT TRANSLATE</h2>
+        <h2 class="home-hero-title-about_us">통역 서비스</h2>
         <p class="home-hero-des-about_us">
             코리아 통번역 센터는 전문 번역 서비스는 물론<br class="br_aboutus"> 소프트웨어 현지화, 국제 회의 맞춤 통역 서비스 등을 제공하는<br class="br_aboutus"> 대한민국 대표 언어 전문 서비스 기업입니다.
         </p>
