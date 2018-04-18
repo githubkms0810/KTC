@@ -186,14 +186,7 @@
 					  <option <?=my_set_selected($row,"interpret_kind","기타")?>>기타</option>
 				  </select>
 			  </p>
-		  </div> 
-
-      
-              <div class="icon">
-                  <label class="project_label" for="translation_kind">통역 사항</label>
-                  <input class="budget" type="text" name="translation_kind" value="<?=DEBUG === false ? my_set_value($row,"translation_kind") : "회사이름테스트" ?>">
-              </div> 
-      
+		  </div>       
 
 
 		  </div>

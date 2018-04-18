@@ -22,7 +22,7 @@
 	================================================== -->
 	<section class="featured-posts" style="margin:100px 0 150px 0;">
 	<div class="section-title">
-		<h2><span><a href="/content/list?board_key=notice" style="color: #292b2c; font-weight: 400; font-size: 22px;">공지사항</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+		<h2><span><a href="/content/list?board_key=notice" style="color: #292b2c; font-weight: 400; font-size: 22px;">새소식</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="/content/list?board_key=faq" style="color: #292b2c; font-weight: 400; font-size: 22px;">FAQ</a></span></h2>
 		
 	</div>
