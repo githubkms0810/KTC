@@ -190,13 +190,89 @@
 
 
 		  </div>
-		  <?php endif; ?>
-		  <div>
+          
+          <div>
 			  <h4>언어 선택</h4>
-  
-			  <p class="project_select icon">
+              
+              <p class="project_select icon" style="margin-bottom: 10px;">
 				  <select name="translation_before" class="budget" style="width:49.4%; display:inline-block;">
+                      <option  value="">시작 언어</option>
 					  <option selected="selected" <?=my_set_selected($row,"translation_before","한국어")?> <?=DEBUG === true ? "selected" : ""?>>한국어</option>
+                      <option <?=my_set_selected($row,"translation_before","영어")?>>영어</option>
+                      <option <?=my_set_selected($row,"translation_before","일본어")?>>일본어</option>
+					  <option <?=my_set_selected($row,"translation_before","중국어")?>>중국어</option>
+					  <option <?=my_set_selected($row,"translation_before","프랑스어")?>>프랑스어</option>
+					  <option <?=my_set_selected($row,"translation_before","독일어")?>>독일어</option>
+					  <option <?=my_set_selected($row,"translation_before","스페인어")?>>스페인어</option>
+                      <option <?=my_set_selected($row,"translation_before","러시아어")?>>러시아어</option>
+                      <option <?=my_set_selected($row,"translation_before","베트남어")?>>베트남어</option>
+                      <option <?=my_set_selected($row,"translation_before","태국어")?>>태국어</option>
+                      <option <?=my_set_selected($row,"translation_before","인도네시아어")?>>인도네시아어</option>
+                      <option <?=my_set_selected($row,"translation_after","기타")?>>기타</option>
+				  </select>
+				  <select name="translation_after" class="budget" style="width:49.5%; display:inline-block;">
+					  <option  value="">번역 언어</option>
+					  <option <?=my_set_selected($row,"translation_after","영어")?> <?=DEBUG === true ? "selected" : ""?> >영어</option>
+					  <option <?=my_set_selected($row,"translation_after","일본어")?>>일본어</option>
+					  <option <?=my_set_selected($row,"translation_after","중국어")?>>중국어</option>
+					  <option <?=my_set_selected($row,"translation_after","프랑스어")?>>프랑스어</option>
+					  <option <?=my_set_selected($row,"translation_after","독일어")?>>독일어</option>
+					  <option <?=my_set_selected($row,"translation_after","스페인어")?>>스페인어</option>
+                      <option <?=my_set_selected($row,"translation_after","러시아어")?>>러시아어</option>
+                      <option <?=my_set_selected($row,"translation_after","베트남어")?>>베트남어</option>
+                      <option <?=my_set_selected($row,"translation_after","태국어")?>>태국어</option>
+                      <option <?=my_set_selected($row,"translation_after","인도네시아어")?>>인도네시아어</option>
+                      <option <?=my_set_selected($row,"translation_after","기타")?>>기타</option>
+				  </select>
+			  </p>
+              
+              <p class="project_select icon" style="margin-bottom: 10px;">
+				  <select name="translation_before" class="budget" style="width:49.4%; display:inline-block;">
+                      <option <?=DEBUG === true ? "selected" : ""?> value="">시작 언어</option>
+					  <option <?=my_set_selected($row,"translation_before","한국어")?> >한국어</option>
+                      <option <?=my_set_selected($row,"translation_before","영어")?>>영어</option>
+                      <option <?=my_set_selected($row,"translation_before","일본어")?>>일본어</option>
+					  <option <?=my_set_selected($row,"translation_before","중국어")?>>중국어</option>
+					  <option <?=my_set_selected($row,"translation_before","프랑스어")?>>프랑스어</option>
+					  <option <?=my_set_selected($row,"translation_before","독일어")?>>독일어</option>
+					  <option <?=my_set_selected($row,"translation_before","스페인어")?>>스페인어</option>
+                      <option <?=my_set_selected($row,"translation_before","러시아어")?>>러시아어</option>
+                      <option <?=my_set_selected($row,"translation_before","베트남어")?>>베트남어</option>
+                      <option <?=my_set_selected($row,"translation_before","태국어")?>>태국어</option>
+                      <option <?=my_set_selected($row,"translation_before","인도네시아어")?>>인도네시아어</option>
+                      <option <?=my_set_selected($row,"translation_after","기타")?>>기타</option>
+				  </select>
+				  <select name="translation_after" class="budget" style="width:49.5%; display:inline-block;">
+					  <option  value="">번역 언어</option>
+					  <option <?=my_set_selected($row,"translation_after","영어")?> <?=DEBUG === true ? "selected" : ""?> >영어</option>
+					  <option <?=my_set_selected($row,"translation_after","일본어")?>>일본어</option>
+					  <option <?=my_set_selected($row,"translation_after","중국어")?>>중국어</option>
+					  <option <?=my_set_selected($row,"translation_after","프랑스어")?>>프랑스어</option>
+					  <option <?=my_set_selected($row,"translation_after","독일어")?>>독일어</option>
+					  <option <?=my_set_selected($row,"translation_after","스페인어")?>>스페인어</option>
+                      <option <?=my_set_selected($row,"translation_after","러시아어")?>>러시아어</option>
+                      <option <?=my_set_selected($row,"translation_after","베트남어")?>>베트남어</option>
+                      <option <?=my_set_selected($row,"translation_after","태국어")?>>태국어</option>
+                      <option <?=my_set_selected($row,"translation_after","인도네시아어")?>>인도네시아어</option>
+                      <option <?=my_set_selected($row,"translation_after","기타")?>>기타</option>
+				  </select>
+			  </p>
+              
+              <p class="project_select icon">
+				  <select name="translation_before" class="budget" style="width:49.4%; display:inline-block;">
+                      <option <?=DEBUG === true ? "selected" : ""?> value="">시작 언어</option>
+					  <option <?=my_set_selected($row,"translation_before","한국어")?>>한국어</option>
+                      <option <?=my_set_selected($row,"translation_before","영어")?>>영어</option>
+                      <option <?=my_set_selected($row,"translation_before","일본어")?>>일본어</option>
+					  <option <?=my_set_selected($row,"translation_before","중국어")?>>중국어</option>
+					  <option <?=my_set_selected($row,"translation_before","프랑스어")?>>프랑스어</option>
+					  <option <?=my_set_selected($row,"translation_before","독일어")?>>독일어</option>
+					  <option <?=my_set_selected($row,"translation_before","스페인어")?>>스페인어</option>
+                      <option <?=my_set_selected($row,"translation_before","러시아어")?>>러시아어</option>
+                      <option <?=my_set_selected($row,"translation_before","베트남어")?>>베트남어</option>
+                      <option <?=my_set_selected($row,"translation_before","태국어")?>>태국어</option>
+                      <option <?=my_set_selected($row,"translation_before","인도네시아어")?>>인도네시아어</option>
+                      <option <?=my_set_selected($row,"translation_after","기타")?>>기타</option>
 				  </select>
 				  <select name="translation_after" class="budget" style="width:49.5%; display:inline-block;">
 					  <option  value="">번역 언어</option>
@@ -214,8 +290,7 @@
 				  </select>
 			  </p>
 		  </div>
-
-		  <?php if ( $type === "통역" ): ?>
+          
 		  <div>
             <br>
 		  <div>
@@ -346,6 +421,41 @@
 		  <?php endif; ?>
 
 		  <?php if ( $type === "번역" ): ?>
+          <div>
+			  <h4>언어 선택</h4>
+  
+              <p class="project_select icon">
+				  <select name="translation_before" class="budget" style="width:49.4%; display:inline-block;">
+                      <option  value="">시작 언어</option>
+					  <option selected="selected" <?=my_set_selected($row,"translation_before","한국어")?> <?=DEBUG === true ? "selected" : ""?>>한국어</option>
+                      <option <?=my_set_selected($row,"translation_before","영어")?>>영어</option>
+                      <option <?=my_set_selected($row,"translation_before","일본어")?>>일본어</option>
+					  <option <?=my_set_selected($row,"translation_before","중국어")?>>중국어</option>
+					  <option <?=my_set_selected($row,"translation_before","프랑스어")?>>프랑스어</option>
+					  <option <?=my_set_selected($row,"translation_before","독일어")?>>독일어</option>
+					  <option <?=my_set_selected($row,"translation_before","스페인어")?>>스페인어</option>
+                      <option <?=my_set_selected($row,"translation_before","러시아어")?>>러시아어</option>
+                      <option <?=my_set_selected($row,"translation_before","베트남어")?>>베트남어</option>
+                      <option <?=my_set_selected($row,"translation_before","태국어")?>>태국어</option>
+                      <option <?=my_set_selected($row,"translation_before","인도네시아어")?>>인도네시아어</option>
+                      <option <?=my_set_selected($row,"translation_after","기타")?>>기타</option>
+				  </select>
+				  <select name="translation_after" class="budget" style="width:49.5%; display:inline-block;">
+					  <option  value="">번역 언어</option>
+					  <option <?=my_set_selected($row,"translation_after","영어")?> <?=DEBUG === true ? "selected" : ""?> >영어</option>
+					  <option <?=my_set_selected($row,"translation_after","일본어")?>>일본어</option>
+					  <option <?=my_set_selected($row,"translation_after","중국어")?>>중국어</option>
+					  <option <?=my_set_selected($row,"translation_after","프랑스어")?>>프랑스어</option>
+					  <option <?=my_set_selected($row,"translation_after","독일어")?>>독일어</option>
+					  <option <?=my_set_selected($row,"translation_after","스페인어")?>>스페인어</option>
+                      <option <?=my_set_selected($row,"translation_after","러시아어")?>>러시아어</option>
+                      <option <?=my_set_selected($row,"translation_after","베트남어")?>>베트남어</option>
+                      <option <?=my_set_selected($row,"translation_after","태국어")?>>태국어</option>
+                      <option <?=my_set_selected($row,"translation_after","인도네시아어")?>>인도네시아어</option>
+                      <option <?=my_set_selected($row,"translation_after","기타")?>>기타</option>
+				  </select>
+			  </p>
+		  </div>
 		  <script>
 			  (function($) {
 				  $.fn.goTo = function() {
